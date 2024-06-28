@@ -16,6 +16,12 @@ namespace SGF.BussinessLogic
             DataModel model = new DataModel();
             return model.SGF_LineaAerea.First(x => x.LineaAereaID == id);
         }
+        [OperationContract]
+        public List<SGF_LineaAerea> LineaAerea_ObtenerTodo()
+        {
+            DataModel model = new DataModel();
+            return model.SGF_LineaAerea.ToList();
+        }
     }
 
     //Línea de código para probar
