@@ -1,0 +1,2480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="REINAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SGF_Auditoria">
+          <Key>
+            <PropertyRef Name="AuditoriaID" />
+          </Key>
+          <Property Name="AuditoriaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Tabla" Type="varchar" MaxLength="255" />
+          <Property Name="Tipo" Type="varchar" MaxLength="10" />
+          <Property Name="Campo" Type="varchar" MaxLength="255" />
+          <Property Name="ValorAnterior" Type="varchar(max)" />
+          <Property Name="ValorNuevo" Type="varchar(max)" />
+          <Property Name="FechaRegistro" Type="datetime" />
+          <Property Name="Usuario" Type="varchar" MaxLength="100" />
+          <Property Name="RegistroID" Type="varchar" MaxLength="1000" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="100" />
+          <Property Name="namePC" Type="varchar" MaxLength="100" />
+          <Property Name="ApplicationName" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="SGF_Bodega">
+          <Key>
+            <PropertyRef Name="BodegaID" />
+          </Key>
+          <Property Name="BodegaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SucursalID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Ubicacion" Type="varchar" MaxLength="500" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Boton">
+          <Key>
+            <PropertyRef Name="BotonID" />
+          </Key>
+          <Property Name="BotonID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FormularioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Activo" Type="int" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Clasificador">
+          <Key>
+            <PropertyRef Name="ClasificadorID" />
+          </Key>
+          <Property Name="ClasificadorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoClasificadorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ParentID" Type="uniqueidentifier" />
+          <Property Name="Nombre" Type="varchar" MaxLength="1500" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="Valor" Type="varchar" MaxLength="500" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="2500" />
+          <Property Name="Estado" Type="smallint" />
+        </EntityType>
+        <EntityType Name="SGF_ConfigurarPersonaEmpresa">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SucursalID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PersonaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Empresa">
+          <Key>
+            <PropertyRef Name="EmpresaID" />
+          </Key>
+          <Property Name="EmpresaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GrupoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RUC" Type="char" MaxLength="13" Nullable="false" />
+          <Property Name="RazonSocial" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="NombreComercial" Type="nvarchar" MaxLength="250" />
+          <Property Name="RepresentanteLegal" Type="nvarchar" MaxLength="100" />
+          <Property Name="CedulaRepresentante" Type="char" MaxLength="10" />
+          <Property Name="Ciudad" Type="varchar" MaxLength="50" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="Celular" Type="varchar" MaxLength="20" />
+          <Property Name="Fax" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="300" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Formulario">
+          <Key>
+            <PropertyRef Name="FormularioID" />
+          </Key>
+          <Property Name="FormularioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModuloID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="250" />
+          <Property Name="Nombre" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Grupo">
+          <Key>
+            <PropertyRef Name="GrupoID" />
+          </Key>
+          <Property Name="GrupoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="200" />
+          <Property Name="Observaciones" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_LineaAerea">
+          <Key>
+            <PropertyRef Name="LineaAereaID" />
+          </Key>
+          <Property Name="LineaAereaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="Nombre" Type="varchar" MaxLength="250" />
+          <Property Name="CedulaRUC" Type="varchar" MaxLength="15" />
+          <Property Name="CodigoCAE" Type="varchar" MaxLength="50" />
+          <Property Name="CodigoSRI" Type="varchar" MaxLength="50" />
+          <Property Name="PrefijoGuia" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="250" />
+          <Property Name="Observacion" Type="varchar" MaxLength="500" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="SGF_Modulo">
+          <Key>
+            <PropertyRef Name="ModuloID" />
+          </Key>
+          <Property Name="ModuloID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="300" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_ParametrosPassword">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LongitudMinima" Type="int" />
+          <Property Name="NumCaracteresEspeciales" Type="int" />
+          <Property Name="NumMayusculas" Type="int" />
+          <Property Name="NumMinusculas" Type="int" />
+          <Property Name="NumNumeros" Type="int" />
+          <Property Name="NumIntentos" Type="int" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Estado" Type="smallint" />
+        </EntityType>
+        <EntityType Name="SGF_Permiso">
+          <Key>
+            <PropertyRef Name="PermisoID" />
+          </Key>
+          <Property Name="PermisoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UsuarioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FormularioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Agregar" Type="bit" />
+          <Property Name="Editar" Type="bit" />
+          <Property Name="Eliminar" Type="bit" />
+          <Property Name="Procesar" Type="bit" />
+          <Property Name="Imprimir" Type="bit" />
+          <Property Name="Value" Type="smallint" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Estado" Type="smallint" />
+        </EntityType>
+        <EntityType Name="SGF_PermisoBoton">
+          <Key>
+            <PropertyRef Name="PermisoBotonID" />
+          </Key>
+          <Property Name="PermisoBotonID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PermisoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FormularioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BotonID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Persona">
+          <Key>
+            <PropertyRef Name="PersonaID" />
+          </Key>
+          <Property Name="PersonaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoPersonaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoIdentificacion" Type="smallint" Nullable="false" />
+          <Property Name="Identificacion" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Codigo" Type="int" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+          <Property Name="NombreComercial" Type="nvarchar" MaxLength="255" />
+          <Property Name="RepresentanteLegal" Type="nvarchar" MaxLength="20" />
+          <Property Name="IdentificacionRepresentante" Type="nvarchar" MaxLength="250" />
+          <Property Name="Pais" Type="uniqueidentifier" />
+          <Property Name="Email" Type="varchar" MaxLength="500" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="Celular" Type="varchar" MaxLength="20" />
+          <Property Name="FechaNacimiento" Type="datetime" />
+          <Property Name="Foto" Type="varchar(max)" />
+          <Property Name="Genero" Type="uniqueidentifier" />
+          <Property Name="EstadoCivil" Type="uniqueidentifier" />
+          <Property Name="UsuarioCreacion" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="Cargo" Type="varchar" MaxLength="200" />
+          <Property Name="FechaIngreso" Type="datetime" />
+          <Property Name="FechaExpiracion" Type="datetime" />
+          <Property Name="FechaActualiza" Type="datetime" />
+          <Property Name="UsuarioActualiza" Type="varchar" MaxLength="50" />
+          <Property Name="Observacion" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Producto">
+          <Key>
+            <PropertyRef Name="ProductoID" />
+          </Key>
+          <Property Name="ProductoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="VariedadID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="250" />
+          <Property Name="CalidadID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LongitudID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TalloID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MercadoID" Type="uniqueidentifier" />
+          <Property Name="PaisID" Type="uniqueidentifier" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="350" />
+          <Property Name="ValorRefCompra" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ValorRefVenta" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Sucursal">
+          <Key>
+            <PropertyRef Name="SucursalID" />
+          </Key>
+          <Property Name="SucursalID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EmpresaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="300" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_TipoClasificador">
+          <Key>
+            <PropertyRef Name="TipoClasificadorID" />
+          </Key>
+          <Property Name="TipoClasificadorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" />
+          <Property Name="Estado" Type="smallint" />
+        </EntityType>
+        <EntityType Name="SGF_TipoPersona">
+          <Key>
+            <PropertyRef Name="TipoPersonaID" />
+          </Key>
+          <Property Name="TipoPersonaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Estado" Type="bit" />
+        </EntityType>
+        <EntityType Name="SGF_TipoUsuario">
+          <Key>
+            <PropertyRef Name="TipoUsuarioID" />
+          </Key>
+          <Property Name="TipoUsuarioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="300" />
+          <Property Name="Estado" Type="bit" />
+        </EntityType>
+        <EntityType Name="SGF_Usuario">
+          <Key>
+            <PropertyRef Name="UsuarioID" />
+          </Key>
+          <Property Name="UsuarioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PersonaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoUsuarioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="255" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="UsuarioCreacion" Type="varchar" MaxLength="50" />
+          <Property Name="CambioPassword" Type="bit" />
+          <Property Name="Bloqueado" Type="bit" />
+          <Property Name="NumeroIntentos" Type="int" />
+          <Property Name="IP" Type="varchar" MaxLength="20" />
+          <Property Name="MAC" Type="varchar" MaxLength="50" />
+          <Property Name="NombrePC" Type="varchar" MaxLength="50" />
+          <Property Name="FechaExpiracion" Type="datetime" />
+          <Property Name="FechaActualiza" Type="datetime" />
+          <Property Name="UsuarioActualiza" Type="varchar" MaxLength="50" />
+          <Property Name="Observacion" Type="nvarchar" MaxLength="500" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Variedad">
+          <Key>
+            <PropertyRef Name="VariedadID" />
+          </Key>
+          <Property Name="VariedadID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoFlorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ColorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CalidadID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="Nombre" Type="varchar" MaxLength="300" />
+          <Property Name="ObtentorID" Type="uniqueidentifier" />
+          <Property Name="ObtentorNombre" Type="nvarchar" MaxLength="500" />
+          <Property Name="Rotacion" Type="int" />
+          <Property Name="IndProdMensual" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="LongitudIDMin" Type="uniqueidentifier" />
+          <Property Name="LongitudIDMax" Type="uniqueidentifier" />
+          <Property Name="TamanoBoton" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="NumeroPetalos" Type="int" />
+          <Property Name="Ciclo" Type="int" />
+          <Property Name="DiasFlorero" Type="int" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="500" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Estado" Type="smallint" />
+        </EntityType>
+        <EntityType Name="SGF_Vendedor">
+          <Key>
+            <PropertyRef Name="VendedorID" />
+          </Key>
+          <Property Name="VendedorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="50" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Identificacion" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="25" />
+          <Property Name="Email" Type="varchar" MaxLength="250" />
+          <Property Name="Direccion" Type="varchar" MaxLength="500" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGF.dbo.SEG_Botones_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="SEG_Botones_VTA">
+          <Key>
+            <PropertyRef Name="PermisoBotonID" />
+            <PropertyRef Name="PermisoID" />
+            <PropertyRef Name="FormularioID" />
+            <PropertyRef Name="UsuarioID" />
+            <PropertyRef Name="Formulario" />
+            <PropertyRef Name="BotonID" />
+            <PropertyRef Name="Boton" />
+            <PropertyRef Name="EstadoBoton" />
+          </Key>
+          <Property Name="PermisoBotonID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PermisoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FormularioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UsuarioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Formulario" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Agregar" Type="bit" />
+          <Property Name="Editar" Type="bit" />
+          <Property Name="Eliminar" Type="bit" />
+          <Property Name="Imprimir" Type="bit" />
+          <Property Name="Value" Type="smallint" />
+          <Property Name="EstadoPermiso" Type="smallint" />
+          <Property Name="BotonID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Boton" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="EstadoBoton" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGF.dbo.SEG_Formularios_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="SEG_Formularios_VTA">
+          <Key>
+            <PropertyRef Name="PermisoID" />
+            <PropertyRef Name="FormularioID" />
+            <PropertyRef Name="UsuarioID" />
+            <PropertyRef Name="Modulo" />
+            <PropertyRef Name="Formulario" />
+            <PropertyRef Name="ModuloID" />
+            <PropertyRef Name="EstadoModulo" />
+            <PropertyRef Name="Estadoformulario" />
+            <PropertyRef Name="EstadoUsuario" />
+          </Key>
+          <Property Name="PermisoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FormularioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UsuarioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Modulo" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Formulario" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Agregar" Type="bit" />
+          <Property Name="Editar" Type="bit" />
+          <Property Name="Eliminar" Type="bit" />
+          <Property Name="Imprimir" Type="bit" />
+          <Property Name="Value" Type="smallint" />
+          <Property Name="EstadoPermiso" Type="smallint" />
+          <Property Name="ModuloID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FormularioPath" Type="varchar" MaxLength="250" />
+          <Property Name="EstadoModulo" Type="smallint" Nullable="false" />
+          <Property Name="Estadoformulario" Type="smallint" Nullable="false" />
+          <Property Name="EstadoUsuario" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGF.dbo.SEG_Usuarios_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="SEG_Usuarios_VTA">
+          <Key>
+            <PropertyRef Name="PersonaID" />
+            <PropertyRef Name="Identificacion" />
+            <PropertyRef Name="TipoPersona" />
+            <PropertyRef Name="EstadoPersona" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="TipoUsuario" />
+            <PropertyRef Name="AppID" />
+            <PropertyRef Name="EstadoUsuario" />
+            <PropertyRef Name="TipoIdentificacion" />
+            <PropertyRef Name="UsuarioID" />
+          </Key>
+          <Property Name="PersonaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Identificacion" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+          <Property Name="Codigo" Type="int" />
+          <Property Name="FechaIngreso" Type="datetime" />
+          <Property Name="TipoPersona" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="EstadoPersona" Type="smallint" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="255" />
+          <Property Name="TipoUsuario" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="AppID" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="EstadoUsuario" Type="smallint" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="500" />
+          <Property Name="Celular" Type="varchar" MaxLength="20" />
+          <Property Name="Cargo" Type="varchar" MaxLength="200" />
+          <Property Name="TipoIdentificacion" Type="smallint" Nullable="false" />
+          <Property Name="UsuarioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NombreCompleto" Type="nvarchar" MaxLength="278" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Clasificador_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="SGF_Clasificador_VTA">
+          <Key>
+            <PropertyRef Name="ClasificadorID" />
+            <PropertyRef Name="TipoClasificadorID" />
+          </Key>
+          <Property Name="ClasificadorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NombreClasificador" Type="varchar" MaxLength="1500" />
+          <Property Name="TipoClasificadorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NombreTipoClasificador" Type="varchar" MaxLength="150" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="Valor" Type="varchar" MaxLength="500" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="2500" />
+          <Property Name="EstadoClasificador" Type="smallint" />
+          <Property Name="EstadoTipoClasificador" Type="smallint" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGF.dbo.SGF_ClasificadorParent_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="SGF_ClasificadorParent_VTA">
+          <Key>
+            <PropertyRef Name="ClasificadorID" />
+            <PropertyRef Name="TipoClasificadorID" />
+          </Key>
+          <Property Name="ClasificadorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NombreClasificador" Type="varchar" MaxLength="1500" />
+          <Property Name="TipoClasificadorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NombreTipoClasificador" Type="varchar" MaxLength="150" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="Valor" Type="varchar" MaxLength="500" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="2500" />
+          <Property Name="EstadoClasificador" Type="smallint" />
+          <Property Name="EstadoTipoClasificador" Type="smallint" />
+          <Property Name="ParentID" Type="uniqueidentifier" />
+          <Property Name="NombreParent" Type="varchar" MaxLength="1500" />
+          <Property Name="CodigoParent" Type="varchar" MaxLength="50" />
+          <Property Name="ValorParent" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Formulario_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="SGF_Formulario_VTA">
+          <Key>
+            <PropertyRef Name="FormularioID" />
+            <PropertyRef Name="NombreFormulario" />
+            <PropertyRef Name="EstadoFormulario" />
+            <PropertyRef Name="ModuloID" />
+            <PropertyRef Name="NombreModulo" />
+            <PropertyRef Name="EstadoModulo" />
+          </Key>
+          <Property Name="FormularioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="250" />
+          <Property Name="NombreFormulario" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" />
+          <Property Name="EstadoFormulario" Type="smallint" Nullable="false" />
+          <Property Name="ModuloID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NombreModulo" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="EstadoModulo" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Persona_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="SGF_Persona_VTA">
+          <Key>
+            <PropertyRef Name="PersonaID" />
+            <PropertyRef Name="TipoPersonaID" />
+            <PropertyRef Name="TipoIdentificacion" />
+            <PropertyRef Name="Identificacion" />
+            <PropertyRef Name="UsuarioCreacion" />
+            <PropertyRef Name="FechaCreacion" />
+            <PropertyRef Name="EstadoPersona" />
+            <PropertyRef Name="TipoPersonaNombre" />
+            <PropertyRef Name="Descripcion" />
+          </Key>
+          <Property Name="PersonaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoPersonaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoIdentificacion" Type="smallint" Nullable="false" />
+          <Property Name="Identificacion" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Codigo" Type="int" />
+          <Property Name="NombrePersona" Type="nvarchar" MaxLength="255" />
+          <Property Name="NombreComercial" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdentificacionRepresentante" Type="nvarchar" MaxLength="250" />
+          <Property Name="RepresentanteLegal" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="500" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="Celular" Type="varchar" MaxLength="20" />
+          <Property Name="PaisID" Type="uniqueidentifier" />
+          <Property Name="FechaNacimiento" Type="datetime" />
+          <Property Name="Genero" Type="uniqueidentifier" />
+          <Property Name="EstadoCivil" Type="uniqueidentifier" />
+          <Property Name="UsuarioCreacion" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="Cargo" Type="varchar" MaxLength="200" />
+          <Property Name="FechaIngreso" Type="datetime" />
+          <Property Name="FechaExpiracion" Type="datetime" />
+          <Property Name="FechaActualiza" Type="datetime" />
+          <Property Name="UsuarioActualiza" Type="varchar" MaxLength="50" />
+          <Property Name="Observacion" Type="nvarchar" MaxLength="1000" />
+          <Property Name="EstadoPersona" Type="smallint" Nullable="false" />
+          <Property Name="TipoPersonaNombre" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="EstadoTipoPersona" Type="bit" />
+          <Property Name="TipoIdentificacionText" Type="varchar" MaxLength="1500" />
+          <Property Name="GeneroText" Type="varchar" MaxLength="1500" />
+          <Property Name="EstadoCivilText" Type="varchar" MaxLength="1500" />
+          <Property Name="Pais" Type="varchar" MaxLength="1500" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Usuario_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="SGF_Usuario_VTA">
+          <Key>
+            <PropertyRef Name="UsuarioID" />
+            <PropertyRef Name="Identificacion" />
+            <PropertyRef Name="TipoPersonaID" />
+            <PropertyRef Name="TipoPersona" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="TipoUsuario" />
+            <PropertyRef Name="EstadoUsuario" />
+            <PropertyRef Name="TipoIdentificacion" />
+          </Key>
+          <Property Name="UsuarioID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Identificacion" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+          <Property Name="Codigo" Type="int" />
+          <Property Name="TipoPersonaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoPersona" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TipoUsuario" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="EstadoUsuario" Type="smallint" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="500" />
+          <Property Name="Celular" Type="varchar" MaxLength="20" />
+          <Property Name="Cargo" Type="varchar" MaxLength="200" />
+          <Property Name="TipoIdentificacion" Type="smallint" Nullable="false" />
+          <Property Name="NombreCompleto" Type="nvarchar" MaxLength="278" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Variedad_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="SGF_Variedad_VTA">
+          <Key>
+            <PropertyRef Name="VariedadID" />
+            <PropertyRef Name="TipoFlorID" />
+            <PropertyRef Name="ColorID" />
+            <PropertyRef Name="CalidadID" />
+          </Key>
+          <Property Name="VariedadID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TipoFlorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ColorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CalidadID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="NombreVariedad" Type="varchar" MaxLength="300" />
+          <Property Name="ObtentorID" Type="uniqueidentifier" />
+          <Property Name="ObtentorNombre" Type="nvarchar" MaxLength="500" />
+          <Property Name="Rotacion" Type="int" />
+          <Property Name="IndProdMensual" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="LongitudIDMin" Type="uniqueidentifier" />
+          <Property Name="LongitudIDMax" Type="uniqueidentifier" />
+          <Property Name="TamanoBoton" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="NumeroPetalos" Type="int" />
+          <Property Name="Ciclo" Type="int" />
+          <Property Name="DiasFlorero" Type="int" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="500" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Estado" Type="smallint" />
+          <Property Name="TipoFlor" Type="varchar" MaxLength="1500" />
+          <Property Name="Color" Type="varchar" MaxLength="1500" />
+          <Property Name="Calidad" Type="varchar" MaxLength="1500" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+          <Property Name="LongitudMin" Type="varchar" MaxLength="1500" />
+          <Property Name="LongitudMax" Type="varchar" MaxLength="1500" />
+        </EntityType>
+        <Association Name="FK_SFG_PermisoBoton_SGF_Permiso">
+          <End Role="SGF_Permiso" Type="Self.SGF_Permiso" Multiplicity="1" />
+          <End Role="SGF_PermisoBoton" Type="Self.SGF_PermisoBoton" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Permiso">
+              <PropertyRef Name="PermisoID" />
+            </Principal>
+            <Dependent Role="SGF_PermisoBoton">
+              <PropertyRef Name="PermisoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Bodega_SGF_Sucursal">
+          <End Role="SGF_Sucursal" Type="Self.SGF_Sucursal" Multiplicity="1" />
+          <End Role="SGF_Bodega" Type="Self.SGF_Bodega" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Sucursal">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="SGF_Bodega">
+              <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Boton_SGF_Formulario">
+          <End Role="SGF_Formulario" Type="Self.SGF_Formulario" Multiplicity="1" />
+          <End Role="SGF_Boton" Type="Self.SGF_Boton" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Formulario">
+              <PropertyRef Name="FormularioID" />
+            </Principal>
+            <Dependent Role="SGF_Boton">
+              <PropertyRef Name="FormularioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Clasificador_SGF_TipoClasificador">
+          <End Role="SGF_TipoClasificador" Type="Self.SGF_TipoClasificador" Multiplicity="1" />
+          <End Role="SGF_Clasificador" Type="Self.SGF_Clasificador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_TipoClasificador">
+              <PropertyRef Name="TipoClasificadorID" />
+            </Principal>
+            <Dependent Role="SGF_Clasificador">
+              <PropertyRef Name="TipoClasificadorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_ConfigurarPersonaEmpresa_SGF_Persona">
+          <End Role="SGF_Persona" Type="Self.SGF_Persona" Multiplicity="1" />
+          <End Role="SGF_ConfigurarPersonaEmpresa" Type="Self.SGF_ConfigurarPersonaEmpresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Persona">
+              <PropertyRef Name="PersonaID" />
+            </Principal>
+            <Dependent Role="SGF_ConfigurarPersonaEmpresa">
+              <PropertyRef Name="PersonaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal">
+          <End Role="SGF_Sucursal" Type="Self.SGF_Sucursal" Multiplicity="1" />
+          <End Role="SGF_ConfigurarPersonaEmpresa" Type="Self.SGF_ConfigurarPersonaEmpresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Sucursal">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="SGF_ConfigurarPersonaEmpresa">
+              <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Empresa_SGF_Grupo">
+          <End Role="SGF_Grupo" Type="Self.SGF_Grupo" Multiplicity="1" />
+          <End Role="SGF_Empresa" Type="Self.SGF_Empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Grupo">
+              <PropertyRef Name="GrupoID" />
+            </Principal>
+            <Dependent Role="SGF_Empresa">
+              <PropertyRef Name="GrupoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Formulario_SGF_Modulo">
+          <End Role="SGF_Modulo" Type="Self.SGF_Modulo" Multiplicity="1" />
+          <End Role="SGF_Formulario" Type="Self.SGF_Formulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Modulo">
+              <PropertyRef Name="ModuloID" />
+            </Principal>
+            <Dependent Role="SGF_Formulario">
+              <PropertyRef Name="ModuloID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Permiso_SGF_Formulario">
+          <End Role="SGF_Formulario" Type="Self.SGF_Formulario" Multiplicity="1" />
+          <End Role="SGF_Permiso" Type="Self.SGF_Permiso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Formulario">
+              <PropertyRef Name="FormularioID" />
+            </Principal>
+            <Dependent Role="SGF_Permiso">
+              <PropertyRef Name="FormularioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Permiso_SGF_Usuario">
+          <End Role="SGF_Usuario" Type="Self.SGF_Usuario" Multiplicity="1" />
+          <End Role="SGF_Permiso" Type="Self.SGF_Permiso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Usuario">
+              <PropertyRef Name="UsuarioID" />
+            </Principal>
+            <Dependent Role="SGF_Permiso">
+              <PropertyRef Name="UsuarioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Persona_SGF_TipoPersona">
+          <End Role="SGF_TipoPersona" Type="Self.SGF_TipoPersona" Multiplicity="1" />
+          <End Role="SGF_Persona" Type="Self.SGF_Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_TipoPersona">
+              <PropertyRef Name="TipoPersonaID" />
+            </Principal>
+            <Dependent Role="SGF_Persona">
+              <PropertyRef Name="TipoPersonaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Producto_SGF_Variedad">
+          <End Role="SGF_Variedad" Type="Self.SGF_Variedad" Multiplicity="1" />
+          <End Role="SGF_Producto" Type="Self.SGF_Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Variedad">
+              <PropertyRef Name="VariedadID" />
+            </Principal>
+            <Dependent Role="SGF_Producto">
+              <PropertyRef Name="VariedadID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Sucursal_SGF_Empresa">
+          <End Role="SGF_Empresa" Type="Self.SGF_Empresa" Multiplicity="1" />
+          <End Role="SGF_Sucursal" Type="Self.SGF_Sucursal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Empresa">
+              <PropertyRef Name="EmpresaID" />
+            </Principal>
+            <Dependent Role="SGF_Sucursal">
+              <PropertyRef Name="EmpresaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Usuario_SGF_Persona">
+          <End Role="SGF_Persona" Type="Self.SGF_Persona" Multiplicity="1" />
+          <End Role="SGF_Usuario" Type="Self.SGF_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Persona">
+              <PropertyRef Name="PersonaID" />
+            </Principal>
+            <Dependent Role="SGF_Usuario">
+              <PropertyRef Name="PersonaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Usuario_SGF_TipoUsuario">
+          <End Role="SGF_TipoUsuario" Type="Self.SGF_TipoUsuario" Multiplicity="1" />
+          <End Role="SGF_Usuario" Type="Self.SGF_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_TipoUsuario">
+              <PropertyRef Name="TipoUsuarioID" />
+            </Principal>
+            <Dependent Role="SGF_Usuario">
+              <PropertyRef Name="TipoUsuarioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="REINAModelStoreContainer">
+          <EntitySet Name="SGF_Auditoria" EntityType="Self.SGF_Auditoria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Bodega" EntityType="Self.SGF_Bodega" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Boton" EntityType="Self.SGF_Boton" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Clasificador" EntityType="Self.SGF_Clasificador" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_ConfigurarPersonaEmpresa" EntityType="Self.SGF_ConfigurarPersonaEmpresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Empresa" EntityType="Self.SGF_Empresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Formulario" EntityType="Self.SGF_Formulario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Grupo" EntityType="Self.SGF_Grupo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_LineaAerea" EntityType="Self.SGF_LineaAerea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Modulo" EntityType="Self.SGF_Modulo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_ParametrosPassword" EntityType="Self.SGF_ParametrosPassword" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Permiso" EntityType="Self.SGF_Permiso" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_PermisoBoton" EntityType="Self.SGF_PermisoBoton" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Persona" EntityType="Self.SGF_Persona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Producto" EntityType="Self.SGF_Producto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Sucursal" EntityType="Self.SGF_Sucursal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_TipoClasificador" EntityType="Self.SGF_TipoClasificador" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_TipoPersona" EntityType="Self.SGF_TipoPersona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_TipoUsuario" EntityType="Self.SGF_TipoUsuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Usuario" EntityType="Self.SGF_Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Variedad" EntityType="Self.SGF_Variedad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Vendedor" EntityType="Self.SGF_Vendedor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SEG_Botones_VTA" EntityType="Self.SEG_Botones_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SEG_Botones_VTA].[PermisoBotonID] AS [PermisoBotonID], 
+[SEG_Botones_VTA].[PermisoID] AS [PermisoID], 
+[SEG_Botones_VTA].[FormularioID] AS [FormularioID], 
+[SEG_Botones_VTA].[UsuarioID] AS [UsuarioID], 
+[SEG_Botones_VTA].[Formulario] AS [Formulario], 
+[SEG_Botones_VTA].[Agregar] AS [Agregar], 
+[SEG_Botones_VTA].[Editar] AS [Editar], 
+[SEG_Botones_VTA].[Eliminar] AS [Eliminar], 
+[SEG_Botones_VTA].[Imprimir] AS [Imprimir], 
+[SEG_Botones_VTA].[Value] AS [Value], 
+[SEG_Botones_VTA].[EstadoPermiso] AS [EstadoPermiso], 
+[SEG_Botones_VTA].[BotonID] AS [BotonID], 
+[SEG_Botones_VTA].[Boton] AS [Boton], 
+[SEG_Botones_VTA].[EstadoBoton] AS [EstadoBoton]
+FROM [dbo].[SEG_Botones_VTA] AS [SEG_Botones_VTA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SEG_Formularios_VTA" EntityType="Self.SEG_Formularios_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SEG_Formularios_VTA].[PermisoID] AS [PermisoID], 
+[SEG_Formularios_VTA].[FormularioID] AS [FormularioID], 
+[SEG_Formularios_VTA].[UsuarioID] AS [UsuarioID], 
+[SEG_Formularios_VTA].[Modulo] AS [Modulo], 
+[SEG_Formularios_VTA].[Formulario] AS [Formulario], 
+[SEG_Formularios_VTA].[Agregar] AS [Agregar], 
+[SEG_Formularios_VTA].[Editar] AS [Editar], 
+[SEG_Formularios_VTA].[Eliminar] AS [Eliminar], 
+[SEG_Formularios_VTA].[Imprimir] AS [Imprimir], 
+[SEG_Formularios_VTA].[Value] AS [Value], 
+[SEG_Formularios_VTA].[EstadoPermiso] AS [EstadoPermiso], 
+[SEG_Formularios_VTA].[ModuloID] AS [ModuloID], 
+[SEG_Formularios_VTA].[FormularioPath] AS [FormularioPath], 
+[SEG_Formularios_VTA].[EstadoModulo] AS [EstadoModulo], 
+[SEG_Formularios_VTA].[Estadoformulario] AS [Estadoformulario], 
+[SEG_Formularios_VTA].[EstadoUsuario] AS [EstadoUsuario]
+FROM [dbo].[SEG_Formularios_VTA] AS [SEG_Formularios_VTA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SEG_Usuarios_VTA" EntityType="Self.SEG_Usuarios_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SEG_Usuarios_VTA].[PersonaID] AS [PersonaID], 
+[SEG_Usuarios_VTA].[Identificacion] AS [Identificacion], 
+[SEG_Usuarios_VTA].[Nombre] AS [Nombre], 
+[SEG_Usuarios_VTA].[Codigo] AS [Codigo], 
+[SEG_Usuarios_VTA].[FechaIngreso] AS [FechaIngreso], 
+[SEG_Usuarios_VTA].[TipoPersona] AS [TipoPersona], 
+[SEG_Usuarios_VTA].[EstadoPersona] AS [EstadoPersona], 
+[SEG_Usuarios_VTA].[UserName] AS [UserName], 
+[SEG_Usuarios_VTA].[Password] AS [Password], 
+[SEG_Usuarios_VTA].[TipoUsuario] AS [TipoUsuario], 
+[SEG_Usuarios_VTA].[AppID] AS [AppID], 
+[SEG_Usuarios_VTA].[EstadoUsuario] AS [EstadoUsuario], 
+[SEG_Usuarios_VTA].[Email] AS [Email], 
+[SEG_Usuarios_VTA].[Celular] AS [Celular], 
+[SEG_Usuarios_VTA].[Cargo] AS [Cargo], 
+[SEG_Usuarios_VTA].[TipoIdentificacion] AS [TipoIdentificacion], 
+[SEG_Usuarios_VTA].[UsuarioID] AS [UsuarioID], 
+[SEG_Usuarios_VTA].[NombreCompleto] AS [NombreCompleto]
+FROM [dbo].[SEG_Usuarios_VTA] AS [SEG_Usuarios_VTA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SGF_Clasificador_VTA" EntityType="Self.SGF_Clasificador_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SGF_Clasificador_VTA].[ClasificadorID] AS [ClasificadorID], 
+[SGF_Clasificador_VTA].[NombreClasificador] AS [NombreClasificador], 
+[SGF_Clasificador_VTA].[TipoClasificadorID] AS [TipoClasificadorID], 
+[SGF_Clasificador_VTA].[NombreTipoClasificador] AS [NombreTipoClasificador], 
+[SGF_Clasificador_VTA].[Codigo] AS [Codigo], 
+[SGF_Clasificador_VTA].[Valor] AS [Valor], 
+[SGF_Clasificador_VTA].[Descripcion] AS [Descripcion], 
+[SGF_Clasificador_VTA].[EstadoClasificador] AS [EstadoClasificador], 
+[SGF_Clasificador_VTA].[EstadoTipoClasificador] AS [EstadoTipoClasificador]
+FROM [dbo].[SGF_Clasificador_VTA] AS [SGF_Clasificador_VTA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SGF_ClasificadorParent_VTA" EntityType="Self.SGF_ClasificadorParent_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SGF_ClasificadorParent_VTA].[ClasificadorID] AS [ClasificadorID], 
+[SGF_ClasificadorParent_VTA].[NombreClasificador] AS [NombreClasificador], 
+[SGF_ClasificadorParent_VTA].[TipoClasificadorID] AS [TipoClasificadorID], 
+[SGF_ClasificadorParent_VTA].[NombreTipoClasificador] AS [NombreTipoClasificador], 
+[SGF_ClasificadorParent_VTA].[Codigo] AS [Codigo], 
+[SGF_ClasificadorParent_VTA].[Valor] AS [Valor], 
+[SGF_ClasificadorParent_VTA].[Descripcion] AS [Descripcion], 
+[SGF_ClasificadorParent_VTA].[EstadoClasificador] AS [EstadoClasificador], 
+[SGF_ClasificadorParent_VTA].[EstadoTipoClasificador] AS [EstadoTipoClasificador], 
+[SGF_ClasificadorParent_VTA].[ParentID] AS [ParentID], 
+[SGF_ClasificadorParent_VTA].[NombreParent] AS [NombreParent], 
+[SGF_ClasificadorParent_VTA].[CodigoParent] AS [CodigoParent], 
+[SGF_ClasificadorParent_VTA].[ValorParent] AS [ValorParent]
+FROM [dbo].[SGF_ClasificadorParent_VTA] AS [SGF_ClasificadorParent_VTA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SGF_Formulario_VTA" EntityType="Self.SGF_Formulario_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SGF_Formulario_VTA].[FormularioID] AS [FormularioID], 
+[SGF_Formulario_VTA].[Codigo] AS [Codigo], 
+[SGF_Formulario_VTA].[NombreFormulario] AS [NombreFormulario], 
+[SGF_Formulario_VTA].[Descripcion] AS [Descripcion], 
+[SGF_Formulario_VTA].[EstadoFormulario] AS [EstadoFormulario], 
+[SGF_Formulario_VTA].[ModuloID] AS [ModuloID], 
+[SGF_Formulario_VTA].[NombreModulo] AS [NombreModulo], 
+[SGF_Formulario_VTA].[EstadoModulo] AS [EstadoModulo]
+FROM [dbo].[SGF_Formulario_VTA] AS [SGF_Formulario_VTA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SGF_Persona_VTA" EntityType="Self.SGF_Persona_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SGF_Persona_VTA].[PersonaID] AS [PersonaID], 
+[SGF_Persona_VTA].[TipoPersonaID] AS [TipoPersonaID], 
+[SGF_Persona_VTA].[TipoIdentificacion] AS [TipoIdentificacion], 
+[SGF_Persona_VTA].[Identificacion] AS [Identificacion], 
+[SGF_Persona_VTA].[Codigo] AS [Codigo], 
+[SGF_Persona_VTA].[NombrePersona] AS [NombrePersona], 
+[SGF_Persona_VTA].[NombreComercial] AS [NombreComercial], 
+[SGF_Persona_VTA].[IdentificacionRepresentante] AS [IdentificacionRepresentante], 
+[SGF_Persona_VTA].[RepresentanteLegal] AS [RepresentanteLegal], 
+[SGF_Persona_VTA].[Email] AS [Email], 
+[SGF_Persona_VTA].[Telefono] AS [Telefono], 
+[SGF_Persona_VTA].[Celular] AS [Celular], 
+[SGF_Persona_VTA].[PaisID] AS [PaisID], 
+[SGF_Persona_VTA].[FechaNacimiento] AS [FechaNacimiento], 
+[SGF_Persona_VTA].[Genero] AS [Genero], 
+[SGF_Persona_VTA].[EstadoCivil] AS [EstadoCivil], 
+[SGF_Persona_VTA].[UsuarioCreacion] AS [UsuarioCreacion], 
+[SGF_Persona_VTA].[FechaCreacion] AS [FechaCreacion], 
+[SGF_Persona_VTA].[Cargo] AS [Cargo], 
+[SGF_Persona_VTA].[FechaIngreso] AS [FechaIngreso], 
+[SGF_Persona_VTA].[FechaExpiracion] AS [FechaExpiracion], 
+[SGF_Persona_VTA].[FechaActualiza] AS [FechaActualiza], 
+[SGF_Persona_VTA].[UsuarioActualiza] AS [UsuarioActualiza], 
+[SGF_Persona_VTA].[Observacion] AS [Observacion], 
+[SGF_Persona_VTA].[EstadoPersona] AS [EstadoPersona], 
+[SGF_Persona_VTA].[TipoPersonaNombre] AS [TipoPersonaNombre], 
+[SGF_Persona_VTA].[Descripcion] AS [Descripcion], 
+[SGF_Persona_VTA].[EstadoTipoPersona] AS [EstadoTipoPersona], 
+[SGF_Persona_VTA].[TipoIdentificacionText] AS [TipoIdentificacionText], 
+[SGF_Persona_VTA].[GeneroText] AS [GeneroText], 
+[SGF_Persona_VTA].[EstadoCivilText] AS [EstadoCivilText], 
+[SGF_Persona_VTA].[Pais] AS [Pais]
+FROM [dbo].[SGF_Persona_VTA] AS [SGF_Persona_VTA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SGF_Usuario_VTA" EntityType="Self.SGF_Usuario_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SGF_Usuario_VTA].[UsuarioID] AS [UsuarioID], 
+[SGF_Usuario_VTA].[Identificacion] AS [Identificacion], 
+[SGF_Usuario_VTA].[Nombre] AS [Nombre], 
+[SGF_Usuario_VTA].[Codigo] AS [Codigo], 
+[SGF_Usuario_VTA].[TipoPersonaID] AS [TipoPersonaID], 
+[SGF_Usuario_VTA].[TipoPersona] AS [TipoPersona], 
+[SGF_Usuario_VTA].[UserName] AS [UserName], 
+[SGF_Usuario_VTA].[TipoUsuario] AS [TipoUsuario], 
+[SGF_Usuario_VTA].[EstadoUsuario] AS [EstadoUsuario], 
+[SGF_Usuario_VTA].[Email] AS [Email], 
+[SGF_Usuario_VTA].[Celular] AS [Celular], 
+[SGF_Usuario_VTA].[Cargo] AS [Cargo], 
+[SGF_Usuario_VTA].[TipoIdentificacion] AS [TipoIdentificacion], 
+[SGF_Usuario_VTA].[NombreCompleto] AS [NombreCompleto]
+FROM [dbo].[SGF_Usuario_VTA] AS [SGF_Usuario_VTA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SGF_Variedad_VTA" EntityType="Self.SGF_Variedad_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SGF_Variedad_VTA].[VariedadID] AS [VariedadID], 
+[SGF_Variedad_VTA].[TipoFlorID] AS [TipoFlorID], 
+[SGF_Variedad_VTA].[ColorID] AS [ColorID], 
+[SGF_Variedad_VTA].[CalidadID] AS [CalidadID], 
+[SGF_Variedad_VTA].[Codigo] AS [Codigo], 
+[SGF_Variedad_VTA].[NombreVariedad] AS [NombreVariedad], 
+[SGF_Variedad_VTA].[ObtentorID] AS [ObtentorID], 
+[SGF_Variedad_VTA].[ObtentorNombre] AS [ObtentorNombre], 
+[SGF_Variedad_VTA].[Rotacion] AS [Rotacion], 
+[SGF_Variedad_VTA].[IndProdMensual] AS [IndProdMensual], 
+[SGF_Variedad_VTA].[LongitudIDMin] AS [LongitudIDMin], 
+[SGF_Variedad_VTA].[LongitudIDMax] AS [LongitudIDMax], 
+[SGF_Variedad_VTA].[TamanoBoton] AS [TamanoBoton], 
+[SGF_Variedad_VTA].[NumeroPetalos] AS [NumeroPetalos], 
+[SGF_Variedad_VTA].[Ciclo] AS [Ciclo], 
+[SGF_Variedad_VTA].[DiasFlorero] AS [DiasFlorero], 
+[SGF_Variedad_VTA].[Observaciones] AS [Observaciones], 
+[SGF_Variedad_VTA].[Usuario] AS [Usuario], 
+[SGF_Variedad_VTA].[Fecha] AS [Fecha], 
+[SGF_Variedad_VTA].[Estado] AS [Estado], 
+[SGF_Variedad_VTA].[TipoFlor] AS [TipoFlor], 
+[SGF_Variedad_VTA].[Color] AS [Color], 
+[SGF_Variedad_VTA].[Calidad] AS [Calidad], 
+[SGF_Variedad_VTA].[Nombre] AS [Nombre], 
+[SGF_Variedad_VTA].[LongitudMin] AS [LongitudMin], 
+[SGF_Variedad_VTA].[LongitudMax] AS [LongitudMax]
+FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_SFG_PermisoBoton_SGF_Permiso" Association="Self.FK_SFG_PermisoBoton_SGF_Permiso">
+            <End Role="SGF_Permiso" EntitySet="SGF_Permiso" />
+            <End Role="SGF_PermisoBoton" EntitySet="SGF_PermisoBoton" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Bodega_SGF_Sucursal" Association="Self.FK_SGF_Bodega_SGF_Sucursal">
+            <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
+            <End Role="SGF_Bodega" EntitySet="SGF_Bodega" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Boton_SGF_Formulario" Association="Self.FK_SGF_Boton_SGF_Formulario">
+            <End Role="SGF_Formulario" EntitySet="SGF_Formulario" />
+            <End Role="SGF_Boton" EntitySet="SGF_Boton" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Clasificador_SGF_TipoClasificador" Association="Self.FK_SGF_Clasificador_SGF_TipoClasificador">
+            <End Role="SGF_TipoClasificador" EntitySet="SGF_TipoClasificador" />
+            <End Role="SGF_Clasificador" EntitySet="SGF_Clasificador" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_ConfigurarPersonaEmpresa_SGF_Persona" Association="Self.FK_SGF_ConfigurarPersonaEmpresa_SGF_Persona">
+            <End Role="SGF_Persona" EntitySet="SGF_Persona" />
+            <End Role="SGF_ConfigurarPersonaEmpresa" EntitySet="SGF_ConfigurarPersonaEmpresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal" Association="Self.FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal">
+            <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
+            <End Role="SGF_ConfigurarPersonaEmpresa" EntitySet="SGF_ConfigurarPersonaEmpresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Empresa_SGF_Grupo" Association="Self.FK_SGF_Empresa_SGF_Grupo">
+            <End Role="SGF_Grupo" EntitySet="SGF_Grupo" />
+            <End Role="SGF_Empresa" EntitySet="SGF_Empresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Formulario_SGF_Modulo" Association="Self.FK_SGF_Formulario_SGF_Modulo">
+            <End Role="SGF_Modulo" EntitySet="SGF_Modulo" />
+            <End Role="SGF_Formulario" EntitySet="SGF_Formulario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Permiso_SGF_Formulario" Association="Self.FK_SGF_Permiso_SGF_Formulario">
+            <End Role="SGF_Formulario" EntitySet="SGF_Formulario" />
+            <End Role="SGF_Permiso" EntitySet="SGF_Permiso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Permiso_SGF_Usuario" Association="Self.FK_SGF_Permiso_SGF_Usuario">
+            <End Role="SGF_Usuario" EntitySet="SGF_Usuario" />
+            <End Role="SGF_Permiso" EntitySet="SGF_Permiso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Persona_SGF_TipoPersona" Association="Self.FK_SGF_Persona_SGF_TipoPersona">
+            <End Role="SGF_TipoPersona" EntitySet="SGF_TipoPersona" />
+            <End Role="SGF_Persona" EntitySet="SGF_Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Producto_SGF_Variedad" Association="Self.FK_SGF_Producto_SGF_Variedad">
+            <End Role="SGF_Variedad" EntitySet="SGF_Variedad" />
+            <End Role="SGF_Producto" EntitySet="SGF_Producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Sucursal_SGF_Empresa" Association="Self.FK_SGF_Sucursal_SGF_Empresa">
+            <End Role="SGF_Empresa" EntitySet="SGF_Empresa" />
+            <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Usuario_SGF_Persona" Association="Self.FK_SGF_Usuario_SGF_Persona">
+            <End Role="SGF_Persona" EntitySet="SGF_Persona" />
+            <End Role="SGF_Usuario" EntitySet="SGF_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Usuario_SGF_TipoUsuario" Association="Self.FK_SGF_Usuario_SGF_TipoUsuario">
+            <End Role="SGF_TipoUsuario" EntitySet="SGF_TipoUsuario" />
+            <End Role="SGF_Usuario" EntitySet="SGF_Usuario" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SGFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DataModel" annotation:LazyLoadingEnabled="false" >
+          <EntitySet Name="SGF_Clasificador" EntityType="SGFModel.SGF_Clasificador" />
+          <EntitySet Name="SGF_ConfigurarPersonaEmpresa" EntityType="SGFModel.SGF_ConfigurarPersonaEmpresa" />
+          <EntitySet Name="SGF_Empresa" EntityType="SGFModel.SGF_Empresa" />
+          <EntitySet Name="SGF_Grupo" EntityType="SGFModel.SGF_Grupo" />
+          <EntitySet Name="SGF_Sucursal" EntityType="SGFModel.SGF_Sucursal" />
+          <EntitySet Name="SGF_TipoClasificador" EntityType="SGFModel.SGF_TipoClasificador" />
+          <EntitySet Name="SGF_TipoPersona" EntityType="SGFModel.SGF_TipoPersona" />
+          <EntitySet Name="SGF_TipoUsuario" EntityType="SGFModel.SGF_TipoUsuario" />
+          <AssociationSet Name="FK_SGF_Clasificador_SGF_TipoClasificador" Association="SGFModel.FK_SGF_Clasificador_SGF_TipoClasificador">
+            <End Role="SGF_TipoClasificador" EntitySet="SGF_TipoClasificador" />
+            <End Role="SGF_Clasificador" EntitySet="SGF_Clasificador" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal" Association="SGFModel.FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal">
+            <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
+            <End Role="SGF_ConfigurarPersonaEmpresa" EntitySet="SGF_ConfigurarPersonaEmpresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Empresa_SGF_Grupo" Association="SGFModel.FK_SGF_Empresa_SGF_Grupo">
+            <End Role="SGF_Grupo" EntitySet="SGF_Grupo" />
+            <End Role="SGF_Empresa" EntitySet="SGF_Empresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Sucursal_SGF_Empresa" Association="SGFModel.FK_SGF_Sucursal_SGF_Empresa">
+            <End Role="SGF_Empresa" EntitySet="SGF_Empresa" />
+            <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
+          </AssociationSet>
+          <EntitySet Name="SGF_Auditoria" EntityType="SGFModel.SGF_Auditoria" />
+          <EntitySet Name="SGF_Bodega" EntityType="SGFModel.SGF_Bodega" />
+          <EntitySet Name="SGF_Boton" EntityType="SGFModel.SGF_Boton" />
+          <EntitySet Name="SGF_Formulario" EntityType="SGFModel.SGF_Formulario" />
+          <EntitySet Name="SGF_Permiso" EntityType="SGFModel.SGF_Permiso" />
+          <AssociationSet Name="FK_SGF_Bodega_SGF_Sucursal" Association="SGFModel.FK_SGF_Bodega_SGF_Sucursal">
+            <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
+            <End Role="SGF_Bodega" EntitySet="SGF_Bodega" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Boton_SGF_Formulario" Association="SGFModel.FK_SGF_Boton_SGF_Formulario">
+            <End Role="SGF_Formulario" EntitySet="SGF_Formulario" />
+            <End Role="SGF_Boton" EntitySet="SGF_Boton" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Permiso_SGF_Formulario" Association="SGFModel.FK_SGF_Permiso_SGF_Formulario">
+            <End Role="SGF_Formulario" EntitySet="SGF_Formulario" />
+            <End Role="SGF_Permiso" EntitySet="SGF_Permiso" />
+          </AssociationSet>
+          <EntitySet Name="SGF_Usuario" EntityType="SGFModel.SGF_Usuario" />
+          <AssociationSet Name="FK_SGF_Permiso_SGF_Usuario" Association="SGFModel.FK_SGF_Permiso_SGF_Usuario">
+            <End Role="SGF_Usuario" EntitySet="SGF_Usuario" />
+            <End Role="SGF_Permiso" EntitySet="SGF_Permiso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Usuario_SGF_TipoUsuario" Association="SGFModel.FK_SGF_Usuario_SGF_TipoUsuario">
+            <End Role="SGF_TipoUsuario" EntitySet="SGF_TipoUsuario" />
+            <End Role="SGF_Usuario" EntitySet="SGF_Usuario" />
+          </AssociationSet>
+          <EntitySet Name="SGF_Modulo" EntityType="SGFModel.SGF_Modulo" />
+          <EntitySet Name="SGF_PermisoBoton" EntityType="SGFModel.SGF_PermisoBoton" />
+          <AssociationSet Name="FK_SGF_Formulario_SGF_Modulo" Association="SGFModel.FK_SGF_Formulario_SGF_Modulo">
+            <End Role="SGF_Modulo" EntitySet="SGF_Modulo" />
+            <End Role="SGF_Formulario" EntitySet="SGF_Formulario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SFG_PermisoBoton_SGF_Permiso" Association="SGFModel.FK_SFG_PermisoBoton_SGF_Permiso">
+            <End Role="SGF_Permiso" EntitySet="SGF_Permiso" />
+            <End Role="SGF_PermisoBoton" EntitySet="SGF_PermisoBoton" />
+          </AssociationSet>
+          <EntitySet Name="SEG_Formularios_VTA" EntityType="SGFModel.SEG_Formularios_VTA" />
+          <EntitySet Name="SEG_Usuarios_VTA" EntityType="SGFModel.SEG_Usuarios_VTA" />
+          <EntitySet Name="SGF_ParametrosPassword" EntityType="SGFModel.SGF_ParametrosPassword" />
+          <EntitySet Name="SGF_Persona" EntityType="SGFModel.SGF_Persona" />
+          <EntitySet Name="SGF_Persona_VTA" EntityType="SGFModel.SGF_Persona_VTA" />
+          <AssociationSet Name="FK_SGF_ConfigurarPersonaEmpresa_SGF_Persona" Association="SGFModel.FK_SGF_ConfigurarPersonaEmpresa_SGF_Persona">
+            <End Role="SGF_Persona" EntitySet="SGF_Persona" />
+            <End Role="SGF_ConfigurarPersonaEmpresa" EntitySet="SGF_ConfigurarPersonaEmpresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Persona_SGF_TipoPersona" Association="SGFModel.FK_SGF_Persona_SGF_TipoPersona">
+            <End Role="SGF_TipoPersona" EntitySet="SGF_TipoPersona" />
+            <End Role="SGF_Persona" EntitySet="SGF_Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Usuario_SGF_Persona" Association="SGFModel.FK_SGF_Usuario_SGF_Persona">
+            <End Role="SGF_Persona" EntitySet="SGF_Persona" />
+            <End Role="SGF_Usuario" EntitySet="SGF_Usuario" />
+          </AssociationSet>
+          <EntitySet Name="SGF_Usuario_VTA" EntityType="SGFModel.SGF_Usuario_VTA" />
+          <EntitySet Name="SGF_Formulario_VTA" EntityType="SGFModel.SGF_Formulario_VTA" />
+          <EntitySet Name="SEG_Botones_VTA" EntityType="SGFModel.SEG_Botones_VTA" />
+          <EntitySet Name="SGF_Clasificador_VTA" EntityType="SGFModel.SGF_Clasificador_VTA" />
+          <EntitySet Name="SGF_ClasificadorParent_VTA" EntityType="SGFModel.SGF_ClasificadorParent_VTA" />
+          <EntitySet Name="SGF_LineaAerea" EntityType="SGFModel.SGF_LineaAerea" />
+          <EntitySet Name="SGF_Producto" EntityType="SGFModel.SGF_Producto" />
+          <EntitySet Name="SGF_Vendedor" EntityType="SGFModel.SGF_Vendedor" />
+          <EntitySet Name="SGF_Variedad" EntityType="SGFModel.SGF_Variedad" />
+          <EntitySet Name="SGF_Variedad_VTA" EntityType="SGFModel.SGF_Variedad_VTA" />
+          <AssociationSet Name="FK_SGF_Producto_SGF_Variedad" Association="SGFModel.FK_SGF_Producto_SGF_Variedad">
+            <End Role="SGF_Variedad" EntitySet="SGF_Variedad" />
+            <End Role="SGF_Producto" EntitySet="SGF_Producto" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="SGF_Clasificador">
+          <Key>
+            <PropertyRef Name="ClasificadorID" />
+          </Key>
+          <Property Name="ClasificadorID" Type="Guid" Nullable="false" />
+          <Property Name="TipoClasificadorID" Type="Guid" Nullable="false" />
+          <Property Name="ParentID" Type="Guid" />
+          <Property Name="Nombre" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valor" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int16" />
+          <NavigationProperty Name="SGF_TipoClasificador" Relationship="SGFModel.FK_SGF_Clasificador_SGF_TipoClasificador" FromRole="SGF_Clasificador" ToRole="SGF_TipoClasificador" />
+        </EntityType>
+        <EntityType Name="SGF_ConfigurarPersonaEmpresa">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="SucursalID" Type="Guid" Nullable="false" />
+          <Property Name="PersonaID" Type="Guid" Nullable="false" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_Sucursal" Relationship="SGFModel.FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal" FromRole="SGF_ConfigurarPersonaEmpresa" ToRole="SGF_Sucursal" />
+          <NavigationProperty Name="SGF_Persona" Relationship="SGFModel.FK_SGF_ConfigurarPersonaEmpresa_SGF_Persona" FromRole="SGF_ConfigurarPersonaEmpresa" ToRole="SGF_Persona" />
+        </EntityType>
+        <EntityType Name="SGF_Empresa">
+          <Key>
+            <PropertyRef Name="EmpresaID" />
+          </Key>
+          <Property Name="EmpresaID" Type="Guid" Nullable="false" />
+          <Property Name="GrupoID" Type="Guid" Nullable="false" />
+          <Property Name="RUC" Type="String" Nullable="false" MaxLength="13" FixedLength="true" Unicode="false" />
+          <Property Name="RazonSocial" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NombreComercial" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="RepresentanteLegal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CedulaRepresentante" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_Grupo" Relationship="SGFModel.FK_SGF_Empresa_SGF_Grupo" FromRole="SGF_Empresa" ToRole="SGF_Grupo" />
+          <NavigationProperty Name="SGF_Sucursal" Relationship="SGFModel.FK_SGF_Sucursal_SGF_Empresa" FromRole="SGF_Empresa" ToRole="SGF_Sucursal" />
+        </EntityType>
+        <EntityType Name="SGF_Grupo">
+          <Key>
+            <PropertyRef Name="GrupoID" />
+          </Key>
+          <Property Name="GrupoID" Type="Guid" Nullable="false" />
+          <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Observaciones" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_Empresa" Relationship="SGFModel.FK_SGF_Empresa_SGF_Grupo" FromRole="SGF_Grupo" ToRole="SGF_Empresa" />
+        </EntityType>
+        <EntityType Name="SGF_Sucursal">
+          <Key>
+            <PropertyRef Name="SucursalID" />
+          </Key>
+          <Property Name="SucursalID" Type="Guid" Nullable="false" />
+          <Property Name="EmpresaID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_ConfigurarPersonaEmpresa" Relationship="SGFModel.FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal" FromRole="SGF_Sucursal" ToRole="SGF_ConfigurarPersonaEmpresa" />
+          <NavigationProperty Name="SGF_Empresa" Relationship="SGFModel.FK_SGF_Sucursal_SGF_Empresa" FromRole="SGF_Sucursal" ToRole="SGF_Empresa" />
+          <NavigationProperty Name="SGF_Bodega" Relationship="SGFModel.FK_SGF_Bodega_SGF_Sucursal" FromRole="SGF_Sucursal" ToRole="SGF_Bodega" />
+        </EntityType>
+        <EntityType Name="SGF_TipoClasificador">
+          <Key>
+            <PropertyRef Name="TipoClasificadorID" />
+          </Key>
+          <Property Name="TipoClasificadorID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int16" />
+          <NavigationProperty Name="SGF_Clasificador" Relationship="SGFModel.FK_SGF_Clasificador_SGF_TipoClasificador" FromRole="SGF_TipoClasificador" ToRole="SGF_Clasificador" />
+        </EntityType>
+        <EntityType Name="SGF_TipoPersona">
+          <Key>
+            <PropertyRef Name="TipoPersonaID" />
+          </Key>
+          <Property Name="TipoPersonaID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="Boolean" />
+          <NavigationProperty Name="SGF_Persona" Relationship="SGFModel.FK_SGF_Persona_SGF_TipoPersona" FromRole="SGF_TipoPersona" ToRole="SGF_Persona" />
+        </EntityType>
+        <EntityType Name="SGF_TipoUsuario">
+          <Key>
+            <PropertyRef Name="TipoUsuarioID" />
+          </Key>
+          <Property Name="TipoUsuarioID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" />
+          <NavigationProperty Name="SGF_Usuario" Relationship="SGFModel.FK_SGF_Usuario_SGF_TipoUsuario" FromRole="SGF_TipoUsuario" ToRole="SGF_Usuario" />
+        </EntityType>
+        <Association Name="FK_SGF_Clasificador_SGF_TipoClasificador">
+          <End Type="SGFModel.SGF_TipoClasificador" Role="SGF_TipoClasificador" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Clasificador" Role="SGF_Clasificador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_TipoClasificador">
+              <PropertyRef Name="TipoClasificadorID" />
+            </Principal>
+            <Dependent Role="SGF_Clasificador">
+              <PropertyRef Name="TipoClasificadorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal">
+          <End Type="SGFModel.SGF_Sucursal" Role="SGF_Sucursal" Multiplicity="1" />
+          <End Type="SGFModel.SGF_ConfigurarPersonaEmpresa" Role="SGF_ConfigurarPersonaEmpresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Sucursal">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="SGF_ConfigurarPersonaEmpresa">
+              <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Empresa_SGF_Grupo">
+          <End Type="SGFModel.SGF_Grupo" Role="SGF_Grupo" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Empresa" Role="SGF_Empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Grupo">
+              <PropertyRef Name="GrupoID" />
+            </Principal>
+            <Dependent Role="SGF_Empresa">
+              <PropertyRef Name="GrupoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Sucursal_SGF_Empresa">
+          <End Type="SGFModel.SGF_Empresa" Role="SGF_Empresa" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Sucursal" Role="SGF_Sucursal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Empresa">
+              <PropertyRef Name="EmpresaID" />
+            </Principal>
+            <Dependent Role="SGF_Sucursal">
+              <PropertyRef Name="EmpresaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SGF_Auditoria">
+          <Key>
+            <PropertyRef Name="AuditoriaID" />
+          </Key>
+          <Property Name="AuditoriaID" Type="Guid" Nullable="false" />
+          <Property Name="Tabla" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Campo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ValorAnterior" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ValorNuevo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+          <Property Name="Usuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RegistroID" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="IPAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="namePC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicationName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SGF_Bodega">
+          <Key>
+            <PropertyRef Name="BodegaID" />
+          </Key>
+          <Property Name="BodegaID" Type="Guid" Nullable="false" />
+          <Property Name="SucursalID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Ubicacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_Sucursal" Relationship="SGFModel.FK_SGF_Bodega_SGF_Sucursal" FromRole="SGF_Bodega" ToRole="SGF_Sucursal" />
+        </EntityType>
+        <EntityType Name="SGF_Boton">
+          <Key>
+            <PropertyRef Name="BotonID" />
+          </Key>
+          <Property Name="BotonID" Type="Guid" Nullable="false" />
+          <Property Name="FormularioID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Activo" Type="Int32" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_Formulario" Relationship="SGFModel.FK_SGF_Boton_SGF_Formulario" FromRole="SGF_Boton" ToRole="SGF_Formulario" />
+        </EntityType>
+        <EntityType Name="SGF_Formulario">
+          <Key>
+            <PropertyRef Name="FormularioID" />
+          </Key>
+          <Property Name="FormularioID" Type="Guid" Nullable="false" />
+          <Property Name="ModuloID" Type="Guid" Nullable="false" />
+          <Property Name="Codigo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_Boton" Relationship="SGFModel.FK_SGF_Boton_SGF_Formulario" FromRole="SGF_Formulario" ToRole="SGF_Boton" />
+          <NavigationProperty Name="SGF_Permiso" Relationship="SGFModel.FK_SGF_Permiso_SGF_Formulario" FromRole="SGF_Formulario" ToRole="SGF_Permiso" />
+          <NavigationProperty Name="SGF_Modulo" Relationship="SGFModel.FK_SGF_Formulario_SGF_Modulo" FromRole="SGF_Formulario" ToRole="SGF_Modulo" />
+        </EntityType>
+        <EntityType Name="SGF_Permiso">
+          <Key>
+            <PropertyRef Name="PermisoID" />
+          </Key>
+          <Property Name="PermisoID" Type="Guid" Nullable="false" />
+          <Property Name="UsuarioID" Type="Guid" Nullable="false" />
+          <Property Name="FormularioID" Type="Guid" Nullable="false" />
+          <Property Name="Agregar" Type="Boolean" />
+          <Property Name="Editar" Type="Boolean" />
+          <Property Name="Eliminar" Type="Boolean" />
+          <Property Name="Procesar" Type="Boolean" />
+          <Property Name="Imprimir" Type="Boolean" />
+          <Property Name="Value" Type="Int16" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int16" />
+          <NavigationProperty Name="SGF_Formulario" Relationship="SGFModel.FK_SGF_Permiso_SGF_Formulario" FromRole="SGF_Permiso" ToRole="SGF_Formulario" />
+          <NavigationProperty Name="SGF_Usuario" Relationship="SGFModel.FK_SGF_Permiso_SGF_Usuario" FromRole="SGF_Permiso" ToRole="SGF_Usuario" />
+          <NavigationProperty Name="SGF_PermisoBoton" Relationship="SGFModel.FK_SFG_PermisoBoton_SGF_Permiso" FromRole="SGF_Permiso" ToRole="SGF_PermisoBoton" />
+        </EntityType>
+        <Association Name="FK_SGF_Bodega_SGF_Sucursal">
+          <End Type="SGFModel.SGF_Sucursal" Role="SGF_Sucursal" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Bodega" Role="SGF_Bodega" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Sucursal">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="SGF_Bodega">
+              <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Boton_SGF_Formulario">
+          <End Type="SGFModel.SGF_Formulario" Role="SGF_Formulario" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Boton" Role="SGF_Boton" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Formulario">
+              <PropertyRef Name="FormularioID" />
+            </Principal>
+            <Dependent Role="SGF_Boton">
+              <PropertyRef Name="FormularioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Permiso_SGF_Formulario">
+          <End Type="SGFModel.SGF_Formulario" Role="SGF_Formulario" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Permiso" Role="SGF_Permiso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Formulario">
+              <PropertyRef Name="FormularioID" />
+            </Principal>
+            <Dependent Role="SGF_Permiso">
+              <PropertyRef Name="FormularioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SGF_Usuario">
+          <Key>
+            <PropertyRef Name="UsuarioID" />
+          </Key>
+          <Property Name="UsuarioID" Type="Guid" Nullable="false" />
+          <Property Name="PersonaID" Type="Guid" Nullable="false" />
+          <Property Name="TipoUsuarioID" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CambioPassword" Type="Boolean" />
+          <Property Name="Bloqueado" Type="Boolean" />
+          <Property Name="NumeroIntentos" Type="Int32" />
+          <Property Name="IP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombrePC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaExpiracion" Type="DateTime" Precision="3" />
+          <Property Name="FechaActualiza" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioActualiza" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Observacion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_Permiso" Relationship="SGFModel.FK_SGF_Permiso_SGF_Usuario" FromRole="SGF_Usuario" ToRole="SGF_Permiso" />
+          <NavigationProperty Name="SGF_TipoUsuario" Relationship="SGFModel.FK_SGF_Usuario_SGF_TipoUsuario" FromRole="SGF_Usuario" ToRole="SGF_TipoUsuario" />
+          <NavigationProperty Name="SGF_Persona" Relationship="SGFModel.FK_SGF_Usuario_SGF_Persona" FromRole="SGF_Usuario" ToRole="SGF_Persona" />
+        </EntityType>
+        <Association Name="FK_SGF_Permiso_SGF_Usuario">
+          <End Type="SGFModel.SGF_Usuario" Role="SGF_Usuario" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Permiso" Role="SGF_Permiso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Usuario">
+              <PropertyRef Name="UsuarioID" />
+            </Principal>
+            <Dependent Role="SGF_Permiso">
+              <PropertyRef Name="UsuarioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Usuario_SGF_TipoUsuario">
+          <End Type="SGFModel.SGF_TipoUsuario" Role="SGF_TipoUsuario" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Usuario" Role="SGF_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_TipoUsuario">
+              <PropertyRef Name="TipoUsuarioID" />
+            </Principal>
+            <Dependent Role="SGF_Usuario">
+              <PropertyRef Name="TipoUsuarioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SGF_Modulo">
+          <Key>
+            <PropertyRef Name="ModuloID" />
+          </Key>
+          <Property Name="ModuloID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_Formulario" Relationship="SGFModel.FK_SGF_Formulario_SGF_Modulo" FromRole="SGF_Modulo" ToRole="SGF_Formulario" />
+        </EntityType>
+        <EntityType Name="SGF_PermisoBoton">
+          <Key>
+            <PropertyRef Name="PermisoBotonID" />
+          </Key>
+          <Property Name="PermisoBotonID" Type="Guid" Nullable="false" />
+          <Property Name="PermisoID" Type="Guid" Nullable="false" />
+          <Property Name="FormularioID" Type="Guid" Nullable="false" />
+          <Property Name="BotonID" Type="Guid" Nullable="false" />
+          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_Permiso" Relationship="SGFModel.FK_SFG_PermisoBoton_SGF_Permiso" FromRole="SGF_PermisoBoton" ToRole="SGF_Permiso" />
+        </EntityType>
+        <Association Name="FK_SGF_Formulario_SGF_Modulo">
+          <End Type="SGFModel.SGF_Modulo" Role="SGF_Modulo" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Formulario" Role="SGF_Formulario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Modulo">
+              <PropertyRef Name="ModuloID" />
+            </Principal>
+            <Dependent Role="SGF_Formulario">
+              <PropertyRef Name="ModuloID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SFG_PermisoBoton_SGF_Permiso">
+          <End Type="SGFModel.SGF_Permiso" Role="SGF_Permiso" Multiplicity="1" />
+          <End Type="SGFModel.SGF_PermisoBoton" Role="SGF_PermisoBoton" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Permiso">
+              <PropertyRef Name="PermisoID" />
+            </Principal>
+            <Dependent Role="SGF_PermisoBoton">
+              <PropertyRef Name="PermisoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SEG_Formularios_VTA">
+          <Key>
+            <PropertyRef Name="PermisoID" />
+            <PropertyRef Name="FormularioID" />
+            <PropertyRef Name="UsuarioID" />
+            <PropertyRef Name="Modulo" />
+            <PropertyRef Name="Formulario" />
+            <PropertyRef Name="ModuloID" />
+            <PropertyRef Name="EstadoModulo" />
+            <PropertyRef Name="Estadoformulario" />
+            <PropertyRef Name="EstadoUsuario" />
+          </Key>
+          <Property Name="PermisoID" Type="Guid" Nullable="false" />
+          <Property Name="FormularioID" Type="Guid" Nullable="false" />
+          <Property Name="UsuarioID" Type="Guid" Nullable="false" />
+          <Property Name="Modulo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Formulario" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Agregar" Type="Boolean" />
+          <Property Name="Editar" Type="Boolean" />
+          <Property Name="Eliminar" Type="Boolean" />
+          <Property Name="Imprimir" Type="Boolean" />
+          <Property Name="Value" Type="Int16" />
+          <Property Name="EstadoPermiso" Type="Int16" />
+          <Property Name="ModuloID" Type="Guid" Nullable="false" />
+          <Property Name="FormularioPath" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoModulo" Type="Int16" Nullable="false" />
+          <Property Name="Estadoformulario" Type="Int16" Nullable="false" />
+          <Property Name="EstadoUsuario" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEG_Usuarios_VTA">
+          <Key>
+            <PropertyRef Name="PersonaID" />
+            <PropertyRef Name="Identificacion" />
+            <PropertyRef Name="TipoPersona" />
+            <PropertyRef Name="EstadoPersona" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="TipoUsuario" />
+            <PropertyRef Name="AppID" />
+            <PropertyRef Name="EstadoUsuario" />
+            <PropertyRef Name="TipoIdentificacion" />
+            <PropertyRef Name="UsuarioID" />
+          </Key>
+          <Property Name="PersonaID" Type="Guid" Nullable="false" />
+          <Property Name="Identificacion" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Codigo" Type="Int32" />
+          <Property Name="FechaIngreso" Type="DateTime" Precision="3" />
+          <Property Name="TipoPersona" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoPersona" Type="Int16" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TipoUsuario" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="AppID" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoUsuario" Type="Int16" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Cargo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TipoIdentificacion" Type="Int16" Nullable="false" />
+          <Property Name="UsuarioID" Type="Guid" Nullable="false" />
+          <Property Name="NombreCompleto" Type="String" MaxLength="278" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SGF_ParametrosPassword">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="LongitudMinima" Type="Int32" />
+          <Property Name="NumCaracteresEspeciales" Type="Int32" />
+          <Property Name="NumMayusculas" Type="Int32" />
+          <Property Name="NumMinusculas" Type="Int32" />
+          <Property Name="NumNumeros" Type="Int32" />
+          <Property Name="NumIntentos" Type="Int32" />
+          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int16" />
+        </EntityType>
+        <EntityType Name="SGF_Persona">
+          <Key>
+            <PropertyRef Name="PersonaID" />
+          </Key>
+          <Property Name="PersonaID" Type="Guid" Nullable="false" />
+          <Property Name="TipoPersonaID" Type="Guid" Nullable="false" />
+          <Property Name="TipoIdentificacion" Type="Int16" Nullable="false" />
+          <Property Name="Identificacion" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Codigo" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NombreComercial" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RepresentanteLegal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IdentificacionRepresentante" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Pais" Type="Guid" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
+          <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Genero" Type="Guid" />
+          <Property Name="EstadoCivil" Type="Guid" />
+          <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Cargo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FechaIngreso" Type="DateTime" Precision="3" />
+          <Property Name="FechaExpiracion" Type="DateTime" Precision="3" />
+          <Property Name="FechaActualiza" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioActualiza" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Observacion" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_ConfigurarPersonaEmpresa" Relationship="SGFModel.FK_SGF_ConfigurarPersonaEmpresa_SGF_Persona" FromRole="SGF_Persona" ToRole="SGF_ConfigurarPersonaEmpresa" />
+          <NavigationProperty Name="SGF_TipoPersona" Relationship="SGFModel.FK_SGF_Persona_SGF_TipoPersona" FromRole="SGF_Persona" ToRole="SGF_TipoPersona" />
+          <NavigationProperty Name="SGF_Usuario" Relationship="SGFModel.FK_SGF_Usuario_SGF_Persona" FromRole="SGF_Persona" ToRole="SGF_Usuario" />
+        </EntityType>
+        <EntityType Name="SGF_Persona_VTA">
+          <Key>
+            <PropertyRef Name="PersonaID" />
+            <PropertyRef Name="TipoPersonaID" />
+            <PropertyRef Name="TipoIdentificacion" />
+            <PropertyRef Name="Identificacion" />
+            <PropertyRef Name="UsuarioCreacion" />
+            <PropertyRef Name="FechaCreacion" />
+            <PropertyRef Name="EstadoPersona" />
+            <PropertyRef Name="TipoPersonaNombre" />
+            <PropertyRef Name="Descripcion" />
+          </Key>
+          <Property Name="PersonaID" Type="Guid" Nullable="false" />
+          <Property Name="TipoPersonaID" Type="Guid" Nullable="false" />
+          <Property Name="TipoIdentificacion" Type="Int16" Nullable="false" />
+          <Property Name="Identificacion" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Codigo" Type="Int32" />
+          <Property Name="NombrePersona" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NombreComercial" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IdentificacionRepresentante" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="RepresentanteLegal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PaisID" Type="Guid" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
+          <Property Name="Genero" Type="Guid" />
+          <Property Name="EstadoCivil" Type="Guid" />
+          <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Cargo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FechaIngreso" Type="DateTime" Precision="3" />
+          <Property Name="FechaExpiracion" Type="DateTime" Precision="3" />
+          <Property Name="FechaActualiza" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioActualiza" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Observacion" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="EstadoPersona" Type="Int16" Nullable="false" />
+          <Property Name="TipoPersonaNombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="EstadoTipoPersona" Type="Boolean" />
+          <Property Name="TipoIdentificacionText" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="GeneroText" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoCivilText" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Pais" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_SGF_ConfigurarPersonaEmpresa_SGF_Persona">
+          <End Type="SGFModel.SGF_Persona" Role="SGF_Persona" Multiplicity="1" />
+          <End Type="SGFModel.SGF_ConfigurarPersonaEmpresa" Role="SGF_ConfigurarPersonaEmpresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Persona">
+              <PropertyRef Name="PersonaID" />
+            </Principal>
+            <Dependent Role="SGF_ConfigurarPersonaEmpresa">
+              <PropertyRef Name="PersonaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Persona_SGF_TipoPersona">
+          <End Type="SGFModel.SGF_TipoPersona" Role="SGF_TipoPersona" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Persona" Role="SGF_Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_TipoPersona">
+              <PropertyRef Name="TipoPersonaID" />
+            </Principal>
+            <Dependent Role="SGF_Persona">
+              <PropertyRef Name="TipoPersonaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Usuario_SGF_Persona">
+          <End Type="SGFModel.SGF_Persona" Role="SGF_Persona" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Usuario" Role="SGF_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Persona">
+              <PropertyRef Name="PersonaID" />
+            </Principal>
+            <Dependent Role="SGF_Usuario">
+              <PropertyRef Name="PersonaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SGF_Usuario_VTA">
+          <Key>
+            <PropertyRef Name="UsuarioID" />
+            <PropertyRef Name="Identificacion" />
+            <PropertyRef Name="TipoPersonaID" />
+            <PropertyRef Name="TipoPersona" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="TipoUsuario" />
+            <PropertyRef Name="EstadoUsuario" />
+            <PropertyRef Name="TipoIdentificacion" />
+          </Key>
+          <Property Name="UsuarioID" Type="Guid" Nullable="false" />
+          <Property Name="Identificacion" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Codigo" Type="Int32" />
+          <Property Name="TipoPersonaID" Type="Guid" Nullable="false" />
+          <Property Name="TipoPersona" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoUsuario" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoUsuario" Type="Int16" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Cargo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TipoIdentificacion" Type="Int16" Nullable="false" />
+          <Property Name="NombreCompleto" Type="String" MaxLength="278" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SGF_Formulario_VTA">
+          <Key>
+            <PropertyRef Name="FormularioID" />
+            <PropertyRef Name="NombreFormulario" />
+            <PropertyRef Name="EstadoFormulario" />
+            <PropertyRef Name="ModuloID" />
+            <PropertyRef Name="NombreModulo" />
+            <PropertyRef Name="EstadoModulo" />
+          </Key>
+          <Property Name="FormularioID" Type="Guid" Nullable="false" />
+          <Property Name="Codigo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NombreFormulario" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoFormulario" Type="Int16" Nullable="false" />
+          <Property Name="ModuloID" Type="Guid" Nullable="false" />
+          <Property Name="NombreModulo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoModulo" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEG_Botones_VTA">
+          <Key>
+            <PropertyRef Name="PermisoBotonID" />
+            <PropertyRef Name="PermisoID" />
+            <PropertyRef Name="FormularioID" />
+            <PropertyRef Name="UsuarioID" />
+            <PropertyRef Name="Formulario" />
+            <PropertyRef Name="BotonID" />
+            <PropertyRef Name="Boton" />
+            <PropertyRef Name="EstadoBoton" />
+          </Key>
+          <Property Name="PermisoBotonID" Type="Guid" Nullable="false" />
+          <Property Name="PermisoID" Type="Guid" Nullable="false" />
+          <Property Name="FormularioID" Type="Guid" Nullable="false" />
+          <Property Name="UsuarioID" Type="Guid" Nullable="false" />
+          <Property Name="Formulario" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Agregar" Type="Boolean" />
+          <Property Name="Editar" Type="Boolean" />
+          <Property Name="Eliminar" Type="Boolean" />
+          <Property Name="Imprimir" Type="Boolean" />
+          <Property Name="Value" Type="Int16" />
+          <Property Name="EstadoPermiso" Type="Int16" />
+          <Property Name="BotonID" Type="Guid" Nullable="false" />
+          <Property Name="Boton" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoBoton" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Clasificador_VTA">
+          <Key>
+            <PropertyRef Name="ClasificadorID" />
+            <PropertyRef Name="TipoClasificadorID" />
+          </Key>
+          <Property Name="ClasificadorID" Type="Guid" Nullable="false" />
+          <Property Name="NombreClasificador" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="TipoClasificadorID" Type="Guid" Nullable="false" />
+          <Property Name="NombreTipoClasificador" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valor" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoClasificador" Type="Int16" />
+          <Property Name="EstadoTipoClasificador" Type="Int16" />
+        </EntityType>
+        <EntityType Name="SGF_ClasificadorParent_VTA">
+          <Key>
+            <PropertyRef Name="ClasificadorID" />
+            <PropertyRef Name="TipoClasificadorID" />
+          </Key>
+          <Property Name="ClasificadorID" Type="Guid" Nullable="false" />
+          <Property Name="NombreClasificador" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="TipoClasificadorID" Type="Guid" Nullable="false" />
+          <Property Name="NombreTipoClasificador" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valor" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoClasificador" Type="Int16" />
+          <Property Name="EstadoTipoClasificador" Type="Int16" />
+          <Property Name="ParentID" Type="Guid" />
+          <Property Name="NombreParent" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoParent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ValorParent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SGF_LineaAerea">
+          <Key>
+            <PropertyRef Name="LineaAereaID" />
+          </Key>
+          <Property Name="LineaAereaID" Type="Guid" Nullable="false" />
+          <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CedulaRUC" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoCAE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoSRI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PrefijoGuia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Observacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SGF_Producto">
+          <Key>
+            <PropertyRef Name="ProductoID" />
+          </Key>
+          <Property Name="ProductoID" Type="Guid" Nullable="false" />
+          <Property Name="VariedadID" Type="Guid" Nullable="false" />
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CalidadID" Type="Guid" Nullable="false" />
+          <Property Name="LongitudID" Type="Guid" Nullable="false" />
+          <Property Name="TalloID" Type="Guid" Nullable="false" />
+          <Property Name="MercadoID" Type="Guid" />
+          <Property Name="PaisID" Type="Guid" />
+          <Property Name="Descripcion" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="ValorRefCompra" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ValorRefVenta" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SGF_Variedad" Relationship="SGFModel.FK_SGF_Producto_SGF_Variedad" FromRole="SGF_Producto" ToRole="SGF_Variedad" />
+        </EntityType>
+        <EntityType Name="SGF_Vendedor">
+          <Key>
+            <PropertyRef Name="VendedorID" />
+          </Key>
+          <Property Name="VendedorID" Type="Guid" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Identificacion" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Variedad">
+          <Key>
+            <PropertyRef Name="VariedadID" />
+          </Key>
+          <Property Name="VariedadID" Type="Guid" Nullable="false" />
+          <Property Name="TipoFlorID" Type="Guid" Nullable="false" />
+          <Property Name="ColorID" Type="Guid" Nullable="false" />
+          <Property Name="CalidadID" Type="Guid" Nullable="false" />
+          <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="ObtentorID" Type="Guid" />
+          <Property Name="ObtentorNombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Rotacion" Type="Int32" />
+          <Property Name="IndProdMensual" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="LongitudIDMin" Type="Guid" />
+          <Property Name="LongitudIDMax" Type="Guid" />
+          <Property Name="TamanoBoton" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="NumeroPetalos" Type="Int32" />
+          <Property Name="Ciclo" Type="Int32" />
+          <Property Name="DiasFlorero" Type="Int32" />
+          <Property Name="Observaciones" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int16" />
+          <NavigationProperty Name="SGF_Producto" Relationship="SGFModel.FK_SGF_Producto_SGF_Variedad" FromRole="SGF_Variedad" ToRole="SGF_Producto" />
+        </EntityType>
+        <EntityType Name="SGF_Variedad_VTA">
+          <Key>
+            <PropertyRef Name="VariedadID" />
+            <PropertyRef Name="TipoFlorID" />
+            <PropertyRef Name="ColorID" />
+            <PropertyRef Name="CalidadID" />
+          </Key>
+          <Property Name="VariedadID" Type="Guid" Nullable="false" />
+          <Property Name="TipoFlorID" Type="Guid" Nullable="false" />
+          <Property Name="ColorID" Type="Guid" Nullable="false" />
+          <Property Name="CalidadID" Type="Guid" Nullable="false" />
+          <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreVariedad" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="ObtentorID" Type="Guid" />
+          <Property Name="ObtentorNombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Rotacion" Type="Int32" />
+          <Property Name="IndProdMensual" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="LongitudIDMin" Type="Guid" />
+          <Property Name="LongitudIDMax" Type="Guid" />
+          <Property Name="TamanoBoton" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="NumeroPetalos" Type="Int32" />
+          <Property Name="Ciclo" Type="Int32" />
+          <Property Name="DiasFlorero" Type="Int32" />
+          <Property Name="Observaciones" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int16" />
+          <Property Name="TipoFlor" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Color" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Calidad" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LongitudMin" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="LongitudMax" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_SGF_Producto_SGF_Variedad">
+          <End Type="SGFModel.SGF_Variedad" Role="SGF_Variedad" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Producto" Role="SGF_Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Variedad">
+              <PropertyRef Name="VariedadID" />
+            </Principal>
+            <Dependent Role="SGF_Producto">
+              <PropertyRef Name="VariedadID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="REINAModelStoreContainer" CdmEntityContainer="DataModel" >
+          <EntitySetMapping Name="SGF_Clasificador">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Clasificador">
+              <MappingFragment StoreEntitySet="SGF_Clasificador">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="TipoClasificadorID" ColumnName="TipoClasificadorID" />
+                <ScalarProperty Name="ClasificadorID" ColumnName="ClasificadorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_ConfigurarPersonaEmpresa">
+            <EntityTypeMapping TypeName="SGFModel.SGF_ConfigurarPersonaEmpresa">
+              <MappingFragment StoreEntitySet="SGF_ConfigurarPersonaEmpresa">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="PersonaID" ColumnName="PersonaID" />
+                <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Empresa">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Empresa">
+              <MappingFragment StoreEntitySet="SGF_Empresa">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="CedulaRepresentante" ColumnName="CedulaRepresentante" />
+                <ScalarProperty Name="RepresentanteLegal" ColumnName="RepresentanteLegal" />
+                <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="RUC" ColumnName="RUC" />
+                <ScalarProperty Name="GrupoID" ColumnName="GrupoID" />
+                <ScalarProperty Name="EmpresaID" ColumnName="EmpresaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Grupo">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Grupo">
+              <MappingFragment StoreEntitySet="SGF_Grupo">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="GrupoID" ColumnName="GrupoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Sucursal">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Sucursal">
+              <MappingFragment StoreEntitySet="SGF_Sucursal">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="EmpresaID" ColumnName="EmpresaID" />
+                <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_TipoClasificador">
+            <EntityTypeMapping TypeName="SGFModel.SGF_TipoClasificador">
+              <MappingFragment StoreEntitySet="SGF_TipoClasificador">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="TipoClasificadorID" ColumnName="TipoClasificadorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_TipoPersona">
+            <EntityTypeMapping TypeName="SGFModel.SGF_TipoPersona">
+              <MappingFragment StoreEntitySet="SGF_TipoPersona">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="TipoPersonaID" ColumnName="TipoPersonaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_TipoUsuario">
+            <EntityTypeMapping TypeName="SGFModel.SGF_TipoUsuario">
+              <MappingFragment StoreEntitySet="SGF_TipoUsuario">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="TipoUsuarioID" ColumnName="TipoUsuarioID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Auditoria">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Auditoria">
+              <MappingFragment StoreEntitySet="SGF_Auditoria">
+                <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+                <ScalarProperty Name="namePC" ColumnName="namePC" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="RegistroID" ColumnName="RegistroID" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="ValorNuevo" ColumnName="ValorNuevo" />
+                <ScalarProperty Name="ValorAnterior" ColumnName="ValorAnterior" />
+                <ScalarProperty Name="Campo" ColumnName="Campo" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Tabla" ColumnName="Tabla" />
+                <ScalarProperty Name="AuditoriaID" ColumnName="AuditoriaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Bodega">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Bodega">
+              <MappingFragment StoreEntitySet="SGF_Bodega">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
+                <ScalarProperty Name="BodegaID" ColumnName="BodegaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Boton">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Boton">
+              <MappingFragment StoreEntitySet="SGF_Boton">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="FormularioID" ColumnName="FormularioID" />
+                <ScalarProperty Name="BotonID" ColumnName="BotonID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Formulario">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Formulario">
+              <MappingFragment StoreEntitySet="SGF_Formulario">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="ModuloID" ColumnName="ModuloID" />
+                <ScalarProperty Name="FormularioID" ColumnName="FormularioID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Permiso">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Permiso">
+              <MappingFragment StoreEntitySet="SGF_Permiso">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Imprimir" ColumnName="Imprimir" />
+                <ScalarProperty Name="Procesar" ColumnName="Procesar" />
+                <ScalarProperty Name="Eliminar" ColumnName="Eliminar" />
+                <ScalarProperty Name="Editar" ColumnName="Editar" />
+                <ScalarProperty Name="Agregar" ColumnName="Agregar" />
+                <ScalarProperty Name="FormularioID" ColumnName="FormularioID" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+                <ScalarProperty Name="PermisoID" ColumnName="PermisoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Usuario">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Usuario">
+              <MappingFragment StoreEntitySet="SGF_Usuario">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="UsuarioActualiza" ColumnName="UsuarioActualiza" />
+                <ScalarProperty Name="FechaActualiza" ColumnName="FechaActualiza" />
+                <ScalarProperty Name="FechaExpiracion" ColumnName="FechaExpiracion" />
+                <ScalarProperty Name="NombrePC" ColumnName="NombrePC" />
+                <ScalarProperty Name="MAC" ColumnName="MAC" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="NumeroIntentos" ColumnName="NumeroIntentos" />
+                <ScalarProperty Name="Bloqueado" ColumnName="Bloqueado" />
+                <ScalarProperty Name="CambioPassword" ColumnName="CambioPassword" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="TipoUsuarioID" ColumnName="TipoUsuarioID" />
+                <ScalarProperty Name="PersonaID" ColumnName="PersonaID" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Modulo">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Modulo">
+              <MappingFragment StoreEntitySet="SGF_Modulo">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="ModuloID" ColumnName="ModuloID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_PermisoBoton">
+            <EntityTypeMapping TypeName="SGFModel.SGF_PermisoBoton">
+              <MappingFragment StoreEntitySet="SGF_PermisoBoton">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="BotonID" ColumnName="BotonID" />
+                <ScalarProperty Name="FormularioID" ColumnName="FormularioID" />
+                <ScalarProperty Name="PermisoID" ColumnName="PermisoID" />
+                <ScalarProperty Name="PermisoBotonID" ColumnName="PermisoBotonID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEG_Formularios_VTA">
+            <EntityTypeMapping TypeName="SGFModel.SEG_Formularios_VTA">
+              <MappingFragment StoreEntitySet="SEG_Formularios_VTA">
+                <ScalarProperty Name="EstadoUsuario" ColumnName="EstadoUsuario" />
+                <ScalarProperty Name="Estadoformulario" ColumnName="Estadoformulario" />
+                <ScalarProperty Name="EstadoModulo" ColumnName="EstadoModulo" />
+                <ScalarProperty Name="FormularioPath" ColumnName="FormularioPath" />
+                <ScalarProperty Name="ModuloID" ColumnName="ModuloID" />
+                <ScalarProperty Name="EstadoPermiso" ColumnName="EstadoPermiso" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Imprimir" ColumnName="Imprimir" />
+                <ScalarProperty Name="Eliminar" ColumnName="Eliminar" />
+                <ScalarProperty Name="Editar" ColumnName="Editar" />
+                <ScalarProperty Name="Agregar" ColumnName="Agregar" />
+                <ScalarProperty Name="Formulario" ColumnName="Formulario" />
+                <ScalarProperty Name="Modulo" ColumnName="Modulo" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+                <ScalarProperty Name="FormularioID" ColumnName="FormularioID" />
+                <ScalarProperty Name="PermisoID" ColumnName="PermisoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEG_Usuarios_VTA">
+            <EntityTypeMapping TypeName="SGFModel.SEG_Usuarios_VTA">
+              <MappingFragment StoreEntitySet="SEG_Usuarios_VTA">
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+                <ScalarProperty Name="TipoIdentificacion" ColumnName="TipoIdentificacion" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EstadoUsuario" ColumnName="EstadoUsuario" />
+                <ScalarProperty Name="AppID" ColumnName="AppID" />
+                <ScalarProperty Name="TipoUsuario" ColumnName="TipoUsuario" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="EstadoPersona" ColumnName="EstadoPersona" />
+                <ScalarProperty Name="TipoPersona" ColumnName="TipoPersona" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="PersonaID" ColumnName="PersonaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_ParametrosPassword">
+            <EntityTypeMapping TypeName="SGFModel.SGF_ParametrosPassword">
+              <MappingFragment StoreEntitySet="SGF_ParametrosPassword">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="NumIntentos" ColumnName="NumIntentos" />
+                <ScalarProperty Name="NumNumeros" ColumnName="NumNumeros" />
+                <ScalarProperty Name="NumMinusculas" ColumnName="NumMinusculas" />
+                <ScalarProperty Name="NumMayusculas" ColumnName="NumMayusculas" />
+                <ScalarProperty Name="NumCaracteresEspeciales" ColumnName="NumCaracteresEspeciales" />
+                <ScalarProperty Name="LongitudMinima" ColumnName="LongitudMinima" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Persona">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Persona">
+              <MappingFragment StoreEntitySet="SGF_Persona">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="UsuarioActualiza" ColumnName="UsuarioActualiza" />
+                <ScalarProperty Name="FechaActualiza" ColumnName="FechaActualiza" />
+                <ScalarProperty Name="FechaExpiracion" ColumnName="FechaExpiracion" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="IdentificacionRepresentante" ColumnName="IdentificacionRepresentante" />
+                <ScalarProperty Name="RepresentanteLegal" ColumnName="RepresentanteLegal" />
+                <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="TipoIdentificacion" ColumnName="TipoIdentificacion" />
+                <ScalarProperty Name="TipoPersonaID" ColumnName="TipoPersonaID" />
+                <ScalarProperty Name="PersonaID" ColumnName="PersonaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Persona_VTA">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Persona_VTA">
+              <MappingFragment StoreEntitySet="SGF_Persona_VTA">
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="EstadoCivilText" ColumnName="EstadoCivilText" />
+                <ScalarProperty Name="GeneroText" ColumnName="GeneroText" />
+                <ScalarProperty Name="TipoIdentificacionText" ColumnName="TipoIdentificacionText" />
+                <ScalarProperty Name="EstadoTipoPersona" ColumnName="EstadoTipoPersona" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="TipoPersonaNombre" ColumnName="TipoPersonaNombre" />
+                <ScalarProperty Name="EstadoPersona" ColumnName="EstadoPersona" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="UsuarioActualiza" ColumnName="UsuarioActualiza" />
+                <ScalarProperty Name="FechaActualiza" ColumnName="FechaActualiza" />
+                <ScalarProperty Name="FechaExpiracion" ColumnName="FechaExpiracion" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="PaisID" ColumnName="PaisID" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RepresentanteLegal" ColumnName="RepresentanteLegal" />
+                <ScalarProperty Name="IdentificacionRepresentante" ColumnName="IdentificacionRepresentante" />
+                <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+                <ScalarProperty Name="NombrePersona" ColumnName="NombrePersona" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="TipoIdentificacion" ColumnName="TipoIdentificacion" />
+                <ScalarProperty Name="TipoPersonaID" ColumnName="TipoPersonaID" />
+                <ScalarProperty Name="PersonaID" ColumnName="PersonaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Usuario_VTA">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Usuario_VTA">
+              <MappingFragment StoreEntitySet="SGF_Usuario_VTA">
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+                <ScalarProperty Name="TipoIdentificacion" ColumnName="TipoIdentificacion" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EstadoUsuario" ColumnName="EstadoUsuario" />
+                <ScalarProperty Name="TipoUsuario" ColumnName="TipoUsuario" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="TipoPersona" ColumnName="TipoPersona" />
+                <ScalarProperty Name="TipoPersonaID" ColumnName="TipoPersonaID" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Formulario_VTA">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Formulario_VTA">
+              <MappingFragment StoreEntitySet="SGF_Formulario_VTA">
+                <ScalarProperty Name="EstadoModulo" ColumnName="EstadoModulo" />
+                <ScalarProperty Name="NombreModulo" ColumnName="NombreModulo" />
+                <ScalarProperty Name="ModuloID" ColumnName="ModuloID" />
+                <ScalarProperty Name="EstadoFormulario" ColumnName="EstadoFormulario" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="NombreFormulario" ColumnName="NombreFormulario" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="FormularioID" ColumnName="FormularioID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEG_Botones_VTA">
+            <EntityTypeMapping TypeName="SGFModel.SEG_Botones_VTA">
+              <MappingFragment StoreEntitySet="SEG_Botones_VTA">
+                <ScalarProperty Name="EstadoBoton" ColumnName="EstadoBoton" />
+                <ScalarProperty Name="Boton" ColumnName="Boton" />
+                <ScalarProperty Name="BotonID" ColumnName="BotonID" />
+                <ScalarProperty Name="EstadoPermiso" ColumnName="EstadoPermiso" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Imprimir" ColumnName="Imprimir" />
+                <ScalarProperty Name="Eliminar" ColumnName="Eliminar" />
+                <ScalarProperty Name="Editar" ColumnName="Editar" />
+                <ScalarProperty Name="Agregar" ColumnName="Agregar" />
+                <ScalarProperty Name="Formulario" ColumnName="Formulario" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+                <ScalarProperty Name="FormularioID" ColumnName="FormularioID" />
+                <ScalarProperty Name="PermisoID" ColumnName="PermisoID" />
+                <ScalarProperty Name="PermisoBotonID" ColumnName="PermisoBotonID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Clasificador_VTA">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Clasificador_VTA">
+              <MappingFragment StoreEntitySet="SGF_Clasificador_VTA">
+                <ScalarProperty Name="EstadoTipoClasificador" ColumnName="EstadoTipoClasificador" />
+                <ScalarProperty Name="EstadoClasificador" ColumnName="EstadoClasificador" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="NombreTipoClasificador" ColumnName="NombreTipoClasificador" />
+                <ScalarProperty Name="TipoClasificadorID" ColumnName="TipoClasificadorID" />
+                <ScalarProperty Name="NombreClasificador" ColumnName="NombreClasificador" />
+                <ScalarProperty Name="ClasificadorID" ColumnName="ClasificadorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_ClasificadorParent_VTA">
+            <EntityTypeMapping TypeName="SGFModel.SGF_ClasificadorParent_VTA">
+              <MappingFragment StoreEntitySet="SGF_ClasificadorParent_VTA">
+                <ScalarProperty Name="ValorParent" ColumnName="ValorParent" />
+                <ScalarProperty Name="CodigoParent" ColumnName="CodigoParent" />
+                <ScalarProperty Name="NombreParent" ColumnName="NombreParent" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="EstadoTipoClasificador" ColumnName="EstadoTipoClasificador" />
+                <ScalarProperty Name="EstadoClasificador" ColumnName="EstadoClasificador" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="NombreTipoClasificador" ColumnName="NombreTipoClasificador" />
+                <ScalarProperty Name="TipoClasificadorID" ColumnName="TipoClasificadorID" />
+                <ScalarProperty Name="NombreClasificador" ColumnName="NombreClasificador" />
+                <ScalarProperty Name="ClasificadorID" ColumnName="ClasificadorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_LineaAerea">
+            <EntityTypeMapping TypeName="SGFModel.SGF_LineaAerea">
+              <MappingFragment StoreEntitySet="SGF_LineaAerea">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PrefijoGuia" ColumnName="PrefijoGuia" />
+                <ScalarProperty Name="CodigoSRI" ColumnName="CodigoSRI" />
+                <ScalarProperty Name="CodigoCAE" ColumnName="CodigoCAE" />
+                <ScalarProperty Name="CedulaRUC" ColumnName="CedulaRUC" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="LineaAereaID" ColumnName="LineaAereaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Producto">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Producto">
+              <MappingFragment StoreEntitySet="SGF_Producto">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="ValorRefVenta" ColumnName="ValorRefVenta" />
+                <ScalarProperty Name="ValorRefCompra" ColumnName="ValorRefCompra" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="PaisID" ColumnName="PaisID" />
+                <ScalarProperty Name="MercadoID" ColumnName="MercadoID" />
+                <ScalarProperty Name="TalloID" ColumnName="TalloID" />
+                <ScalarProperty Name="LongitudID" ColumnName="LongitudID" />
+                <ScalarProperty Name="CalidadID" ColumnName="CalidadID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="VariedadID" ColumnName="VariedadID" />
+                <ScalarProperty Name="ProductoID" ColumnName="ProductoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Vendedor">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Vendedor">
+              <MappingFragment StoreEntitySet="SGF_Vendedor">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="VendedorID" ColumnName="VendedorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Variedad">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Variedad">
+              <MappingFragment StoreEntitySet="SGF_Variedad">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="DiasFlorero" ColumnName="DiasFlorero" />
+                <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+                <ScalarProperty Name="NumeroPetalos" ColumnName="NumeroPetalos" />
+                <ScalarProperty Name="TamanoBoton" ColumnName="TamanoBoton" />
+                <ScalarProperty Name="LongitudIDMax" ColumnName="LongitudIDMax" />
+                <ScalarProperty Name="LongitudIDMin" ColumnName="LongitudIDMin" />
+                <ScalarProperty Name="IndProdMensual" ColumnName="IndProdMensual" />
+                <ScalarProperty Name="Rotacion" ColumnName="Rotacion" />
+                <ScalarProperty Name="ObtentorNombre" ColumnName="ObtentorNombre" />
+                <ScalarProperty Name="ObtentorID" ColumnName="ObtentorID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="CalidadID" ColumnName="CalidadID" />
+                <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+                <ScalarProperty Name="TipoFlorID" ColumnName="TipoFlorID" />
+                <ScalarProperty Name="VariedadID" ColumnName="VariedadID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Variedad_VTA">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Variedad_VTA">
+              <MappingFragment StoreEntitySet="SGF_Variedad_VTA">
+                <ScalarProperty Name="LongitudMax" ColumnName="LongitudMax" />
+                <ScalarProperty Name="LongitudMin" ColumnName="LongitudMin" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Calidad" ColumnName="Calidad" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="TipoFlor" ColumnName="TipoFlor" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="DiasFlorero" ColumnName="DiasFlorero" />
+                <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+                <ScalarProperty Name="NumeroPetalos" ColumnName="NumeroPetalos" />
+                <ScalarProperty Name="TamanoBoton" ColumnName="TamanoBoton" />
+                <ScalarProperty Name="LongitudIDMax" ColumnName="LongitudIDMax" />
+                <ScalarProperty Name="LongitudIDMin" ColumnName="LongitudIDMin" />
+                <ScalarProperty Name="IndProdMensual" ColumnName="IndProdMensual" />
+                <ScalarProperty Name="Rotacion" ColumnName="Rotacion" />
+                <ScalarProperty Name="ObtentorNombre" ColumnName="ObtentorNombre" />
+                <ScalarProperty Name="ObtentorID" ColumnName="ObtentorID" />
+                <ScalarProperty Name="NombreVariedad" ColumnName="NombreVariedad" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="CalidadID" ColumnName="CalidadID" />
+                <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+                <ScalarProperty Name="TipoFlorID" ColumnName="TipoFlorID" />
+                <ScalarProperty Name="VariedadID" ColumnName="VariedadID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Predeterminado" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
