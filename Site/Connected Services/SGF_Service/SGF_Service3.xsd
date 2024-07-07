@@ -18,65 +18,6 @@
     <xs:attribute ref="ser:Ref" />
   </xs:complexType>
   <xs:element name="StructuralObject" nillable="true" type="tns:StructuralObject" />
-  <xs:complexType name="EntityReferenceOfSGF_ModuloMYlFw61k">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="SGF_Modulo" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:EntityReference">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="EntityReferenceOfSGF_ModuloMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_ModuloMYlFw61k" />
-  <xs:complexType name="EntityReference">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:RelatedEnd">
-        <xs:sequence>
-          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q2:EntityKey" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="EntityReference" nillable="true" type="tns:EntityReference" />
-  <xs:complexType name="RelatedEnd">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:element name="RelatedEnd" nillable="true" type="tns:RelatedEnd" />
-  <xs:complexType name="EntityReferenceOfSGF_FormularioMYlFw61k">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="SGF_Formulario" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:EntityReference">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="EntityReferenceOfSGF_FormularioMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_FormularioMYlFw61k" />
-  <xs:complexType name="EntityReferenceOfSGF_PermisoMYlFw61k">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="SGF_Permiso" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:EntityReference">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="EntityReferenceOfSGF_PermisoMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_PermisoMYlFw61k" />
   <xs:complexType name="EntityReferenceOfSGF_PersonaMYlFw61k">
     <xs:annotation>
       <xs:appinfo>
@@ -92,6 +33,35 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="EntityReferenceOfSGF_PersonaMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_PersonaMYlFw61k" />
+  <xs:complexType name="EntityReference">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RelatedEnd">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q2:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReference" nillable="true" type="tns:EntityReference" />
+  <xs:complexType name="RelatedEnd">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="RelatedEnd" nillable="true" type="tns:RelatedEnd" />
+  <xs:complexType name="EntityReferenceOfSGF_AlmacenMYlFw61k">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SGF_Almacen" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfSGF_AlmacenMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_AlmacenMYlFw61k" />
   <xs:complexType name="EntityReferenceOfSGF_SucursalMYlFw61k">
     <xs:annotation>
       <xs:appinfo>
@@ -107,6 +77,96 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="EntityReferenceOfSGF_SucursalMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_SucursalMYlFw61k" />
+  <xs:complexType name="EntityReferenceOfSGF_CampoCultivoMYlFw61k">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SGF_CampoCultivo" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfSGF_CampoCultivoMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_CampoCultivoMYlFw61k" />
+  <xs:complexType name="EntityReferenceOfSGF_CultivoAreaMYlFw61k">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SGF_CultivoArea" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfSGF_CultivoAreaMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_CultivoAreaMYlFw61k" />
+  <xs:complexType name="EntityReferenceOfSGF_CultivoBloqueMYlFw61k">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SGF_CultivoBloque" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfSGF_CultivoBloqueMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_CultivoBloqueMYlFw61k" />
+  <xs:complexType name="EntityReferenceOfSGF_CultivoCamaMYlFw61k">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SGF_CultivoCama" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfSGF_CultivoCamaMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_CultivoCamaMYlFw61k" />
+  <xs:complexType name="EntityReferenceOfSGF_CultivoNaveMYlFw61k">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SGF_CultivoNave" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfSGF_CultivoNaveMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_CultivoNaveMYlFw61k" />
+  <xs:complexType name="EntityReferenceOfSGF_CultivoLadoMYlFw61k">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SGF_CultivoLado" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfSGF_CultivoLadoMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_CultivoLadoMYlFw61k" />
   <xs:complexType name="EntityReferenceOfSGF_GrupoMYlFw61k">
     <xs:annotation>
       <xs:appinfo>
@@ -152,11 +212,11 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="EntityReferenceOfSGF_TipoPersonaMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_TipoPersonaMYlFw61k" />
-  <xs:complexType name="EntityReferenceOfSGF_TipoUsuarioMYlFw61k">
+  <xs:complexType name="EntityReferenceOfSGF_FormularioMYlFw61k">
     <xs:annotation>
       <xs:appinfo>
         <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="SGF_TipoUsuario" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+          <GenericParameter Name="SGF_Formulario" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
         </GenericType>
       </xs:appinfo>
     </xs:annotation>
@@ -166,7 +226,37 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="EntityReferenceOfSGF_TipoUsuarioMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_TipoUsuarioMYlFw61k" />
+  <xs:element name="EntityReferenceOfSGF_FormularioMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_FormularioMYlFw61k" />
+  <xs:complexType name="EntityReferenceOfSGF_ModuloMYlFw61k">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SGF_Modulo" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfSGF_ModuloMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_ModuloMYlFw61k" />
+  <xs:complexType name="EntityReferenceOfSGF_PermisoMYlFw61k">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SGF_Permiso" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfSGF_PermisoMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_PermisoMYlFw61k" />
   <xs:complexType name="EntityReferenceOfSGF_UsuarioMYlFw61k">
     <xs:annotation>
       <xs:appinfo>
@@ -182,11 +272,11 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="EntityReferenceOfSGF_UsuarioMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_UsuarioMYlFw61k" />
-  <xs:complexType name="EntityReferenceOfSGF_TipoClasificadorMYlFw61k">
+  <xs:complexType name="EntityReferenceOfSGF_TipoUsuarioMYlFw61k">
     <xs:annotation>
       <xs:appinfo>
         <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="SGF_TipoClasificador" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+          <GenericParameter Name="SGF_TipoUsuario" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
         </GenericType>
       </xs:appinfo>
     </xs:annotation>
@@ -196,7 +286,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="EntityReferenceOfSGF_TipoClasificadorMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_TipoClasificadorMYlFw61k" />
+  <xs:element name="EntityReferenceOfSGF_TipoUsuarioMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_TipoUsuarioMYlFw61k" />
   <xs:complexType name="EntityReferenceOfSGF_VariedadMYlFw61k">
     <xs:annotation>
       <xs:appinfo>
@@ -212,4 +302,19 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="EntityReferenceOfSGF_VariedadMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_VariedadMYlFw61k" />
+  <xs:complexType name="EntityReferenceOfSGF_TipoClasificadorMYlFw61k">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SGF_TipoClasificador" Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfSGF_TipoClasificadorMYlFw61k" nillable="true" type="tns:EntityReferenceOfSGF_TipoClasificadorMYlFw61k" />
 </xs:schema>

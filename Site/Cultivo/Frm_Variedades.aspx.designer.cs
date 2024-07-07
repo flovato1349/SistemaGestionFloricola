@@ -456,6 +456,24 @@ namespace SGF.Site.Cultivo
         protected global::Telerik.Web.UI.RadListBox rlb_Pais;
 
         /// <summary>
+        /// Control pnl_DetalleProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnl_DetalleProducto;
+
+        /// <summary>
+        /// Control gv_Producto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadGrid gv_Producto;
+
+        /// <summary>
         /// Control RadNotification1.
         /// </summary>
         /// <remarks>

@@ -8,6 +8,5 @@ namespace SGF.BussinessLogic
 {
     public partial class Logic
     {
-
     }
 }

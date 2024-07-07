@@ -2,178 +2,29 @@
 <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/SGF.DataAccess" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:57843/SGF_Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:import schemaLocation="http://localhost:57843/SGF_Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
-  <xs:complexType name="SGF_Auditoria">
+  <xs:complexType name="SGF_TipoPersona">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
         <xs:sequence>
-          <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="AuditoriaID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="RegistroID" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Tabla" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ValorAnterior" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ValorNuevo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="namePC" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_Auditoria" nillable="true" type="tns:SGF_Auditoria" />
-  <xs:complexType name="SGF_Boton">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Activo" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="BotonID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Estado" type="xs:short" />
-          <xs:element minOccurs="0" name="FormularioID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="SGF_Formulario" nillable="true" type="tns:SGF_Formulario" />
-          <xs:element minOccurs="0" name="SGF_FormularioReference" nillable="true" type="q2:EntityReferenceOfSGF_FormularioMYlFw61k" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_Boton" nillable="true" type="tns:SGF_Boton" />
-  <xs:complexType name="SGF_Formulario">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Estado" type="xs:short" />
-          <xs:element minOccurs="0" name="FormularioID" type="ser:guid" />
-          <xs:element minOccurs="0" name="ModuloID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:boolean" />
           <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="SGF_Boton" nillable="true" type="tns:ArrayOfSGF_Boton" />
-          <xs:element minOccurs="0" name="SGF_Modulo" nillable="true" type="tns:SGF_Modulo" />
-          <xs:element minOccurs="0" name="SGF_ModuloReference" nillable="true" type="q3:EntityReferenceOfSGF_ModuloMYlFw61k" />
-          <xs:element minOccurs="0" name="SGF_Permiso" nillable="true" type="tns:ArrayOfSGF_Permiso" />
+          <xs:element minOccurs="0" name="SGF_Persona" nillable="true" type="tns:ArrayOfSGF_Persona" />
+          <xs:element minOccurs="0" name="TipoPersonaID" type="ser:guid" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="SGF_Formulario" nillable="true" type="tns:SGF_Formulario" />
-  <xs:complexType name="ArrayOfSGF_Boton">
+  <xs:element name="SGF_TipoPersona" nillable="true" type="tns:SGF_TipoPersona" />
+  <xs:complexType name="ArrayOfSGF_Persona">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Boton" nillable="true" type="tns:SGF_Boton" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Persona" nillable="true" type="tns:SGF_Persona" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfSGF_Boton" nillable="true" type="tns:ArrayOfSGF_Boton" />
-  <xs:complexType name="SGF_Modulo">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Estado" type="xs:short" />
-          <xs:element minOccurs="0" name="ModuloID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="SGF_Formulario" nillable="true" type="tns:ArrayOfSGF_Formulario" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_Modulo" nillable="true" type="tns:SGF_Modulo" />
-  <xs:complexType name="ArrayOfSGF_Formulario">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Formulario" nillable="true" type="tns:SGF_Formulario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSGF_Formulario" nillable="true" type="tns:ArrayOfSGF_Formulario" />
-  <xs:complexType name="ArrayOfSGF_Permiso">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Permiso" nillable="true" type="tns:SGF_Permiso" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSGF_Permiso" nillable="true" type="tns:ArrayOfSGF_Permiso" />
-  <xs:complexType name="SGF_Permiso">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Agregar" nillable="true" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Editar" nillable="true" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Eliminar" nillable="true" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:short" />
-          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="FormularioID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Imprimir" nillable="true" type="xs:boolean" />
-          <xs:element minOccurs="0" name="PermisoID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Procesar" nillable="true" type="xs:boolean" />
-          <xs:element minOccurs="0" name="SGF_Formulario" nillable="true" type="tns:SGF_Formulario" />
-          <xs:element minOccurs="0" name="SGF_FormularioReference" nillable="true" type="q5:EntityReferenceOfSGF_FormularioMYlFw61k" />
-          <xs:element minOccurs="0" name="SGF_PermisoBoton" nillable="true" type="tns:ArrayOfSGF_PermisoBoton" />
-          <xs:element minOccurs="0" name="SGF_Usuario" nillable="true" type="tns:SGF_Usuario" />
-          <xs:element minOccurs="0" name="SGF_UsuarioReference" nillable="true" type="q5:EntityReferenceOfSGF_UsuarioMYlFw61k" />
-          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UsuarioID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:short" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_Permiso" nillable="true" type="tns:SGF_Permiso" />
-  <xs:complexType name="ArrayOfSGF_PermisoBoton">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_PermisoBoton" nillable="true" type="tns:SGF_PermisoBoton" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSGF_PermisoBoton" nillable="true" type="tns:ArrayOfSGF_PermisoBoton" />
-  <xs:complexType name="SGF_PermisoBoton">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="BotonID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Estado" type="xs:short" />
-          <xs:element minOccurs="0" name="FormularioID" type="ser:guid" />
-          <xs:element minOccurs="0" name="PermisoBotonID" type="ser:guid" />
-          <xs:element minOccurs="0" name="PermisoID" type="ser:guid" />
-          <xs:element minOccurs="0" name="SGF_Permiso" nillable="true" type="tns:SGF_Permiso" />
-          <xs:element minOccurs="0" name="SGF_PermisoReference" nillable="true" type="q6:EntityReferenceOfSGF_PermisoMYlFw61k" />
-          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_PermisoBoton" nillable="true" type="tns:SGF_PermisoBoton" />
-  <xs:complexType name="SGF_Usuario">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Bloqueado" nillable="true" type="xs:boolean" />
-          <xs:element minOccurs="0" name="CambioPassword" nillable="true" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Estado" type="xs:short" />
-          <xs:element minOccurs="0" name="FechaActualiza" nillable="true" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="FechaCreacion" nillable="true" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="FechaExpiracion" nillable="true" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NombrePC" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NumeroIntentos" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="PersonaID" type="ser:guid" />
-          <xs:element minOccurs="0" name="SGF_Permiso" nillable="true" type="tns:ArrayOfSGF_Permiso" />
-          <xs:element minOccurs="0" name="SGF_Persona" nillable="true" type="tns:SGF_Persona" />
-          <xs:element minOccurs="0" name="SGF_PersonaReference" nillable="true" type="q7:EntityReferenceOfSGF_PersonaMYlFw61k" />
-          <xs:element minOccurs="0" name="SGF_TipoUsuario" nillable="true" type="tns:SGF_TipoUsuario" />
-          <xs:element minOccurs="0" name="SGF_TipoUsuarioReference" nillable="true" type="q7:EntityReferenceOfSGF_TipoUsuarioMYlFw61k" />
-          <xs:element minOccurs="0" name="TipoUsuarioID" type="ser:guid" />
-          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UsuarioActualiza" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UsuarioID" type="ser:guid" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_Usuario" nillable="true" type="tns:SGF_Usuario" />
+  <xs:element name="ArrayOfSGF_Persona" nillable="true" type="tns:ArrayOfSGF_Persona" />
   <xs:complexType name="SGF_Persona">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:EntityObject">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Celular" nillable="true" type="xs:string" />
@@ -198,7 +49,7 @@
           <xs:element minOccurs="0" name="RepresentanteLegal" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="SGF_ConfigurarPersonaEmpresa" nillable="true" type="tns:ArrayOfSGF_ConfigurarPersonaEmpresa" />
           <xs:element minOccurs="0" name="SGF_TipoPersona" nillable="true" type="tns:SGF_TipoPersona" />
-          <xs:element minOccurs="0" name="SGF_TipoPersonaReference" nillable="true" type="q8:EntityReferenceOfSGF_TipoPersonaMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_TipoPersonaReference" nillable="true" type="q2:EntityReferenceOfSGF_TipoPersonaMYlFw61k" />
           <xs:element minOccurs="0" name="SGF_Usuario" nillable="true" type="tns:ArrayOfSGF_Usuario" />
           <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="TipoIdentificacion" type="xs:short" />
@@ -218,15 +69,15 @@
   <xs:element name="ArrayOfSGF_ConfigurarPersonaEmpresa" nillable="true" type="tns:ArrayOfSGF_ConfigurarPersonaEmpresa" />
   <xs:complexType name="SGF_ConfigurarPersonaEmpresa">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q9:EntityObject">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Estado" type="xs:short" />
           <xs:element minOccurs="0" name="ID" type="ser:guid" />
           <xs:element minOccurs="0" name="PersonaID" type="ser:guid" />
           <xs:element minOccurs="0" name="SGF_Persona" nillable="true" type="tns:SGF_Persona" />
-          <xs:element minOccurs="0" name="SGF_PersonaReference" nillable="true" type="q9:EntityReferenceOfSGF_PersonaMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_PersonaReference" nillable="true" type="q3:EntityReferenceOfSGF_PersonaMYlFw61k" />
           <xs:element minOccurs="0" name="SGF_Sucursal" nillable="true" type="tns:SGF_Sucursal" />
-          <xs:element minOccurs="0" name="SGF_SucursalReference" nillable="true" type="q9:EntityReferenceOfSGF_SucursalMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_SucursalReference" nillable="true" type="q3:EntityReferenceOfSGF_SucursalMYlFw61k" />
           <xs:element minOccurs="0" name="SucursalID" type="ser:guid" />
         </xs:sequence>
       </xs:extension>
@@ -235,16 +86,17 @@
   <xs:element name="SGF_ConfigurarPersonaEmpresa" nillable="true" type="tns:SGF_ConfigurarPersonaEmpresa" />
   <xs:complexType name="SGF_Sucursal">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q10:EntityObject">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="EmpresaID" type="ser:guid" />
           <xs:element minOccurs="0" name="Estado" type="xs:short" />
           <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="SGF_Bodega" nillable="true" type="tns:ArrayOfSGF_Bodega" />
+          <xs:element minOccurs="0" name="SGF_Almacen" nillable="true" type="tns:ArrayOfSGF_Almacen" />
+          <xs:element minOccurs="0" name="SGF_CampoCultivo" nillable="true" type="tns:ArrayOfSGF_CampoCultivo" />
           <xs:element minOccurs="0" name="SGF_ConfigurarPersonaEmpresa" nillable="true" type="tns:ArrayOfSGF_ConfigurarPersonaEmpresa" />
           <xs:element minOccurs="0" name="SGF_Empresa" nillable="true" type="tns:SGF_Empresa" />
-          <xs:element minOccurs="0" name="SGF_EmpresaReference" nillable="true" type="q10:EntityReferenceOfSGF_EmpresaMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_EmpresaReference" nillable="true" type="q4:EntityReferenceOfSGF_EmpresaMYlFw61k" />
           <xs:element minOccurs="0" name="SucursalID" type="ser:guid" />
           <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
         </xs:sequence>
@@ -252,6 +104,29 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="SGF_Sucursal" nillable="true" type="tns:SGF_Sucursal" />
+  <xs:complexType name="ArrayOfSGF_Almacen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Almacen" nillable="true" type="tns:SGF_Almacen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_Almacen" nillable="true" type="tns:ArrayOfSGF_Almacen" />
+  <xs:complexType name="SGF_Almacen">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AlmacenID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estado" type="xs:int" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SGF_Bodega" nillable="true" type="tns:ArrayOfSGF_Bodega" />
+          <xs:element minOccurs="0" name="SGF_Sucursal" nillable="true" type="tns:SGF_Sucursal" />
+          <xs:element minOccurs="0" name="SGF_SucursalReference" nillable="true" type="q5:EntityReferenceOfSGF_SucursalMYlFw61k" />
+          <xs:element minOccurs="0" name="SucursalID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Almacen" nillable="true" type="tns:SGF_Almacen" />
   <xs:complexType name="ArrayOfSGF_Bodega">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Bodega" nillable="true" type="tns:SGF_Bodega" />
@@ -260,23 +135,190 @@
   <xs:element name="ArrayOfSGF_Bodega" nillable="true" type="tns:ArrayOfSGF_Bodega" />
   <xs:complexType name="SGF_Bodega">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q11:EntityObject">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:EntityObject">
         <xs:sequence>
+          <xs:element minOccurs="0" name="AlmacenID" type="ser:guid" />
           <xs:element minOccurs="0" name="BodegaID" type="ser:guid" />
           <xs:element minOccurs="0" name="Estado" type="xs:short" />
           <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="SGF_Sucursal" nillable="true" type="tns:SGF_Sucursal" />
-          <xs:element minOccurs="0" name="SGF_SucursalReference" nillable="true" type="q11:EntityReferenceOfSGF_SucursalMYlFw61k" />
-          <xs:element minOccurs="0" name="SucursalID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SGF_Almacen" nillable="true" type="tns:SGF_Almacen" />
+          <xs:element minOccurs="0" name="SGF_AlmacenReference" nillable="true" type="q6:EntityReferenceOfSGF_AlmacenMYlFw61k" />
           <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="SGF_Bodega" nillable="true" type="tns:SGF_Bodega" />
-  <xs:complexType name="SGF_Empresa">
+  <xs:complexType name="ArrayOfSGF_CampoCultivo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_CampoCultivo" nillable="true" type="tns:SGF_CampoCultivo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_CampoCultivo" nillable="true" type="tns:ArrayOfSGF_CampoCultivo" />
+  <xs:complexType name="SGF_CampoCultivo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CampoCultivoID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estado" type="xs:int" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SGF_CultivoArea" nillable="true" type="tns:ArrayOfSGF_CultivoArea" />
+          <xs:element minOccurs="0" name="SGF_Sucursal" nillable="true" type="tns:SGF_Sucursal" />
+          <xs:element minOccurs="0" name="SGF_SucursalReference" nillable="true" type="q7:EntityReferenceOfSGF_SucursalMYlFw61k" />
+          <xs:element minOccurs="0" name="SucursalID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_CampoCultivo" nillable="true" type="tns:SGF_CampoCultivo" />
+  <xs:complexType name="ArrayOfSGF_CultivoArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_CultivoArea" nillable="true" type="tns:SGF_CultivoArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_CultivoArea" nillable="true" type="tns:ArrayOfSGF_CultivoArea" />
+  <xs:complexType name="SGF_CultivoArea">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AreaID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CampoCultivoID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CultivoAreaID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Estado" type="xs:int" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SGF_CampoCultivo" nillable="true" type="tns:SGF_CampoCultivo" />
+          <xs:element minOccurs="0" name="SGF_CampoCultivoReference" nillable="true" type="q8:EntityReferenceOfSGF_CampoCultivoMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_CultivoBloque" nillable="true" type="tns:ArrayOfSGF_CultivoBloque" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_CultivoArea" nillable="true" type="tns:SGF_CultivoArea" />
+  <xs:complexType name="ArrayOfSGF_CultivoBloque">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_CultivoBloque" nillable="true" type="tns:SGF_CultivoBloque" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_CultivoBloque" nillable="true" type="tns:ArrayOfSGF_CultivoBloque" />
+  <xs:complexType name="SGF_CultivoBloque">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q9:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BloqueID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CultivoAreaID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CultivoBloqueID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Estado" type="xs:int" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SGF_CultivoArea" nillable="true" type="tns:SGF_CultivoArea" />
+          <xs:element minOccurs="0" name="SGF_CultivoAreaReference" nillable="true" type="q9:EntityReferenceOfSGF_CultivoAreaMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_CultivoLado" nillable="true" type="tns:ArrayOfSGF_CultivoLado" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_CultivoBloque" nillable="true" type="tns:SGF_CultivoBloque" />
+  <xs:complexType name="ArrayOfSGF_CultivoLado">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_CultivoLado" nillable="true" type="tns:SGF_CultivoLado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_CultivoLado" nillable="true" type="tns:ArrayOfSGF_CultivoLado" />
+  <xs:complexType name="SGF_CultivoLado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q10:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CultivoBloqueID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CultivoLadoID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Estado" type="xs:int" />
+          <xs:element minOccurs="0" name="LadoID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SGF_CultivoBloque" nillable="true" type="tns:SGF_CultivoBloque" />
+          <xs:element minOccurs="0" name="SGF_CultivoBloqueReference" nillable="true" type="q10:EntityReferenceOfSGF_CultivoBloqueMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_CultivoNave" nillable="true" type="tns:ArrayOfSGF_CultivoNave" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_CultivoLado" nillable="true" type="tns:SGF_CultivoLado" />
+  <xs:complexType name="ArrayOfSGF_CultivoNave">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_CultivoNave" nillable="true" type="tns:SGF_CultivoNave" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_CultivoNave" nillable="true" type="tns:ArrayOfSGF_CultivoNave" />
+  <xs:complexType name="SGF_CultivoNave">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q11:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CultivoLadoID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CultivoNaveID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Estado" type="xs:int" />
+          <xs:element minOccurs="0" name="NaveID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SGF_CultivoCama" nillable="true" type="tns:ArrayOfSGF_CultivoCama" />
+          <xs:element minOccurs="0" name="SGF_CultivoLado" nillable="true" type="tns:SGF_CultivoLado" />
+          <xs:element minOccurs="0" name="SGF_CultivoLadoReference" nillable="true" type="q11:EntityReferenceOfSGF_CultivoLadoMYlFw61k" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_CultivoNave" nillable="true" type="tns:SGF_CultivoNave" />
+  <xs:complexType name="ArrayOfSGF_CultivoCama">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_CultivoCama" nillable="true" type="tns:SGF_CultivoCama" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_CultivoCama" nillable="true" type="tns:ArrayOfSGF_CultivoCama" />
+  <xs:complexType name="SGF_CultivoCama">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q12:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CamaID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CultivoCamaID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CultivoNaveID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Estado" type="xs:int" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SGF_CultivoCuadro" nillable="true" type="tns:ArrayOfSGF_CultivoCuadro" />
+          <xs:element minOccurs="0" name="SGF_CultivoNave" nillable="true" type="tns:SGF_CultivoNave" />
+          <xs:element minOccurs="0" name="SGF_CultivoNaveReference" nillable="true" type="q12:EntityReferenceOfSGF_CultivoNaveMYlFw61k" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_CultivoCama" nillable="true" type="tns:SGF_CultivoCama" />
+  <xs:complexType name="ArrayOfSGF_CultivoCuadro">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_CultivoCuadro" nillable="true" type="tns:SGF_CultivoCuadro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_CultivoCuadro" nillable="true" type="tns:ArrayOfSGF_CultivoCuadro" />
+  <xs:complexType name="SGF_CultivoCuadro">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q13:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CuadroID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CultivoCamaID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CultivoCuadroID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Estado" type="xs:int" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SGF_CultivoCama" nillable="true" type="tns:SGF_CultivoCama" />
+          <xs:element minOccurs="0" name="SGF_CultivoCamaReference" nillable="true" type="q13:EntityReferenceOfSGF_CultivoCamaMYlFw61k" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_CultivoCuadro" nillable="true" type="tns:SGF_CultivoCuadro" />
+  <xs:complexType name="SGF_Empresa">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q14:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="CedulaRepresentante" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Celular" nillable="true" type="xs:string" />
@@ -292,7 +334,7 @@
           <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="RepresentanteLegal" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="SGF_Grupo" nillable="true" type="tns:SGF_Grupo" />
-          <xs:element minOccurs="0" name="SGF_GrupoReference" nillable="true" type="q12:EntityReferenceOfSGF_GrupoMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_GrupoReference" nillable="true" type="q14:EntityReferenceOfSGF_GrupoMYlFw61k" />
           <xs:element minOccurs="0" name="SGF_Sucursal" nillable="true" type="tns:ArrayOfSGF_Sucursal" />
           <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
         </xs:sequence>
@@ -302,7 +344,7 @@
   <xs:element name="SGF_Empresa" nillable="true" type="tns:SGF_Empresa" />
   <xs:complexType name="SGF_Grupo">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q13:EntityObject">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q15:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Estado" type="xs:short" />
@@ -327,35 +369,163 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfSGF_Sucursal" nillable="true" type="tns:ArrayOfSGF_Sucursal" />
-  <xs:complexType name="SGF_TipoPersona">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q14:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="SGF_Persona" nillable="true" type="tns:ArrayOfSGF_Persona" />
-          <xs:element minOccurs="0" name="TipoPersonaID" type="ser:guid" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_TipoPersona" nillable="true" type="tns:SGF_TipoPersona" />
-  <xs:complexType name="ArrayOfSGF_Persona">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Persona" nillable="true" type="tns:SGF_Persona" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSGF_Persona" nillable="true" type="tns:ArrayOfSGF_Persona" />
   <xs:complexType name="ArrayOfSGF_Usuario">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Usuario" nillable="true" type="tns:SGF_Usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfSGF_Usuario" nillable="true" type="tns:ArrayOfSGF_Usuario" />
+  <xs:complexType name="SGF_Usuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q16:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bloqueado" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CambioPassword" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Estado" type="xs:short" />
+          <xs:element minOccurs="0" name="FechaActualiza" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaCreacion" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaExpiracion" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombrePC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroIntentos" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PersonaID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SGF_Permiso" nillable="true" type="tns:ArrayOfSGF_Permiso" />
+          <xs:element minOccurs="0" name="SGF_Persona" nillable="true" type="tns:SGF_Persona" />
+          <xs:element minOccurs="0" name="SGF_PersonaReference" nillable="true" type="q16:EntityReferenceOfSGF_PersonaMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_TipoUsuario" nillable="true" type="tns:SGF_TipoUsuario" />
+          <xs:element minOccurs="0" name="SGF_TipoUsuarioReference" nillable="true" type="q16:EntityReferenceOfSGF_TipoUsuarioMYlFw61k" />
+          <xs:element minOccurs="0" name="TipoUsuarioID" type="ser:guid" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioActualiza" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Usuario" nillable="true" type="tns:SGF_Usuario" />
+  <xs:complexType name="ArrayOfSGF_Permiso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Permiso" nillable="true" type="tns:SGF_Permiso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_Permiso" nillable="true" type="tns:ArrayOfSGF_Permiso" />
+  <xs:complexType name="SGF_Permiso">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q17:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Agregar" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Editar" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Eliminar" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FormularioID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Imprimir" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PermisoID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Procesar" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SGF_Formulario" nillable="true" type="tns:SGF_Formulario" />
+          <xs:element minOccurs="0" name="SGF_FormularioReference" nillable="true" type="q17:EntityReferenceOfSGF_FormularioMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_PermisoBoton" nillable="true" type="tns:ArrayOfSGF_PermisoBoton" />
+          <xs:element minOccurs="0" name="SGF_Usuario" nillable="true" type="tns:SGF_Usuario" />
+          <xs:element minOccurs="0" name="SGF_UsuarioReference" nillable="true" type="q17:EntityReferenceOfSGF_UsuarioMYlFw61k" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:short" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Permiso" nillable="true" type="tns:SGF_Permiso" />
+  <xs:complexType name="SGF_Formulario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q18:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estado" type="xs:short" />
+          <xs:element minOccurs="0" name="FormularioID" type="ser:guid" />
+          <xs:element minOccurs="0" name="ModuloID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SGF_Boton" nillable="true" type="tns:ArrayOfSGF_Boton" />
+          <xs:element minOccurs="0" name="SGF_Modulo" nillable="true" type="tns:SGF_Modulo" />
+          <xs:element minOccurs="0" name="SGF_ModuloReference" nillable="true" type="q18:EntityReferenceOfSGF_ModuloMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_Permiso" nillable="true" type="tns:ArrayOfSGF_Permiso" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Formulario" nillable="true" type="tns:SGF_Formulario" />
+  <xs:complexType name="ArrayOfSGF_Boton">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Boton" nillable="true" type="tns:SGF_Boton" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_Boton" nillable="true" type="tns:ArrayOfSGF_Boton" />
+  <xs:complexType name="SGF_Boton">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q19:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BotonID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Estado" type="xs:short" />
+          <xs:element minOccurs="0" name="FormularioID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SGF_Formulario" nillable="true" type="tns:SGF_Formulario" />
+          <xs:element minOccurs="0" name="SGF_FormularioReference" nillable="true" type="q19:EntityReferenceOfSGF_FormularioMYlFw61k" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Boton" nillable="true" type="tns:SGF_Boton" />
+  <xs:complexType name="SGF_Modulo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q20:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estado" type="xs:short" />
+          <xs:element minOccurs="0" name="ModuloID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SGF_Formulario" nillable="true" type="tns:ArrayOfSGF_Formulario" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Modulo" nillable="true" type="tns:SGF_Modulo" />
+  <xs:complexType name="ArrayOfSGF_Formulario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Formulario" nillable="true" type="tns:SGF_Formulario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_Formulario" nillable="true" type="tns:ArrayOfSGF_Formulario" />
+  <xs:complexType name="ArrayOfSGF_PermisoBoton">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_PermisoBoton" nillable="true" type="tns:SGF_PermisoBoton" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_PermisoBoton" nillable="true" type="tns:ArrayOfSGF_PermisoBoton" />
+  <xs:complexType name="SGF_PermisoBoton">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q21:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BotonID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Estado" type="xs:short" />
+          <xs:element minOccurs="0" name="FormularioID" type="ser:guid" />
+          <xs:element minOccurs="0" name="PermisoBotonID" type="ser:guid" />
+          <xs:element minOccurs="0" name="PermisoID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SGF_Permiso" nillable="true" type="tns:SGF_Permiso" />
+          <xs:element minOccurs="0" name="SGF_PermisoReference" nillable="true" type="q21:EntityReferenceOfSGF_PermisoMYlFw61k" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_PermisoBoton" nillable="true" type="tns:SGF_PermisoBoton" />
   <xs:complexType name="SGF_TipoUsuario">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q15:EntityObject">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q22:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:boolean" />
@@ -367,6 +537,177 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="SGF_TipoUsuario" nillable="true" type="tns:SGF_TipoUsuario" />
+  <xs:complexType name="ArrayOfSGF_TipoPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_TipoPersona" nillable="true" type="tns:SGF_TipoPersona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_TipoPersona" nillable="true" type="tns:ArrayOfSGF_TipoPersona" />
+  <xs:complexType name="ArrayOfSGF_TipoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_TipoUsuario" nillable="true" type="tns:SGF_TipoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_TipoUsuario" nillable="true" type="tns:ArrayOfSGF_TipoUsuario" />
+  <xs:complexType name="ArrayOfSGF_Usuario_VTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Usuario_VTA" nillable="true" type="tns:SGF_Usuario_VTA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_Usuario_VTA" nillable="true" type="tns:ArrayOfSGF_Usuario_VTA" />
+  <xs:complexType name="SGF_Usuario_VTA">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q23:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Celular" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstadoUsuario" type="xs:short" />
+          <xs:element minOccurs="0" name="Identificacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoIdentificacion" type="xs:short" />
+          <xs:element minOccurs="0" name="TipoPersona" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoPersonaID" type="ser:guid" />
+          <xs:element minOccurs="0" name="TipoUsuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Usuario_VTA" nillable="true" type="tns:SGF_Usuario_VTA" />
+  <xs:complexType name="SGF_Variedad">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q24:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CalidadID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Ciclo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColorID" type="ser:guid" />
+          <xs:element minOccurs="0" name="DiasFlorero" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IndProdMensual" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="LongitudIDMax" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="LongitudIDMin" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroPetalos" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ObtentorID" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="ObtentorNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rotacion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SGF_Producto" nillable="true" type="tns:ArrayOfSGF_Producto" />
+          <xs:element minOccurs="0" name="TamanoBoton" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TipoFlorID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VariedadID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Variedad" nillable="true" type="tns:SGF_Variedad" />
+  <xs:complexType name="ArrayOfSGF_Producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Producto" nillable="true" type="tns:SGF_Producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_Producto" nillable="true" type="tns:ArrayOfSGF_Producto" />
+  <xs:complexType name="SGF_Producto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q25:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CalidadID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estado" type="xs:int" />
+          <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LongitudID" type="ser:guid" />
+          <xs:element minOccurs="0" name="MercadoID" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaisID" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="ProductoID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SGF_Variedad" nillable="true" type="tns:SGF_Variedad" />
+          <xs:element minOccurs="0" name="SGF_VariedadReference" nillable="true" type="q25:EntityReferenceOfSGF_VariedadMYlFw61k" />
+          <xs:element minOccurs="0" name="TalloID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorRefCompra" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ValorRefVenta" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="VariedadID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Producto" nillable="true" type="tns:SGF_Producto" />
+  <xs:complexType name="ArrayOfSGF_Variedad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Variedad" nillable="true" type="tns:SGF_Variedad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_Variedad" nillable="true" type="tns:ArrayOfSGF_Variedad" />
+  <xs:complexType name="ArrayOfSGF_Variedad_VTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Variedad_VTA" nillable="true" type="tns:SGF_Variedad_VTA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_Variedad_VTA" nillable="true" type="tns:ArrayOfSGF_Variedad_VTA" />
+  <xs:complexType name="SGF_Variedad_VTA">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q26:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Calidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CalidadID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Ciclo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColorID" type="ser:guid" />
+          <xs:element minOccurs="0" name="DiasFlorero" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IndProdMensual" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="LongitudIDMax" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="LongitudIDMin" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="LongitudMax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LongitudMin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreVariedad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroPetalos" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ObtentorID" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="ObtentorNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rotacion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TamanoBoton" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TipoFlor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoFlorID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VariedadID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Variedad_VTA" nillable="true" type="tns:SGF_Variedad_VTA" />
+  <xs:complexType name="SGF_Auditoria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q27:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AuditoriaID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Campo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistroID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tabla" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorAnterior" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorNuevo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="namePC" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Auditoria" nillable="true" type="tns:SGF_Auditoria" />
   <xs:complexType name="ArrayOfSEG_Botones_VTA">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="SEG_Botones_VTA" nillable="true" type="tns:SEG_Botones_VTA" />
@@ -375,7 +716,7 @@
   <xs:element name="ArrayOfSEG_Botones_VTA" nillable="true" type="tns:ArrayOfSEG_Botones_VTA" />
   <xs:complexType name="SEG_Botones_VTA">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q16:EntityObject">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q28:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Agregar" nillable="true" type="xs:boolean" />
           <xs:element minOccurs="0" name="Boton" nillable="true" type="xs:string" />
@@ -398,7 +739,7 @@
   <xs:element name="SEG_Botones_VTA" nillable="true" type="tns:SEG_Botones_VTA" />
   <xs:complexType name="SGF_Clasificador">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q17:EntityObject">
+      <xs:extension xmlns:q29="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q29:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="ClasificadorID" type="ser:guid" />
           <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
@@ -407,7 +748,7 @@
           <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="ParentID" nillable="true" type="ser:guid" />
           <xs:element minOccurs="0" name="SGF_TipoClasificador" nillable="true" type="tns:SGF_TipoClasificador" />
-          <xs:element minOccurs="0" name="SGF_TipoClasificadorReference" nillable="true" type="q17:EntityReferenceOfSGF_TipoClasificadorMYlFw61k" />
+          <xs:element minOccurs="0" name="SGF_TipoClasificadorReference" nillable="true" type="q29:EntityReferenceOfSGF_TipoClasificadorMYlFw61k" />
           <xs:element minOccurs="0" name="TipoClasificadorID" type="ser:guid" />
           <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
         </xs:sequence>
@@ -417,7 +758,7 @@
   <xs:element name="SGF_Clasificador" nillable="true" type="tns:SGF_Clasificador" />
   <xs:complexType name="SGF_TipoClasificador">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q18:EntityObject">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q30:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:short" />
           <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
@@ -436,7 +777,7 @@
   <xs:element name="ArrayOfSGF_Clasificador" nillable="true" type="tns:ArrayOfSGF_Clasificador" />
   <xs:complexType name="SGF_Clasificador_VTA">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q19:EntityObject">
+      <xs:extension xmlns:q31="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q31:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="ClasificadorID" type="ser:guid" />
           <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
@@ -466,7 +807,7 @@
   <xs:element name="ArrayOfSGF_Formulario_VTA" nillable="true" type="tns:ArrayOfSGF_Formulario_VTA" />
   <xs:complexType name="SGF_Formulario_VTA">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q20:EntityObject">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q32:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
@@ -489,7 +830,7 @@
   <xs:element name="ArrayOfSEG_Formularios_VTA" nillable="true" type="tns:ArrayOfSEG_Formularios_VTA" />
   <xs:complexType name="SEG_Formularios_VTA">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q21:EntityObject">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q33:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Agregar" nillable="true" type="xs:boolean" />
           <xs:element minOccurs="0" name="Editar" nillable="true" type="xs:boolean" />
@@ -518,6 +859,33 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfSGF_Grupo" nillable="true" type="tns:ArrayOfSGF_Grupo" />
+  <xs:complexType name="SGF_LineaAerea">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q34:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CedulaRUC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoCAE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoSRI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LineaAereaID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrefijoGuia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_LineaAerea" nillable="true" type="tns:SGF_LineaAerea" />
+  <xs:complexType name="ArrayOfSGF_LineaAerea">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_LineaAerea" nillable="true" type="tns:SGF_LineaAerea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_LineaAerea" nillable="true" type="tns:ArrayOfSGF_LineaAerea" />
   <xs:complexType name="ArrayOfSGF_Modulo">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Modulo" nillable="true" type="tns:SGF_Modulo" />
@@ -532,7 +900,7 @@
   <xs:element name="ArrayOfSGF_Persona_VTA" nillable="true" type="tns:ArrayOfSGF_Persona_VTA" />
   <xs:complexType name="SGF_Persona_VTA">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q22:EntityObject">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q35:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Celular" nillable="true" type="xs:string" />
@@ -571,9 +939,58 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="SGF_Persona_VTA" nillable="true" type="tns:SGF_Persona_VTA" />
+  <xs:complexType name="ArrayOfSGF_Producto_VTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Producto_VTA" nillable="true" type="tns:SGF_Producto_VTA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSGF_Producto_VTA" nillable="true" type="tns:ArrayOfSGF_Producto_VTA" />
+  <xs:complexType name="SGF_Producto_VTA">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q36:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Calidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CalidadID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estado" type="xs:int" />
+          <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Longitud" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LongitudID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Mercado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MercadoID" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pais" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaisID" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="ProductoID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Tallo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TalloID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorRefCompra" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ValorRefVenta" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="VariedadCalidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VariedadCiclo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="VariedadCodigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VariedadColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VariedadDiasFlorero" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="VariedadID" type="ser:guid" />
+          <xs:element minOccurs="0" name="VariedadIndProdMensual" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="VariedadLongitudMax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VariedadLongitudMin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VariedadNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VariedadNumeroPetalos" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="VariedadObtentor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VariedadRotacion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="VariedadTamanoBoton" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="VariedadTipoFlor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SGF_Producto_VTA" nillable="true" type="tns:SGF_Producto_VTA" />
   <xs:complexType name="SEG_Usuarios_VTA">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q23:EntityObject">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q37:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="AppID" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
@@ -612,7 +1029,7 @@
   <xs:element name="ArrayOfSGF_ParametrosPassword" nillable="true" type="tns:ArrayOfSGF_ParametrosPassword" />
   <xs:complexType name="SGF_ParametrosPassword">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q24:EntityObject">
+      <xs:extension xmlns:q38="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q38:EntityObject">
         <xs:sequence>
           <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:short" />
           <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
@@ -635,154 +1052,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfSGF_TipoClasificador" nillable="true" type="tns:ArrayOfSGF_TipoClasificador" />
-  <xs:complexType name="ArrayOfSGF_TipoPersona">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_TipoPersona" nillable="true" type="tns:SGF_TipoPersona" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSGF_TipoPersona" nillable="true" type="tns:ArrayOfSGF_TipoPersona" />
-  <xs:complexType name="ArrayOfSGF_TipoUsuario">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_TipoUsuario" nillable="true" type="tns:SGF_TipoUsuario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSGF_TipoUsuario" nillable="true" type="tns:ArrayOfSGF_TipoUsuario" />
-  <xs:complexType name="ArrayOfSGF_Usuario_VTA">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Usuario_VTA" nillable="true" type="tns:SGF_Usuario_VTA" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSGF_Usuario_VTA" nillable="true" type="tns:ArrayOfSGF_Usuario_VTA" />
-  <xs:complexType name="SGF_Usuario_VTA">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q25:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Celular" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="EstadoUsuario" type="xs:short" />
-          <xs:element minOccurs="0" name="Identificacion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoIdentificacion" type="xs:short" />
-          <xs:element minOccurs="0" name="TipoPersona" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoPersonaID" type="ser:guid" />
-          <xs:element minOccurs="0" name="TipoUsuario" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="UsuarioID" type="ser:guid" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_Usuario_VTA" nillable="true" type="tns:SGF_Usuario_VTA" />
-  <xs:complexType name="SGF_Variedad">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q26:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="CalidadID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Ciclo" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ColorID" type="ser:guid" />
-          <xs:element minOccurs="0" name="DiasFlorero" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:short" />
-          <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="IndProdMensual" nillable="true" type="xs:decimal" />
-          <xs:element minOccurs="0" name="LongitudIDMax" nillable="true" type="ser:guid" />
-          <xs:element minOccurs="0" name="LongitudIDMin" nillable="true" type="ser:guid" />
-          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NumeroPetalos" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ObtentorID" nillable="true" type="ser:guid" />
-          <xs:element minOccurs="0" name="ObtentorNombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Rotacion" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="SGF_Producto" nillable="true" type="tns:ArrayOfSGF_Producto" />
-          <xs:element minOccurs="0" name="TamanoBoton" nillable="true" type="xs:decimal" />
-          <xs:element minOccurs="0" name="TipoFlorID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="VariedadID" type="ser:guid" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_Variedad" nillable="true" type="tns:SGF_Variedad" />
-  <xs:complexType name="ArrayOfSGF_Producto">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Producto" nillable="true" type="tns:SGF_Producto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSGF_Producto" nillable="true" type="tns:ArrayOfSGF_Producto" />
-  <xs:complexType name="SGF_Producto">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q27:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="CalidadID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Estado" type="xs:int" />
-          <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="LongitudID" type="ser:guid" />
-          <xs:element minOccurs="0" name="MercadoID" nillable="true" type="ser:guid" />
-          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="PaisID" nillable="true" type="ser:guid" />
-          <xs:element minOccurs="0" name="ProductoID" type="ser:guid" />
-          <xs:element minOccurs="0" name="SGF_Variedad" nillable="true" type="tns:SGF_Variedad" />
-          <xs:element minOccurs="0" name="SGF_VariedadReference" nillable="true" type="q27:EntityReferenceOfSGF_VariedadMYlFw61k" />
-          <xs:element minOccurs="0" name="TalloID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ValorRefCompra" nillable="true" type="xs:decimal" />
-          <xs:element minOccurs="0" name="ValorRefVenta" nillable="true" type="xs:decimal" />
-          <xs:element minOccurs="0" name="VariedadID" type="ser:guid" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_Producto" nillable="true" type="tns:SGF_Producto" />
-  <xs:complexType name="ArrayOfSGF_Variedad">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Variedad" nillable="true" type="tns:SGF_Variedad" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSGF_Variedad" nillable="true" type="tns:ArrayOfSGF_Variedad" />
-  <xs:complexType name="ArrayOfSGF_Variedad_VTA">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SGF_Variedad_VTA" nillable="true" type="tns:SGF_Variedad_VTA" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSGF_Variedad_VTA" nillable="true" type="tns:ArrayOfSGF_Variedad_VTA" />
-  <xs:complexType name="SGF_Variedad_VTA">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q28:EntityObject">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Calidad" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CalidadID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Ciclo" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ColorID" type="ser:guid" />
-          <xs:element minOccurs="0" name="DiasFlorero" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:short" />
-          <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="IndProdMensual" nillable="true" type="xs:decimal" />
-          <xs:element minOccurs="0" name="LongitudIDMax" nillable="true" type="ser:guid" />
-          <xs:element minOccurs="0" name="LongitudIDMin" nillable="true" type="ser:guid" />
-          <xs:element minOccurs="0" name="LongitudMax" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="LongitudMin" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NombreVariedad" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="NumeroPetalos" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ObtentorID" nillable="true" type="ser:guid" />
-          <xs:element minOccurs="0" name="ObtentorNombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Rotacion" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="TamanoBoton" nillable="true" type="xs:decimal" />
-          <xs:element minOccurs="0" name="TipoFlor" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoFlorID" type="ser:guid" />
-          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="VariedadID" type="ser:guid" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="SGF_Variedad_VTA" nillable="true" type="tns:SGF_Variedad_VTA" />
 </xs:schema>

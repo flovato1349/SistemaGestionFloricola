@@ -23,7 +23,6 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal", "SGF_Sucursal", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Sucursal), "SGF_ConfigurarPersonaEmpresa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_ConfigurarPersonaEmpresa), true)]
 [assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Empresa_SGF_Grupo", "SGF_Grupo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Grupo), "SGF_Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Empresa), true)]
 [assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Sucursal_SGF_Empresa", "SGF_Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Empresa), "SGF_Sucursal", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Sucursal), true)]
-[assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Bodega_SGF_Sucursal", "SGF_Sucursal", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Sucursal), "SGF_Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Bodega), true)]
 [assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Boton_SGF_Formulario", "SGF_Formulario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Formulario), "SGF_Boton", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Boton), true)]
 [assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Permiso_SGF_Formulario", "SGF_Formulario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Formulario), "SGF_Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Permiso), true)]
 [assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Permiso_SGF_Usuario", "SGF_Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Usuario), "SGF_Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Permiso), true)]
@@ -34,6 +33,15 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Persona_SGF_TipoPersona", "SGF_TipoPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_TipoPersona), "SGF_Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Persona), true)]
 [assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Usuario_SGF_Persona", "SGF_Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Persona), "SGF_Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Usuario), true)]
 [assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Producto_SGF_Variedad", "SGF_Variedad", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Variedad), "SGF_Producto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Producto), true)]
+[assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Almacen_SGF_Sucursal", "SGF_Sucursal", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Sucursal), "SGF_Almacen", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Almacen), true)]
+[assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_Bodega_SGF_Almacen", "SGF_Almacen", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Almacen), "SGF_Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_Bodega), true)]
+[assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_CampoCultivo_SGF_Sucursal", "SGF_Sucursal", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_Sucursal), "SGF_CampoCultivo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_CampoCultivo), true)]
+[assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_CultivoArea_SGF_CampoCultivo", "SGF_CampoCultivo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_CampoCultivo), "SGF_CultivoArea", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_CultivoArea), true)]
+[assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_CultivoBloque_SGF_CultivoArea", "SGF_CultivoArea", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_CultivoArea), "SGF_CultivoBloque", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_CultivoBloque), true)]
+[assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_CultivoLado_SGF_CultivoBloque", "SGF_CultivoBloque", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_CultivoBloque), "SGF_CultivoLado", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_CultivoLado), true)]
+[assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_CultivoCama_SGF_CultivoNave", "SGF_CultivoNave", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_CultivoNave), "SGF_CultivoCama", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_CultivoCama), true)]
+[assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_CultivoCuadro_SGF_CultivoCama", "SGF_CultivoCama", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_CultivoCama), "SGF_CultivoCuadro", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_CultivoCuadro), true)]
+[assembly: EdmRelationshipAttribute("SGFModel", "FK_SGF_CultivoNave_SGF_CultivoLado", "SGF_CultivoLado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SGF.DataAccess.SGF_CultivoLado), "SGF_CultivoNave", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SGF.DataAccess.SGF_CultivoNave), true)]
 
 #endregion
 
@@ -228,22 +236,6 @@ namespace SGF.DataAccess
             }
         }
         private ObjectSet<SGF_Auditoria> _SGF_Auditoria;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<SGF_Bodega> SGF_Bodega
-        {
-            get
-            {
-                if ((_SGF_Bodega == null))
-                {
-                    _SGF_Bodega = base.CreateObjectSet<SGF_Bodega>("SGF_Bodega");
-                }
-                return _SGF_Bodega;
-            }
-        }
-        private ObjectSet<SGF_Bodega> _SGF_Bodega;
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -580,6 +572,198 @@ namespace SGF.DataAccess
             }
         }
         private ObjectSet<SGF_Variedad_VTA> _SGF_Variedad_VTA;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_Producto_VTA> SGF_Producto_VTA
+        {
+            get
+            {
+                if ((_SGF_Producto_VTA == null))
+                {
+                    _SGF_Producto_VTA = base.CreateObjectSet<SGF_Producto_VTA>("SGF_Producto_VTA");
+                }
+                return _SGF_Producto_VTA;
+            }
+        }
+        private ObjectSet<SGF_Producto_VTA> _SGF_Producto_VTA;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_Almacen> SGF_Almacen
+        {
+            get
+            {
+                if ((_SGF_Almacen == null))
+                {
+                    _SGF_Almacen = base.CreateObjectSet<SGF_Almacen>("SGF_Almacen");
+                }
+                return _SGF_Almacen;
+            }
+        }
+        private ObjectSet<SGF_Almacen> _SGF_Almacen;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_Bodega> SGF_Bodega
+        {
+            get
+            {
+                if ((_SGF_Bodega == null))
+                {
+                    _SGF_Bodega = base.CreateObjectSet<SGF_Bodega>("SGF_Bodega");
+                }
+                return _SGF_Bodega;
+            }
+        }
+        private ObjectSet<SGF_Bodega> _SGF_Bodega;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_Parametro> SGF_Parametro
+        {
+            get
+            {
+                if ((_SGF_Parametro == null))
+                {
+                    _SGF_Parametro = base.CreateObjectSet<SGF_Parametro>("SGF_Parametro");
+                }
+                return _SGF_Parametro;
+            }
+        }
+        private ObjectSet<SGF_Parametro> _SGF_Parametro;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_CampoCultivo> SGF_CampoCultivo
+        {
+            get
+            {
+                if ((_SGF_CampoCultivo == null))
+                {
+                    _SGF_CampoCultivo = base.CreateObjectSet<SGF_CampoCultivo>("SGF_CampoCultivo");
+                }
+                return _SGF_CampoCultivo;
+            }
+        }
+        private ObjectSet<SGF_CampoCultivo> _SGF_CampoCultivo;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_CultivoArea> SGF_CultivoArea
+        {
+            get
+            {
+                if ((_SGF_CultivoArea == null))
+                {
+                    _SGF_CultivoArea = base.CreateObjectSet<SGF_CultivoArea>("SGF_CultivoArea");
+                }
+                return _SGF_CultivoArea;
+            }
+        }
+        private ObjectSet<SGF_CultivoArea> _SGF_CultivoArea;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_CultivoBloque> SGF_CultivoBloque
+        {
+            get
+            {
+                if ((_SGF_CultivoBloque == null))
+                {
+                    _SGF_CultivoBloque = base.CreateObjectSet<SGF_CultivoBloque>("SGF_CultivoBloque");
+                }
+                return _SGF_CultivoBloque;
+            }
+        }
+        private ObjectSet<SGF_CultivoBloque> _SGF_CultivoBloque;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_CultivoCama> SGF_CultivoCama
+        {
+            get
+            {
+                if ((_SGF_CultivoCama == null))
+                {
+                    _SGF_CultivoCama = base.CreateObjectSet<SGF_CultivoCama>("SGF_CultivoCama");
+                }
+                return _SGF_CultivoCama;
+            }
+        }
+        private ObjectSet<SGF_CultivoCama> _SGF_CultivoCama;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_CultivoCuadro> SGF_CultivoCuadro
+        {
+            get
+            {
+                if ((_SGF_CultivoCuadro == null))
+                {
+                    _SGF_CultivoCuadro = base.CreateObjectSet<SGF_CultivoCuadro>("SGF_CultivoCuadro");
+                }
+                return _SGF_CultivoCuadro;
+            }
+        }
+        private ObjectSet<SGF_CultivoCuadro> _SGF_CultivoCuadro;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_CultivoLado> SGF_CultivoLado
+        {
+            get
+            {
+                if ((_SGF_CultivoLado == null))
+                {
+                    _SGF_CultivoLado = base.CreateObjectSet<SGF_CultivoLado>("SGF_CultivoLado");
+                }
+                return _SGF_CultivoLado;
+            }
+        }
+        private ObjectSet<SGF_CultivoLado> _SGF_CultivoLado;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SGF_CultivoNave> SGF_CultivoNave
+        {
+            get
+            {
+                if ((_SGF_CultivoNave == null))
+                {
+                    _SGF_CultivoNave = base.CreateObjectSet<SGF_CultivoNave>("SGF_CultivoNave");
+                }
+                return _SGF_CultivoNave;
+            }
+        }
+        private ObjectSet<SGF_CultivoNave> _SGF_CultivoNave;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<sysdiagrams> sysdiagrams
+        {
+            get
+            {
+                if ((_sysdiagrams == null))
+                {
+                    _sysdiagrams = base.CreateObjectSet<sysdiagrams>("sysdiagrams");
+                }
+                return _sysdiagrams;
+            }
+        }
+        private ObjectSet<sysdiagrams> _sysdiagrams;
 
         #endregion
 
@@ -655,14 +839,6 @@ namespace SGF.DataAccess
         public void AddToSGF_Auditoria(SGF_Auditoria sGF_Auditoria)
         {
             base.AddObject("SGF_Auditoria", sGF_Auditoria);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_Bodega. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToSGF_Bodega(SGF_Bodega sGF_Bodega)
-        {
-            base.AddObject("SGF_Bodega", sGF_Bodega);
         }
     
         /// <summary>
@@ -831,6 +1007,102 @@ namespace SGF.DataAccess
         public void AddToSGF_Variedad_VTA(SGF_Variedad_VTA sGF_Variedad_VTA)
         {
             base.AddObject("SGF_Variedad_VTA", sGF_Variedad_VTA);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_Producto_VTA. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_Producto_VTA(SGF_Producto_VTA sGF_Producto_VTA)
+        {
+            base.AddObject("SGF_Producto_VTA", sGF_Producto_VTA);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_Almacen. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_Almacen(SGF_Almacen sGF_Almacen)
+        {
+            base.AddObject("SGF_Almacen", sGF_Almacen);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_Bodega. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_Bodega(SGF_Bodega sGF_Bodega)
+        {
+            base.AddObject("SGF_Bodega", sGF_Bodega);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_Parametro. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_Parametro(SGF_Parametro sGF_Parametro)
+        {
+            base.AddObject("SGF_Parametro", sGF_Parametro);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_CampoCultivo. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_CampoCultivo(SGF_CampoCultivo sGF_CampoCultivo)
+        {
+            base.AddObject("SGF_CampoCultivo", sGF_CampoCultivo);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_CultivoArea. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_CultivoArea(SGF_CultivoArea sGF_CultivoArea)
+        {
+            base.AddObject("SGF_CultivoArea", sGF_CultivoArea);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_CultivoBloque. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_CultivoBloque(SGF_CultivoBloque sGF_CultivoBloque)
+        {
+            base.AddObject("SGF_CultivoBloque", sGF_CultivoBloque);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_CultivoCama. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_CultivoCama(SGF_CultivoCama sGF_CultivoCama)
+        {
+            base.AddObject("SGF_CultivoCama", sGF_CultivoCama);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_CultivoCuadro. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_CultivoCuadro(SGF_CultivoCuadro sGF_CultivoCuadro)
+        {
+            base.AddObject("SGF_CultivoCuadro", sGF_CultivoCuadro);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_CultivoLado. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_CultivoLado(SGF_CultivoLado sGF_CultivoLado)
+        {
+            base.AddObject("SGF_CultivoLado", sGF_CultivoLado);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SGF_CultivoNave. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSGF_CultivoNave(SGF_CultivoNave sGF_CultivoNave)
+        {
+            base.AddObject("SGF_CultivoNave", sGF_CultivoNave);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet sysdiagrams. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddTosysdiagrams(sysdiagrams sysdiagrams)
+        {
+            base.AddObject("sysdiagrams", sysdiagrams);
         }
 
         #endregion
@@ -2212,6 +2484,228 @@ namespace SGF.DataAccess
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_Almacen")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SGF_Almacen : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SGF_Almacen.
+        /// </summary>
+        /// <param name="almacenID">Valor inicial de la propiedad AlmacenID.</param>
+        /// <param name="sucursalID">Valor inicial de la propiedad SucursalID.</param>
+        /// <param name="nombre">Valor inicial de la propiedad Nombre.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static SGF_Almacen CreateSGF_Almacen(global::System.Guid almacenID, global::System.Guid sucursalID, global::System.String nombre, global::System.Int32 estado)
+        {
+            SGF_Almacen sGF_Almacen = new SGF_Almacen();
+            sGF_Almacen.AlmacenID = almacenID;
+            sGF_Almacen.SucursalID = sucursalID;
+            sGF_Almacen.Nombre = nombre;
+            sGF_Almacen.Estado = estado;
+            return sGF_Almacen;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid AlmacenID
+        {
+            get
+            {
+                return _AlmacenID;
+            }
+            set
+            {
+                if (_AlmacenID != value)
+                {
+                    OnAlmacenIDChanging(value);
+                    ReportPropertyChanging("AlmacenID");
+                    _AlmacenID = StructuralObject.SetValidValue(value, "AlmacenID");
+                    ReportPropertyChanged("AlmacenID");
+                    OnAlmacenIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _AlmacenID;
+        partial void OnAlmacenIDChanging(global::System.Guid value);
+        partial void OnAlmacenIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid SucursalID
+        {
+            get
+            {
+                return _SucursalID;
+            }
+            set
+            {
+                OnSucursalIDChanging(value);
+                ReportPropertyChanging("SucursalID");
+                _SucursalID = StructuralObject.SetValidValue(value, "SucursalID");
+                ReportPropertyChanged("SucursalID");
+                OnSucursalIDChanged();
+            }
+        }
+        private global::System.Guid _SucursalID;
+        partial void OnSucursalIDChanging(global::System.Guid value);
+        partial void OnSucursalIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = StructuralObject.SetValidValue(value, false, "Nombre");
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Direccion
+        {
+            get
+            {
+                return _Direccion;
+            }
+            set
+            {
+                OnDireccionChanging(value);
+                ReportPropertyChanging("Direccion");
+                _Direccion = StructuralObject.SetValidValue(value, true, "Direccion");
+                ReportPropertyChanged("Direccion");
+                OnDireccionChanged();
+            }
+        }
+        private global::System.String _Direccion;
+        partial void OnDireccionChanging(global::System.String value);
+        partial void OnDireccionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value, "Estado");
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+
+        #endregion
+
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_Almacen_SGF_Sucursal", "SGF_Sucursal")]
+        public SGF_Sucursal SGF_Sucursal
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_Almacen_SGF_Sucursal", "SGF_Sucursal").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_Almacen_SGF_Sucursal", "SGF_Sucursal").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SGF_Sucursal> SGF_SucursalReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_Almacen_SGF_Sucursal", "SGF_Sucursal");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_Almacen_SGF_Sucursal", "SGF_Sucursal", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_Bodega_SGF_Almacen", "SGF_Bodega")]
+        public EntityCollection<SGF_Bodega> SGF_Bodega
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SGF_Bodega>("SGFModel.FK_SGF_Bodega_SGF_Almacen", "SGF_Bodega");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SGF_Bodega>("SGFModel.FK_SGF_Bodega_SGF_Almacen", "SGF_Bodega", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_Auditoria")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -2543,14 +3037,14 @@ namespace SGF.DataAccess
         /// Crear un nuevo objeto SGF_Bodega.
         /// </summary>
         /// <param name="bodegaID">Valor inicial de la propiedad BodegaID.</param>
-        /// <param name="sucursalID">Valor inicial de la propiedad SucursalID.</param>
+        /// <param name="almacenID">Valor inicial de la propiedad AlmacenID.</param>
         /// <param name="nombre">Valor inicial de la propiedad Nombre.</param>
         /// <param name="estado">Valor inicial de la propiedad Estado.</param>
-        public static SGF_Bodega CreateSGF_Bodega(global::System.Guid bodegaID, global::System.Guid sucursalID, global::System.String nombre, global::System.Int16 estado)
+        public static SGF_Bodega CreateSGF_Bodega(global::System.Guid bodegaID, global::System.Guid almacenID, global::System.String nombre, global::System.Int16 estado)
         {
             SGF_Bodega sGF_Bodega = new SGF_Bodega();
             sGF_Bodega.BodegaID = bodegaID;
-            sGF_Bodega.SucursalID = sucursalID;
+            sGF_Bodega.AlmacenID = almacenID;
             sGF_Bodega.Nombre = nombre;
             sGF_Bodega.Estado = estado;
             return sGF_Bodega;
@@ -2592,24 +3086,24 @@ namespace SGF.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Guid SucursalID
+        public global::System.Guid AlmacenID
         {
             get
             {
-                return _SucursalID;
+                return _AlmacenID;
             }
             set
             {
-                OnSucursalIDChanging(value);
-                ReportPropertyChanging("SucursalID");
-                _SucursalID = StructuralObject.SetValidValue(value, "SucursalID");
-                ReportPropertyChanged("SucursalID");
-                OnSucursalIDChanged();
+                OnAlmacenIDChanging(value);
+                ReportPropertyChanging("AlmacenID");
+                _AlmacenID = StructuralObject.SetValidValue(value, "AlmacenID");
+                ReportPropertyChanged("AlmacenID");
+                OnAlmacenIDChanged();
             }
         }
-        private global::System.Guid _SucursalID;
-        partial void OnSucursalIDChanging(global::System.Guid value);
-        partial void OnSucursalIDChanged();
+        private global::System.Guid _AlmacenID;
+        partial void OnAlmacenIDChanging(global::System.Guid value);
+        partial void OnAlmacenIDChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -2693,16 +3187,16 @@ namespace SGF.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_Bodega_SGF_Sucursal", "SGF_Sucursal")]
-        public SGF_Sucursal SGF_Sucursal
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_Bodega_SGF_Almacen", "SGF_Almacen")]
+        public SGF_Almacen SGF_Almacen
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_Bodega_SGF_Sucursal", "SGF_Sucursal").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Almacen>("SGFModel.FK_SGF_Bodega_SGF_Almacen", "SGF_Almacen").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_Bodega_SGF_Sucursal", "SGF_Sucursal").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Almacen>("SGFModel.FK_SGF_Bodega_SGF_Almacen", "SGF_Almacen").Value = value;
             }
         }
         /// <summary>
@@ -2710,17 +3204,17 @@ namespace SGF.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<SGF_Sucursal> SGF_SucursalReference
+        public EntityReference<SGF_Almacen> SGF_AlmacenReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_Bodega_SGF_Sucursal", "SGF_Sucursal");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Almacen>("SGFModel.FK_SGF_Bodega_SGF_Almacen", "SGF_Almacen");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_Bodega_SGF_Sucursal", "SGF_Sucursal", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_Almacen>("SGFModel.FK_SGF_Bodega_SGF_Almacen", "SGF_Almacen", value);
                 }
             }
         }
@@ -2921,6 +3415,250 @@ namespace SGF.DataAccess
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_Formulario>("SGFModel.FK_SGF_Boton_SGF_Formulario", "SGF_Formulario", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_CampoCultivo")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SGF_CampoCultivo : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SGF_CampoCultivo.
+        /// </summary>
+        /// <param name="campoCultivoID">Valor inicial de la propiedad CampoCultivoID.</param>
+        /// <param name="sucursalID">Valor inicial de la propiedad SucursalID.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static SGF_CampoCultivo CreateSGF_CampoCultivo(global::System.Guid campoCultivoID, global::System.Guid sucursalID, global::System.Int32 estado)
+        {
+            SGF_CampoCultivo sGF_CampoCultivo = new SGF_CampoCultivo();
+            sGF_CampoCultivo.CampoCultivoID = campoCultivoID;
+            sGF_CampoCultivo.SucursalID = sucursalID;
+            sGF_CampoCultivo.Estado = estado;
+            return sGF_CampoCultivo;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CampoCultivoID
+        {
+            get
+            {
+                return _CampoCultivoID;
+            }
+            set
+            {
+                if (_CampoCultivoID != value)
+                {
+                    OnCampoCultivoIDChanging(value);
+                    ReportPropertyChanging("CampoCultivoID");
+                    _CampoCultivoID = StructuralObject.SetValidValue(value, "CampoCultivoID");
+                    ReportPropertyChanged("CampoCultivoID");
+                    OnCampoCultivoIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _CampoCultivoID;
+        partial void OnCampoCultivoIDChanging(global::System.Guid value);
+        partial void OnCampoCultivoIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid SucursalID
+        {
+            get
+            {
+                return _SucursalID;
+            }
+            set
+            {
+                OnSucursalIDChanging(value);
+                ReportPropertyChanging("SucursalID");
+                _SucursalID = StructuralObject.SetValidValue(value, "SucursalID");
+                ReportPropertyChanged("SucursalID");
+                OnSucursalIDChanged();
+            }
+        }
+        private global::System.Guid _SucursalID;
+        partial void OnSucursalIDChanging(global::System.Guid value);
+        partial void OnSucursalIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = StructuralObject.SetValidValue(value, true, "Nombre");
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Direccion
+        {
+            get
+            {
+                return _Direccion;
+            }
+            set
+            {
+                OnDireccionChanging(value);
+                ReportPropertyChanging("Direccion");
+                _Direccion = StructuralObject.SetValidValue(value, true, "Direccion");
+                ReportPropertyChanged("Direccion");
+                OnDireccionChanged();
+            }
+        }
+        private global::System.String _Direccion;
+        partial void OnDireccionChanging(global::System.String value);
+        partial void OnDireccionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Descripcion
+        {
+            get
+            {
+                return _Descripcion;
+            }
+            set
+            {
+                OnDescripcionChanging(value);
+                ReportPropertyChanging("Descripcion");
+                _Descripcion = StructuralObject.SetValidValue(value, true, "Descripcion");
+                ReportPropertyChanged("Descripcion");
+                OnDescripcionChanged();
+            }
+        }
+        private global::System.String _Descripcion;
+        partial void OnDescripcionChanging(global::System.String value);
+        partial void OnDescripcionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value, "Estado");
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+
+        #endregion
+
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CampoCultivo_SGF_Sucursal", "SGF_Sucursal")]
+        public SGF_Sucursal SGF_Sucursal
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_CampoCultivo_SGF_Sucursal", "SGF_Sucursal").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_CampoCultivo_SGF_Sucursal", "SGF_Sucursal").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SGF_Sucursal> SGF_SucursalReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_CampoCultivo_SGF_Sucursal", "SGF_Sucursal");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_Sucursal>("SGFModel.FK_SGF_CampoCultivo_SGF_Sucursal", "SGF_Sucursal", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoArea_SGF_CampoCultivo", "SGF_CultivoArea")]
+        public EntityCollection<SGF_CultivoArea> SGF_CultivoArea
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SGF_CultivoArea>("SGFModel.FK_SGF_CultivoArea_SGF_CampoCultivo", "SGF_CultivoArea");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SGF_CultivoArea>("SGFModel.FK_SGF_CultivoArea_SGF_CampoCultivo", "SGF_CultivoArea", value);
                 }
             }
         }
@@ -4005,6 +4743,1460 @@ namespace SGF.DataAccess
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_Persona>("SGFModel.FK_SGF_ConfigurarPersonaEmpresa_SGF_Persona", "SGF_Persona", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_CultivoArea")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SGF_CultivoArea : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SGF_CultivoArea.
+        /// </summary>
+        /// <param name="cultivoAreaID">Valor inicial de la propiedad CultivoAreaID.</param>
+        /// <param name="campoCultivoID">Valor inicial de la propiedad CampoCultivoID.</param>
+        /// <param name="areaID">Valor inicial de la propiedad AreaID.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static SGF_CultivoArea CreateSGF_CultivoArea(global::System.Guid cultivoAreaID, global::System.Guid campoCultivoID, global::System.Guid areaID, global::System.Int32 estado)
+        {
+            SGF_CultivoArea sGF_CultivoArea = new SGF_CultivoArea();
+            sGF_CultivoArea.CultivoAreaID = cultivoAreaID;
+            sGF_CultivoArea.CampoCultivoID = campoCultivoID;
+            sGF_CultivoArea.AreaID = areaID;
+            sGF_CultivoArea.Estado = estado;
+            return sGF_CultivoArea;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoAreaID
+        {
+            get
+            {
+                return _CultivoAreaID;
+            }
+            set
+            {
+                if (_CultivoAreaID != value)
+                {
+                    OnCultivoAreaIDChanging(value);
+                    ReportPropertyChanging("CultivoAreaID");
+                    _CultivoAreaID = StructuralObject.SetValidValue(value, "CultivoAreaID");
+                    ReportPropertyChanged("CultivoAreaID");
+                    OnCultivoAreaIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _CultivoAreaID;
+        partial void OnCultivoAreaIDChanging(global::System.Guid value);
+        partial void OnCultivoAreaIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CampoCultivoID
+        {
+            get
+            {
+                return _CampoCultivoID;
+            }
+            set
+            {
+                OnCampoCultivoIDChanging(value);
+                ReportPropertyChanging("CampoCultivoID");
+                _CampoCultivoID = StructuralObject.SetValidValue(value, "CampoCultivoID");
+                ReportPropertyChanged("CampoCultivoID");
+                OnCampoCultivoIDChanged();
+            }
+        }
+        private global::System.Guid _CampoCultivoID;
+        partial void OnCampoCultivoIDChanging(global::System.Guid value);
+        partial void OnCampoCultivoIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid AreaID
+        {
+            get
+            {
+                return _AreaID;
+            }
+            set
+            {
+                OnAreaIDChanging(value);
+                ReportPropertyChanging("AreaID");
+                _AreaID = StructuralObject.SetValidValue(value, "AreaID");
+                ReportPropertyChanged("AreaID");
+                OnAreaIDChanged();
+            }
+        }
+        private global::System.Guid _AreaID;
+        partial void OnAreaIDChanging(global::System.Guid value);
+        partial void OnAreaIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = StructuralObject.SetValidValue(value, true, "Nombre");
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Orden
+        {
+            get
+            {
+                return _Orden;
+            }
+            set
+            {
+                OnOrdenChanging(value);
+                ReportPropertyChanging("Orden");
+                _Orden = StructuralObject.SetValidValue(value, "Orden");
+                ReportPropertyChanged("Orden");
+                OnOrdenChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Orden;
+        partial void OnOrdenChanging(Nullable<global::System.Int32> value);
+        partial void OnOrdenChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value, "Estado");
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+
+        #endregion
+
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoArea_SGF_CampoCultivo", "SGF_CampoCultivo")]
+        public SGF_CampoCultivo SGF_CampoCultivo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CampoCultivo>("SGFModel.FK_SGF_CultivoArea_SGF_CampoCultivo", "SGF_CampoCultivo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CampoCultivo>("SGFModel.FK_SGF_CultivoArea_SGF_CampoCultivo", "SGF_CampoCultivo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SGF_CampoCultivo> SGF_CampoCultivoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CampoCultivo>("SGFModel.FK_SGF_CultivoArea_SGF_CampoCultivo", "SGF_CampoCultivo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_CampoCultivo>("SGFModel.FK_SGF_CultivoArea_SGF_CampoCultivo", "SGF_CampoCultivo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoBloque_SGF_CultivoArea", "SGF_CultivoBloque")]
+        public EntityCollection<SGF_CultivoBloque> SGF_CultivoBloque
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SGF_CultivoBloque>("SGFModel.FK_SGF_CultivoBloque_SGF_CultivoArea", "SGF_CultivoBloque");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SGF_CultivoBloque>("SGFModel.FK_SGF_CultivoBloque_SGF_CultivoArea", "SGF_CultivoBloque", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_CultivoBloque")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SGF_CultivoBloque : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SGF_CultivoBloque.
+        /// </summary>
+        /// <param name="cultivoBloqueID">Valor inicial de la propiedad CultivoBloqueID.</param>
+        /// <param name="cultivoAreaID">Valor inicial de la propiedad CultivoAreaID.</param>
+        /// <param name="bloqueID">Valor inicial de la propiedad BloqueID.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static SGF_CultivoBloque CreateSGF_CultivoBloque(global::System.Guid cultivoBloqueID, global::System.Guid cultivoAreaID, global::System.Guid bloqueID, global::System.Int32 estado)
+        {
+            SGF_CultivoBloque sGF_CultivoBloque = new SGF_CultivoBloque();
+            sGF_CultivoBloque.CultivoBloqueID = cultivoBloqueID;
+            sGF_CultivoBloque.CultivoAreaID = cultivoAreaID;
+            sGF_CultivoBloque.BloqueID = bloqueID;
+            sGF_CultivoBloque.Estado = estado;
+            return sGF_CultivoBloque;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoBloqueID
+        {
+            get
+            {
+                return _CultivoBloqueID;
+            }
+            set
+            {
+                if (_CultivoBloqueID != value)
+                {
+                    OnCultivoBloqueIDChanging(value);
+                    ReportPropertyChanging("CultivoBloqueID");
+                    _CultivoBloqueID = StructuralObject.SetValidValue(value, "CultivoBloqueID");
+                    ReportPropertyChanged("CultivoBloqueID");
+                    OnCultivoBloqueIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _CultivoBloqueID;
+        partial void OnCultivoBloqueIDChanging(global::System.Guid value);
+        partial void OnCultivoBloqueIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoAreaID
+        {
+            get
+            {
+                return _CultivoAreaID;
+            }
+            set
+            {
+                OnCultivoAreaIDChanging(value);
+                ReportPropertyChanging("CultivoAreaID");
+                _CultivoAreaID = StructuralObject.SetValidValue(value, "CultivoAreaID");
+                ReportPropertyChanged("CultivoAreaID");
+                OnCultivoAreaIDChanged();
+            }
+        }
+        private global::System.Guid _CultivoAreaID;
+        partial void OnCultivoAreaIDChanging(global::System.Guid value);
+        partial void OnCultivoAreaIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid BloqueID
+        {
+            get
+            {
+                return _BloqueID;
+            }
+            set
+            {
+                OnBloqueIDChanging(value);
+                ReportPropertyChanging("BloqueID");
+                _BloqueID = StructuralObject.SetValidValue(value, "BloqueID");
+                ReportPropertyChanged("BloqueID");
+                OnBloqueIDChanged();
+            }
+        }
+        private global::System.Guid _BloqueID;
+        partial void OnBloqueIDChanging(global::System.Guid value);
+        partial void OnBloqueIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = StructuralObject.SetValidValue(value, true, "Nombre");
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Orden
+        {
+            get
+            {
+                return _Orden;
+            }
+            set
+            {
+                OnOrdenChanging(value);
+                ReportPropertyChanging("Orden");
+                _Orden = StructuralObject.SetValidValue(value, "Orden");
+                ReportPropertyChanged("Orden");
+                OnOrdenChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Orden;
+        partial void OnOrdenChanging(Nullable<global::System.Int32> value);
+        partial void OnOrdenChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value, "Estado");
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+
+        #endregion
+
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoBloque_SGF_CultivoArea", "SGF_CultivoArea")]
+        public SGF_CultivoArea SGF_CultivoArea
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoArea>("SGFModel.FK_SGF_CultivoBloque_SGF_CultivoArea", "SGF_CultivoArea").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoArea>("SGFModel.FK_SGF_CultivoBloque_SGF_CultivoArea", "SGF_CultivoArea").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SGF_CultivoArea> SGF_CultivoAreaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoArea>("SGFModel.FK_SGF_CultivoBloque_SGF_CultivoArea", "SGF_CultivoArea");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_CultivoArea>("SGFModel.FK_SGF_CultivoBloque_SGF_CultivoArea", "SGF_CultivoArea", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoLado_SGF_CultivoBloque", "SGF_CultivoLado")]
+        public EntityCollection<SGF_CultivoLado> SGF_CultivoLado
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SGF_CultivoLado>("SGFModel.FK_SGF_CultivoLado_SGF_CultivoBloque", "SGF_CultivoLado");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SGF_CultivoLado>("SGFModel.FK_SGF_CultivoLado_SGF_CultivoBloque", "SGF_CultivoLado", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_CultivoCama")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SGF_CultivoCama : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SGF_CultivoCama.
+        /// </summary>
+        /// <param name="cultivoCamaID">Valor inicial de la propiedad CultivoCamaID.</param>
+        /// <param name="cultivoNaveID">Valor inicial de la propiedad CultivoNaveID.</param>
+        /// <param name="camaID">Valor inicial de la propiedad CamaID.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static SGF_CultivoCama CreateSGF_CultivoCama(global::System.Guid cultivoCamaID, global::System.Guid cultivoNaveID, global::System.Guid camaID, global::System.Int32 estado)
+        {
+            SGF_CultivoCama sGF_CultivoCama = new SGF_CultivoCama();
+            sGF_CultivoCama.CultivoCamaID = cultivoCamaID;
+            sGF_CultivoCama.CultivoNaveID = cultivoNaveID;
+            sGF_CultivoCama.CamaID = camaID;
+            sGF_CultivoCama.Estado = estado;
+            return sGF_CultivoCama;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoCamaID
+        {
+            get
+            {
+                return _CultivoCamaID;
+            }
+            set
+            {
+                if (_CultivoCamaID != value)
+                {
+                    OnCultivoCamaIDChanging(value);
+                    ReportPropertyChanging("CultivoCamaID");
+                    _CultivoCamaID = StructuralObject.SetValidValue(value, "CultivoCamaID");
+                    ReportPropertyChanged("CultivoCamaID");
+                    OnCultivoCamaIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _CultivoCamaID;
+        partial void OnCultivoCamaIDChanging(global::System.Guid value);
+        partial void OnCultivoCamaIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoNaveID
+        {
+            get
+            {
+                return _CultivoNaveID;
+            }
+            set
+            {
+                OnCultivoNaveIDChanging(value);
+                ReportPropertyChanging("CultivoNaveID");
+                _CultivoNaveID = StructuralObject.SetValidValue(value, "CultivoNaveID");
+                ReportPropertyChanged("CultivoNaveID");
+                OnCultivoNaveIDChanged();
+            }
+        }
+        private global::System.Guid _CultivoNaveID;
+        partial void OnCultivoNaveIDChanging(global::System.Guid value);
+        partial void OnCultivoNaveIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CamaID
+        {
+            get
+            {
+                return _CamaID;
+            }
+            set
+            {
+                OnCamaIDChanging(value);
+                ReportPropertyChanging("CamaID");
+                _CamaID = StructuralObject.SetValidValue(value, "CamaID");
+                ReportPropertyChanged("CamaID");
+                OnCamaIDChanged();
+            }
+        }
+        private global::System.Guid _CamaID;
+        partial void OnCamaIDChanging(global::System.Guid value);
+        partial void OnCamaIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = StructuralObject.SetValidValue(value, true, "Nombre");
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Orden
+        {
+            get
+            {
+                return _Orden;
+            }
+            set
+            {
+                OnOrdenChanging(value);
+                ReportPropertyChanging("Orden");
+                _Orden = StructuralObject.SetValidValue(value, "Orden");
+                ReportPropertyChanged("Orden");
+                OnOrdenChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Orden;
+        partial void OnOrdenChanging(Nullable<global::System.Int32> value);
+        partial void OnOrdenChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value, "Estado");
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+
+        #endregion
+
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoCama_SGF_CultivoNave", "SGF_CultivoNave")]
+        public SGF_CultivoNave SGF_CultivoNave
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoNave>("SGFModel.FK_SGF_CultivoCama_SGF_CultivoNave", "SGF_CultivoNave").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoNave>("SGFModel.FK_SGF_CultivoCama_SGF_CultivoNave", "SGF_CultivoNave").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SGF_CultivoNave> SGF_CultivoNaveReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoNave>("SGFModel.FK_SGF_CultivoCama_SGF_CultivoNave", "SGF_CultivoNave");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_CultivoNave>("SGFModel.FK_SGF_CultivoCama_SGF_CultivoNave", "SGF_CultivoNave", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoCuadro_SGF_CultivoCama", "SGF_CultivoCuadro")]
+        public EntityCollection<SGF_CultivoCuadro> SGF_CultivoCuadro
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SGF_CultivoCuadro>("SGFModel.FK_SGF_CultivoCuadro_SGF_CultivoCama", "SGF_CultivoCuadro");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SGF_CultivoCuadro>("SGFModel.FK_SGF_CultivoCuadro_SGF_CultivoCama", "SGF_CultivoCuadro", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_CultivoCuadro")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SGF_CultivoCuadro : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SGF_CultivoCuadro.
+        /// </summary>
+        /// <param name="cultivoCuadroID">Valor inicial de la propiedad CultivoCuadroID.</param>
+        /// <param name="cultivoCamaID">Valor inicial de la propiedad CultivoCamaID.</param>
+        /// <param name="cuadroID">Valor inicial de la propiedad CuadroID.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static SGF_CultivoCuadro CreateSGF_CultivoCuadro(global::System.Guid cultivoCuadroID, global::System.Guid cultivoCamaID, global::System.Guid cuadroID, global::System.Int32 estado)
+        {
+            SGF_CultivoCuadro sGF_CultivoCuadro = new SGF_CultivoCuadro();
+            sGF_CultivoCuadro.CultivoCuadroID = cultivoCuadroID;
+            sGF_CultivoCuadro.CultivoCamaID = cultivoCamaID;
+            sGF_CultivoCuadro.CuadroID = cuadroID;
+            sGF_CultivoCuadro.Estado = estado;
+            return sGF_CultivoCuadro;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoCuadroID
+        {
+            get
+            {
+                return _CultivoCuadroID;
+            }
+            set
+            {
+                if (_CultivoCuadroID != value)
+                {
+                    OnCultivoCuadroIDChanging(value);
+                    ReportPropertyChanging("CultivoCuadroID");
+                    _CultivoCuadroID = StructuralObject.SetValidValue(value, "CultivoCuadroID");
+                    ReportPropertyChanged("CultivoCuadroID");
+                    OnCultivoCuadroIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _CultivoCuadroID;
+        partial void OnCultivoCuadroIDChanging(global::System.Guid value);
+        partial void OnCultivoCuadroIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoCamaID
+        {
+            get
+            {
+                return _CultivoCamaID;
+            }
+            set
+            {
+                OnCultivoCamaIDChanging(value);
+                ReportPropertyChanging("CultivoCamaID");
+                _CultivoCamaID = StructuralObject.SetValidValue(value, "CultivoCamaID");
+                ReportPropertyChanged("CultivoCamaID");
+                OnCultivoCamaIDChanged();
+            }
+        }
+        private global::System.Guid _CultivoCamaID;
+        partial void OnCultivoCamaIDChanging(global::System.Guid value);
+        partial void OnCultivoCamaIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CuadroID
+        {
+            get
+            {
+                return _CuadroID;
+            }
+            set
+            {
+                OnCuadroIDChanging(value);
+                ReportPropertyChanging("CuadroID");
+                _CuadroID = StructuralObject.SetValidValue(value, "CuadroID");
+                ReportPropertyChanged("CuadroID");
+                OnCuadroIDChanged();
+            }
+        }
+        private global::System.Guid _CuadroID;
+        partial void OnCuadroIDChanging(global::System.Guid value);
+        partial void OnCuadroIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = StructuralObject.SetValidValue(value, true, "Nombre");
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Orden
+        {
+            get
+            {
+                return _Orden;
+            }
+            set
+            {
+                OnOrdenChanging(value);
+                ReportPropertyChanging("Orden");
+                _Orden = StructuralObject.SetValidValue(value, "Orden");
+                ReportPropertyChanged("Orden");
+                OnOrdenChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Orden;
+        partial void OnOrdenChanging(Nullable<global::System.Int32> value);
+        partial void OnOrdenChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value, "Estado");
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+
+        #endregion
+
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoCuadro_SGF_CultivoCama", "SGF_CultivoCama")]
+        public SGF_CultivoCama SGF_CultivoCama
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoCama>("SGFModel.FK_SGF_CultivoCuadro_SGF_CultivoCama", "SGF_CultivoCama").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoCama>("SGFModel.FK_SGF_CultivoCuadro_SGF_CultivoCama", "SGF_CultivoCama").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SGF_CultivoCama> SGF_CultivoCamaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoCama>("SGFModel.FK_SGF_CultivoCuadro_SGF_CultivoCama", "SGF_CultivoCama");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_CultivoCama>("SGFModel.FK_SGF_CultivoCuadro_SGF_CultivoCama", "SGF_CultivoCama", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_CultivoLado")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SGF_CultivoLado : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SGF_CultivoLado.
+        /// </summary>
+        /// <param name="cultivoLadoID">Valor inicial de la propiedad CultivoLadoID.</param>
+        /// <param name="cultivoBloqueID">Valor inicial de la propiedad CultivoBloqueID.</param>
+        /// <param name="ladoID">Valor inicial de la propiedad LadoID.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static SGF_CultivoLado CreateSGF_CultivoLado(global::System.Guid cultivoLadoID, global::System.Guid cultivoBloqueID, global::System.Guid ladoID, global::System.Int32 estado)
+        {
+            SGF_CultivoLado sGF_CultivoLado = new SGF_CultivoLado();
+            sGF_CultivoLado.CultivoLadoID = cultivoLadoID;
+            sGF_CultivoLado.CultivoBloqueID = cultivoBloqueID;
+            sGF_CultivoLado.LadoID = ladoID;
+            sGF_CultivoLado.Estado = estado;
+            return sGF_CultivoLado;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoLadoID
+        {
+            get
+            {
+                return _CultivoLadoID;
+            }
+            set
+            {
+                if (_CultivoLadoID != value)
+                {
+                    OnCultivoLadoIDChanging(value);
+                    ReportPropertyChanging("CultivoLadoID");
+                    _CultivoLadoID = StructuralObject.SetValidValue(value, "CultivoLadoID");
+                    ReportPropertyChanged("CultivoLadoID");
+                    OnCultivoLadoIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _CultivoLadoID;
+        partial void OnCultivoLadoIDChanging(global::System.Guid value);
+        partial void OnCultivoLadoIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoBloqueID
+        {
+            get
+            {
+                return _CultivoBloqueID;
+            }
+            set
+            {
+                OnCultivoBloqueIDChanging(value);
+                ReportPropertyChanging("CultivoBloqueID");
+                _CultivoBloqueID = StructuralObject.SetValidValue(value, "CultivoBloqueID");
+                ReportPropertyChanged("CultivoBloqueID");
+                OnCultivoBloqueIDChanged();
+            }
+        }
+        private global::System.Guid _CultivoBloqueID;
+        partial void OnCultivoBloqueIDChanging(global::System.Guid value);
+        partial void OnCultivoBloqueIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid LadoID
+        {
+            get
+            {
+                return _LadoID;
+            }
+            set
+            {
+                OnLadoIDChanging(value);
+                ReportPropertyChanging("LadoID");
+                _LadoID = StructuralObject.SetValidValue(value, "LadoID");
+                ReportPropertyChanged("LadoID");
+                OnLadoIDChanged();
+            }
+        }
+        private global::System.Guid _LadoID;
+        partial void OnLadoIDChanging(global::System.Guid value);
+        partial void OnLadoIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = StructuralObject.SetValidValue(value, true, "Nombre");
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Orden
+        {
+            get
+            {
+                return _Orden;
+            }
+            set
+            {
+                OnOrdenChanging(value);
+                ReportPropertyChanging("Orden");
+                _Orden = StructuralObject.SetValidValue(value, "Orden");
+                ReportPropertyChanged("Orden");
+                OnOrdenChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Orden;
+        partial void OnOrdenChanging(Nullable<global::System.Int32> value);
+        partial void OnOrdenChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value, "Estado");
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+
+        #endregion
+
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoLado_SGF_CultivoBloque", "SGF_CultivoBloque")]
+        public SGF_CultivoBloque SGF_CultivoBloque
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoBloque>("SGFModel.FK_SGF_CultivoLado_SGF_CultivoBloque", "SGF_CultivoBloque").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoBloque>("SGFModel.FK_SGF_CultivoLado_SGF_CultivoBloque", "SGF_CultivoBloque").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SGF_CultivoBloque> SGF_CultivoBloqueReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoBloque>("SGFModel.FK_SGF_CultivoLado_SGF_CultivoBloque", "SGF_CultivoBloque");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_CultivoBloque>("SGFModel.FK_SGF_CultivoLado_SGF_CultivoBloque", "SGF_CultivoBloque", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoNave_SGF_CultivoLado", "SGF_CultivoNave")]
+        public EntityCollection<SGF_CultivoNave> SGF_CultivoNave
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SGF_CultivoNave>("SGFModel.FK_SGF_CultivoNave_SGF_CultivoLado", "SGF_CultivoNave");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SGF_CultivoNave>("SGFModel.FK_SGF_CultivoNave_SGF_CultivoLado", "SGF_CultivoNave", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_CultivoNave")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SGF_CultivoNave : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SGF_CultivoNave.
+        /// </summary>
+        /// <param name="cultivoNaveID">Valor inicial de la propiedad CultivoNaveID.</param>
+        /// <param name="cultivoLadoID">Valor inicial de la propiedad CultivoLadoID.</param>
+        /// <param name="naveID">Valor inicial de la propiedad NaveID.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static SGF_CultivoNave CreateSGF_CultivoNave(global::System.Guid cultivoNaveID, global::System.Guid cultivoLadoID, global::System.Guid naveID, global::System.Int32 estado)
+        {
+            SGF_CultivoNave sGF_CultivoNave = new SGF_CultivoNave();
+            sGF_CultivoNave.CultivoNaveID = cultivoNaveID;
+            sGF_CultivoNave.CultivoLadoID = cultivoLadoID;
+            sGF_CultivoNave.NaveID = naveID;
+            sGF_CultivoNave.Estado = estado;
+            return sGF_CultivoNave;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoNaveID
+        {
+            get
+            {
+                return _CultivoNaveID;
+            }
+            set
+            {
+                if (_CultivoNaveID != value)
+                {
+                    OnCultivoNaveIDChanging(value);
+                    ReportPropertyChanging("CultivoNaveID");
+                    _CultivoNaveID = StructuralObject.SetValidValue(value, "CultivoNaveID");
+                    ReportPropertyChanged("CultivoNaveID");
+                    OnCultivoNaveIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _CultivoNaveID;
+        partial void OnCultivoNaveIDChanging(global::System.Guid value);
+        partial void OnCultivoNaveIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CultivoLadoID
+        {
+            get
+            {
+                return _CultivoLadoID;
+            }
+            set
+            {
+                OnCultivoLadoIDChanging(value);
+                ReportPropertyChanging("CultivoLadoID");
+                _CultivoLadoID = StructuralObject.SetValidValue(value, "CultivoLadoID");
+                ReportPropertyChanged("CultivoLadoID");
+                OnCultivoLadoIDChanged();
+            }
+        }
+        private global::System.Guid _CultivoLadoID;
+        partial void OnCultivoLadoIDChanging(global::System.Guid value);
+        partial void OnCultivoLadoIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid NaveID
+        {
+            get
+            {
+                return _NaveID;
+            }
+            set
+            {
+                OnNaveIDChanging(value);
+                ReportPropertyChanging("NaveID");
+                _NaveID = StructuralObject.SetValidValue(value, "NaveID");
+                ReportPropertyChanged("NaveID");
+                OnNaveIDChanged();
+            }
+        }
+        private global::System.Guid _NaveID;
+        partial void OnNaveIDChanging(global::System.Guid value);
+        partial void OnNaveIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = StructuralObject.SetValidValue(value, true, "Nombre");
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Orden
+        {
+            get
+            {
+                return _Orden;
+            }
+            set
+            {
+                OnOrdenChanging(value);
+                ReportPropertyChanging("Orden");
+                _Orden = StructuralObject.SetValidValue(value, "Orden");
+                ReportPropertyChanged("Orden");
+                OnOrdenChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Orden;
+        partial void OnOrdenChanging(Nullable<global::System.Int32> value);
+        partial void OnOrdenChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value, "Estado");
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+
+        #endregion
+
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoCama_SGF_CultivoNave", "SGF_CultivoCama")]
+        public EntityCollection<SGF_CultivoCama> SGF_CultivoCama
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SGF_CultivoCama>("SGFModel.FK_SGF_CultivoCama_SGF_CultivoNave", "SGF_CultivoCama");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SGF_CultivoCama>("SGFModel.FK_SGF_CultivoCama_SGF_CultivoNave", "SGF_CultivoCama", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CultivoNave_SGF_CultivoLado", "SGF_CultivoLado")]
+        public SGF_CultivoLado SGF_CultivoLado
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoLado>("SGFModel.FK_SGF_CultivoNave_SGF_CultivoLado", "SGF_CultivoLado").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoLado>("SGFModel.FK_SGF_CultivoNave_SGF_CultivoLado", "SGF_CultivoLado").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SGF_CultivoLado> SGF_CultivoLadoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SGF_CultivoLado>("SGFModel.FK_SGF_CultivoNave_SGF_CultivoLado", "SGF_CultivoLado");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SGF_CultivoLado>("SGFModel.FK_SGF_CultivoNave_SGF_CultivoLado", "SGF_CultivoLado", value);
                 }
             }
         }
@@ -5623,6 +7815,188 @@ namespace SGF.DataAccess
                 }
             }
         }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_Parametro")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SGF_Parametro : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SGF_Parametro.
+        /// </summary>
+        /// <param name="parametroID">Valor inicial de la propiedad ParametroID.</param>
+        /// <param name="tipoParametro">Valor inicial de la propiedad TipoParametro.</param>
+        /// <param name="valor">Valor inicial de la propiedad Valor.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static SGF_Parametro CreateSGF_Parametro(global::System.Guid parametroID, global::System.Int32 tipoParametro, global::System.String valor, global::System.Int32 estado)
+        {
+            SGF_Parametro sGF_Parametro = new SGF_Parametro();
+            sGF_Parametro.ParametroID = parametroID;
+            sGF_Parametro.TipoParametro = tipoParametro;
+            sGF_Parametro.Valor = valor;
+            sGF_Parametro.Estado = estado;
+            return sGF_Parametro;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid ParametroID
+        {
+            get
+            {
+                return _ParametroID;
+            }
+            set
+            {
+                if (_ParametroID != value)
+                {
+                    OnParametroIDChanging(value);
+                    ReportPropertyChanging("ParametroID");
+                    _ParametroID = StructuralObject.SetValidValue(value, "ParametroID");
+                    ReportPropertyChanged("ParametroID");
+                    OnParametroIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _ParametroID;
+        partial void OnParametroIDChanging(global::System.Guid value);
+        partial void OnParametroIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Pkey
+        {
+            get
+            {
+                return _Pkey;
+            }
+            set
+            {
+                OnPkeyChanging(value);
+                ReportPropertyChanging("Pkey");
+                _Pkey = StructuralObject.SetValidValue(value, true, "Pkey");
+                ReportPropertyChanged("Pkey");
+                OnPkeyChanged();
+            }
+        }
+        private global::System.String _Pkey;
+        partial void OnPkeyChanging(global::System.String value);
+        partial void OnPkeyChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 TipoParametro
+        {
+            get
+            {
+                return _TipoParametro;
+            }
+            set
+            {
+                OnTipoParametroChanging(value);
+                ReportPropertyChanging("TipoParametro");
+                _TipoParametro = StructuralObject.SetValidValue(value, "TipoParametro");
+                ReportPropertyChanged("TipoParametro");
+                OnTipoParametroChanged();
+            }
+        }
+        private global::System.Int32 _TipoParametro;
+        partial void OnTipoParametroChanging(global::System.Int32 value);
+        partial void OnTipoParametroChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Valor
+        {
+            get
+            {
+                return _Valor;
+            }
+            set
+            {
+                OnValorChanging(value);
+                ReportPropertyChanging("Valor");
+                _Valor = StructuralObject.SetValidValue(value, false, "Valor");
+                ReportPropertyChanged("Valor");
+                OnValorChanged();
+            }
+        }
+        private global::System.String _Valor;
+        partial void OnValorChanging(global::System.String value);
+        partial void OnValorChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Comentarios
+        {
+            get
+            {
+                return _Comentarios;
+            }
+            set
+            {
+                OnComentariosChanging(value);
+                ReportPropertyChanging("Comentarios");
+                _Comentarios = StructuralObject.SetValidValue(value, true, "Comentarios");
+                ReportPropertyChanged("Comentarios");
+                OnComentariosChanged();
+            }
+        }
+        private global::System.String _Comentarios;
+        partial void OnComentariosChanging(global::System.String value);
+        partial void OnComentariosChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value, "Estado");
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
 
         #endregion
 
@@ -8603,6 +10977,894 @@ namespace SGF.DataAccess
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_Producto_VTA")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SGF_Producto_VTA : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SGF_Producto_VTA.
+        /// </summary>
+        /// <param name="productoID">Valor inicial de la propiedad ProductoID.</param>
+        /// <param name="variedadID">Valor inicial de la propiedad VariedadID.</param>
+        /// <param name="codigo">Valor inicial de la propiedad Codigo.</param>
+        /// <param name="calidadID">Valor inicial de la propiedad CalidadID.</param>
+        /// <param name="longitudID">Valor inicial de la propiedad LongitudID.</param>
+        /// <param name="talloID">Valor inicial de la propiedad TalloID.</param>
+        /// <param name="usuario">Valor inicial de la propiedad Usuario.</param>
+        /// <param name="fecha">Valor inicial de la propiedad Fecha.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static SGF_Producto_VTA CreateSGF_Producto_VTA(global::System.Guid productoID, global::System.Guid variedadID, global::System.String codigo, global::System.Guid calidadID, global::System.Guid longitudID, global::System.Guid talloID, global::System.String usuario, global::System.DateTime fecha, global::System.Int32 estado)
+        {
+            SGF_Producto_VTA sGF_Producto_VTA = new SGF_Producto_VTA();
+            sGF_Producto_VTA.ProductoID = productoID;
+            sGF_Producto_VTA.VariedadID = variedadID;
+            sGF_Producto_VTA.Codigo = codigo;
+            sGF_Producto_VTA.CalidadID = calidadID;
+            sGF_Producto_VTA.LongitudID = longitudID;
+            sGF_Producto_VTA.TalloID = talloID;
+            sGF_Producto_VTA.Usuario = usuario;
+            sGF_Producto_VTA.Fecha = fecha;
+            sGF_Producto_VTA.Estado = estado;
+            return sGF_Producto_VTA;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid ProductoID
+        {
+            get
+            {
+                return _ProductoID;
+            }
+            set
+            {
+                if (_ProductoID != value)
+                {
+                    OnProductoIDChanging(value);
+                    ReportPropertyChanging("ProductoID");
+                    _ProductoID = StructuralObject.SetValidValue(value, "ProductoID");
+                    ReportPropertyChanged("ProductoID");
+                    OnProductoIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _ProductoID;
+        partial void OnProductoIDChanging(global::System.Guid value);
+        partial void OnProductoIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VariedadID
+        {
+            get
+            {
+                return _VariedadID;
+            }
+            set
+            {
+                if (_VariedadID != value)
+                {
+                    OnVariedadIDChanging(value);
+                    ReportPropertyChanging("VariedadID");
+                    _VariedadID = StructuralObject.SetValidValue(value, "VariedadID");
+                    ReportPropertyChanged("VariedadID");
+                    OnVariedadIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _VariedadID;
+        partial void OnVariedadIDChanging(global::System.Guid value);
+        partial void OnVariedadIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Codigo
+        {
+            get
+            {
+                return _Codigo;
+            }
+            set
+            {
+                if (_Codigo != value)
+                {
+                    OnCodigoChanging(value);
+                    ReportPropertyChanging("Codigo");
+                    _Codigo = StructuralObject.SetValidValue(value, false, "Codigo");
+                    ReportPropertyChanged("Codigo");
+                    OnCodigoChanged();
+                }
+            }
+        }
+        private global::System.String _Codigo;
+        partial void OnCodigoChanging(global::System.String value);
+        partial void OnCodigoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = StructuralObject.SetValidValue(value, true, "Nombre");
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CalidadID
+        {
+            get
+            {
+                return _CalidadID;
+            }
+            set
+            {
+                if (_CalidadID != value)
+                {
+                    OnCalidadIDChanging(value);
+                    ReportPropertyChanging("CalidadID");
+                    _CalidadID = StructuralObject.SetValidValue(value, "CalidadID");
+                    ReportPropertyChanged("CalidadID");
+                    OnCalidadIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _CalidadID;
+        partial void OnCalidadIDChanging(global::System.Guid value);
+        partial void OnCalidadIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid LongitudID
+        {
+            get
+            {
+                return _LongitudID;
+            }
+            set
+            {
+                if (_LongitudID != value)
+                {
+                    OnLongitudIDChanging(value);
+                    ReportPropertyChanging("LongitudID");
+                    _LongitudID = StructuralObject.SetValidValue(value, "LongitudID");
+                    ReportPropertyChanged("LongitudID");
+                    OnLongitudIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _LongitudID;
+        partial void OnLongitudIDChanging(global::System.Guid value);
+        partial void OnLongitudIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid TalloID
+        {
+            get
+            {
+                return _TalloID;
+            }
+            set
+            {
+                if (_TalloID != value)
+                {
+                    OnTalloIDChanging(value);
+                    ReportPropertyChanging("TalloID");
+                    _TalloID = StructuralObject.SetValidValue(value, "TalloID");
+                    ReportPropertyChanged("TalloID");
+                    OnTalloIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _TalloID;
+        partial void OnTalloIDChanging(global::System.Guid value);
+        partial void OnTalloIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> MercadoID
+        {
+            get
+            {
+                return _MercadoID;
+            }
+            set
+            {
+                OnMercadoIDChanging(value);
+                ReportPropertyChanging("MercadoID");
+                _MercadoID = StructuralObject.SetValidValue(value, "MercadoID");
+                ReportPropertyChanged("MercadoID");
+                OnMercadoIDChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _MercadoID;
+        partial void OnMercadoIDChanging(Nullable<global::System.Guid> value);
+        partial void OnMercadoIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> PaisID
+        {
+            get
+            {
+                return _PaisID;
+            }
+            set
+            {
+                OnPaisIDChanging(value);
+                ReportPropertyChanging("PaisID");
+                _PaisID = StructuralObject.SetValidValue(value, "PaisID");
+                ReportPropertyChanged("PaisID");
+                OnPaisIDChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _PaisID;
+        partial void OnPaisIDChanging(Nullable<global::System.Guid> value);
+        partial void OnPaisIDChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Descripcion
+        {
+            get
+            {
+                return _Descripcion;
+            }
+            set
+            {
+                OnDescripcionChanging(value);
+                ReportPropertyChanging("Descripcion");
+                _Descripcion = StructuralObject.SetValidValue(value, true, "Descripcion");
+                ReportPropertyChanged("Descripcion");
+                OnDescripcionChanged();
+            }
+        }
+        private global::System.String _Descripcion;
+        partial void OnDescripcionChanging(global::System.String value);
+        partial void OnDescripcionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> ValorRefCompra
+        {
+            get
+            {
+                return _ValorRefCompra;
+            }
+            set
+            {
+                OnValorRefCompraChanging(value);
+                ReportPropertyChanging("ValorRefCompra");
+                _ValorRefCompra = StructuralObject.SetValidValue(value, "ValorRefCompra");
+                ReportPropertyChanged("ValorRefCompra");
+                OnValorRefCompraChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _ValorRefCompra;
+        partial void OnValorRefCompraChanging(Nullable<global::System.Decimal> value);
+        partial void OnValorRefCompraChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> ValorRefVenta
+        {
+            get
+            {
+                return _ValorRefVenta;
+            }
+            set
+            {
+                OnValorRefVentaChanging(value);
+                ReportPropertyChanging("ValorRefVenta");
+                _ValorRefVenta = StructuralObject.SetValidValue(value, "ValorRefVenta");
+                ReportPropertyChanged("ValorRefVenta");
+                OnValorRefVentaChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _ValorRefVenta;
+        partial void OnValorRefVentaChanging(Nullable<global::System.Decimal> value);
+        partial void OnValorRefVentaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Usuario
+        {
+            get
+            {
+                return _Usuario;
+            }
+            set
+            {
+                if (_Usuario != value)
+                {
+                    OnUsuarioChanging(value);
+                    ReportPropertyChanging("Usuario");
+                    _Usuario = StructuralObject.SetValidValue(value, false, "Usuario");
+                    ReportPropertyChanged("Usuario");
+                    OnUsuarioChanged();
+                }
+            }
+        }
+        private global::System.String _Usuario;
+        partial void OnUsuarioChanging(global::System.String value);
+        partial void OnUsuarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime Fecha
+        {
+            get
+            {
+                return _Fecha;
+            }
+            set
+            {
+                if (_Fecha != value)
+                {
+                    OnFechaChanging(value);
+                    ReportPropertyChanging("Fecha");
+                    _Fecha = StructuralObject.SetValidValue(value, "Fecha");
+                    ReportPropertyChanged("Fecha");
+                    OnFechaChanged();
+                }
+            }
+        }
+        private global::System.DateTime _Fecha;
+        partial void OnFechaChanging(global::System.DateTime value);
+        partial void OnFechaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                if (_Estado != value)
+                {
+                    OnEstadoChanging(value);
+                    ReportPropertyChanging("Estado");
+                    _Estado = StructuralObject.SetValidValue(value, "Estado");
+                    ReportPropertyChanged("Estado");
+                    OnEstadoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Calidad
+        {
+            get
+            {
+                return _Calidad;
+            }
+            set
+            {
+                OnCalidadChanging(value);
+                ReportPropertyChanging("Calidad");
+                _Calidad = StructuralObject.SetValidValue(value, true, "Calidad");
+                ReportPropertyChanged("Calidad");
+                OnCalidadChanged();
+            }
+        }
+        private global::System.String _Calidad;
+        partial void OnCalidadChanging(global::System.String value);
+        partial void OnCalidadChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Longitud
+        {
+            get
+            {
+                return _Longitud;
+            }
+            set
+            {
+                OnLongitudChanging(value);
+                ReportPropertyChanging("Longitud");
+                _Longitud = StructuralObject.SetValidValue(value, true, "Longitud");
+                ReportPropertyChanged("Longitud");
+                OnLongitudChanged();
+            }
+        }
+        private global::System.String _Longitud;
+        partial void OnLongitudChanging(global::System.String value);
+        partial void OnLongitudChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Tallo
+        {
+            get
+            {
+                return _Tallo;
+            }
+            set
+            {
+                OnTalloChanging(value);
+                ReportPropertyChanging("Tallo");
+                _Tallo = StructuralObject.SetValidValue(value, true, "Tallo");
+                ReportPropertyChanged("Tallo");
+                OnTalloChanged();
+            }
+        }
+        private global::System.String _Tallo;
+        partial void OnTalloChanging(global::System.String value);
+        partial void OnTalloChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Mercado
+        {
+            get
+            {
+                return _Mercado;
+            }
+            set
+            {
+                OnMercadoChanging(value);
+                ReportPropertyChanging("Mercado");
+                _Mercado = StructuralObject.SetValidValue(value, true, "Mercado");
+                ReportPropertyChanged("Mercado");
+                OnMercadoChanged();
+            }
+        }
+        private global::System.String _Mercado;
+        partial void OnMercadoChanging(global::System.String value);
+        partial void OnMercadoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Pais
+        {
+            get
+            {
+                return _Pais;
+            }
+            set
+            {
+                OnPaisChanging(value);
+                ReportPropertyChanging("Pais");
+                _Pais = StructuralObject.SetValidValue(value, true, "Pais");
+                ReportPropertyChanged("Pais");
+                OnPaisChanged();
+            }
+        }
+        private global::System.String _Pais;
+        partial void OnPaisChanging(global::System.String value);
+        partial void OnPaisChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String VariedadCodigo
+        {
+            get
+            {
+                return _VariedadCodigo;
+            }
+            set
+            {
+                OnVariedadCodigoChanging(value);
+                ReportPropertyChanging("VariedadCodigo");
+                _VariedadCodigo = StructuralObject.SetValidValue(value, true, "VariedadCodigo");
+                ReportPropertyChanged("VariedadCodigo");
+                OnVariedadCodigoChanged();
+            }
+        }
+        private global::System.String _VariedadCodigo;
+        partial void OnVariedadCodigoChanging(global::System.String value);
+        partial void OnVariedadCodigoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String VariedadNombre
+        {
+            get
+            {
+                return _VariedadNombre;
+            }
+            set
+            {
+                OnVariedadNombreChanging(value);
+                ReportPropertyChanging("VariedadNombre");
+                _VariedadNombre = StructuralObject.SetValidValue(value, true, "VariedadNombre");
+                ReportPropertyChanged("VariedadNombre");
+                OnVariedadNombreChanged();
+            }
+        }
+        private global::System.String _VariedadNombre;
+        partial void OnVariedadNombreChanging(global::System.String value);
+        partial void OnVariedadNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String VariedadObtentor
+        {
+            get
+            {
+                return _VariedadObtentor;
+            }
+            set
+            {
+                OnVariedadObtentorChanging(value);
+                ReportPropertyChanging("VariedadObtentor");
+                _VariedadObtentor = StructuralObject.SetValidValue(value, true, "VariedadObtentor");
+                ReportPropertyChanged("VariedadObtentor");
+                OnVariedadObtentorChanged();
+            }
+        }
+        private global::System.String _VariedadObtentor;
+        partial void OnVariedadObtentorChanging(global::System.String value);
+        partial void OnVariedadObtentorChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> VariedadRotacion
+        {
+            get
+            {
+                return _VariedadRotacion;
+            }
+            set
+            {
+                OnVariedadRotacionChanging(value);
+                ReportPropertyChanging("VariedadRotacion");
+                _VariedadRotacion = StructuralObject.SetValidValue(value, "VariedadRotacion");
+                ReportPropertyChanged("VariedadRotacion");
+                OnVariedadRotacionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _VariedadRotacion;
+        partial void OnVariedadRotacionChanging(Nullable<global::System.Int32> value);
+        partial void OnVariedadRotacionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> VariedadIndProdMensual
+        {
+            get
+            {
+                return _VariedadIndProdMensual;
+            }
+            set
+            {
+                OnVariedadIndProdMensualChanging(value);
+                ReportPropertyChanging("VariedadIndProdMensual");
+                _VariedadIndProdMensual = StructuralObject.SetValidValue(value, "VariedadIndProdMensual");
+                ReportPropertyChanged("VariedadIndProdMensual");
+                OnVariedadIndProdMensualChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _VariedadIndProdMensual;
+        partial void OnVariedadIndProdMensualChanging(Nullable<global::System.Decimal> value);
+        partial void OnVariedadIndProdMensualChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> VariedadTamanoBoton
+        {
+            get
+            {
+                return _VariedadTamanoBoton;
+            }
+            set
+            {
+                OnVariedadTamanoBotonChanging(value);
+                ReportPropertyChanging("VariedadTamanoBoton");
+                _VariedadTamanoBoton = StructuralObject.SetValidValue(value, "VariedadTamanoBoton");
+                ReportPropertyChanged("VariedadTamanoBoton");
+                OnVariedadTamanoBotonChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _VariedadTamanoBoton;
+        partial void OnVariedadTamanoBotonChanging(Nullable<global::System.Decimal> value);
+        partial void OnVariedadTamanoBotonChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> VariedadDiasFlorero
+        {
+            get
+            {
+                return _VariedadDiasFlorero;
+            }
+            set
+            {
+                OnVariedadDiasFloreroChanging(value);
+                ReportPropertyChanging("VariedadDiasFlorero");
+                _VariedadDiasFlorero = StructuralObject.SetValidValue(value, "VariedadDiasFlorero");
+                ReportPropertyChanged("VariedadDiasFlorero");
+                OnVariedadDiasFloreroChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _VariedadDiasFlorero;
+        partial void OnVariedadDiasFloreroChanging(Nullable<global::System.Int32> value);
+        partial void OnVariedadDiasFloreroChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> VariedadCiclo
+        {
+            get
+            {
+                return _VariedadCiclo;
+            }
+            set
+            {
+                OnVariedadCicloChanging(value);
+                ReportPropertyChanging("VariedadCiclo");
+                _VariedadCiclo = StructuralObject.SetValidValue(value, "VariedadCiclo");
+                ReportPropertyChanged("VariedadCiclo");
+                OnVariedadCicloChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _VariedadCiclo;
+        partial void OnVariedadCicloChanging(Nullable<global::System.Int32> value);
+        partial void OnVariedadCicloChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> VariedadNumeroPetalos
+        {
+            get
+            {
+                return _VariedadNumeroPetalos;
+            }
+            set
+            {
+                OnVariedadNumeroPetalosChanging(value);
+                ReportPropertyChanging("VariedadNumeroPetalos");
+                _VariedadNumeroPetalos = StructuralObject.SetValidValue(value, "VariedadNumeroPetalos");
+                ReportPropertyChanged("VariedadNumeroPetalos");
+                OnVariedadNumeroPetalosChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _VariedadNumeroPetalos;
+        partial void OnVariedadNumeroPetalosChanging(Nullable<global::System.Int32> value);
+        partial void OnVariedadNumeroPetalosChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String VariedadTipoFlor
+        {
+            get
+            {
+                return _VariedadTipoFlor;
+            }
+            set
+            {
+                OnVariedadTipoFlorChanging(value);
+                ReportPropertyChanging("VariedadTipoFlor");
+                _VariedadTipoFlor = StructuralObject.SetValidValue(value, true, "VariedadTipoFlor");
+                ReportPropertyChanged("VariedadTipoFlor");
+                OnVariedadTipoFlorChanged();
+            }
+        }
+        private global::System.String _VariedadTipoFlor;
+        partial void OnVariedadTipoFlorChanging(global::System.String value);
+        partial void OnVariedadTipoFlorChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String VariedadColor
+        {
+            get
+            {
+                return _VariedadColor;
+            }
+            set
+            {
+                OnVariedadColorChanging(value);
+                ReportPropertyChanging("VariedadColor");
+                _VariedadColor = StructuralObject.SetValidValue(value, true, "VariedadColor");
+                ReportPropertyChanged("VariedadColor");
+                OnVariedadColorChanged();
+            }
+        }
+        private global::System.String _VariedadColor;
+        partial void OnVariedadColorChanging(global::System.String value);
+        partial void OnVariedadColorChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String VariedadCalidad
+        {
+            get
+            {
+                return _VariedadCalidad;
+            }
+            set
+            {
+                OnVariedadCalidadChanging(value);
+                ReportPropertyChanging("VariedadCalidad");
+                _VariedadCalidad = StructuralObject.SetValidValue(value, true, "VariedadCalidad");
+                ReportPropertyChanged("VariedadCalidad");
+                OnVariedadCalidadChanged();
+            }
+        }
+        private global::System.String _VariedadCalidad;
+        partial void OnVariedadCalidadChanging(global::System.String value);
+        partial void OnVariedadCalidadChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String VariedadLongitudMax
+        {
+            get
+            {
+                return _VariedadLongitudMax;
+            }
+            set
+            {
+                OnVariedadLongitudMaxChanging(value);
+                ReportPropertyChanging("VariedadLongitudMax");
+                _VariedadLongitudMax = StructuralObject.SetValidValue(value, true, "VariedadLongitudMax");
+                ReportPropertyChanged("VariedadLongitudMax");
+                OnVariedadLongitudMaxChanged();
+            }
+        }
+        private global::System.String _VariedadLongitudMax;
+        partial void OnVariedadLongitudMaxChanging(global::System.String value);
+        partial void OnVariedadLongitudMaxChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String VariedadLongitudMin
+        {
+            get
+            {
+                return _VariedadLongitudMin;
+            }
+            set
+            {
+                OnVariedadLongitudMinChanging(value);
+                ReportPropertyChanging("VariedadLongitudMin");
+                _VariedadLongitudMin = StructuralObject.SetValidValue(value, true, "VariedadLongitudMin");
+                ReportPropertyChanged("VariedadLongitudMin");
+                OnVariedadLongitudMinChanged();
+            }
+        }
+        private global::System.String _VariedadLongitudMin;
+        partial void OnVariedadLongitudMinChanging(global::System.String value);
+        partial void OnVariedadLongitudMinChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="SGF_Sucursal")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -8848,18 +12110,40 @@ namespace SGF.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_Bodega_SGF_Sucursal", "SGF_Bodega")]
-        public EntityCollection<SGF_Bodega> SGF_Bodega
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_Almacen_SGF_Sucursal", "SGF_Almacen")]
+        public EntityCollection<SGF_Almacen> SGF_Almacen
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SGF_Bodega>("SGFModel.FK_SGF_Bodega_SGF_Sucursal", "SGF_Bodega");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SGF_Almacen>("SGFModel.FK_SGF_Almacen_SGF_Sucursal", "SGF_Almacen");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SGF_Bodega>("SGFModel.FK_SGF_Bodega_SGF_Sucursal", "SGF_Bodega", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SGF_Almacen>("SGFModel.FK_SGF_Almacen_SGF_Sucursal", "SGF_Almacen", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SGFModel", "FK_SGF_CampoCultivo_SGF_Sucursal", "SGF_CampoCultivo")]
+        public EntityCollection<SGF_CampoCultivo> SGF_CampoCultivo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SGF_CampoCultivo>("SGFModel.FK_SGF_CampoCultivo_SGF_Sucursal", "SGF_CampoCultivo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SGF_CampoCultivo>("SGFModel.FK_SGF_CampoCultivo_SGF_Sucursal", "SGF_CampoCultivo", value);
                 }
             }
         }
@@ -11777,6 +15061,162 @@ namespace SGF.DataAccess
         private global::System.Int32 _Estado;
         partial void OnEstadoChanging(global::System.Int32 value);
         partial void OnEstadoChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SGFModel", Name="sysdiagrams")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class sysdiagrams : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto sysdiagrams.
+        /// </summary>
+        /// <param name="name">Valor inicial de la propiedad name.</param>
+        /// <param name="principal_id">Valor inicial de la propiedad principal_id.</param>
+        /// <param name="diagram_id">Valor inicial de la propiedad diagram_id.</param>
+        public static sysdiagrams Createsysdiagrams(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
+        {
+            sysdiagrams sysdiagrams = new sysdiagrams();
+            sysdiagrams.name = name;
+            sysdiagrams.principal_id = principal_id;
+            sysdiagrams.diagram_id = diagram_id;
+            return sysdiagrams;
+        }
+
+        #endregion
+
+        #region Propiedades simples
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                OnnameChanging(value);
+                ReportPropertyChanging("name");
+                _name = StructuralObject.SetValidValue(value, false, "name");
+                ReportPropertyChanged("name");
+                OnnameChanged();
+            }
+        }
+        private global::System.String _name;
+        partial void OnnameChanging(global::System.String value);
+        partial void OnnameChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 principal_id
+        {
+            get
+            {
+                return _principal_id;
+            }
+            set
+            {
+                Onprincipal_idChanging(value);
+                ReportPropertyChanging("principal_id");
+                _principal_id = StructuralObject.SetValidValue(value, "principal_id");
+                ReportPropertyChanged("principal_id");
+                Onprincipal_idChanged();
+            }
+        }
+        private global::System.Int32 _principal_id;
+        partial void Onprincipal_idChanging(global::System.Int32 value);
+        partial void Onprincipal_idChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 diagram_id
+        {
+            get
+            {
+                return _diagram_id;
+            }
+            set
+            {
+                if (_diagram_id != value)
+                {
+                    Ondiagram_idChanging(value);
+                    ReportPropertyChanging("diagram_id");
+                    _diagram_id = StructuralObject.SetValidValue(value, "diagram_id");
+                    ReportPropertyChanged("diagram_id");
+                    Ondiagram_idChanged();
+                }
+            }
+        }
+        private global::System.Int32 _diagram_id;
+        partial void Ondiagram_idChanging(global::System.Int32 value);
+        partial void Ondiagram_idChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value, "version");
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _version;
+        partial void OnversionChanging(Nullable<global::System.Int32> value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] definition
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_definition);
+            }
+            set
+            {
+                OndefinitionChanging(value);
+                ReportPropertyChanging("definition");
+                _definition = StructuralObject.SetValidValue(value, true, "definition");
+                ReportPropertyChanged("definition");
+                OndefinitionChanged();
+            }
+        }
+        private global::System.Byte[] _definition;
+        partial void OndefinitionChanging(global::System.Byte[] value);
+        partial void OndefinitionChanged();
 
         #endregion
 

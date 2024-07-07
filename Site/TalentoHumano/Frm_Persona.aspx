@@ -11,6 +11,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:HiddenField ID="hdn_PersonaID" runat="server" />
+     <table width="100%">
+        <tr>
+            <td align="center">
+                <asp:Label runat="server" ID="lbl_Titulo" Text="ADMINISTRACIÓN DE PERSONAS" Font-Size="Large" Font-Bold="true"></asp:Label>
+            </td>
+        </tr>
+    </table>
     <asp:Panel ID="pnl_Buscar" runat="server" Visible="true">
         <asp:ImageButton ID="btn_Nuevo" runat="server" ToolTip="Nuevo Registro" ImageUrl="~/Images/Agregar.png"
             OnClick="btn_Nuevo_Click" />
@@ -25,6 +32,7 @@
                     </td>
                     <td width="150px" align="left">Nombre:
                     </td>
+
                     <td>
                         <telerik:RadTextBox ID="txt_BuscarNombre" runat="server" Width="250px"></telerik:RadTextBox>
                     </td>

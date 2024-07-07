@@ -56,8 +56,8 @@ namespace SGF.Site.Administracion
                             master.VisibilityMenuItem = (int)Enums.ModuloIndex.Cultivo;
                             lbl_Titulo.Text = "ADMINISTRACIÓN DE AREAS";
                             cmb_TipoClasificador.Enabled = false;
-                            cmb_TipoClasificador.SelectedValue = TipoClasificador.Areas.ToString();
-                            cmb_TipoClasificadorBuscar.SelectedValue = TipoClasificador.Areas.ToString();
+                            cmb_TipoClasificador.SelectedValue = TipoClasificador.CultivoAreas .ToString();
+                            cmb_TipoClasificadorBuscar.SelectedValue = TipoClasificador.CultivoAreas.ToString();
                             fiel_Buscar.Visible = false;
                             break;
                         case "4498C717-2896-4934-B6BC-545E8EA20DD2":        //Cultivo - Tallos por Malla

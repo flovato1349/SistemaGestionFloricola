@@ -35,7 +35,6 @@ namespace SGF.Site
         public static readonly Guid CalidadFlor = new Guid("59397B48-46C0-4314-9673-F3293114BBCB");
         public static readonly Guid Pais = new Guid("6CA88FE4-81C3-4E64-AAC3-79F8E62A2BD9");
         public static readonly Guid Ciudad = new Guid("56195587-9FBA-452E-9A41-92CC6DBC998B");
-        public static readonly Guid Areas = new Guid("E03E4E4D-6492-45B1-BA5F-EDE1C416C73D");
         public static readonly Guid Actividades = new Guid("2CF38792-6533-4FA4-B304-0DE2A7EBA47C");
         public static readonly Guid TipoProblemasFlor = new Guid("0B29F36C-2E8B-4298-B3E0-675F3F04DEF7");
         public static readonly Guid ProblemasFlor= new Guid("7F3A7F8E-265C-40DD-BFD8-4E8F82647010");
@@ -57,5 +56,11 @@ namespace SGF.Site
         public static readonly Guid Mesas = new Guid("1A3FA34D-8E49-4211-A05C-C09927439D46");
         public static readonly Guid Cargueras= new Guid("63E098D1-74C5-41AD-BFEA-2709E1B89029");
         public static readonly Guid BonchesPorCaja = new Guid("D2726425-33FF-4178-98B9-CBD77E2816D1");
+        public static readonly Guid CultivoAreas = new Guid("E03E4E4D-6492-45B1-BA5F-EDE1C416C73D");
+        public static readonly Guid CultivoBloques = new Guid("2C0BB68F-8D62-4DFA-9B40-C13C6BB003EA");
+        public static readonly Guid CultivoLados= new Guid("5A69AD9F-65E6-4011-9F82-A490A8A950A2");
+        public static readonly Guid CultivoNaves= new Guid("BB421ADD-C972-4FDE-AB61-13489BDFB229");
+        public static readonly Guid CultivoCamas = new Guid("D5630115-EF0C-4BFA-9B17-F6048EE5EF89");
+        public static readonly Guid CultivoCuadros = new Guid("E3BBAA72-6A5C-4F7A-AF4F-E47253DF7A4B");
     }
 }

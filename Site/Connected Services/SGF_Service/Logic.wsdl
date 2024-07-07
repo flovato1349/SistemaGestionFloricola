@@ -10,6 +10,156 @@
       <xsd:import schemaLocation="http://localhost:57843/SGF_Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="Logic_TipoPersona_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoPersona_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoPersona_ObtenerPorUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerPorUsername" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoPersona_ObtenerPorUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerPorUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoPersona_ObtenerTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerTodo" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoPersona_ObtenerTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoPersona_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoPersona_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoPersona_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoPersona_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoUsuario_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoUsuario_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoUsuario_ObtenerPorUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerPorUsername" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoUsuario_ObtenerPorUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerPorUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoUsuario_ObtenerTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerTodo" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoUsuario_ObtenerTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoUsuario_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoUsuario_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_TipoUsuario_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoUsuario_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerPorID_InfraestructureExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q1:InfraestructureException" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerPorID_LogicExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q2:LogicException" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerPorID_SecurityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q3:SecurityException" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerPorUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorUsername" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerPorUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ObtenerTodo" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ObtenerTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerPorTipoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorTipoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ObtenerPorTipoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorTipoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ActualizarPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ActualizarPassword" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_ActualizarPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ActualizarPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_BuscarUsuarioVTA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_BuscarUsuarioVTA" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_BuscarUsuarioVTA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_BuscarUsuarioVTAResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_BuscarUsuarioPorID_VTA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_BuscarUsuarioPorID_VTA" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Usuario_BuscarUsuarioPorID_VTA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_BuscarUsuarioPorID_VTAResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerPorID_InfraestructureExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q4:InfraestructureException" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerPorID_LogicExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q5:LogicException" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerPorID_SecurityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q6:SecurityException" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerPorCodName_InputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorCodName" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerPorCodName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorCodNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerPorCodNameVTA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorCodNameVTA" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerPorCodNameVTA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorCodNameVTAResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_ObtenerTodo" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_ObtenerTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerTodoVTA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_ObtenerTodoVTA" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_ObtenerTodoVTA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_ObtenerTodoVTAResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Variedad_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Variedad_GrabarResponse" />
+  </wsdl:message>
   <wsdl:message name="Logic_Auditoria_Grabar_InputMessage">
     <wsdl:part name="parameters" element="tns:Auditoria_Grabar" />
   </wsdl:message>
@@ -57,6 +207,90 @@
   </wsdl:message>
   <wsdl:message name="Logic_PermisoBoton_Grabar_OutputMessage">
     <wsdl:part name="parameters" element="tns:PermisoBoton_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CampoCultivo_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CampoCultivo_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CampoCultivo_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CampoCultivo_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CampoCultivo_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CampoCultivo_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CampoCultivo_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CampoCultivo_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoArea_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoArea_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoArea_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoArea_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoArea_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoArea_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoArea_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoArea_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoBloque_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoBloque_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoBloque_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoBloque_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoBloque_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoBloque_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoBloque_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoBloque_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoLado_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoLado_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoLado_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoLado_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoLado_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoLado_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoLado_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoLado_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoNave_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoNave_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoNave_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoNave_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoNave_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoNave_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoNave_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoNave_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoCama_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoCama_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoCama_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoCama_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoCama_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoCama_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoCama_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoCama_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoCuadro_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoCuadro_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoCuadro_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoCuadro_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoCuadro_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoCuadro_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_CultivoCuadro_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CultivoCuadro_ObtenerPorIDResponse" />
   </wsdl:message>
   <wsdl:message name="Logic_Clasificador_ObtenerPorID_InputMessage">
     <wsdl:part name="parameters" element="tns:Clasificador_ObtenerPorID" />
@@ -232,6 +466,18 @@
   <wsdl:message name="Logic_Grupo_Grabar_OutputMessage">
     <wsdl:part name="parameters" element="tns:Grupo_GrabarResponse" />
   </wsdl:message>
+  <wsdl:message name="Logic_LineaAerea_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LineaAerea_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_LineaAerea_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LineaAerea_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_LineaAerea_ObtenerTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LineaAerea_ObtenerTodo" />
+  </wsdl:message>
+  <wsdl:message name="Logic_LineaAerea_ObtenerTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LineaAerea_ObtenerTodoResponse" />
+  </wsdl:message>
   <wsdl:message name="Logic_Activate_InputMessage">
     <wsdl:part name="parameters" element="tns:Activate" />
   </wsdl:message>
@@ -286,6 +532,42 @@
   <wsdl:message name="Logic_Persona_BuscarPersonaVTA_OutputMessage">
     <wsdl:part name="parameters" element="tns:Persona_BuscarPersonaVTAResponse" />
   </wsdl:message>
+  <wsdl:message name="Logic_Producto_ObtenerPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_ObtenerPorID" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_ObtenerPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_ObtenerPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_ObtenerTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_ObtenerTodo" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_ObtenerTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_ObtenerTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_ObtenerPorVariedad_InputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_ObtenerPorVariedad" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_ObtenerPorVariedad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_ObtenerPorVariedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_ObtenerPorVariedadVTA_InputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_ObtenerPorVariedadVTA" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_ObtenerPorVariedadVTA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_ObtenerPorVariedadVTAResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_Grabar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_Grabar" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_Grabar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_GrabarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_ValidarProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_ValidarProducto" />
+  </wsdl:message>
+  <wsdl:message name="Logic_Producto_ValidarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Producto_ValidarProductoResponse" />
+  </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ObtenerUsuarioPorID_InputMessage">
     <wsdl:part name="parameters" element="tns:Seguridad_ObtenerUsuarioPorID" />
   </wsdl:message>
@@ -293,13 +575,13 @@
     <wsdl:part name="parameters" element="tns:Seguridad_ObtenerUsuarioPorIDResponse" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ObtenerUsuarioPorID_InfraestructureExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q1:InfraestructureException" />
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q7:InfraestructureException" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ObtenerUsuarioPorID_LogicExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q2:LogicException" />
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q8:LogicException" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ObtenerUsuarioPorID_SecurityExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q3:SecurityException" />
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q9:SecurityException" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ObtenerUsuarioTodos_InputMessage">
     <wsdl:part name="parameters" element="tns:Seguridad_ObtenerUsuarioTodos" />
@@ -308,13 +590,13 @@
     <wsdl:part name="parameters" element="tns:Seguridad_ObtenerUsuarioTodosResponse" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ObtenerUsuarioTodos_InfraestructureExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q4:InfraestructureException" />
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q10:InfraestructureException" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ObtenerUsuarioTodos_LogicExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q5:LogicException" />
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q11:LogicException" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ObtenerUsuarioTodos_SecurityExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q6:SecurityException" />
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q12:SecurityException" />
   </wsdl:message>
   <wsdl:message name="Logic_Menu_ObtenerTodosPor_InputMessage">
     <wsdl:part name="parameters" element="tns:Menu_ObtenerTodosPor" />
@@ -323,13 +605,13 @@
     <wsdl:part name="parameters" element="tns:Menu_ObtenerTodosPorResponse" />
   </wsdl:message>
   <wsdl:message name="Logic_Menu_ObtenerTodosPor_InfraestructureExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q7:InfraestructureException" />
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q13:InfraestructureException" />
   </wsdl:message>
   <wsdl:message name="Logic_Menu_ObtenerTodosPor_LogicExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q8:LogicException" />
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q14:LogicException" />
   </wsdl:message>
   <wsdl:message name="Logic_Menu_ObtenerTodosPor_SecurityExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q9:SecurityException" />
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q15:SecurityException" />
   </wsdl:message>
   <wsdl:message name="Logic_Botones_ObtenerTodosPor_InputMessage">
     <wsdl:part name="parameters" element="tns:Botones_ObtenerTodosPor" />
@@ -338,13 +620,13 @@
     <wsdl:part name="parameters" element="tns:Botones_ObtenerTodosPorResponse" />
   </wsdl:message>
   <wsdl:message name="Logic_Botones_ObtenerTodosPor_InfraestructureExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q10:InfraestructureException" />
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q16:InfraestructureException" />
   </wsdl:message>
   <wsdl:message name="Logic_Botones_ObtenerTodosPor_LogicExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q11:LogicException" />
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q17:LogicException" />
   </wsdl:message>
   <wsdl:message name="Logic_Botones_ObtenerTodosPor_SecurityExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q12:SecurityException" />
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q18:SecurityException" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ParametrosPassword_InputMessage">
     <wsdl:part name="parameters" element="tns:Seguridad_ParametrosPassword" />
@@ -353,13 +635,13 @@
     <wsdl:part name="parameters" element="tns:Seguridad_ParametrosPasswordResponse" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ParametrosPassword_InfraestructureExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q13:InfraestructureException" />
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q19:InfraestructureException" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ParametrosPassword_LogicExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q14:LogicException" />
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q20:LogicException" />
   </wsdl:message>
   <wsdl:message name="Logic_Seguridad_ParametrosPassword_SecurityExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q15:SecurityException" />
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q21:SecurityException" />
   </wsdl:message>
   <wsdl:message name="Logic_Sucursal_ObtenerPorID_InputMessage">
     <wsdl:part name="parameters" element="tns:Sucursal_ObtenerPorID" />
@@ -421,157 +703,101 @@
   <wsdl:message name="Logic_TipoClasificador_Grabar_OutputMessage">
     <wsdl:part name="parameters" element="tns:TipoClasificador_GrabarResponse" />
   </wsdl:message>
-  <wsdl:message name="Logic_TipoPersona_ObtenerPorID_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerPorID" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoPersona_ObtenerPorID_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerPorIDResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoPersona_ObtenerPorUsername_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerPorUsername" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoPersona_ObtenerPorUsername_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerPorUsernameResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoPersona_ObtenerTodo_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerTodo" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoPersona_ObtenerTodo_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoPersona_ObtenerTodoResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoPersona_Grabar_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoPersona_Grabar" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoPersona_Grabar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoPersona_GrabarResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoUsuario_ObtenerPorID_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerPorID" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoUsuario_ObtenerPorID_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerPorIDResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoUsuario_ObtenerPorUsername_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerPorUsername" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoUsuario_ObtenerPorUsername_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerPorUsernameResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoUsuario_ObtenerTodo_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerTodo" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoUsuario_ObtenerTodo_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoUsuario_ObtenerTodoResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoUsuario_Grabar_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoUsuario_Grabar" />
-  </wsdl:message>
-  <wsdl:message name="Logic_TipoUsuario_Grabar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoUsuario_GrabarResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerPorID_InputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorID" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerPorID_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorIDResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerPorID_InfraestructureExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q16:InfraestructureException" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerPorID_LogicExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q17:LogicException" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerPorID_SecurityExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q18:SecurityException" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerPorUsername_InputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorUsername" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerPorUsername_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorUsernameResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerTodo_InputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_ObtenerTodo" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerTodo_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_ObtenerTodoResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerPorTipoUsuario_InputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorTipoUsuario" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ObtenerPorTipoUsuario_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_ObtenerPorTipoUsuarioResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_Grabar_InputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_Grabar" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_Grabar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_GrabarResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ActualizarPassword_InputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_ActualizarPassword" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_ActualizarPassword_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_ActualizarPasswordResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_BuscarUsuarioVTA_InputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_BuscarUsuarioVTA" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_BuscarUsuarioVTA_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_BuscarUsuarioVTAResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_BuscarUsuarioPorID_VTA_InputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_BuscarUsuarioPorID_VTA" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Usuario_BuscarUsuarioPorID_VTA_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Usuario_BuscarUsuarioPorID_VTAResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerPorID_InputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorID" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerPorID_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorIDResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerPorID_InfraestructureExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q19:InfraestructureException" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerPorID_LogicExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q20:LogicException" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerPorID_SecurityExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common" name="detail" element="q21:SecurityException" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerPorCodName_InputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorCodName" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerPorCodName_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorCodNameResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerPorCodNameVTA_InputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorCodNameVTA" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerPorCodNameVTA_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_ObtenerPorCodNameVTAResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerTodo_InputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_ObtenerTodo" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerTodo_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_ObtenerTodoResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerTodoVTA_InputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_ObtenerTodoVTA" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_ObtenerTodoVTA_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_ObtenerTodoVTAResponse" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_Grabar_InputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_Grabar" />
-  </wsdl:message>
-  <wsdl:message name="Logic_Variedad_Grabar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Variedad_GrabarResponse" />
-  </wsdl:message>
   <wsdl:portType name="Logic">
+    <wsdl:operation name="TipoPersona_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorID" message="tns:Logic_TipoPersona_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorIDResponse" message="tns:Logic_TipoPersona_ObtenerPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoPersona_ObtenerPorUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsername" message="tns:Logic_TipoPersona_ObtenerPorUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsernameResponse" message="tns:Logic_TipoPersona_ObtenerPorUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoPersona_ObtenerTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerTodo" message="tns:Logic_TipoPersona_ObtenerTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerTodoResponse" message="tns:Logic_TipoPersona_ObtenerTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoPersona_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoPersona_Grabar" message="tns:Logic_TipoPersona_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoPersona_GrabarResponse" message="tns:Logic_TipoPersona_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoUsuario_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorID" message="tns:Logic_TipoUsuario_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorIDResponse" message="tns:Logic_TipoUsuario_ObtenerPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoUsuario_ObtenerPorUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsername" message="tns:Logic_TipoUsuario_ObtenerPorUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsernameResponse" message="tns:Logic_TipoUsuario_ObtenerPorUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoUsuario_ObtenerTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerTodo" message="tns:Logic_TipoUsuario_ObtenerTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerTodoResponse" message="tns:Logic_TipoUsuario_ObtenerTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoUsuario_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoUsuario_Grabar" message="tns:Logic_TipoUsuario_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoUsuario_GrabarResponse" message="tns:Logic_TipoUsuario_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorID" message="tns:Logic_Usuario_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDResponse" message="tns:Logic_Usuario_ObtenerPorID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDInfraestructureExceptionFault" name="InfraestructureExceptionFault" message="tns:Logic_Usuario_ObtenerPorID_InfraestructureExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDLogicExceptionFault" name="LogicExceptionFault" message="tns:Logic_Usuario_ObtenerPorID_LogicExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDSecurityExceptionFault" name="SecurityExceptionFault" message="tns:Logic_Usuario_ObtenerPorID_SecurityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ObtenerPorUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorUsername" message="tns:Logic_Usuario_ObtenerPorUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorUsernameResponse" message="tns:Logic_Usuario_ObtenerPorUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ObtenerTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerTodo" message="tns:Logic_Usuario_ObtenerTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerTodoResponse" message="tns:Logic_Usuario_ObtenerTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ObtenerPorTipoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuario" message="tns:Logic_Usuario_ObtenerPorTipoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuarioResponse" message="tns:Logic_Usuario_ObtenerPorTipoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_Grabar" message="tns:Logic_Usuario_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_GrabarResponse" message="tns:Logic_Usuario_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ActualizarPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_ActualizarPassword" message="tns:Logic_Usuario_ActualizarPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_ActualizarPasswordResponse" message="tns:Logic_Usuario_ActualizarPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_BuscarUsuarioVTA">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTA" message="tns:Logic_Usuario_BuscarUsuarioVTA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTAResponse" message="tns:Logic_Usuario_BuscarUsuarioVTA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_BuscarUsuarioPorID_VTA">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTA" message="tns:Logic_Usuario_BuscarUsuarioPorID_VTA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTAResponse" message="tns:Logic_Usuario_BuscarUsuarioPorID_VTA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorID" message="tns:Logic_Variedad_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDResponse" message="tns:Logic_Variedad_ObtenerPorID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDInfraestructureExceptionFault" name="InfraestructureExceptionFault" message="tns:Logic_Variedad_ObtenerPorID_InfraestructureExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDLogicExceptionFault" name="LogicExceptionFault" message="tns:Logic_Variedad_ObtenerPorID_LogicExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDSecurityExceptionFault" name="SecurityExceptionFault" message="tns:Logic_Variedad_ObtenerPorID_SecurityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_ObtenerPorCodName">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodName" message="tns:Logic_Variedad_ObtenerPorCodName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameResponse" message="tns:Logic_Variedad_ObtenerPorCodName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_ObtenerPorCodNameVTA">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTA" message="tns:Logic_Variedad_ObtenerPorCodNameVTA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTAResponse" message="tns:Logic_Variedad_ObtenerPorCodNameVTA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_ObtenerTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerTodo" message="tns:Logic_Variedad_ObtenerTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerTodoResponse" message="tns:Logic_Variedad_ObtenerTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_ObtenerTodoVTA">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerTodoVTA" message="tns:Logic_Variedad_ObtenerTodoVTA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerTodoVTAResponse" message="tns:Logic_Variedad_ObtenerTodoVTA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_Grabar" message="tns:Logic_Variedad_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_GrabarResponse" message="tns:Logic_Variedad_Grabar_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Auditoria_Grabar">
       <wsdl:input wsaw:Action="http://tempuri.org/Logic/Auditoria_Grabar" message="tns:Logic_Auditoria_Grabar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Logic/Auditoria_GrabarResponse" message="tns:Logic_Auditoria_Grabar_OutputMessage" />
@@ -603,6 +829,62 @@
     <wsdl:operation name="PermisoBoton_Grabar">
       <wsdl:input wsaw:Action="http://tempuri.org/Logic/PermisoBoton_Grabar" message="tns:Logic_PermisoBoton_Grabar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Logic/PermisoBoton_GrabarResponse" message="tns:Logic_PermisoBoton_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CampoCultivo_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CampoCultivo_Grabar" message="tns:Logic_CampoCultivo_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CampoCultivo_GrabarResponse" message="tns:Logic_CampoCultivo_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CampoCultivo_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CampoCultivo_ObtenerPorID" message="tns:Logic_CampoCultivo_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CampoCultivo_ObtenerPorIDResponse" message="tns:Logic_CampoCultivo_ObtenerPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoArea_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoArea_Grabar" message="tns:Logic_CultivoArea_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoArea_GrabarResponse" message="tns:Logic_CultivoArea_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoArea_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoArea_ObtenerPorID" message="tns:Logic_CultivoArea_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoArea_ObtenerPorIDResponse" message="tns:Logic_CultivoArea_ObtenerPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoBloque_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoBloque_Grabar" message="tns:Logic_CultivoBloque_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoBloque_GrabarResponse" message="tns:Logic_CultivoBloque_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoBloque_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoBloque_ObtenerPorID" message="tns:Logic_CultivoBloque_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoBloque_ObtenerPorIDResponse" message="tns:Logic_CultivoBloque_ObtenerPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoLado_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoLado_Grabar" message="tns:Logic_CultivoLado_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoLado_GrabarResponse" message="tns:Logic_CultivoLado_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoLado_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoLado_ObtenerPorID" message="tns:Logic_CultivoLado_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoLado_ObtenerPorIDResponse" message="tns:Logic_CultivoLado_ObtenerPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoNave_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoNave_Grabar" message="tns:Logic_CultivoNave_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoNave_GrabarResponse" message="tns:Logic_CultivoNave_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoNave_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoNave_ObtenerPorID" message="tns:Logic_CultivoNave_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoNave_ObtenerPorIDResponse" message="tns:Logic_CultivoNave_ObtenerPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoCama_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoCama_Grabar" message="tns:Logic_CultivoCama_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoCama_GrabarResponse" message="tns:Logic_CultivoCama_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoCama_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoCama_ObtenerPorID" message="tns:Logic_CultivoCama_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoCama_ObtenerPorIDResponse" message="tns:Logic_CultivoCama_ObtenerPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoCuadro_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoCuadro_Grabar" message="tns:Logic_CultivoCuadro_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoCuadro_GrabarResponse" message="tns:Logic_CultivoCuadro_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CultivoCuadro_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/CultivoCuadro_ObtenerPorID" message="tns:Logic_CultivoCuadro_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/CultivoCuadro_ObtenerPorIDResponse" message="tns:Logic_CultivoCuadro_ObtenerPorID_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Clasificador_ObtenerPorID">
       <wsdl:input wsaw:Action="http://tempuri.org/Logic/Clasificador_ObtenerPorID" message="tns:Logic_Clasificador_ObtenerPorID_InputMessage" />
@@ -720,6 +1002,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/Logic/Grupo_Grabar" message="tns:Logic_Grupo_Grabar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Logic/Grupo_GrabarResponse" message="tns:Logic_Grupo_Grabar_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="LineaAerea_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/LineaAerea_ObtenerPorID" message="tns:Logic_LineaAerea_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/LineaAerea_ObtenerPorIDResponse" message="tns:Logic_LineaAerea_ObtenerPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LineaAerea_ObtenerTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/LineaAerea_ObtenerTodo" message="tns:Logic_LineaAerea_ObtenerTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/LineaAerea_ObtenerTodoResponse" message="tns:Logic_LineaAerea_ObtenerTodo_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Activate">
       <wsdl:input wsaw:Action="http://tempuri.org/Logic/Activate" message="tns:Logic_Activate_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Logic/ActivateResponse" message="tns:Logic_Activate_OutputMessage" />
@@ -755,6 +1045,30 @@
     <wsdl:operation name="Persona_BuscarPersonaVTA">
       <wsdl:input wsaw:Action="http://tempuri.org/Logic/Persona_BuscarPersonaVTA" message="tns:Logic_Persona_BuscarPersonaVTA_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Logic/Persona_BuscarPersonaVTAResponse" message="tns:Logic_Persona_BuscarPersonaVTA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Producto_ObtenerPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Producto_ObtenerPorID" message="tns:Logic_Producto_ObtenerPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Producto_ObtenerPorIDResponse" message="tns:Logic_Producto_ObtenerPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Producto_ObtenerTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Producto_ObtenerTodo" message="tns:Logic_Producto_ObtenerTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Producto_ObtenerTodoResponse" message="tns:Logic_Producto_ObtenerTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Producto_ObtenerPorVariedad">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Producto_ObtenerPorVariedad" message="tns:Logic_Producto_ObtenerPorVariedad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Producto_ObtenerPorVariedadResponse" message="tns:Logic_Producto_ObtenerPorVariedad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Producto_ObtenerPorVariedadVTA">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Producto_ObtenerPorVariedadVTA" message="tns:Logic_Producto_ObtenerPorVariedadVTA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Producto_ObtenerPorVariedadVTAResponse" message="tns:Logic_Producto_ObtenerPorVariedadVTA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Grabar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Producto_Grabar" message="tns:Logic_Producto_Grabar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Producto_GrabarResponse" message="tns:Logic_Producto_Grabar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Producto_ValidarProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Producto_ValidarProducto" message="tns:Logic_Producto_ValidarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Producto_ValidarProductoResponse" message="tns:Logic_Producto_ValidarProducto_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Seguridad_ObtenerUsuarioPorID">
       <wsdl:input wsaw:Action="http://tempuri.org/Logic/Seguridad_ObtenerUsuarioPorID" message="tns:Logic_Seguridad_ObtenerUsuarioPorID_InputMessage" />
@@ -831,103 +1145,225 @@
       <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoClasificador_Grabar" message="tns:Logic_TipoClasificador_Grabar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoClasificador_GrabarResponse" message="tns:Logic_TipoClasificador_Grabar_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="TipoPersona_ObtenerPorID">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorID" message="tns:Logic_TipoPersona_ObtenerPorID_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorIDResponse" message="tns:Logic_TipoPersona_ObtenerPorID_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoPersona_ObtenerPorUsername">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsername" message="tns:Logic_TipoPersona_ObtenerPorUsername_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsernameResponse" message="tns:Logic_TipoPersona_ObtenerPorUsername_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoPersona_ObtenerTodo">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerTodo" message="tns:Logic_TipoPersona_ObtenerTodo_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoPersona_ObtenerTodoResponse" message="tns:Logic_TipoPersona_ObtenerTodo_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoPersona_Grabar">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoPersona_Grabar" message="tns:Logic_TipoPersona_Grabar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoPersona_GrabarResponse" message="tns:Logic_TipoPersona_Grabar_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoUsuario_ObtenerPorID">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorID" message="tns:Logic_TipoUsuario_ObtenerPorID_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorIDResponse" message="tns:Logic_TipoUsuario_ObtenerPorID_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoUsuario_ObtenerPorUsername">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsername" message="tns:Logic_TipoUsuario_ObtenerPorUsername_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsernameResponse" message="tns:Logic_TipoUsuario_ObtenerPorUsername_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoUsuario_ObtenerTodo">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerTodo" message="tns:Logic_TipoUsuario_ObtenerTodo_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoUsuario_ObtenerTodoResponse" message="tns:Logic_TipoUsuario_ObtenerTodo_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoUsuario_Grabar">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/TipoUsuario_Grabar" message="tns:Logic_TipoUsuario_Grabar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/TipoUsuario_GrabarResponse" message="tns:Logic_TipoUsuario_Grabar_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_ObtenerPorID">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorID" message="tns:Logic_Usuario_ObtenerPorID_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDResponse" message="tns:Logic_Usuario_ObtenerPorID_OutputMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDInfraestructureExceptionFault" name="InfraestructureExceptionFault" message="tns:Logic_Usuario_ObtenerPorID_InfraestructureExceptionFault_FaultMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDLogicExceptionFault" name="LogicExceptionFault" message="tns:Logic_Usuario_ObtenerPorID_LogicExceptionFault_FaultMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDSecurityExceptionFault" name="SecurityExceptionFault" message="tns:Logic_Usuario_ObtenerPorID_SecurityExceptionFault_FaultMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_ObtenerPorUsername">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorUsername" message="tns:Logic_Usuario_ObtenerPorUsername_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorUsernameResponse" message="tns:Logic_Usuario_ObtenerPorUsername_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_ObtenerTodo">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerTodo" message="tns:Logic_Usuario_ObtenerTodo_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerTodoResponse" message="tns:Logic_Usuario_ObtenerTodo_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_ObtenerPorTipoUsuario">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuario" message="tns:Logic_Usuario_ObtenerPorTipoUsuario_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuarioResponse" message="tns:Logic_Usuario_ObtenerPorTipoUsuario_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_Grabar">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_Grabar" message="tns:Logic_Usuario_Grabar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_GrabarResponse" message="tns:Logic_Usuario_Grabar_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_ActualizarPassword">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_ActualizarPassword" message="tns:Logic_Usuario_ActualizarPassword_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_ActualizarPasswordResponse" message="tns:Logic_Usuario_ActualizarPassword_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_BuscarUsuarioVTA">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTA" message="tns:Logic_Usuario_BuscarUsuarioVTA_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTAResponse" message="tns:Logic_Usuario_BuscarUsuarioVTA_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_BuscarUsuarioPorID_VTA">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTA" message="tns:Logic_Usuario_BuscarUsuarioPorID_VTA_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTAResponse" message="tns:Logic_Usuario_BuscarUsuarioPorID_VTA_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_ObtenerPorID">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorID" message="tns:Logic_Variedad_ObtenerPorID_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDResponse" message="tns:Logic_Variedad_ObtenerPorID_OutputMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDInfraestructureExceptionFault" name="InfraestructureExceptionFault" message="tns:Logic_Variedad_ObtenerPorID_InfraestructureExceptionFault_FaultMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDLogicExceptionFault" name="LogicExceptionFault" message="tns:Logic_Variedad_ObtenerPorID_LogicExceptionFault_FaultMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDSecurityExceptionFault" name="SecurityExceptionFault" message="tns:Logic_Variedad_ObtenerPorID_SecurityExceptionFault_FaultMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_ObtenerPorCodName">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodName" message="tns:Logic_Variedad_ObtenerPorCodName_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameResponse" message="tns:Logic_Variedad_ObtenerPorCodName_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_ObtenerPorCodNameVTA">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTA" message="tns:Logic_Variedad_ObtenerPorCodNameVTA_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTAResponse" message="tns:Logic_Variedad_ObtenerPorCodNameVTA_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_ObtenerTodo">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerTodo" message="tns:Logic_Variedad_ObtenerTodo_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerTodoResponse" message="tns:Logic_Variedad_ObtenerTodo_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_ObtenerTodoVTA">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerTodoVTA" message="tns:Logic_Variedad_ObtenerTodoVTA_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_ObtenerTodoVTAResponse" message="tns:Logic_Variedad_ObtenerTodoVTA_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_Grabar">
-      <wsdl:input wsaw:Action="http://tempuri.org/Logic/Variedad_Grabar" message="tns:Logic_Variedad_Grabar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Logic/Variedad_GrabarResponse" message="tns:Logic_Variedad_Grabar_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_Logic" type="tns:Logic">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TipoPersona_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoPersona_ObtenerPorUsername">
+      <soap:operation soapAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoPersona_ObtenerTodo">
+      <soap:operation soapAction="http://tempuri.org/Logic/TipoPersona_ObtenerTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoPersona_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/TipoPersona_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoUsuario_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoUsuario_ObtenerPorUsername">
+      <soap:operation soapAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoUsuario_ObtenerTodo">
+      <soap:operation soapAction="http://tempuri.org/Logic/TipoUsuario_ObtenerTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoUsuario_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/TipoUsuario_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InfraestructureExceptionFault">
+        <soap:fault use="literal" name="InfraestructureExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="LogicExceptionFault">
+        <soap:fault use="literal" name="LogicExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityExceptionFault">
+        <soap:fault use="literal" name="SecurityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ObtenerPorUsername">
+      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_ObtenerPorUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ObtenerTodo">
+      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_ObtenerTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ObtenerPorTipoUsuario">
+      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ActualizarPassword">
+      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_ActualizarPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_BuscarUsuarioVTA">
+      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_BuscarUsuarioPorID_VTA">
+      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InfraestructureExceptionFault">
+        <soap:fault use="literal" name="InfraestructureExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="LogicExceptionFault">
+        <soap:fault use="literal" name="LogicExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityExceptionFault">
+        <soap:fault use="literal" name="SecurityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_ObtenerPorCodName">
+      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_ObtenerPorCodNameVTA">
+      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_ObtenerTodo">
+      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_ObtenerTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_ObtenerTodoVTA">
+      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_ObtenerTodoVTA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Variedad_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Auditoria_Grabar">
       <soap:operation soapAction="http://tempuri.org/Logic/Auditoria_Grabar" style="document" />
       <wsdl:input>
@@ -993,6 +1429,132 @@
     </wsdl:operation>
     <wsdl:operation name="PermisoBoton_Grabar">
       <soap:operation soapAction="http://tempuri.org/Logic/PermisoBoton_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampoCultivo_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/CampoCultivo_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampoCultivo_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/CampoCultivo_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoArea_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoArea_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoArea_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoArea_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoBloque_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoBloque_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoBloque_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoBloque_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoLado_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoLado_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoLado_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoLado_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoNave_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoNave_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoNave_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoNave_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoCama_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoCama_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoCama_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoCama_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoCuadro_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoCuadro_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CultivoCuadro_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/CultivoCuadro_ObtenerPorID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1261,6 +1823,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="LineaAerea_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/LineaAerea_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LineaAerea_ObtenerTodo">
+      <soap:operation soapAction="http://tempuri.org/Logic/LineaAerea_ObtenerTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Activate">
       <soap:operation soapAction="http://tempuri.org/Logic/Activate" style="document" />
       <wsdl:input>
@@ -1335,6 +1915,60 @@
     </wsdl:operation>
     <wsdl:operation name="Persona_BuscarPersonaVTA">
       <soap:operation soapAction="http://tempuri.org/Logic/Persona_BuscarPersonaVTA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_ObtenerPorID">
+      <soap:operation soapAction="http://tempuri.org/Logic/Producto_ObtenerPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_ObtenerTodo">
+      <soap:operation soapAction="http://tempuri.org/Logic/Producto_ObtenerTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_ObtenerPorVariedad">
+      <soap:operation soapAction="http://tempuri.org/Logic/Producto_ObtenerPorVariedad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_ObtenerPorVariedadVTA">
+      <soap:operation soapAction="http://tempuri.org/Logic/Producto_ObtenerPorVariedadVTA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_Grabar">
+      <soap:operation soapAction="http://tempuri.org/Logic/Producto_Grabar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Producto_ValidarProducto">
+      <soap:operation soapAction="http://tempuri.org/Logic/Producto_ValidarProducto" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1515,222 +2149,6 @@
     </wsdl:operation>
     <wsdl:operation name="TipoClasificador_Grabar">
       <soap:operation soapAction="http://tempuri.org/Logic/TipoClasificador_Grabar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoPersona_ObtenerPorID">
-      <soap:operation soapAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorID" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoPersona_ObtenerPorUsername">
-      <soap:operation soapAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsername" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoPersona_ObtenerTodo">
-      <soap:operation soapAction="http://tempuri.org/Logic/TipoPersona_ObtenerTodo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoPersona_Grabar">
-      <soap:operation soapAction="http://tempuri.org/Logic/TipoPersona_Grabar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoUsuario_ObtenerPorID">
-      <soap:operation soapAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorID" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoUsuario_ObtenerPorUsername">
-      <soap:operation soapAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsername" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoUsuario_ObtenerTodo">
-      <soap:operation soapAction="http://tempuri.org/Logic/TipoUsuario_ObtenerTodo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoUsuario_Grabar">
-      <soap:operation soapAction="http://tempuri.org/Logic/TipoUsuario_Grabar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_ObtenerPorID">
-      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_ObtenerPorID" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="InfraestructureExceptionFault">
-        <soap:fault use="literal" name="InfraestructureExceptionFault" namespace="" />
-      </wsdl:fault>
-      <wsdl:fault name="LogicExceptionFault">
-        <soap:fault use="literal" name="LogicExceptionFault" namespace="" />
-      </wsdl:fault>
-      <wsdl:fault name="SecurityExceptionFault">
-        <soap:fault use="literal" name="SecurityExceptionFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_ObtenerPorUsername">
-      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_ObtenerPorUsername" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_ObtenerTodo">
-      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_ObtenerTodo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_ObtenerPorTipoUsuario">
-      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuario" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_Grabar">
-      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_Grabar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_ActualizarPassword">
-      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_ActualizarPassword" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_BuscarUsuarioVTA">
-      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTA" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Usuario_BuscarUsuarioPorID_VTA">
-      <soap:operation soapAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTA" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_ObtenerPorID">
-      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_ObtenerPorID" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="InfraestructureExceptionFault">
-        <soap:fault use="literal" name="InfraestructureExceptionFault" namespace="" />
-      </wsdl:fault>
-      <wsdl:fault name="LogicExceptionFault">
-        <soap:fault use="literal" name="LogicExceptionFault" namespace="" />
-      </wsdl:fault>
-      <wsdl:fault name="SecurityExceptionFault">
-        <soap:fault use="literal" name="SecurityExceptionFault" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_ObtenerPorCodName">
-      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodName" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_ObtenerPorCodNameVTA">
-      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTA" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_ObtenerTodo">
-      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_ObtenerTodo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_ObtenerTodoVTA">
-      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_ObtenerTodoVTA" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Variedad_Grabar">
-      <soap:operation soapAction="http://tempuri.org/Logic/Variedad_Grabar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

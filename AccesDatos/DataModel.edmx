@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="REINAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SGF_Almacen">
+          <Key>
+            <PropertyRef Name="AlmacenID" />
+          </Key>
+          <Property Name="AlmacenID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SucursalID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="500" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="SGF_Auditoria">
           <Key>
             <PropertyRef Name="AuditoriaID" />
@@ -27,7 +37,7 @@
             <PropertyRef Name="BodegaID" />
           </Key>
           <Property Name="BodegaID" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="SucursalID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AlmacenID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="Ubicacion" Type="varchar" MaxLength="500" />
           <Property Name="Estado" Type="smallint" Nullable="false" />
@@ -41,6 +51,17 @@
           <Property Name="Nombre" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="Activo" Type="int" />
           <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_CampoCultivo">
+          <Key>
+            <PropertyRef Name="CampoCultivoID" />
+          </Key>
+          <Property Name="CampoCultivoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SucursalID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="Direccion" Type="varchar" MaxLength="300" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="1500" />
+          <Property Name="Estado" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="SGF_Clasificador">
           <Key>
@@ -63,6 +84,72 @@
           <Property Name="SucursalID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="PersonaID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoArea">
+          <Key>
+            <PropertyRef Name="CultivoAreaID" />
+          </Key>
+          <Property Name="CultivoAreaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CampoCultivoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AreaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoBloque">
+          <Key>
+            <PropertyRef Name="CultivoBloqueID" />
+          </Key>
+          <Property Name="CultivoBloqueID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CultivoAreaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BloqueID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoCama">
+          <Key>
+            <PropertyRef Name="CultivoCamaID" />
+          </Key>
+          <Property Name="CultivoCamaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CultivoNaveID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CamaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoCuadro">
+          <Key>
+            <PropertyRef Name="CultivoCuadroID" />
+          </Key>
+          <Property Name="CultivoCuadroID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CultivoCamaID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CuadroID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoLado">
+          <Key>
+            <PropertyRef Name="CultivoLadoID" />
+          </Key>
+          <Property Name="CultivoLadoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CultivoBloqueID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LadoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoNave">
+          <Key>
+            <PropertyRef Name="CultivoNaveID" />
+          </Key>
+          <Property Name="CultivoNaveID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CultivoLadoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NaveID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="500" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Estado" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="SGF_Empresa">
           <Key>
@@ -129,6 +216,17 @@
           <Property Name="Nombre" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="Descripcion" Type="varchar" MaxLength="300" />
           <Property Name="Estado" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SGF_Parametro">
+          <Key>
+            <PropertyRef Name="ParametroID" />
+          </Key>
+          <Property Name="ParametroID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Pkey" Type="varchar" MaxLength="50" />
+          <Property Name="TipoParametro" Type="int" Nullable="false" />
+          <Property Name="Valor" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Comentarios" Type="varchar" MaxLength="200" />
+          <Property Name="Estado" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="SGF_ParametrosPassword">
           <Key>
@@ -323,6 +421,16 @@
           <Property Name="Usuario" Type="varchar" MaxLength="50" />
           <Property Name="Fecha" Type="datetime" />
           <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'SGF.dbo.SEG_Botones_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
@@ -523,6 +631,55 @@ advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Persona_VTA' no tiene definida n
           <Property Name="Pais" Type="varchar" MaxLength="1500" />
         </EntityType>
         <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Producto_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="SGF_Producto_VTA">
+          <Key>
+            <PropertyRef Name="ProductoID" />
+            <PropertyRef Name="VariedadID" />
+            <PropertyRef Name="Codigo" />
+            <PropertyRef Name="CalidadID" />
+            <PropertyRef Name="LongitudID" />
+            <PropertyRef Name="TalloID" />
+            <PropertyRef Name="Usuario" />
+            <PropertyRef Name="Fecha" />
+            <PropertyRef Name="Estado" />
+          </Key>
+          <Property Name="ProductoID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="VariedadID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="250" />
+          <Property Name="CalidadID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LongitudID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TalloID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MercadoID" Type="uniqueidentifier" />
+          <Property Name="PaisID" Type="uniqueidentifier" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="350" />
+          <Property Name="ValorRefCompra" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ValorRefVenta" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+          <Property Name="Calidad" Type="varchar" MaxLength="1500" />
+          <Property Name="Longitud" Type="varchar" MaxLength="1500" />
+          <Property Name="Tallo" Type="varchar" MaxLength="1500" />
+          <Property Name="Mercado" Type="varchar" MaxLength="1500" />
+          <Property Name="Pais" Type="varchar" MaxLength="1500" />
+          <Property Name="VariedadCodigo" Type="varchar" MaxLength="50" />
+          <Property Name="VariedadNombre" Type="varchar" MaxLength="300" />
+          <Property Name="VariedadObtentor" Type="nvarchar" MaxLength="500" />
+          <Property Name="VariedadRotacion" Type="int" />
+          <Property Name="VariedadIndProdMensual" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="VariedadTamanoBoton" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="VariedadDiasFlorero" Type="int" />
+          <Property Name="VariedadCiclo" Type="int" />
+          <Property Name="VariedadNumeroPetalos" Type="int" />
+          <Property Name="VariedadTipoFlor" Type="varchar" MaxLength="1500" />
+          <Property Name="VariedadColor" Type="varchar" MaxLength="1500" />
+          <Property Name="VariedadCalidad" Type="varchar" MaxLength="1500" />
+          <Property Name="VariedadLongitudMax" Type="varchar" MaxLength="1500" />
+          <Property Name="VariedadLongitudMin" Type="varchar" MaxLength="1500" />
+        </EntityType>
+        <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Usuario_VTA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="SGF_Usuario_VTA">
           <Key>
@@ -598,15 +755,27 @@ advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Variedad_VTA' no tiene definida 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_SGF_Bodega_SGF_Sucursal">
+        <Association Name="FK_SGF_Almacen_SGF_Sucursal">
           <End Role="SGF_Sucursal" Type="Self.SGF_Sucursal" Multiplicity="1" />
-          <End Role="SGF_Bodega" Type="Self.SGF_Bodega" Multiplicity="*" />
+          <End Role="SGF_Almacen" Type="Self.SGF_Almacen" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SGF_Sucursal">
               <PropertyRef Name="SucursalID" />
             </Principal>
-            <Dependent Role="SGF_Bodega">
+            <Dependent Role="SGF_Almacen">
               <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Bodega_SGF_Almacen">
+          <End Role="SGF_Almacen" Type="Self.SGF_Almacen" Multiplicity="1" />
+          <End Role="SGF_Bodega" Type="Self.SGF_Bodega" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Almacen">
+              <PropertyRef Name="AlmacenID" />
+            </Principal>
+            <Dependent Role="SGF_Bodega">
+              <PropertyRef Name="AlmacenID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -619,6 +788,18 @@ advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Variedad_VTA' no tiene definida 
             </Principal>
             <Dependent Role="SGF_Boton">
               <PropertyRef Name="FormularioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CampoCultivo_SGF_Sucursal">
+          <End Role="SGF_Sucursal" Type="Self.SGF_Sucursal" Multiplicity="1" />
+          <End Role="SGF_CampoCultivo" Type="Self.SGF_CampoCultivo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Sucursal">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="SGF_CampoCultivo">
+              <PropertyRef Name="SucursalID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -655,6 +836,78 @@ advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Variedad_VTA' no tiene definida 
             </Principal>
             <Dependent Role="SGF_ConfigurarPersonaEmpresa">
               <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoArea_SGF_CampoCultivo">
+          <End Role="SGF_CampoCultivo" Type="Self.SGF_CampoCultivo" Multiplicity="1" />
+          <End Role="SGF_CultivoArea" Type="Self.SGF_CultivoArea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CampoCultivo">
+              <PropertyRef Name="CampoCultivoID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoArea">
+              <PropertyRef Name="CampoCultivoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoBloque_SGF_CultivoArea">
+          <End Role="SGF_CultivoArea" Type="Self.SGF_CultivoArea" Multiplicity="1" />
+          <End Role="SGF_CultivoBloque" Type="Self.SGF_CultivoBloque" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CultivoArea">
+              <PropertyRef Name="CultivoAreaID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoBloque">
+              <PropertyRef Name="CultivoAreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoCama_SGF_CultivoNave">
+          <End Role="SGF_CultivoNave" Type="Self.SGF_CultivoNave" Multiplicity="1" />
+          <End Role="SGF_CultivoCama" Type="Self.SGF_CultivoCama" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CultivoNave">
+              <PropertyRef Name="CultivoNaveID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoCama">
+              <PropertyRef Name="CultivoNaveID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoCuadro_SGF_CultivoCama">
+          <End Role="SGF_CultivoCama" Type="Self.SGF_CultivoCama" Multiplicity="1" />
+          <End Role="SGF_CultivoCuadro" Type="Self.SGF_CultivoCuadro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CultivoCama">
+              <PropertyRef Name="CultivoCamaID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoCuadro">
+              <PropertyRef Name="CultivoCamaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoLado_SGF_CultivoBloque">
+          <End Role="SGF_CultivoBloque" Type="Self.SGF_CultivoBloque" Multiplicity="1" />
+          <End Role="SGF_CultivoLado" Type="Self.SGF_CultivoLado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CultivoBloque">
+              <PropertyRef Name="CultivoBloqueID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoLado">
+              <PropertyRef Name="CultivoBloqueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoNave_SGF_CultivoLado">
+          <End Role="SGF_CultivoLado" Type="Self.SGF_CultivoLado" Multiplicity="1" />
+          <End Role="SGF_CultivoNave" Type="Self.SGF_CultivoNave" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CultivoLado">
+              <PropertyRef Name="CultivoLadoID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoNave">
+              <PropertyRef Name="CultivoLadoID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -767,16 +1020,25 @@ advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Variedad_VTA' no tiene definida 
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="REINAModelStoreContainer">
+          <EntitySet Name="SGF_Almacen" EntityType="Self.SGF_Almacen" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Auditoria" EntityType="Self.SGF_Auditoria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Bodega" EntityType="Self.SGF_Bodega" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Boton" EntityType="Self.SGF_Boton" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_CampoCultivo" EntityType="Self.SGF_CampoCultivo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Clasificador" EntityType="Self.SGF_Clasificador" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_ConfigurarPersonaEmpresa" EntityType="Self.SGF_ConfigurarPersonaEmpresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_CultivoArea" EntityType="Self.SGF_CultivoArea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_CultivoBloque" EntityType="Self.SGF_CultivoBloque" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_CultivoCama" EntityType="Self.SGF_CultivoCama" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_CultivoCuadro" EntityType="Self.SGF_CultivoCuadro" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_CultivoLado" EntityType="Self.SGF_CultivoLado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_CultivoNave" EntityType="Self.SGF_CultivoNave" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Empresa" EntityType="Self.SGF_Empresa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Formulario" EntityType="Self.SGF_Formulario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Grupo" EntityType="Self.SGF_Grupo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_LineaAerea" EntityType="Self.SGF_LineaAerea" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Modulo" EntityType="Self.SGF_Modulo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGF_Parametro" EntityType="Self.SGF_Parametro" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_ParametrosPassword" EntityType="Self.SGF_ParametrosPassword" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Permiso" EntityType="Self.SGF_Permiso" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_PermisoBoton" EntityType="Self.SGF_PermisoBoton" Schema="dbo" store:Type="Tables" />
@@ -789,6 +1051,7 @@ advertencia 6002: La tabla o vista 'SGF.dbo.SGF_Variedad_VTA' no tiene definida 
           <EntitySet Name="SGF_Usuario" EntityType="Self.SGF_Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Variedad" EntityType="Self.SGF_Variedad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SGF_Vendedor" EntityType="Self.SGF_Vendedor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SEG_Botones_VTA" EntityType="Self.SEG_Botones_VTA" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [SEG_Botones_VTA].[PermisoBotonID] AS [PermisoBotonID], 
@@ -927,6 +1190,44 @@ FROM [dbo].[SGF_Formulario_VTA] AS [SGF_Formulario_VTA]</DefiningQuery>
 [SGF_Persona_VTA].[Pais] AS [Pais]
 FROM [dbo].[SGF_Persona_VTA] AS [SGF_Persona_VTA]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="SGF_Producto_VTA" EntityType="Self.SGF_Producto_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SGF_Producto_VTA].[ProductoID] AS [ProductoID], 
+[SGF_Producto_VTA].[VariedadID] AS [VariedadID], 
+[SGF_Producto_VTA].[Codigo] AS [Codigo], 
+[SGF_Producto_VTA].[Nombre] AS [Nombre], 
+[SGF_Producto_VTA].[CalidadID] AS [CalidadID], 
+[SGF_Producto_VTA].[LongitudID] AS [LongitudID], 
+[SGF_Producto_VTA].[TalloID] AS [TalloID], 
+[SGF_Producto_VTA].[MercadoID] AS [MercadoID], 
+[SGF_Producto_VTA].[PaisID] AS [PaisID], 
+[SGF_Producto_VTA].[Descripcion] AS [Descripcion], 
+[SGF_Producto_VTA].[ValorRefCompra] AS [ValorRefCompra], 
+[SGF_Producto_VTA].[ValorRefVenta] AS [ValorRefVenta], 
+[SGF_Producto_VTA].[Usuario] AS [Usuario], 
+[SGF_Producto_VTA].[Fecha] AS [Fecha], 
+[SGF_Producto_VTA].[Estado] AS [Estado], 
+[SGF_Producto_VTA].[Calidad] AS [Calidad], 
+[SGF_Producto_VTA].[Longitud] AS [Longitud], 
+[SGF_Producto_VTA].[Tallo] AS [Tallo], 
+[SGF_Producto_VTA].[Mercado] AS [Mercado], 
+[SGF_Producto_VTA].[Pais] AS [Pais], 
+[SGF_Producto_VTA].[VariedadCodigo] AS [VariedadCodigo], 
+[SGF_Producto_VTA].[VariedadNombre] AS [VariedadNombre], 
+[SGF_Producto_VTA].[VariedadObtentor] AS [VariedadObtentor], 
+[SGF_Producto_VTA].[VariedadRotacion] AS [VariedadRotacion], 
+[SGF_Producto_VTA].[VariedadIndProdMensual] AS [VariedadIndProdMensual], 
+[SGF_Producto_VTA].[VariedadTamanoBoton] AS [VariedadTamanoBoton], 
+[SGF_Producto_VTA].[VariedadDiasFlorero] AS [VariedadDiasFlorero], 
+[SGF_Producto_VTA].[VariedadCiclo] AS [VariedadCiclo], 
+[SGF_Producto_VTA].[VariedadNumeroPetalos] AS [VariedadNumeroPetalos], 
+[SGF_Producto_VTA].[VariedadTipoFlor] AS [VariedadTipoFlor], 
+[SGF_Producto_VTA].[VariedadColor] AS [VariedadColor], 
+[SGF_Producto_VTA].[VariedadCalidad] AS [VariedadCalidad], 
+[SGF_Producto_VTA].[VariedadLongitudMax] AS [VariedadLongitudMax], 
+[SGF_Producto_VTA].[VariedadLongitudMin] AS [VariedadLongitudMin]
+FROM [dbo].[SGF_Producto_VTA] AS [SGF_Producto_VTA]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="SGF_Usuario_VTA" EntityType="Self.SGF_Usuario_VTA" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [SGF_Usuario_VTA].[UsuarioID] AS [UsuarioID], 
@@ -979,13 +1280,21 @@ FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
             <End Role="SGF_Permiso" EntitySet="SGF_Permiso" />
             <End Role="SGF_PermisoBoton" EntitySet="SGF_PermisoBoton" />
           </AssociationSet>
-          <AssociationSet Name="FK_SGF_Bodega_SGF_Sucursal" Association="Self.FK_SGF_Bodega_SGF_Sucursal">
+          <AssociationSet Name="FK_SGF_Almacen_SGF_Sucursal" Association="Self.FK_SGF_Almacen_SGF_Sucursal">
             <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
+            <End Role="SGF_Almacen" EntitySet="SGF_Almacen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Bodega_SGF_Almacen" Association="Self.FK_SGF_Bodega_SGF_Almacen">
+            <End Role="SGF_Almacen" EntitySet="SGF_Almacen" />
             <End Role="SGF_Bodega" EntitySet="SGF_Bodega" />
           </AssociationSet>
           <AssociationSet Name="FK_SGF_Boton_SGF_Formulario" Association="Self.FK_SGF_Boton_SGF_Formulario">
             <End Role="SGF_Formulario" EntitySet="SGF_Formulario" />
             <End Role="SGF_Boton" EntitySet="SGF_Boton" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CampoCultivo_SGF_Sucursal" Association="Self.FK_SGF_CampoCultivo_SGF_Sucursal">
+            <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
+            <End Role="SGF_CampoCultivo" EntitySet="SGF_CampoCultivo" />
           </AssociationSet>
           <AssociationSet Name="FK_SGF_Clasificador_SGF_TipoClasificador" Association="Self.FK_SGF_Clasificador_SGF_TipoClasificador">
             <End Role="SGF_TipoClasificador" EntitySet="SGF_TipoClasificador" />
@@ -998,6 +1307,30 @@ FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
           <AssociationSet Name="FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal" Association="Self.FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal">
             <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
             <End Role="SGF_ConfigurarPersonaEmpresa" EntitySet="SGF_ConfigurarPersonaEmpresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoArea_SGF_CampoCultivo" Association="Self.FK_SGF_CultivoArea_SGF_CampoCultivo">
+            <End Role="SGF_CampoCultivo" EntitySet="SGF_CampoCultivo" />
+            <End Role="SGF_CultivoArea" EntitySet="SGF_CultivoArea" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoBloque_SGF_CultivoArea" Association="Self.FK_SGF_CultivoBloque_SGF_CultivoArea">
+            <End Role="SGF_CultivoArea" EntitySet="SGF_CultivoArea" />
+            <End Role="SGF_CultivoBloque" EntitySet="SGF_CultivoBloque" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoCama_SGF_CultivoNave" Association="Self.FK_SGF_CultivoCama_SGF_CultivoNave">
+            <End Role="SGF_CultivoNave" EntitySet="SGF_CultivoNave" />
+            <End Role="SGF_CultivoCama" EntitySet="SGF_CultivoCama" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoCuadro_SGF_CultivoCama" Association="Self.FK_SGF_CultivoCuadro_SGF_CultivoCama">
+            <End Role="SGF_CultivoCama" EntitySet="SGF_CultivoCama" />
+            <End Role="SGF_CultivoCuadro" EntitySet="SGF_CultivoCuadro" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoLado_SGF_CultivoBloque" Association="Self.FK_SGF_CultivoLado_SGF_CultivoBloque">
+            <End Role="SGF_CultivoBloque" EntitySet="SGF_CultivoBloque" />
+            <End Role="SGF_CultivoLado" EntitySet="SGF_CultivoLado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoNave_SGF_CultivoLado" Association="Self.FK_SGF_CultivoNave_SGF_CultivoLado">
+            <End Role="SGF_CultivoLado" EntitySet="SGF_CultivoLado" />
+            <End Role="SGF_CultivoNave" EntitySet="SGF_CultivoNave" />
           </AssociationSet>
           <AssociationSet Name="FK_SGF_Empresa_SGF_Grupo" Association="Self.FK_SGF_Empresa_SGF_Grupo">
             <End Role="SGF_Grupo" EntitySet="SGF_Grupo" />
@@ -1066,14 +1399,9 @@ FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
             <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
           </AssociationSet>
           <EntitySet Name="SGF_Auditoria" EntityType="SGFModel.SGF_Auditoria" />
-          <EntitySet Name="SGF_Bodega" EntityType="SGFModel.SGF_Bodega" />
           <EntitySet Name="SGF_Boton" EntityType="SGFModel.SGF_Boton" />
           <EntitySet Name="SGF_Formulario" EntityType="SGFModel.SGF_Formulario" />
           <EntitySet Name="SGF_Permiso" EntityType="SGFModel.SGF_Permiso" />
-          <AssociationSet Name="FK_SGF_Bodega_SGF_Sucursal" Association="SGFModel.FK_SGF_Bodega_SGF_Sucursal">
-            <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
-            <End Role="SGF_Bodega" EntitySet="SGF_Bodega" />
-          </AssociationSet>
           <AssociationSet Name="FK_SGF_Boton_SGF_Formulario" Association="SGFModel.FK_SGF_Boton_SGF_Formulario">
             <End Role="SGF_Formulario" EntitySet="SGF_Formulario" />
             <End Role="SGF_Boton" EntitySet="SGF_Boton" />
@@ -1131,6 +1459,54 @@ FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
           <AssociationSet Name="FK_SGF_Producto_SGF_Variedad" Association="SGFModel.FK_SGF_Producto_SGF_Variedad">
             <End Role="SGF_Variedad" EntitySet="SGF_Variedad" />
             <End Role="SGF_Producto" EntitySet="SGF_Producto" />
+          </AssociationSet>
+          <EntitySet Name="SGF_Producto_VTA" EntityType="SGFModel.SGF_Producto_VTA" />
+          <EntitySet Name="SGF_Almacen" EntityType="SGFModel.SGF_Almacen" />
+          <EntitySet Name="SGF_Bodega" EntityType="SGFModel.SGF_Bodega" />
+          <EntitySet Name="SGF_Parametro" EntityType="SGFModel.SGF_Parametro" />
+          <AssociationSet Name="FK_SGF_Almacen_SGF_Sucursal" Association="SGFModel.FK_SGF_Almacen_SGF_Sucursal">
+            <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
+            <End Role="SGF_Almacen" EntitySet="SGF_Almacen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_Bodega_SGF_Almacen" Association="SGFModel.FK_SGF_Bodega_SGF_Almacen">
+            <End Role="SGF_Almacen" EntitySet="SGF_Almacen" />
+            <End Role="SGF_Bodega" EntitySet="SGF_Bodega" />
+          </AssociationSet>
+          <EntitySet Name="SGF_CampoCultivo" EntityType="SGFModel.SGF_CampoCultivo" />
+          <EntitySet Name="SGF_CultivoArea" EntityType="SGFModel.SGF_CultivoArea" />
+          <EntitySet Name="SGF_CultivoBloque" EntityType="SGFModel.SGF_CultivoBloque" />
+          <EntitySet Name="SGF_CultivoCama" EntityType="SGFModel.SGF_CultivoCama" />
+          <EntitySet Name="SGF_CultivoCuadro" EntityType="SGFModel.SGF_CultivoCuadro" />
+          <EntitySet Name="SGF_CultivoLado" EntityType="SGFModel.SGF_CultivoLado" />
+          <EntitySet Name="SGF_CultivoNave" EntityType="SGFModel.SGF_CultivoNave" />
+          <EntitySet Name="sysdiagrams" EntityType="SGFModel.sysdiagrams" />
+          <AssociationSet Name="FK_SGF_CampoCultivo_SGF_Sucursal" Association="SGFModel.FK_SGF_CampoCultivo_SGF_Sucursal">
+            <End Role="SGF_Sucursal" EntitySet="SGF_Sucursal" />
+            <End Role="SGF_CampoCultivo" EntitySet="SGF_CampoCultivo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoArea_SGF_CampoCultivo" Association="SGFModel.FK_SGF_CultivoArea_SGF_CampoCultivo">
+            <End Role="SGF_CampoCultivo" EntitySet="SGF_CampoCultivo" />
+            <End Role="SGF_CultivoArea" EntitySet="SGF_CultivoArea" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoBloque_SGF_CultivoArea" Association="SGFModel.FK_SGF_CultivoBloque_SGF_CultivoArea">
+            <End Role="SGF_CultivoArea" EntitySet="SGF_CultivoArea" />
+            <End Role="SGF_CultivoBloque" EntitySet="SGF_CultivoBloque" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoLado_SGF_CultivoBloque" Association="SGFModel.FK_SGF_CultivoLado_SGF_CultivoBloque">
+            <End Role="SGF_CultivoBloque" EntitySet="SGF_CultivoBloque" />
+            <End Role="SGF_CultivoLado" EntitySet="SGF_CultivoLado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoCama_SGF_CultivoNave" Association="SGFModel.FK_SGF_CultivoCama_SGF_CultivoNave">
+            <End Role="SGF_CultivoNave" EntitySet="SGF_CultivoNave" />
+            <End Role="SGF_CultivoCama" EntitySet="SGF_CultivoCama" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoCuadro_SGF_CultivoCama" Association="SGFModel.FK_SGF_CultivoCuadro_SGF_CultivoCama">
+            <End Role="SGF_CultivoCama" EntitySet="SGF_CultivoCama" />
+            <End Role="SGF_CultivoCuadro" EntitySet="SGF_CultivoCuadro" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SGF_CultivoNave_SGF_CultivoLado" Association="SGFModel.FK_SGF_CultivoNave_SGF_CultivoLado">
+            <End Role="SGF_CultivoLado" EntitySet="SGF_CultivoLado" />
+            <End Role="SGF_CultivoNave" EntitySet="SGF_CultivoNave" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="SGF_Clasificador">
@@ -1202,7 +1578,8 @@ FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
           <Property Name="Estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="SGF_ConfigurarPersonaEmpresa" Relationship="SGFModel.FK_SGF_ConfigurarPersonaEmpresa_SGF_Sucursal" FromRole="SGF_Sucursal" ToRole="SGF_ConfigurarPersonaEmpresa" />
           <NavigationProperty Name="SGF_Empresa" Relationship="SGFModel.FK_SGF_Sucursal_SGF_Empresa" FromRole="SGF_Sucursal" ToRole="SGF_Empresa" />
-          <NavigationProperty Name="SGF_Bodega" Relationship="SGFModel.FK_SGF_Bodega_SGF_Sucursal" FromRole="SGF_Sucursal" ToRole="SGF_Bodega" />
+          <NavigationProperty Name="SGF_Almacen" Relationship="SGFModel.FK_SGF_Almacen_SGF_Sucursal" FromRole="SGF_Sucursal" ToRole="SGF_Almacen" />
+          <NavigationProperty Name="SGF_CampoCultivo" Relationship="SGFModel.FK_SGF_CampoCultivo_SGF_Sucursal" FromRole="SGF_Sucursal" ToRole="SGF_CampoCultivo" />
         </EntityType>
         <EntityType Name="SGF_TipoClasificador">
           <Key>
@@ -1298,17 +1675,6 @@ FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
           <Property Name="namePC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ApplicationName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="SGF_Bodega">
-          <Key>
-            <PropertyRef Name="BodegaID" />
-          </Key>
-          <Property Name="BodegaID" Type="Guid" Nullable="false" />
-          <Property Name="SucursalID" Type="Guid" Nullable="false" />
-          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="Ubicacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="Estado" Type="Int16" Nullable="false" />
-          <NavigationProperty Name="SGF_Sucursal" Relationship="SGFModel.FK_SGF_Bodega_SGF_Sucursal" FromRole="SGF_Bodega" ToRole="SGF_Sucursal" />
-        </EntityType>
         <EntityType Name="SGF_Boton">
           <Key>
             <PropertyRef Name="BotonID" />
@@ -1354,18 +1720,6 @@ FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
           <NavigationProperty Name="SGF_Usuario" Relationship="SGFModel.FK_SGF_Permiso_SGF_Usuario" FromRole="SGF_Permiso" ToRole="SGF_Usuario" />
           <NavigationProperty Name="SGF_PermisoBoton" Relationship="SGFModel.FK_SFG_PermisoBoton_SGF_Permiso" FromRole="SGF_Permiso" ToRole="SGF_PermisoBoton" />
         </EntityType>
-        <Association Name="FK_SGF_Bodega_SGF_Sucursal">
-          <End Type="SGFModel.SGF_Sucursal" Role="SGF_Sucursal" Multiplicity="1" />
-          <End Type="SGFModel.SGF_Bodega" Role="SGF_Bodega" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SGF_Sucursal">
-              <PropertyRef Name="SucursalID" />
-            </Principal>
-            <Dependent Role="SGF_Bodega">
-              <PropertyRef Name="SucursalID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_SGF_Boton_SGF_Formulario">
           <End Type="SGFModel.SGF_Formulario" Role="SGF_Formulario" Multiplicity="1" />
           <End Type="SGFModel.SGF_Boton" Role="SGF_Boton" Multiplicity="*" />
@@ -1906,6 +2260,295 @@ FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="SGF_Producto_VTA">
+          <Key>
+            <PropertyRef Name="ProductoID" />
+            <PropertyRef Name="VariedadID" />
+            <PropertyRef Name="Codigo" />
+            <PropertyRef Name="CalidadID" />
+            <PropertyRef Name="LongitudID" />
+            <PropertyRef Name="TalloID" />
+            <PropertyRef Name="Usuario" />
+            <PropertyRef Name="Fecha" />
+            <PropertyRef Name="Estado" />
+          </Key>
+          <Property Name="ProductoID" Type="Guid" Nullable="false" />
+          <Property Name="VariedadID" Type="Guid" Nullable="false" />
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CalidadID" Type="Guid" Nullable="false" />
+          <Property Name="LongitudID" Type="Guid" Nullable="false" />
+          <Property Name="TalloID" Type="Guid" Nullable="false" />
+          <Property Name="MercadoID" Type="Guid" />
+          <Property Name="PaisID" Type="Guid" />
+          <Property Name="Descripcion" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="ValorRefCompra" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ValorRefVenta" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <Property Name="Calidad" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Longitud" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Tallo" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Mercado" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Pais" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="VariedadCodigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VariedadNombre" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="VariedadObtentor" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VariedadRotacion" Type="Int32" />
+          <Property Name="VariedadIndProdMensual" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="VariedadTamanoBoton" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="VariedadDiasFlorero" Type="Int32" />
+          <Property Name="VariedadCiclo" Type="Int32" />
+          <Property Name="VariedadNumeroPetalos" Type="Int32" />
+          <Property Name="VariedadTipoFlor" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="VariedadColor" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="VariedadCalidad" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="VariedadLongitudMax" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="VariedadLongitudMin" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SGF_Almacen">
+          <Key>
+            <PropertyRef Name="AlmacenID" />
+          </Key>
+          <Property Name="AlmacenID" Type="Guid" Nullable="false" />
+          <Property Name="SucursalID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SGF_Sucursal" Relationship="SGFModel.FK_SGF_Almacen_SGF_Sucursal" FromRole="SGF_Almacen" ToRole="SGF_Sucursal" />
+          <NavigationProperty Name="SGF_Bodega" Relationship="SGFModel.FK_SGF_Bodega_SGF_Almacen" FromRole="SGF_Almacen" ToRole="SGF_Bodega" />
+        </EntityType>
+        <EntityType Name="SGF_Bodega">
+          <Key>
+            <PropertyRef Name="BodegaID" />
+          </Key>
+          <Property Name="BodegaID" Type="Guid" Nullable="false" />
+          <Property Name="AlmacenID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Ubicacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="SGF_Almacen" Relationship="SGFModel.FK_SGF_Bodega_SGF_Almacen" FromRole="SGF_Bodega" ToRole="SGF_Almacen" />
+        </EntityType>
+        <EntityType Name="SGF_Parametro">
+          <Key>
+            <PropertyRef Name="ParametroID" />
+          </Key>
+          <Property Name="ParametroID" Type="Guid" Nullable="false" />
+          <Property Name="Pkey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoParametro" Type="Int32" Nullable="false" />
+          <Property Name="Valor" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Comentarios" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_SGF_Almacen_SGF_Sucursal">
+          <End Type="SGFModel.SGF_Sucursal" Role="SGF_Sucursal" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Almacen" Role="SGF_Almacen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Sucursal">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="SGF_Almacen">
+              <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_Bodega_SGF_Almacen">
+          <End Type="SGFModel.SGF_Almacen" Role="SGF_Almacen" Multiplicity="1" />
+          <End Type="SGFModel.SGF_Bodega" Role="SGF_Bodega" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Almacen">
+              <PropertyRef Name="AlmacenID" />
+            </Principal>
+            <Dependent Role="SGF_Bodega">
+              <PropertyRef Name="AlmacenID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SGF_CampoCultivo">
+          <Key>
+            <PropertyRef Name="CampoCultivoID" />
+          </Key>
+          <Property Name="CampoCultivoID" Type="Guid" Nullable="false" />
+          <Property Name="SucursalID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SGF_Sucursal" Relationship="SGFModel.FK_SGF_CampoCultivo_SGF_Sucursal" FromRole="SGF_CampoCultivo" ToRole="SGF_Sucursal" />
+          <NavigationProperty Name="SGF_CultivoArea" Relationship="SGFModel.FK_SGF_CultivoArea_SGF_CampoCultivo" FromRole="SGF_CampoCultivo" ToRole="SGF_CultivoArea" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoArea">
+          <Key>
+            <PropertyRef Name="CultivoAreaID" />
+          </Key>
+          <Property Name="CultivoAreaID" Type="Guid" Nullable="false" />
+          <Property Name="CampoCultivoID" Type="Guid" Nullable="false" />
+          <Property Name="AreaID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SGF_CampoCultivo" Relationship="SGFModel.FK_SGF_CultivoArea_SGF_CampoCultivo" FromRole="SGF_CultivoArea" ToRole="SGF_CampoCultivo" />
+          <NavigationProperty Name="SGF_CultivoBloque" Relationship="SGFModel.FK_SGF_CultivoBloque_SGF_CultivoArea" FromRole="SGF_CultivoArea" ToRole="SGF_CultivoBloque" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoBloque">
+          <Key>
+            <PropertyRef Name="CultivoBloqueID" />
+          </Key>
+          <Property Name="CultivoBloqueID" Type="Guid" Nullable="false" />
+          <Property Name="CultivoAreaID" Type="Guid" Nullable="false" />
+          <Property Name="BloqueID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SGF_CultivoArea" Relationship="SGFModel.FK_SGF_CultivoBloque_SGF_CultivoArea" FromRole="SGF_CultivoBloque" ToRole="SGF_CultivoArea" />
+          <NavigationProperty Name="SGF_CultivoLado" Relationship="SGFModel.FK_SGF_CultivoLado_SGF_CultivoBloque" FromRole="SGF_CultivoBloque" ToRole="SGF_CultivoLado" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoCama">
+          <Key>
+            <PropertyRef Name="CultivoCamaID" />
+          </Key>
+          <Property Name="CultivoCamaID" Type="Guid" Nullable="false" />
+          <Property Name="CultivoNaveID" Type="Guid" Nullable="false" />
+          <Property Name="CamaID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SGF_CultivoNave" Relationship="SGFModel.FK_SGF_CultivoCama_SGF_CultivoNave" FromRole="SGF_CultivoCama" ToRole="SGF_CultivoNave" />
+          <NavigationProperty Name="SGF_CultivoCuadro" Relationship="SGFModel.FK_SGF_CultivoCuadro_SGF_CultivoCama" FromRole="SGF_CultivoCama" ToRole="SGF_CultivoCuadro" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoCuadro">
+          <Key>
+            <PropertyRef Name="CultivoCuadroID" />
+          </Key>
+          <Property Name="CultivoCuadroID" Type="Guid" Nullable="false" />
+          <Property Name="CultivoCamaID" Type="Guid" Nullable="false" />
+          <Property Name="CuadroID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SGF_CultivoCama" Relationship="SGFModel.FK_SGF_CultivoCuadro_SGF_CultivoCama" FromRole="SGF_CultivoCuadro" ToRole="SGF_CultivoCama" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoLado">
+          <Key>
+            <PropertyRef Name="CultivoLadoID" />
+          </Key>
+          <Property Name="CultivoLadoID" Type="Guid" Nullable="false" />
+          <Property Name="CultivoBloqueID" Type="Guid" Nullable="false" />
+          <Property Name="LadoID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SGF_CultivoBloque" Relationship="SGFModel.FK_SGF_CultivoLado_SGF_CultivoBloque" FromRole="SGF_CultivoLado" ToRole="SGF_CultivoBloque" />
+          <NavigationProperty Name="SGF_CultivoNave" Relationship="SGFModel.FK_SGF_CultivoNave_SGF_CultivoLado" FromRole="SGF_CultivoLado" ToRole="SGF_CultivoNave" />
+        </EntityType>
+        <EntityType Name="SGF_CultivoNave">
+          <Key>
+            <PropertyRef Name="CultivoNaveID" />
+          </Key>
+          <Property Name="CultivoNaveID" Type="Guid" Nullable="false" />
+          <Property Name="CultivoLadoID" Type="Guid" Nullable="false" />
+          <Property Name="NaveID" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SGF_CultivoCama" Relationship="SGFModel.FK_SGF_CultivoCama_SGF_CultivoNave" FromRole="SGF_CultivoNave" ToRole="SGF_CultivoCama" />
+          <NavigationProperty Name="SGF_CultivoLado" Relationship="SGFModel.FK_SGF_CultivoNave_SGF_CultivoLado" FromRole="SGF_CultivoNave" ToRole="SGF_CultivoLado" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_SGF_CampoCultivo_SGF_Sucursal">
+          <End Type="SGFModel.SGF_Sucursal" Role="SGF_Sucursal" Multiplicity="1" />
+          <End Type="SGFModel.SGF_CampoCultivo" Role="SGF_CampoCultivo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_Sucursal">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="SGF_CampoCultivo">
+              <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoArea_SGF_CampoCultivo">
+          <End Type="SGFModel.SGF_CampoCultivo" Role="SGF_CampoCultivo" Multiplicity="1" />
+          <End Type="SGFModel.SGF_CultivoArea" Role="SGF_CultivoArea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CampoCultivo">
+              <PropertyRef Name="CampoCultivoID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoArea">
+              <PropertyRef Name="CampoCultivoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoBloque_SGF_CultivoArea">
+          <End Type="SGFModel.SGF_CultivoArea" Role="SGF_CultivoArea" Multiplicity="1" />
+          <End Type="SGFModel.SGF_CultivoBloque" Role="SGF_CultivoBloque" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CultivoArea">
+              <PropertyRef Name="CultivoAreaID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoBloque">
+              <PropertyRef Name="CultivoAreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoLado_SGF_CultivoBloque">
+          <End Type="SGFModel.SGF_CultivoBloque" Role="SGF_CultivoBloque" Multiplicity="1" />
+          <End Type="SGFModel.SGF_CultivoLado" Role="SGF_CultivoLado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CultivoBloque">
+              <PropertyRef Name="CultivoBloqueID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoLado">
+              <PropertyRef Name="CultivoBloqueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoCama_SGF_CultivoNave">
+          <End Type="SGFModel.SGF_CultivoNave" Role="SGF_CultivoNave" Multiplicity="1" />
+          <End Type="SGFModel.SGF_CultivoCama" Role="SGF_CultivoCama" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CultivoNave">
+              <PropertyRef Name="CultivoNaveID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoCama">
+              <PropertyRef Name="CultivoNaveID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoCuadro_SGF_CultivoCama">
+          <End Type="SGFModel.SGF_CultivoCama" Role="SGF_CultivoCama" Multiplicity="1" />
+          <End Type="SGFModel.SGF_CultivoCuadro" Role="SGF_CultivoCuadro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CultivoCama">
+              <PropertyRef Name="CultivoCamaID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoCuadro">
+              <PropertyRef Name="CultivoCamaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SGF_CultivoNave_SGF_CultivoLado">
+          <End Type="SGFModel.SGF_CultivoLado" Role="SGF_CultivoLado" Multiplicity="1" />
+          <End Type="SGFModel.SGF_CultivoNave" Role="SGF_CultivoNave" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGF_CultivoLado">
+              <PropertyRef Name="CultivoLadoID" />
+            </Principal>
+            <Dependent Role="SGF_CultivoNave">
+              <PropertyRef Name="CultivoLadoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <edmx:Mappings>
@@ -2022,17 +2665,6 @@ FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
                 <ScalarProperty Name="Tipo" ColumnName="Tipo" />
                 <ScalarProperty Name="Tabla" ColumnName="Tabla" />
                 <ScalarProperty Name="AuditoriaID" ColumnName="AuditoriaID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SGF_Bodega">
-            <EntityTypeMapping TypeName="SGFModel.SGF_Bodega">
-              <MappingFragment StoreEntitySet="SGF_Bodega">
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
-                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
-                <ScalarProperty Name="BodegaID" ColumnName="BodegaID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2453,6 +3085,175 @@ FROM [dbo].[SGF_Variedad_VTA] AS [SGF_Variedad_VTA]</DefiningQuery>
                 <ScalarProperty Name="ColorID" ColumnName="ColorID" />
                 <ScalarProperty Name="TipoFlorID" ColumnName="TipoFlorID" />
                 <ScalarProperty Name="VariedadID" ColumnName="VariedadID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Producto_VTA">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Producto_VTA">
+              <MappingFragment StoreEntitySet="SGF_Producto_VTA">
+                <ScalarProperty Name="VariedadLongitudMin" ColumnName="VariedadLongitudMin" />
+                <ScalarProperty Name="VariedadLongitudMax" ColumnName="VariedadLongitudMax" />
+                <ScalarProperty Name="VariedadCalidad" ColumnName="VariedadCalidad" />
+                <ScalarProperty Name="VariedadColor" ColumnName="VariedadColor" />
+                <ScalarProperty Name="VariedadTipoFlor" ColumnName="VariedadTipoFlor" />
+                <ScalarProperty Name="VariedadNumeroPetalos" ColumnName="VariedadNumeroPetalos" />
+                <ScalarProperty Name="VariedadCiclo" ColumnName="VariedadCiclo" />
+                <ScalarProperty Name="VariedadDiasFlorero" ColumnName="VariedadDiasFlorero" />
+                <ScalarProperty Name="VariedadTamanoBoton" ColumnName="VariedadTamanoBoton" />
+                <ScalarProperty Name="VariedadIndProdMensual" ColumnName="VariedadIndProdMensual" />
+                <ScalarProperty Name="VariedadRotacion" ColumnName="VariedadRotacion" />
+                <ScalarProperty Name="VariedadObtentor" ColumnName="VariedadObtentor" />
+                <ScalarProperty Name="VariedadNombre" ColumnName="VariedadNombre" />
+                <ScalarProperty Name="VariedadCodigo" ColumnName="VariedadCodigo" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="Mercado" ColumnName="Mercado" />
+                <ScalarProperty Name="Tallo" ColumnName="Tallo" />
+                <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+                <ScalarProperty Name="Calidad" ColumnName="Calidad" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="ValorRefVenta" ColumnName="ValorRefVenta" />
+                <ScalarProperty Name="ValorRefCompra" ColumnName="ValorRefCompra" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="PaisID" ColumnName="PaisID" />
+                <ScalarProperty Name="MercadoID" ColumnName="MercadoID" />
+                <ScalarProperty Name="TalloID" ColumnName="TalloID" />
+                <ScalarProperty Name="LongitudID" ColumnName="LongitudID" />
+                <ScalarProperty Name="CalidadID" ColumnName="CalidadID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="VariedadID" ColumnName="VariedadID" />
+                <ScalarProperty Name="ProductoID" ColumnName="ProductoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Almacen">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Almacen">
+              <MappingFragment StoreEntitySet="SGF_Almacen">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
+                <ScalarProperty Name="AlmacenID" ColumnName="AlmacenID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Bodega">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Bodega">
+              <MappingFragment StoreEntitySet="SGF_Bodega">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="AlmacenID" ColumnName="AlmacenID" />
+                <ScalarProperty Name="BodegaID" ColumnName="BodegaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_Parametro">
+            <EntityTypeMapping TypeName="SGFModel.SGF_Parametro">
+              <MappingFragment StoreEntitySet="SGF_Parametro">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="TipoParametro" ColumnName="TipoParametro" />
+                <ScalarProperty Name="Pkey" ColumnName="Pkey" />
+                <ScalarProperty Name="ParametroID" ColumnName="ParametroID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_CampoCultivo">
+            <EntityTypeMapping TypeName="SGFModel.SGF_CampoCultivo">
+              <MappingFragment StoreEntitySet="SGF_CampoCultivo">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
+                <ScalarProperty Name="CampoCultivoID" ColumnName="CampoCultivoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_CultivoArea">
+            <EntityTypeMapping TypeName="SGFModel.SGF_CultivoArea">
+              <MappingFragment StoreEntitySet="SGF_CultivoArea">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="CampoCultivoID" ColumnName="CampoCultivoID" />
+                <ScalarProperty Name="CultivoAreaID" ColumnName="CultivoAreaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_CultivoBloque">
+            <EntityTypeMapping TypeName="SGFModel.SGF_CultivoBloque">
+              <MappingFragment StoreEntitySet="SGF_CultivoBloque">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="BloqueID" ColumnName="BloqueID" />
+                <ScalarProperty Name="CultivoAreaID" ColumnName="CultivoAreaID" />
+                <ScalarProperty Name="CultivoBloqueID" ColumnName="CultivoBloqueID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_CultivoCama">
+            <EntityTypeMapping TypeName="SGFModel.SGF_CultivoCama">
+              <MappingFragment StoreEntitySet="SGF_CultivoCama">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="CamaID" ColumnName="CamaID" />
+                <ScalarProperty Name="CultivoNaveID" ColumnName="CultivoNaveID" />
+                <ScalarProperty Name="CultivoCamaID" ColumnName="CultivoCamaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_CultivoCuadro">
+            <EntityTypeMapping TypeName="SGFModel.SGF_CultivoCuadro">
+              <MappingFragment StoreEntitySet="SGF_CultivoCuadro">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="CuadroID" ColumnName="CuadroID" />
+                <ScalarProperty Name="CultivoCamaID" ColumnName="CultivoCamaID" />
+                <ScalarProperty Name="CultivoCuadroID" ColumnName="CultivoCuadroID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_CultivoLado">
+            <EntityTypeMapping TypeName="SGFModel.SGF_CultivoLado">
+              <MappingFragment StoreEntitySet="SGF_CultivoLado">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="LadoID" ColumnName="LadoID" />
+                <ScalarProperty Name="CultivoBloqueID" ColumnName="CultivoBloqueID" />
+                <ScalarProperty Name="CultivoLadoID" ColumnName="CultivoLadoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGF_CultivoNave">
+            <EntityTypeMapping TypeName="SGFModel.SGF_CultivoNave">
+              <MappingFragment StoreEntitySet="SGF_CultivoNave">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="NaveID" ColumnName="NaveID" />
+                <ScalarProperty Name="CultivoLadoID" ColumnName="CultivoLadoID" />
+                <ScalarProperty Name="CultivoNaveID" ColumnName="CultivoNaveID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="SGFModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

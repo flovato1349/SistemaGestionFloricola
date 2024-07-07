@@ -18,34 +18,44 @@ namespace SGF.Site.SGF_Service {
     [System.Runtime.Serialization.DataContractAttribute(Name="StructuralObject", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses", IsReference=true)]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityObject))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Boton))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Formulario))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Modulo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Permiso))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_PermisoBoton))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Persona))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_ConfigurarPersonaEmpresa))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Sucursal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Almacen))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Bodega))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CampoCultivo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoArea))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoBloque))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoLado))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoNave))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoCama))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoCuadro))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Empresa))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Grupo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoPersona))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Permiso))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Formulario))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Boton))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Modulo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_PermisoBoton))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoUsuario))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Producto))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Auditoria))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SEG_Botones_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Clasificador))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoClasificador))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Clasificador_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Formulario_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SEG_Formularios_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_LineaAerea))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Persona_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Producto_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SEG_Usuarios_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_ParametrosPassword))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario_VTA))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Producto))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad_VTA))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Auditoria))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoPersona))]
     public partial class StructuralObject : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -75,34 +85,44 @@ namespace SGF.Site.SGF_Service {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityObject", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses", IsReference=true)]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Boton))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Formulario))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Modulo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Permiso))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_PermisoBoton))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Persona))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_ConfigurarPersonaEmpresa))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Sucursal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Almacen))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Bodega))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CampoCultivo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoArea))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoBloque))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoLado))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoNave))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoCama))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoCuadro))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Empresa))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Grupo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoPersona))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Permiso))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Formulario))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Boton))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Modulo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_PermisoBoton))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoUsuario))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Producto))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Auditoria))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SEG_Botones_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Clasificador))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoClasificador))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Clasificador_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Formulario_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SEG_Formularios_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_LineaAerea))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Persona_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Producto_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SEG_Usuarios_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_ParametrosPassword))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario_VTA))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Producto))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad_VTA))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Auditoria))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoPersona))]
     public partial class EntityObject : SGF.Site.SGF_Service.StructuralObject {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -117,1168 +137,6 @@ namespace SGF.Site.SGF_Service {
                 if ((object.ReferenceEquals(this.EntityKeyField, value) != true)) {
                     this.EntityKeyField = value;
                     this.RaisePropertyChanged("EntityKey");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Boton", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_Boton : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ActivoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid BotonIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid FormularioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.SGF_Formulario SGF_FormularioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k SGF_FormularioReferenceField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Activo {
-            get {
-                return this.ActivoField;
-            }
-            set {
-                if ((this.ActivoField.Equals(value) != true)) {
-                    this.ActivoField = value;
-                    this.RaisePropertyChanged("Activo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid BotonID {
-            get {
-                return this.BotonIDField;
-            }
-            set {
-                if ((this.BotonIDField.Equals(value) != true)) {
-                    this.BotonIDField = value;
-                    this.RaisePropertyChanged("BotonID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid FormularioID {
-            get {
-                return this.FormularioIDField;
-            }
-            set {
-                if ((this.FormularioIDField.Equals(value) != true)) {
-                    this.FormularioIDField = value;
-                    this.RaisePropertyChanged("FormularioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
-            get {
-                return this.NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.SGF_Formulario SGF_Formulario {
-            get {
-                return this.SGF_FormularioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_FormularioField, value) != true)) {
-                    this.SGF_FormularioField = value;
-                    this.RaisePropertyChanged("SGF_Formulario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k SGF_FormularioReference {
-            get {
-                return this.SGF_FormularioReferenceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_FormularioReferenceField, value) != true)) {
-                    this.SGF_FormularioReferenceField = value;
-                    this.RaisePropertyChanged("SGF_FormularioReference");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Formulario", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_Formulario : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid FormularioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ModuloIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Boton> SGF_BotonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.SGF_Modulo SGF_ModuloField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.EntityReferenceOfSGF_ModuloMYlFw61k SGF_ModuloReferenceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Permiso> SGF_PermisoField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Codigo {
-            get {
-                return this.CodigoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
-                    this.CodigoField = value;
-                    this.RaisePropertyChanged("Codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid FormularioID {
-            get {
-                return this.FormularioIDField;
-            }
-            set {
-                if ((this.FormularioIDField.Equals(value) != true)) {
-                    this.FormularioIDField = value;
-                    this.RaisePropertyChanged("FormularioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ModuloID {
-            get {
-                return this.ModuloIDField;
-            }
-            set {
-                if ((this.ModuloIDField.Equals(value) != true)) {
-                    this.ModuloIDField = value;
-                    this.RaisePropertyChanged("ModuloID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
-            get {
-                return this.NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Boton> SGF_Boton {
-            get {
-                return this.SGF_BotonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_BotonField, value) != true)) {
-                    this.SGF_BotonField = value;
-                    this.RaisePropertyChanged("SGF_Boton");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.SGF_Modulo SGF_Modulo {
-            get {
-                return this.SGF_ModuloField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_ModuloField, value) != true)) {
-                    this.SGF_ModuloField = value;
-                    this.RaisePropertyChanged("SGF_Modulo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.EntityReferenceOfSGF_ModuloMYlFw61k SGF_ModuloReference {
-            get {
-                return this.SGF_ModuloReferenceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_ModuloReferenceField, value) != true)) {
-                    this.SGF_ModuloReferenceField = value;
-                    this.RaisePropertyChanged("SGF_ModuloReference");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Permiso> SGF_Permiso {
-            get {
-                return this.SGF_PermisoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_PermisoField, value) != true)) {
-                    this.SGF_PermisoField = value;
-                    this.RaisePropertyChanged("SGF_Permiso");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Modulo", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_Modulo : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ModuloIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Formulario> SGF_FormularioField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ModuloID {
-            get {
-                return this.ModuloIDField;
-            }
-            set {
-                if ((this.ModuloIDField.Equals(value) != true)) {
-                    this.ModuloIDField = value;
-                    this.RaisePropertyChanged("ModuloID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
-            get {
-                return this.NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Formulario> SGF_Formulario {
-            get {
-                return this.SGF_FormularioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_FormularioField, value) != true)) {
-                    this.SGF_FormularioField = value;
-                    this.RaisePropertyChanged("SGF_Formulario");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Permiso", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_Permiso : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> AgregarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> EditarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> EliminarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FechaCreacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid FormularioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> ImprimirField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid PermisoIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> ProcesarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.SGF_Formulario SGF_FormularioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k SGF_FormularioReferenceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_PermisoBoton> SGF_PermisoBotonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.SGF_Usuario SGF_UsuarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.EntityReferenceOfSGF_UsuarioMYlFw61k SGF_UsuarioReferenceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioCreacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid UsuarioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> ValueField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Agregar {
-            get {
-                return this.AgregarField;
-            }
-            set {
-                if ((this.AgregarField.Equals(value) != true)) {
-                    this.AgregarField = value;
-                    this.RaisePropertyChanged("Agregar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Editar {
-            get {
-                return this.EditarField;
-            }
-            set {
-                if ((this.EditarField.Equals(value) != true)) {
-                    this.EditarField = value;
-                    this.RaisePropertyChanged("Editar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Eliminar {
-            get {
-                return this.EliminarField;
-            }
-            set {
-                if ((this.EliminarField.Equals(value) != true)) {
-                    this.EliminarField = value;
-                    this.RaisePropertyChanged("Eliminar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaCreacion {
-            get {
-                return this.FechaCreacionField;
-            }
-            set {
-                if ((this.FechaCreacionField.Equals(value) != true)) {
-                    this.FechaCreacionField = value;
-                    this.RaisePropertyChanged("FechaCreacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid FormularioID {
-            get {
-                return this.FormularioIDField;
-            }
-            set {
-                if ((this.FormularioIDField.Equals(value) != true)) {
-                    this.FormularioIDField = value;
-                    this.RaisePropertyChanged("FormularioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Imprimir {
-            get {
-                return this.ImprimirField;
-            }
-            set {
-                if ((this.ImprimirField.Equals(value) != true)) {
-                    this.ImprimirField = value;
-                    this.RaisePropertyChanged("Imprimir");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid PermisoID {
-            get {
-                return this.PermisoIDField;
-            }
-            set {
-                if ((this.PermisoIDField.Equals(value) != true)) {
-                    this.PermisoIDField = value;
-                    this.RaisePropertyChanged("PermisoID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Procesar {
-            get {
-                return this.ProcesarField;
-            }
-            set {
-                if ((this.ProcesarField.Equals(value) != true)) {
-                    this.ProcesarField = value;
-                    this.RaisePropertyChanged("Procesar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.SGF_Formulario SGF_Formulario {
-            get {
-                return this.SGF_FormularioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_FormularioField, value) != true)) {
-                    this.SGF_FormularioField = value;
-                    this.RaisePropertyChanged("SGF_Formulario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k SGF_FormularioReference {
-            get {
-                return this.SGF_FormularioReferenceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_FormularioReferenceField, value) != true)) {
-                    this.SGF_FormularioReferenceField = value;
-                    this.RaisePropertyChanged("SGF_FormularioReference");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_PermisoBoton> SGF_PermisoBoton {
-            get {
-                return this.SGF_PermisoBotonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_PermisoBotonField, value) != true)) {
-                    this.SGF_PermisoBotonField = value;
-                    this.RaisePropertyChanged("SGF_PermisoBoton");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.SGF_Usuario SGF_Usuario {
-            get {
-                return this.SGF_UsuarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_UsuarioField, value) != true)) {
-                    this.SGF_UsuarioField = value;
-                    this.RaisePropertyChanged("SGF_Usuario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.EntityReferenceOfSGF_UsuarioMYlFw61k SGF_UsuarioReference {
-            get {
-                return this.SGF_UsuarioReferenceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_UsuarioReferenceField, value) != true)) {
-                    this.SGF_UsuarioReferenceField = value;
-                    this.RaisePropertyChanged("SGF_UsuarioReference");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UsuarioCreacion {
-            get {
-                return this.UsuarioCreacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioCreacionField, value) != true)) {
-                    this.UsuarioCreacionField = value;
-                    this.RaisePropertyChanged("UsuarioCreacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid UsuarioID {
-            get {
-                return this.UsuarioIDField;
-            }
-            set {
-                if ((this.UsuarioIDField.Equals(value) != true)) {
-                    this.UsuarioIDField = value;
-                    this.RaisePropertyChanged("UsuarioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_PermisoBoton", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_PermisoBoton : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid BotonIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid FormularioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid PermisoBotonIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid PermisoIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.SGF_Permiso SGF_PermisoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.EntityReferenceOfSGF_PermisoMYlFw61k SGF_PermisoReferenceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid BotonID {
-            get {
-                return this.BotonIDField;
-            }
-            set {
-                if ((this.BotonIDField.Equals(value) != true)) {
-                    this.BotonIDField = value;
-                    this.RaisePropertyChanged("BotonID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid FormularioID {
-            get {
-                return this.FormularioIDField;
-            }
-            set {
-                if ((this.FormularioIDField.Equals(value) != true)) {
-                    this.FormularioIDField = value;
-                    this.RaisePropertyChanged("FormularioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid PermisoBotonID {
-            get {
-                return this.PermisoBotonIDField;
-            }
-            set {
-                if ((this.PermisoBotonIDField.Equals(value) != true)) {
-                    this.PermisoBotonIDField = value;
-                    this.RaisePropertyChanged("PermisoBotonID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid PermisoID {
-            get {
-                return this.PermisoIDField;
-            }
-            set {
-                if ((this.PermisoIDField.Equals(value) != true)) {
-                    this.PermisoIDField = value;
-                    this.RaisePropertyChanged("PermisoID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.SGF_Permiso SGF_Permiso {
-            get {
-                return this.SGF_PermisoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_PermisoField, value) != true)) {
-                    this.SGF_PermisoField = value;
-                    this.RaisePropertyChanged("SGF_Permiso");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.EntityReferenceOfSGF_PermisoMYlFw61k SGF_PermisoReference {
-            get {
-                return this.SGF_PermisoReferenceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_PermisoReferenceField, value) != true)) {
-                    this.SGF_PermisoReferenceField = value;
-                    this.RaisePropertyChanged("SGF_PermisoReference");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Usuario {
-            get {
-                return this.UsuarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
-                    this.UsuarioField = value;
-                    this.RaisePropertyChanged("Usuario");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Usuario", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_Usuario : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> BloqueadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> CambioPasswordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FechaActualizaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FechaCreacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FechaExpiracionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IPField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MACField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombrePCField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> NumeroIntentosField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ObservacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PasswordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid PersonaIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Permiso> SGF_PermisoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.SGF_Persona SGF_PersonaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.EntityReferenceOfSGF_PersonaMYlFw61k SGF_PersonaReferenceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.SGF_TipoUsuario SGF_TipoUsuarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoUsuarioMYlFw61k SGF_TipoUsuarioReferenceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid TipoUsuarioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioActualizaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioCreacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid UsuarioIDField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Bloqueado {
-            get {
-                return this.BloqueadoField;
-            }
-            set {
-                if ((this.BloqueadoField.Equals(value) != true)) {
-                    this.BloqueadoField = value;
-                    this.RaisePropertyChanged("Bloqueado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> CambioPassword {
-            get {
-                return this.CambioPasswordField;
-            }
-            set {
-                if ((this.CambioPasswordField.Equals(value) != true)) {
-                    this.CambioPasswordField = value;
-                    this.RaisePropertyChanged("CambioPassword");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> FechaActualiza {
-            get {
-                return this.FechaActualizaField;
-            }
-            set {
-                if ((this.FechaActualizaField.Equals(value) != true)) {
-                    this.FechaActualizaField = value;
-                    this.RaisePropertyChanged("FechaActualiza");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> FechaCreacion {
-            get {
-                return this.FechaCreacionField;
-            }
-            set {
-                if ((this.FechaCreacionField.Equals(value) != true)) {
-                    this.FechaCreacionField = value;
-                    this.RaisePropertyChanged("FechaCreacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> FechaExpiracion {
-            get {
-                return this.FechaExpiracionField;
-            }
-            set {
-                if ((this.FechaExpiracionField.Equals(value) != true)) {
-                    this.FechaExpiracionField = value;
-                    this.RaisePropertyChanged("FechaExpiracion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string IP {
-            get {
-                return this.IPField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IPField, value) != true)) {
-                    this.IPField = value;
-                    this.RaisePropertyChanged("IP");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MAC {
-            get {
-                return this.MACField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MACField, value) != true)) {
-                    this.MACField = value;
-                    this.RaisePropertyChanged("MAC");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NombrePC {
-            get {
-                return this.NombrePCField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombrePCField, value) != true)) {
-                    this.NombrePCField = value;
-                    this.RaisePropertyChanged("NombrePC");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> NumeroIntentos {
-            get {
-                return this.NumeroIntentosField;
-            }
-            set {
-                if ((this.NumeroIntentosField.Equals(value) != true)) {
-                    this.NumeroIntentosField = value;
-                    this.RaisePropertyChanged("NumeroIntentos");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Observacion {
-            get {
-                return this.ObservacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
-                    this.ObservacionField = value;
-                    this.RaisePropertyChanged("Observacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Password {
-            get {
-                return this.PasswordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
-                    this.PasswordField = value;
-                    this.RaisePropertyChanged("Password");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid PersonaID {
-            get {
-                return this.PersonaIDField;
-            }
-            set {
-                if ((this.PersonaIDField.Equals(value) != true)) {
-                    this.PersonaIDField = value;
-                    this.RaisePropertyChanged("PersonaID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Permiso> SGF_Permiso {
-            get {
-                return this.SGF_PermisoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_PermisoField, value) != true)) {
-                    this.SGF_PermisoField = value;
-                    this.RaisePropertyChanged("SGF_Permiso");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.SGF_Persona SGF_Persona {
-            get {
-                return this.SGF_PersonaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_PersonaField, value) != true)) {
-                    this.SGF_PersonaField = value;
-                    this.RaisePropertyChanged("SGF_Persona");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.EntityReferenceOfSGF_PersonaMYlFw61k SGF_PersonaReference {
-            get {
-                return this.SGF_PersonaReferenceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_PersonaReferenceField, value) != true)) {
-                    this.SGF_PersonaReferenceField = value;
-                    this.RaisePropertyChanged("SGF_PersonaReference");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.SGF_TipoUsuario SGF_TipoUsuario {
-            get {
-                return this.SGF_TipoUsuarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_TipoUsuarioField, value) != true)) {
-                    this.SGF_TipoUsuarioField = value;
-                    this.RaisePropertyChanged("SGF_TipoUsuario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoUsuarioMYlFw61k SGF_TipoUsuarioReference {
-            get {
-                return this.SGF_TipoUsuarioReferenceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_TipoUsuarioReferenceField, value) != true)) {
-                    this.SGF_TipoUsuarioReferenceField = value;
-                    this.RaisePropertyChanged("SGF_TipoUsuarioReference");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid TipoUsuarioID {
-            get {
-                return this.TipoUsuarioIDField;
-            }
-            set {
-                if ((this.TipoUsuarioIDField.Equals(value) != true)) {
-                    this.TipoUsuarioIDField = value;
-                    this.RaisePropertyChanged("TipoUsuarioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserName {
-            get {
-                return this.UserNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
-                    this.UserNameField = value;
-                    this.RaisePropertyChanged("UserName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UsuarioActualiza {
-            get {
-                return this.UsuarioActualizaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioActualizaField, value) != true)) {
-                    this.UsuarioActualizaField = value;
-                    this.RaisePropertyChanged("UsuarioActualiza");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UsuarioCreacion {
-            get {
-                return this.UsuarioCreacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioCreacionField, value) != true)) {
-                    this.UsuarioCreacionField = value;
-                    this.RaisePropertyChanged("UsuarioCreacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid UsuarioID {
-            get {
-                return this.UsuarioIDField;
-            }
-            set {
-                if ((this.UsuarioIDField.Equals(value) != true)) {
-                    this.UsuarioIDField = value;
-                    this.RaisePropertyChanged("UsuarioID");
                 }
             }
         }
@@ -1925,7 +783,10 @@ namespace SGF.Site.SGF_Service {
         private string NombreField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Bodega> SGF_BodegaField;
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Almacen> SGF_AlmacenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CampoCultivo> SGF_CampoCultivoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_ConfigurarPersonaEmpresa> SGF_ConfigurarPersonaEmpresaField;
@@ -1995,14 +856,27 @@ namespace SGF.Site.SGF_Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Bodega> SGF_Bodega {
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Almacen> SGF_Almacen {
             get {
-                return this.SGF_BodegaField;
+                return this.SGF_AlmacenField;
             }
             set {
-                if ((object.ReferenceEquals(this.SGF_BodegaField, value) != true)) {
-                    this.SGF_BodegaField = value;
-                    this.RaisePropertyChanged("SGF_Bodega");
+                if ((object.ReferenceEquals(this.SGF_AlmacenField, value) != true)) {
+                    this.SGF_AlmacenField = value;
+                    this.RaisePropertyChanged("SGF_Almacen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CampoCultivo> SGF_CampoCultivo {
+            get {
+                return this.SGF_CampoCultivoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CampoCultivoField, value) != true)) {
+                    this.SGF_CampoCultivoField = value;
+                    this.RaisePropertyChanged("SGF_CampoCultivo");
                 }
             }
         }
@@ -2075,18 +949,24 @@ namespace SGF.Site.SGF_Service {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Bodega", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Almacen", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
     [System.SerializableAttribute()]
-    public partial class SGF_Bodega : SGF.Site.SGF_Service.EntityObject {
+    public partial class SGF_Almacen : SGF.Site.SGF_Service.EntityObject {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid BodegaIDField;
+        private System.Guid AlmacenIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoField;
+        private string DireccionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Bodega> SGF_BodegaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private SGF.Site.SGF_Service.SGF_Sucursal SGF_SucursalField;
@@ -2097,24 +977,34 @@ namespace SGF.Site.SGF_Service {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Guid SucursalIDField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UbicacionField;
-        
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid BodegaID {
+        public System.Guid AlmacenID {
             get {
-                return this.BodegaIDField;
+                return this.AlmacenIDField;
             }
             set {
-                if ((this.BodegaIDField.Equals(value) != true)) {
-                    this.BodegaIDField = value;
-                    this.RaisePropertyChanged("BodegaID");
+                if ((this.AlmacenIDField.Equals(value) != true)) {
+                    this.AlmacenIDField = value;
+                    this.RaisePropertyChanged("AlmacenID");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Estado {
+        public string Direccion {
+            get {
+                return this.DireccionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DireccionField, value) != true)) {
+                    this.DireccionField = value;
+                    this.RaisePropertyChanged("Direccion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Estado {
             get {
                 return this.EstadoField;
             }
@@ -2135,6 +1025,19 @@ namespace SGF.Site.SGF_Service {
                 if ((object.ReferenceEquals(this.NombreField, value) != true)) {
                     this.NombreField = value;
                     this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Bodega> SGF_Bodega {
+            get {
+                return this.SGF_BodegaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_BodegaField, value) != true)) {
+                    this.SGF_BodegaField = value;
+                    this.RaisePropertyChanged("SGF_Bodega");
                 }
             }
         }
@@ -2177,6 +1080,112 @@ namespace SGF.Site.SGF_Service {
                 }
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Bodega", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_Bodega : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid AlmacenIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid BodegaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_Almacen SGF_AlmacenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_AlmacenMYlFw61k SGF_AlmacenReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UbicacionField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid AlmacenID {
+            get {
+                return this.AlmacenIDField;
+            }
+            set {
+                if ((this.AlmacenIDField.Equals(value) != true)) {
+                    this.AlmacenIDField = value;
+                    this.RaisePropertyChanged("AlmacenID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid BodegaID {
+            get {
+                return this.BodegaIDField;
+            }
+            set {
+                if ((this.BodegaIDField.Equals(value) != true)) {
+                    this.BodegaIDField = value;
+                    this.RaisePropertyChanged("BodegaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_Almacen SGF_Almacen {
+            get {
+                return this.SGF_AlmacenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_AlmacenField, value) != true)) {
+                    this.SGF_AlmacenField = value;
+                    this.RaisePropertyChanged("SGF_Almacen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_AlmacenMYlFw61k SGF_AlmacenReference {
+            get {
+                return this.SGF_AlmacenReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_AlmacenReferenceField, value) != true)) {
+                    this.SGF_AlmacenReferenceField = value;
+                    this.RaisePropertyChanged("SGF_AlmacenReference");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Ubicacion {
@@ -2187,6 +1196,1047 @@ namespace SGF.Site.SGF_Service {
                 if ((object.ReferenceEquals(this.UbicacionField, value) != true)) {
                     this.UbicacionField = value;
                     this.RaisePropertyChanged("Ubicacion");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_CampoCultivo", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_CampoCultivo : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CampoCultivoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DireccionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoArea> SGF_CultivoAreaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_Sucursal SGF_SucursalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_SucursalMYlFw61k SGF_SucursalReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SucursalIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CampoCultivoID {
+            get {
+                return this.CampoCultivoIDField;
+            }
+            set {
+                if ((this.CampoCultivoIDField.Equals(value) != true)) {
+                    this.CampoCultivoIDField = value;
+                    this.RaisePropertyChanged("CampoCultivoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Direccion {
+            get {
+                return this.DireccionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DireccionField, value) != true)) {
+                    this.DireccionField = value;
+                    this.RaisePropertyChanged("Direccion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoArea> SGF_CultivoArea {
+            get {
+                return this.SGF_CultivoAreaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoAreaField, value) != true)) {
+                    this.SGF_CultivoAreaField = value;
+                    this.RaisePropertyChanged("SGF_CultivoArea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_Sucursal SGF_Sucursal {
+            get {
+                return this.SGF_SucursalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_SucursalField, value) != true)) {
+                    this.SGF_SucursalField = value;
+                    this.RaisePropertyChanged("SGF_Sucursal");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_SucursalMYlFw61k SGF_SucursalReference {
+            get {
+                return this.SGF_SucursalReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_SucursalReferenceField, value) != true)) {
+                    this.SGF_SucursalReferenceField = value;
+                    this.RaisePropertyChanged("SGF_SucursalReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SucursalID {
+            get {
+                return this.SucursalIDField;
+            }
+            set {
+                if ((this.SucursalIDField.Equals(value) != true)) {
+                    this.SucursalIDField = value;
+                    this.RaisePropertyChanged("SucursalID");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_CultivoArea", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_CultivoArea : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid AreaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CampoCultivoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoAreaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> OrdenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_CampoCultivo SGF_CampoCultivoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_CampoCultivoMYlFw61k SGF_CampoCultivoReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoBloque> SGF_CultivoBloqueField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid AreaID {
+            get {
+                return this.AreaIDField;
+            }
+            set {
+                if ((this.AreaIDField.Equals(value) != true)) {
+                    this.AreaIDField = value;
+                    this.RaisePropertyChanged("AreaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CampoCultivoID {
+            get {
+                return this.CampoCultivoIDField;
+            }
+            set {
+                if ((this.CampoCultivoIDField.Equals(value) != true)) {
+                    this.CampoCultivoIDField = value;
+                    this.RaisePropertyChanged("CampoCultivoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoAreaID {
+            get {
+                return this.CultivoAreaIDField;
+            }
+            set {
+                if ((this.CultivoAreaIDField.Equals(value) != true)) {
+                    this.CultivoAreaIDField = value;
+                    this.RaisePropertyChanged("CultivoAreaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Orden {
+            get {
+                return this.OrdenField;
+            }
+            set {
+                if ((this.OrdenField.Equals(value) != true)) {
+                    this.OrdenField = value;
+                    this.RaisePropertyChanged("Orden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_CampoCultivo SGF_CampoCultivo {
+            get {
+                return this.SGF_CampoCultivoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CampoCultivoField, value) != true)) {
+                    this.SGF_CampoCultivoField = value;
+                    this.RaisePropertyChanged("SGF_CampoCultivo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_CampoCultivoMYlFw61k SGF_CampoCultivoReference {
+            get {
+                return this.SGF_CampoCultivoReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CampoCultivoReferenceField, value) != true)) {
+                    this.SGF_CampoCultivoReferenceField = value;
+                    this.RaisePropertyChanged("SGF_CampoCultivoReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoBloque> SGF_CultivoBloque {
+            get {
+                return this.SGF_CultivoBloqueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoBloqueField, value) != true)) {
+                    this.SGF_CultivoBloqueField = value;
+                    this.RaisePropertyChanged("SGF_CultivoBloque");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_CultivoBloque", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_CultivoBloque : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid BloqueIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoAreaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoBloqueIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> OrdenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_CultivoArea SGF_CultivoAreaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoAreaMYlFw61k SGF_CultivoAreaReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoLado> SGF_CultivoLadoField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid BloqueID {
+            get {
+                return this.BloqueIDField;
+            }
+            set {
+                if ((this.BloqueIDField.Equals(value) != true)) {
+                    this.BloqueIDField = value;
+                    this.RaisePropertyChanged("BloqueID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoAreaID {
+            get {
+                return this.CultivoAreaIDField;
+            }
+            set {
+                if ((this.CultivoAreaIDField.Equals(value) != true)) {
+                    this.CultivoAreaIDField = value;
+                    this.RaisePropertyChanged("CultivoAreaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoBloqueID {
+            get {
+                return this.CultivoBloqueIDField;
+            }
+            set {
+                if ((this.CultivoBloqueIDField.Equals(value) != true)) {
+                    this.CultivoBloqueIDField = value;
+                    this.RaisePropertyChanged("CultivoBloqueID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Orden {
+            get {
+                return this.OrdenField;
+            }
+            set {
+                if ((this.OrdenField.Equals(value) != true)) {
+                    this.OrdenField = value;
+                    this.RaisePropertyChanged("Orden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_CultivoArea SGF_CultivoArea {
+            get {
+                return this.SGF_CultivoAreaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoAreaField, value) != true)) {
+                    this.SGF_CultivoAreaField = value;
+                    this.RaisePropertyChanged("SGF_CultivoArea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoAreaMYlFw61k SGF_CultivoAreaReference {
+            get {
+                return this.SGF_CultivoAreaReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoAreaReferenceField, value) != true)) {
+                    this.SGF_CultivoAreaReferenceField = value;
+                    this.RaisePropertyChanged("SGF_CultivoAreaReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoLado> SGF_CultivoLado {
+            get {
+                return this.SGF_CultivoLadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoLadoField, value) != true)) {
+                    this.SGF_CultivoLadoField = value;
+                    this.RaisePropertyChanged("SGF_CultivoLado");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_CultivoLado", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_CultivoLado : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoBloqueIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoLadoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid LadoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> OrdenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_CultivoBloque SGF_CultivoBloqueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoBloqueMYlFw61k SGF_CultivoBloqueReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoNave> SGF_CultivoNaveField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoBloqueID {
+            get {
+                return this.CultivoBloqueIDField;
+            }
+            set {
+                if ((this.CultivoBloqueIDField.Equals(value) != true)) {
+                    this.CultivoBloqueIDField = value;
+                    this.RaisePropertyChanged("CultivoBloqueID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoLadoID {
+            get {
+                return this.CultivoLadoIDField;
+            }
+            set {
+                if ((this.CultivoLadoIDField.Equals(value) != true)) {
+                    this.CultivoLadoIDField = value;
+                    this.RaisePropertyChanged("CultivoLadoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid LadoID {
+            get {
+                return this.LadoIDField;
+            }
+            set {
+                if ((this.LadoIDField.Equals(value) != true)) {
+                    this.LadoIDField = value;
+                    this.RaisePropertyChanged("LadoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Orden {
+            get {
+                return this.OrdenField;
+            }
+            set {
+                if ((this.OrdenField.Equals(value) != true)) {
+                    this.OrdenField = value;
+                    this.RaisePropertyChanged("Orden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_CultivoBloque SGF_CultivoBloque {
+            get {
+                return this.SGF_CultivoBloqueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoBloqueField, value) != true)) {
+                    this.SGF_CultivoBloqueField = value;
+                    this.RaisePropertyChanged("SGF_CultivoBloque");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoBloqueMYlFw61k SGF_CultivoBloqueReference {
+            get {
+                return this.SGF_CultivoBloqueReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoBloqueReferenceField, value) != true)) {
+                    this.SGF_CultivoBloqueReferenceField = value;
+                    this.RaisePropertyChanged("SGF_CultivoBloqueReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoNave> SGF_CultivoNave {
+            get {
+                return this.SGF_CultivoNaveField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoNaveField, value) != true)) {
+                    this.SGF_CultivoNaveField = value;
+                    this.RaisePropertyChanged("SGF_CultivoNave");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_CultivoNave", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_CultivoNave : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoLadoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoNaveIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid NaveIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> OrdenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoCama> SGF_CultivoCamaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_CultivoLado SGF_CultivoLadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoLadoMYlFw61k SGF_CultivoLadoReferenceField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoLadoID {
+            get {
+                return this.CultivoLadoIDField;
+            }
+            set {
+                if ((this.CultivoLadoIDField.Equals(value) != true)) {
+                    this.CultivoLadoIDField = value;
+                    this.RaisePropertyChanged("CultivoLadoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoNaveID {
+            get {
+                return this.CultivoNaveIDField;
+            }
+            set {
+                if ((this.CultivoNaveIDField.Equals(value) != true)) {
+                    this.CultivoNaveIDField = value;
+                    this.RaisePropertyChanged("CultivoNaveID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid NaveID {
+            get {
+                return this.NaveIDField;
+            }
+            set {
+                if ((this.NaveIDField.Equals(value) != true)) {
+                    this.NaveIDField = value;
+                    this.RaisePropertyChanged("NaveID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Orden {
+            get {
+                return this.OrdenField;
+            }
+            set {
+                if ((this.OrdenField.Equals(value) != true)) {
+                    this.OrdenField = value;
+                    this.RaisePropertyChanged("Orden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoCama> SGF_CultivoCama {
+            get {
+                return this.SGF_CultivoCamaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoCamaField, value) != true)) {
+                    this.SGF_CultivoCamaField = value;
+                    this.RaisePropertyChanged("SGF_CultivoCama");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_CultivoLado SGF_CultivoLado {
+            get {
+                return this.SGF_CultivoLadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoLadoField, value) != true)) {
+                    this.SGF_CultivoLadoField = value;
+                    this.RaisePropertyChanged("SGF_CultivoLado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoLadoMYlFw61k SGF_CultivoLadoReference {
+            get {
+                return this.SGF_CultivoLadoReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoLadoReferenceField, value) != true)) {
+                    this.SGF_CultivoLadoReferenceField = value;
+                    this.RaisePropertyChanged("SGF_CultivoLadoReference");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_CultivoCama", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_CultivoCama : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CamaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoCamaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoNaveIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> OrdenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoCuadro> SGF_CultivoCuadroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_CultivoNave SGF_CultivoNaveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoNaveMYlFw61k SGF_CultivoNaveReferenceField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CamaID {
+            get {
+                return this.CamaIDField;
+            }
+            set {
+                if ((this.CamaIDField.Equals(value) != true)) {
+                    this.CamaIDField = value;
+                    this.RaisePropertyChanged("CamaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoCamaID {
+            get {
+                return this.CultivoCamaIDField;
+            }
+            set {
+                if ((this.CultivoCamaIDField.Equals(value) != true)) {
+                    this.CultivoCamaIDField = value;
+                    this.RaisePropertyChanged("CultivoCamaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoNaveID {
+            get {
+                return this.CultivoNaveIDField;
+            }
+            set {
+                if ((this.CultivoNaveIDField.Equals(value) != true)) {
+                    this.CultivoNaveIDField = value;
+                    this.RaisePropertyChanged("CultivoNaveID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Orden {
+            get {
+                return this.OrdenField;
+            }
+            set {
+                if ((this.OrdenField.Equals(value) != true)) {
+                    this.OrdenField = value;
+                    this.RaisePropertyChanged("Orden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoCuadro> SGF_CultivoCuadro {
+            get {
+                return this.SGF_CultivoCuadroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoCuadroField, value) != true)) {
+                    this.SGF_CultivoCuadroField = value;
+                    this.RaisePropertyChanged("SGF_CultivoCuadro");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_CultivoNave SGF_CultivoNave {
+            get {
+                return this.SGF_CultivoNaveField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoNaveField, value) != true)) {
+                    this.SGF_CultivoNaveField = value;
+                    this.RaisePropertyChanged("SGF_CultivoNave");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoNaveMYlFw61k SGF_CultivoNaveReference {
+            get {
+                return this.SGF_CultivoNaveReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoNaveReferenceField, value) != true)) {
+                    this.SGF_CultivoNaveReferenceField = value;
+                    this.RaisePropertyChanged("SGF_CultivoNaveReference");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_CultivoCuadro", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_CultivoCuadro : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CuadroIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoCamaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CultivoCuadroIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> OrdenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_CultivoCama SGF_CultivoCamaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoCamaMYlFw61k SGF_CultivoCamaReferenceField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CuadroID {
+            get {
+                return this.CuadroIDField;
+            }
+            set {
+                if ((this.CuadroIDField.Equals(value) != true)) {
+                    this.CuadroIDField = value;
+                    this.RaisePropertyChanged("CuadroID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoCamaID {
+            get {
+                return this.CultivoCamaIDField;
+            }
+            set {
+                if ((this.CultivoCamaIDField.Equals(value) != true)) {
+                    this.CultivoCamaIDField = value;
+                    this.RaisePropertyChanged("CultivoCamaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CultivoCuadroID {
+            get {
+                return this.CultivoCuadroIDField;
+            }
+            set {
+                if ((this.CultivoCuadroIDField.Equals(value) != true)) {
+                    this.CultivoCuadroIDField = value;
+                    this.RaisePropertyChanged("CultivoCuadroID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Orden {
+            get {
+                return this.OrdenField;
+            }
+            set {
+                if ((this.OrdenField.Equals(value) != true)) {
+                    this.OrdenField = value;
+                    this.RaisePropertyChanged("Orden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_CultivoCama SGF_CultivoCama {
+            get {
+                return this.SGF_CultivoCamaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoCamaField, value) != true)) {
+                    this.SGF_CultivoCamaField = value;
+                    this.RaisePropertyChanged("SGF_CultivoCama");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoCamaMYlFw61k SGF_CultivoCamaReference {
+            get {
+                return this.SGF_CultivoCamaReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_CultivoCamaReferenceField, value) != true)) {
+                    this.SGF_CultivoCamaReferenceField = value;
+                    this.RaisePropertyChanged("SGF_CultivoCamaReference");
                 }
             }
         }
@@ -2576,24 +2626,706 @@ namespace SGF.Site.SGF_Service {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_TipoPersona", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Usuario", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
     [System.SerializableAttribute()]
-    public partial class SGF_TipoPersona : SGF.Site.SGF_Service.EntityObject {
+    public partial class SGF_Usuario : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> BloqueadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> CambioPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FechaActualizaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FechaCreacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FechaExpiracionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IPField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MACField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombrePCField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> NumeroIntentosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObservacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid PersonaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Permiso> SGF_PermisoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_Persona SGF_PersonaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_PersonaMYlFw61k SGF_PersonaReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_TipoUsuario SGF_TipoUsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoUsuarioMYlFw61k SGF_TipoUsuarioReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid TipoUsuarioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioActualizaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioCreacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid UsuarioIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Bloqueado {
+            get {
+                return this.BloqueadoField;
+            }
+            set {
+                if ((this.BloqueadoField.Equals(value) != true)) {
+                    this.BloqueadoField = value;
+                    this.RaisePropertyChanged("Bloqueado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> CambioPassword {
+            get {
+                return this.CambioPasswordField;
+            }
+            set {
+                if ((this.CambioPasswordField.Equals(value) != true)) {
+                    this.CambioPasswordField = value;
+                    this.RaisePropertyChanged("CambioPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FechaActualiza {
+            get {
+                return this.FechaActualizaField;
+            }
+            set {
+                if ((this.FechaActualizaField.Equals(value) != true)) {
+                    this.FechaActualizaField = value;
+                    this.RaisePropertyChanged("FechaActualiza");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FechaCreacion {
+            get {
+                return this.FechaCreacionField;
+            }
+            set {
+                if ((this.FechaCreacionField.Equals(value) != true)) {
+                    this.FechaCreacionField = value;
+                    this.RaisePropertyChanged("FechaCreacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FechaExpiracion {
+            get {
+                return this.FechaExpiracionField;
+            }
+            set {
+                if ((this.FechaExpiracionField.Equals(value) != true)) {
+                    this.FechaExpiracionField = value;
+                    this.RaisePropertyChanged("FechaExpiracion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IP {
+            get {
+                return this.IPField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IPField, value) != true)) {
+                    this.IPField = value;
+                    this.RaisePropertyChanged("IP");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MAC {
+            get {
+                return this.MACField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MACField, value) != true)) {
+                    this.MACField = value;
+                    this.RaisePropertyChanged("MAC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombrePC {
+            get {
+                return this.NombrePCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombrePCField, value) != true)) {
+                    this.NombrePCField = value;
+                    this.RaisePropertyChanged("NombrePC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> NumeroIntentos {
+            get {
+                return this.NumeroIntentosField;
+            }
+            set {
+                if ((this.NumeroIntentosField.Equals(value) != true)) {
+                    this.NumeroIntentosField = value;
+                    this.RaisePropertyChanged("NumeroIntentos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observacion {
+            get {
+                return this.ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
+                    this.ObservacionField = value;
+                    this.RaisePropertyChanged("Observacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid PersonaID {
+            get {
+                return this.PersonaIDField;
+            }
+            set {
+                if ((this.PersonaIDField.Equals(value) != true)) {
+                    this.PersonaIDField = value;
+                    this.RaisePropertyChanged("PersonaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Permiso> SGF_Permiso {
+            get {
+                return this.SGF_PermisoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_PermisoField, value) != true)) {
+                    this.SGF_PermisoField = value;
+                    this.RaisePropertyChanged("SGF_Permiso");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_Persona SGF_Persona {
+            get {
+                return this.SGF_PersonaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_PersonaField, value) != true)) {
+                    this.SGF_PersonaField = value;
+                    this.RaisePropertyChanged("SGF_Persona");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_PersonaMYlFw61k SGF_PersonaReference {
+            get {
+                return this.SGF_PersonaReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_PersonaReferenceField, value) != true)) {
+                    this.SGF_PersonaReferenceField = value;
+                    this.RaisePropertyChanged("SGF_PersonaReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_TipoUsuario SGF_TipoUsuario {
+            get {
+                return this.SGF_TipoUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_TipoUsuarioField, value) != true)) {
+                    this.SGF_TipoUsuarioField = value;
+                    this.RaisePropertyChanged("SGF_TipoUsuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoUsuarioMYlFw61k SGF_TipoUsuarioReference {
+            get {
+                return this.SGF_TipoUsuarioReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_TipoUsuarioReferenceField, value) != true)) {
+                    this.SGF_TipoUsuarioReferenceField = value;
+                    this.RaisePropertyChanged("SGF_TipoUsuarioReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid TipoUsuarioID {
+            get {
+                return this.TipoUsuarioIDField;
+            }
+            set {
+                if ((this.TipoUsuarioIDField.Equals(value) != true)) {
+                    this.TipoUsuarioIDField = value;
+                    this.RaisePropertyChanged("TipoUsuarioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UsuarioActualiza {
+            get {
+                return this.UsuarioActualizaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioActualizaField, value) != true)) {
+                    this.UsuarioActualizaField = value;
+                    this.RaisePropertyChanged("UsuarioActualiza");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UsuarioCreacion {
+            get {
+                return this.UsuarioCreacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioCreacionField, value) != true)) {
+                    this.UsuarioCreacionField = value;
+                    this.RaisePropertyChanged("UsuarioCreacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid UsuarioID {
+            get {
+                return this.UsuarioIDField;
+            }
+            set {
+                if ((this.UsuarioIDField.Equals(value) != true)) {
+                    this.UsuarioIDField = value;
+                    this.RaisePropertyChanged("UsuarioID");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Permiso", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_Permiso : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> AgregarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> EditarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> EliminarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaCreacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid FormularioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> ImprimirField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid PermisoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> ProcesarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_Formulario SGF_FormularioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k SGF_FormularioReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_PermisoBoton> SGF_PermisoBotonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_Usuario SGF_UsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_UsuarioMYlFw61k SGF_UsuarioReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioCreacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid UsuarioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> ValueField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Agregar {
+            get {
+                return this.AgregarField;
+            }
+            set {
+                if ((this.AgregarField.Equals(value) != true)) {
+                    this.AgregarField = value;
+                    this.RaisePropertyChanged("Agregar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Editar {
+            get {
+                return this.EditarField;
+            }
+            set {
+                if ((this.EditarField.Equals(value) != true)) {
+                    this.EditarField = value;
+                    this.RaisePropertyChanged("Editar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Eliminar {
+            get {
+                return this.EliminarField;
+            }
+            set {
+                if ((this.EliminarField.Equals(value) != true)) {
+                    this.EliminarField = value;
+                    this.RaisePropertyChanged("Eliminar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaCreacion {
+            get {
+                return this.FechaCreacionField;
+            }
+            set {
+                if ((this.FechaCreacionField.Equals(value) != true)) {
+                    this.FechaCreacionField = value;
+                    this.RaisePropertyChanged("FechaCreacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid FormularioID {
+            get {
+                return this.FormularioIDField;
+            }
+            set {
+                if ((this.FormularioIDField.Equals(value) != true)) {
+                    this.FormularioIDField = value;
+                    this.RaisePropertyChanged("FormularioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Imprimir {
+            get {
+                return this.ImprimirField;
+            }
+            set {
+                if ((this.ImprimirField.Equals(value) != true)) {
+                    this.ImprimirField = value;
+                    this.RaisePropertyChanged("Imprimir");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid PermisoID {
+            get {
+                return this.PermisoIDField;
+            }
+            set {
+                if ((this.PermisoIDField.Equals(value) != true)) {
+                    this.PermisoIDField = value;
+                    this.RaisePropertyChanged("PermisoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Procesar {
+            get {
+                return this.ProcesarField;
+            }
+            set {
+                if ((this.ProcesarField.Equals(value) != true)) {
+                    this.ProcesarField = value;
+                    this.RaisePropertyChanged("Procesar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_Formulario SGF_Formulario {
+            get {
+                return this.SGF_FormularioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_FormularioField, value) != true)) {
+                    this.SGF_FormularioField = value;
+                    this.RaisePropertyChanged("SGF_Formulario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k SGF_FormularioReference {
+            get {
+                return this.SGF_FormularioReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_FormularioReferenceField, value) != true)) {
+                    this.SGF_FormularioReferenceField = value;
+                    this.RaisePropertyChanged("SGF_FormularioReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_PermisoBoton> SGF_PermisoBoton {
+            get {
+                return this.SGF_PermisoBotonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_PermisoBotonField, value) != true)) {
+                    this.SGF_PermisoBotonField = value;
+                    this.RaisePropertyChanged("SGF_PermisoBoton");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_Usuario SGF_Usuario {
+            get {
+                return this.SGF_UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_UsuarioField, value) != true)) {
+                    this.SGF_UsuarioField = value;
+                    this.RaisePropertyChanged("SGF_Usuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_UsuarioMYlFw61k SGF_UsuarioReference {
+            get {
+                return this.SGF_UsuarioReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_UsuarioReferenceField, value) != true)) {
+                    this.SGF_UsuarioReferenceField = value;
+                    this.RaisePropertyChanged("SGF_UsuarioReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UsuarioCreacion {
+            get {
+                return this.UsuarioCreacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioCreacionField, value) != true)) {
+                    this.UsuarioCreacionField = value;
+                    this.RaisePropertyChanged("UsuarioCreacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid UsuarioID {
+            get {
+                return this.UsuarioIDField;
+            }
+            set {
+                if ((this.UsuarioIDField.Equals(value) != true)) {
+                    this.UsuarioIDField = value;
+                    this.RaisePropertyChanged("UsuarioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Formulario", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_Formulario : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescripcionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> EstadoField;
+        private short EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid FormularioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ModuloIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NombreField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Persona> SGF_PersonaField;
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Boton> SGF_BotonField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid TipoPersonaIDField;
+        private SGF.Site.SGF_Service.SGF_Modulo SGF_ModuloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_ModuloMYlFw61k SGF_ModuloReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Permiso> SGF_PermisoField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Descripcion {
@@ -2609,7 +3341,7 @@ namespace SGF.Site.SGF_Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Estado {
+        public short Estado {
             get {
                 return this.EstadoField;
             }
@@ -2617,6 +3349,32 @@ namespace SGF.Site.SGF_Service {
                 if ((this.EstadoField.Equals(value) != true)) {
                     this.EstadoField = value;
                     this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid FormularioID {
+            get {
+                return this.FormularioIDField;
+            }
+            set {
+                if ((this.FormularioIDField.Equals(value) != true)) {
+                    this.FormularioIDField = value;
+                    this.RaisePropertyChanged("FormularioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ModuloID {
+            get {
+                return this.ModuloIDField;
+            }
+            set {
+                if ((this.ModuloIDField.Equals(value) != true)) {
+                    this.ModuloIDField = value;
+                    this.RaisePropertyChanged("ModuloID");
                 }
             }
         }
@@ -2635,27 +3393,394 @@ namespace SGF.Site.SGF_Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Persona> SGF_Persona {
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Boton> SGF_Boton {
             get {
-                return this.SGF_PersonaField;
+                return this.SGF_BotonField;
             }
             set {
-                if ((object.ReferenceEquals(this.SGF_PersonaField, value) != true)) {
-                    this.SGF_PersonaField = value;
-                    this.RaisePropertyChanged("SGF_Persona");
+                if ((object.ReferenceEquals(this.SGF_BotonField, value) != true)) {
+                    this.SGF_BotonField = value;
+                    this.RaisePropertyChanged("SGF_Boton");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid TipoPersonaID {
+        public SGF.Site.SGF_Service.SGF_Modulo SGF_Modulo {
             get {
-                return this.TipoPersonaIDField;
+                return this.SGF_ModuloField;
             }
             set {
-                if ((this.TipoPersonaIDField.Equals(value) != true)) {
-                    this.TipoPersonaIDField = value;
-                    this.RaisePropertyChanged("TipoPersonaID");
+                if ((object.ReferenceEquals(this.SGF_ModuloField, value) != true)) {
+                    this.SGF_ModuloField = value;
+                    this.RaisePropertyChanged("SGF_Modulo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_ModuloMYlFw61k SGF_ModuloReference {
+            get {
+                return this.SGF_ModuloReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_ModuloReferenceField, value) != true)) {
+                    this.SGF_ModuloReferenceField = value;
+                    this.RaisePropertyChanged("SGF_ModuloReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Permiso> SGF_Permiso {
+            get {
+                return this.SGF_PermisoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_PermisoField, value) != true)) {
+                    this.SGF_PermisoField = value;
+                    this.RaisePropertyChanged("SGF_Permiso");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Boton", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_Boton : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> ActivoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid BotonIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid FormularioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_Formulario SGF_FormularioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k SGF_FormularioReferenceField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Activo {
+            get {
+                return this.ActivoField;
+            }
+            set {
+                if ((this.ActivoField.Equals(value) != true)) {
+                    this.ActivoField = value;
+                    this.RaisePropertyChanged("Activo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid BotonID {
+            get {
+                return this.BotonIDField;
+            }
+            set {
+                if ((this.BotonIDField.Equals(value) != true)) {
+                    this.BotonIDField = value;
+                    this.RaisePropertyChanged("BotonID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid FormularioID {
+            get {
+                return this.FormularioIDField;
+            }
+            set {
+                if ((this.FormularioIDField.Equals(value) != true)) {
+                    this.FormularioIDField = value;
+                    this.RaisePropertyChanged("FormularioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_Formulario SGF_Formulario {
+            get {
+                return this.SGF_FormularioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_FormularioField, value) != true)) {
+                    this.SGF_FormularioField = value;
+                    this.RaisePropertyChanged("SGF_Formulario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k SGF_FormularioReference {
+            get {
+                return this.SGF_FormularioReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_FormularioReferenceField, value) != true)) {
+                    this.SGF_FormularioReferenceField = value;
+                    this.RaisePropertyChanged("SGF_FormularioReference");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Modulo", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_Modulo : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ModuloIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Formulario> SGF_FormularioField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ModuloID {
+            get {
+                return this.ModuloIDField;
+            }
+            set {
+                if ((this.ModuloIDField.Equals(value) != true)) {
+                    this.ModuloIDField = value;
+                    this.RaisePropertyChanged("ModuloID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Formulario> SGF_Formulario {
+            get {
+                return this.SGF_FormularioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_FormularioField, value) != true)) {
+                    this.SGF_FormularioField = value;
+                    this.RaisePropertyChanged("SGF_Formulario");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_PermisoBoton", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_PermisoBoton : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid BotonIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid FormularioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid PermisoBotonIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid PermisoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_Permiso SGF_PermisoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_PermisoMYlFw61k SGF_PermisoReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid BotonID {
+            get {
+                return this.BotonIDField;
+            }
+            set {
+                if ((this.BotonIDField.Equals(value) != true)) {
+                    this.BotonIDField = value;
+                    this.RaisePropertyChanged("BotonID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid FormularioID {
+            get {
+                return this.FormularioIDField;
+            }
+            set {
+                if ((this.FormularioIDField.Equals(value) != true)) {
+                    this.FormularioIDField = value;
+                    this.RaisePropertyChanged("FormularioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid PermisoBotonID {
+            get {
+                return this.PermisoBotonIDField;
+            }
+            set {
+                if ((this.PermisoBotonIDField.Equals(value) != true)) {
+                    this.PermisoBotonIDField = value;
+                    this.RaisePropertyChanged("PermisoBotonID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid PermisoID {
+            get {
+                return this.PermisoIDField;
+            }
+            set {
+                if ((this.PermisoIDField.Equals(value) != true)) {
+                    this.PermisoIDField = value;
+                    this.RaisePropertyChanged("PermisoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_Permiso SGF_Permiso {
+            get {
+                return this.SGF_PermisoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_PermisoField, value) != true)) {
+                    this.SGF_PermisoField = value;
+                    this.RaisePropertyChanged("SGF_Permiso");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_PermisoMYlFw61k SGF_PermisoReference {
+            get {
+                return this.SGF_PermisoReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_PermisoReferenceField, value) != true)) {
+                    this.SGF_PermisoReferenceField = value;
+                    this.RaisePropertyChanged("SGF_PermisoReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
                 }
             }
         }
@@ -2743,2005 +3868,6 @@ namespace SGF.Site.SGF_Service {
                 if ((this.TipoUsuarioIDField.Equals(value) != true)) {
                     this.TipoUsuarioIDField = value;
                     this.RaisePropertyChanged("TipoUsuarioID");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SEG_Botones_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SEG_Botones_VTA : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> AgregarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BotonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid BotonIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> EditarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> EliminarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoBotonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> EstadoPermisoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FormularioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid FormularioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> ImprimirField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid PermisoBotonIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid PermisoIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid UsuarioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> ValueField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Agregar {
-            get {
-                return this.AgregarField;
-            }
-            set {
-                if ((this.AgregarField.Equals(value) != true)) {
-                    this.AgregarField = value;
-                    this.RaisePropertyChanged("Agregar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Boton {
-            get {
-                return this.BotonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BotonField, value) != true)) {
-                    this.BotonField = value;
-                    this.RaisePropertyChanged("Boton");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid BotonID {
-            get {
-                return this.BotonIDField;
-            }
-            set {
-                if ((this.BotonIDField.Equals(value) != true)) {
-                    this.BotonIDField = value;
-                    this.RaisePropertyChanged("BotonID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Editar {
-            get {
-                return this.EditarField;
-            }
-            set {
-                if ((this.EditarField.Equals(value) != true)) {
-                    this.EditarField = value;
-                    this.RaisePropertyChanged("Editar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Eliminar {
-            get {
-                return this.EliminarField;
-            }
-            set {
-                if ((this.EliminarField.Equals(value) != true)) {
-                    this.EliminarField = value;
-                    this.RaisePropertyChanged("Eliminar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short EstadoBoton {
-            get {
-                return this.EstadoBotonField;
-            }
-            set {
-                if ((this.EstadoBotonField.Equals(value) != true)) {
-                    this.EstadoBotonField = value;
-                    this.RaisePropertyChanged("EstadoBoton");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> EstadoPermiso {
-            get {
-                return this.EstadoPermisoField;
-            }
-            set {
-                if ((this.EstadoPermisoField.Equals(value) != true)) {
-                    this.EstadoPermisoField = value;
-                    this.RaisePropertyChanged("EstadoPermiso");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Formulario {
-            get {
-                return this.FormularioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FormularioField, value) != true)) {
-                    this.FormularioField = value;
-                    this.RaisePropertyChanged("Formulario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid FormularioID {
-            get {
-                return this.FormularioIDField;
-            }
-            set {
-                if ((this.FormularioIDField.Equals(value) != true)) {
-                    this.FormularioIDField = value;
-                    this.RaisePropertyChanged("FormularioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Imprimir {
-            get {
-                return this.ImprimirField;
-            }
-            set {
-                if ((this.ImprimirField.Equals(value) != true)) {
-                    this.ImprimirField = value;
-                    this.RaisePropertyChanged("Imprimir");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid PermisoBotonID {
-            get {
-                return this.PermisoBotonIDField;
-            }
-            set {
-                if ((this.PermisoBotonIDField.Equals(value) != true)) {
-                    this.PermisoBotonIDField = value;
-                    this.RaisePropertyChanged("PermisoBotonID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid PermisoID {
-            get {
-                return this.PermisoIDField;
-            }
-            set {
-                if ((this.PermisoIDField.Equals(value) != true)) {
-                    this.PermisoIDField = value;
-                    this.RaisePropertyChanged("PermisoID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid UsuarioID {
-            get {
-                return this.UsuarioIDField;
-            }
-            set {
-                if ((this.UsuarioIDField.Equals(value) != true)) {
-                    this.UsuarioIDField = value;
-                    this.RaisePropertyChanged("UsuarioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Clasificador", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_Clasificador : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ClasificadorIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> ParentIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.SGF_TipoClasificador SGF_TipoClasificadorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoClasificadorMYlFw61k SGF_TipoClasificadorReferenceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid TipoClasificadorIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ValorField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ClasificadorID {
-            get {
-                return this.ClasificadorIDField;
-            }
-            set {
-                if ((this.ClasificadorIDField.Equals(value) != true)) {
-                    this.ClasificadorIDField = value;
-                    this.RaisePropertyChanged("ClasificadorID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Codigo {
-            get {
-                return this.CodigoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
-                    this.CodigoField = value;
-                    this.RaisePropertyChanged("Codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
-            get {
-                return this.NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> ParentID {
-            get {
-                return this.ParentIDField;
-            }
-            set {
-                if ((this.ParentIDField.Equals(value) != true)) {
-                    this.ParentIDField = value;
-                    this.RaisePropertyChanged("ParentID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.SGF_TipoClasificador SGF_TipoClasificador {
-            get {
-                return this.SGF_TipoClasificadorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_TipoClasificadorField, value) != true)) {
-                    this.SGF_TipoClasificadorField = value;
-                    this.RaisePropertyChanged("SGF_TipoClasificador");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoClasificadorMYlFw61k SGF_TipoClasificadorReference {
-            get {
-                return this.SGF_TipoClasificadorReferenceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_TipoClasificadorReferenceField, value) != true)) {
-                    this.SGF_TipoClasificadorReferenceField = value;
-                    this.RaisePropertyChanged("SGF_TipoClasificadorReference");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid TipoClasificadorID {
-            get {
-                return this.TipoClasificadorIDField;
-            }
-            set {
-                if ((this.TipoClasificadorIDField.Equals(value) != true)) {
-                    this.TipoClasificadorIDField = value;
-                    this.RaisePropertyChanged("TipoClasificadorID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Valor {
-            get {
-                return this.ValorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
-                    this.ValorField = value;
-                    this.RaisePropertyChanged("Valor");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_TipoClasificador", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_TipoClasificador : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Clasificador> SGF_ClasificadorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid TipoClasificadorIDField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
-            get {
-                return this.NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Clasificador> SGF_Clasificador {
-            get {
-                return this.SGF_ClasificadorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SGF_ClasificadorField, value) != true)) {
-                    this.SGF_ClasificadorField = value;
-                    this.RaisePropertyChanged("SGF_Clasificador");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid TipoClasificadorID {
-            get {
-                return this.TipoClasificadorIDField;
-            }
-            set {
-                if ((this.TipoClasificadorIDField.Equals(value) != true)) {
-                    this.TipoClasificadorIDField = value;
-                    this.RaisePropertyChanged("TipoClasificadorID");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Clasificador_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_Clasificador_VTA : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ClasificadorIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> EstadoClasificadorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> EstadoTipoClasificadorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreClasificadorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreTipoClasificadorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid TipoClasificadorIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ValorField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ClasificadorID {
-            get {
-                return this.ClasificadorIDField;
-            }
-            set {
-                if ((this.ClasificadorIDField.Equals(value) != true)) {
-                    this.ClasificadorIDField = value;
-                    this.RaisePropertyChanged("ClasificadorID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Codigo {
-            get {
-                return this.CodigoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
-                    this.CodigoField = value;
-                    this.RaisePropertyChanged("Codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> EstadoClasificador {
-            get {
-                return this.EstadoClasificadorField;
-            }
-            set {
-                if ((this.EstadoClasificadorField.Equals(value) != true)) {
-                    this.EstadoClasificadorField = value;
-                    this.RaisePropertyChanged("EstadoClasificador");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> EstadoTipoClasificador {
-            get {
-                return this.EstadoTipoClasificadorField;
-            }
-            set {
-                if ((this.EstadoTipoClasificadorField.Equals(value) != true)) {
-                    this.EstadoTipoClasificadorField = value;
-                    this.RaisePropertyChanged("EstadoTipoClasificador");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NombreClasificador {
-            get {
-                return this.NombreClasificadorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreClasificadorField, value) != true)) {
-                    this.NombreClasificadorField = value;
-                    this.RaisePropertyChanged("NombreClasificador");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NombreTipoClasificador {
-            get {
-                return this.NombreTipoClasificadorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreTipoClasificadorField, value) != true)) {
-                    this.NombreTipoClasificadorField = value;
-                    this.RaisePropertyChanged("NombreTipoClasificador");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid TipoClasificadorID {
-            get {
-                return this.TipoClasificadorIDField;
-            }
-            set {
-                if ((this.TipoClasificadorIDField.Equals(value) != true)) {
-                    this.TipoClasificadorIDField = value;
-                    this.RaisePropertyChanged("TipoClasificadorID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Valor {
-            get {
-                return this.ValorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
-                    this.ValorField = value;
-                    this.RaisePropertyChanged("Valor");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Formulario_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_Formulario_VTA : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoFormularioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoModuloField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid FormularioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ModuloIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreFormularioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreModuloField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Codigo {
-            get {
-                return this.CodigoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
-                    this.CodigoField = value;
-                    this.RaisePropertyChanged("Codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short EstadoFormulario {
-            get {
-                return this.EstadoFormularioField;
-            }
-            set {
-                if ((this.EstadoFormularioField.Equals(value) != true)) {
-                    this.EstadoFormularioField = value;
-                    this.RaisePropertyChanged("EstadoFormulario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short EstadoModulo {
-            get {
-                return this.EstadoModuloField;
-            }
-            set {
-                if ((this.EstadoModuloField.Equals(value) != true)) {
-                    this.EstadoModuloField = value;
-                    this.RaisePropertyChanged("EstadoModulo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid FormularioID {
-            get {
-                return this.FormularioIDField;
-            }
-            set {
-                if ((this.FormularioIDField.Equals(value) != true)) {
-                    this.FormularioIDField = value;
-                    this.RaisePropertyChanged("FormularioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ModuloID {
-            get {
-                return this.ModuloIDField;
-            }
-            set {
-                if ((this.ModuloIDField.Equals(value) != true)) {
-                    this.ModuloIDField = value;
-                    this.RaisePropertyChanged("ModuloID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NombreFormulario {
-            get {
-                return this.NombreFormularioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreFormularioField, value) != true)) {
-                    this.NombreFormularioField = value;
-                    this.RaisePropertyChanged("NombreFormulario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NombreModulo {
-            get {
-                return this.NombreModuloField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreModuloField, value) != true)) {
-                    this.NombreModuloField = value;
-                    this.RaisePropertyChanged("NombreModulo");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SEG_Formularios_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SEG_Formularios_VTA : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> AgregarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> EditarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> EliminarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoModuloField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> EstadoPermisoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoUsuarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoformularioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FormularioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid FormularioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FormularioPathField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> ImprimirField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ModuloField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ModuloIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid PermisoIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid UsuarioIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> ValueField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Agregar {
-            get {
-                return this.AgregarField;
-            }
-            set {
-                if ((this.AgregarField.Equals(value) != true)) {
-                    this.AgregarField = value;
-                    this.RaisePropertyChanged("Agregar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Editar {
-            get {
-                return this.EditarField;
-            }
-            set {
-                if ((this.EditarField.Equals(value) != true)) {
-                    this.EditarField = value;
-                    this.RaisePropertyChanged("Editar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Eliminar {
-            get {
-                return this.EliminarField;
-            }
-            set {
-                if ((this.EliminarField.Equals(value) != true)) {
-                    this.EliminarField = value;
-                    this.RaisePropertyChanged("Eliminar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short EstadoModulo {
-            get {
-                return this.EstadoModuloField;
-            }
-            set {
-                if ((this.EstadoModuloField.Equals(value) != true)) {
-                    this.EstadoModuloField = value;
-                    this.RaisePropertyChanged("EstadoModulo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> EstadoPermiso {
-            get {
-                return this.EstadoPermisoField;
-            }
-            set {
-                if ((this.EstadoPermisoField.Equals(value) != true)) {
-                    this.EstadoPermisoField = value;
-                    this.RaisePropertyChanged("EstadoPermiso");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short EstadoUsuario {
-            get {
-                return this.EstadoUsuarioField;
-            }
-            set {
-                if ((this.EstadoUsuarioField.Equals(value) != true)) {
-                    this.EstadoUsuarioField = value;
-                    this.RaisePropertyChanged("EstadoUsuario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Estadoformulario {
-            get {
-                return this.EstadoformularioField;
-            }
-            set {
-                if ((this.EstadoformularioField.Equals(value) != true)) {
-                    this.EstadoformularioField = value;
-                    this.RaisePropertyChanged("Estadoformulario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Formulario {
-            get {
-                return this.FormularioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FormularioField, value) != true)) {
-                    this.FormularioField = value;
-                    this.RaisePropertyChanged("Formulario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid FormularioID {
-            get {
-                return this.FormularioIDField;
-            }
-            set {
-                if ((this.FormularioIDField.Equals(value) != true)) {
-                    this.FormularioIDField = value;
-                    this.RaisePropertyChanged("FormularioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FormularioPath {
-            get {
-                return this.FormularioPathField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FormularioPathField, value) != true)) {
-                    this.FormularioPathField = value;
-                    this.RaisePropertyChanged("FormularioPath");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> Imprimir {
-            get {
-                return this.ImprimirField;
-            }
-            set {
-                if ((this.ImprimirField.Equals(value) != true)) {
-                    this.ImprimirField = value;
-                    this.RaisePropertyChanged("Imprimir");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Modulo {
-            get {
-                return this.ModuloField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ModuloField, value) != true)) {
-                    this.ModuloField = value;
-                    this.RaisePropertyChanged("Modulo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ModuloID {
-            get {
-                return this.ModuloIDField;
-            }
-            set {
-                if ((this.ModuloIDField.Equals(value) != true)) {
-                    this.ModuloIDField = value;
-                    this.RaisePropertyChanged("ModuloID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid PermisoID {
-            get {
-                return this.PermisoIDField;
-            }
-            set {
-                if ((this.PermisoIDField.Equals(value) != true)) {
-                    this.PermisoIDField = value;
-                    this.RaisePropertyChanged("PermisoID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid UsuarioID {
-            get {
-                return this.UsuarioIDField;
-            }
-            set {
-                if ((this.UsuarioIDField.Equals(value) != true)) {
-                    this.UsuarioIDField = value;
-                    this.RaisePropertyChanged("UsuarioID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Persona_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_Persona_VTA : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CargoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CelularField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CodigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> EstadoCivilField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EstadoCivilTextField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoPersonaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> EstadoTipoPersonaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FechaActualizaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FechaCreacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FechaExpiracionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FechaIngresoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FechaNacimientoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> GeneroField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string GeneroTextField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IdentificacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IdentificacionRepresentanteField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreComercialField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombrePersonaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ObservacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PaisField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> PaisIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid PersonaIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RepresentanteLegalField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TelefonoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short TipoIdentificacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TipoIdentificacionTextField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid TipoPersonaIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TipoPersonaNombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioActualizaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioCreacionField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Cargo {
-            get {
-                return this.CargoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CargoField, value) != true)) {
-                    this.CargoField = value;
-                    this.RaisePropertyChanged("Cargo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Celular {
-            get {
-                return this.CelularField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CelularField, value) != true)) {
-                    this.CelularField = value;
-                    this.RaisePropertyChanged("Celular");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Codigo {
-            get {
-                return this.CodigoField;
-            }
-            set {
-                if ((this.CodigoField.Equals(value) != true)) {
-                    this.CodigoField = value;
-                    this.RaisePropertyChanged("Codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
-            get {
-                return this.EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> EstadoCivil {
-            get {
-                return this.EstadoCivilField;
-            }
-            set {
-                if ((this.EstadoCivilField.Equals(value) != true)) {
-                    this.EstadoCivilField = value;
-                    this.RaisePropertyChanged("EstadoCivil");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EstadoCivilText {
-            get {
-                return this.EstadoCivilTextField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EstadoCivilTextField, value) != true)) {
-                    this.EstadoCivilTextField = value;
-                    this.RaisePropertyChanged("EstadoCivilText");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short EstadoPersona {
-            get {
-                return this.EstadoPersonaField;
-            }
-            set {
-                if ((this.EstadoPersonaField.Equals(value) != true)) {
-                    this.EstadoPersonaField = value;
-                    this.RaisePropertyChanged("EstadoPersona");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> EstadoTipoPersona {
-            get {
-                return this.EstadoTipoPersonaField;
-            }
-            set {
-                if ((this.EstadoTipoPersonaField.Equals(value) != true)) {
-                    this.EstadoTipoPersonaField = value;
-                    this.RaisePropertyChanged("EstadoTipoPersona");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> FechaActualiza {
-            get {
-                return this.FechaActualizaField;
-            }
-            set {
-                if ((this.FechaActualizaField.Equals(value) != true)) {
-                    this.FechaActualizaField = value;
-                    this.RaisePropertyChanged("FechaActualiza");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaCreacion {
-            get {
-                return this.FechaCreacionField;
-            }
-            set {
-                if ((this.FechaCreacionField.Equals(value) != true)) {
-                    this.FechaCreacionField = value;
-                    this.RaisePropertyChanged("FechaCreacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> FechaExpiracion {
-            get {
-                return this.FechaExpiracionField;
-            }
-            set {
-                if ((this.FechaExpiracionField.Equals(value) != true)) {
-                    this.FechaExpiracionField = value;
-                    this.RaisePropertyChanged("FechaExpiracion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> FechaIngreso {
-            get {
-                return this.FechaIngresoField;
-            }
-            set {
-                if ((this.FechaIngresoField.Equals(value) != true)) {
-                    this.FechaIngresoField = value;
-                    this.RaisePropertyChanged("FechaIngreso");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> FechaNacimiento {
-            get {
-                return this.FechaNacimientoField;
-            }
-            set {
-                if ((this.FechaNacimientoField.Equals(value) != true)) {
-                    this.FechaNacimientoField = value;
-                    this.RaisePropertyChanged("FechaNacimiento");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Genero {
-            get {
-                return this.GeneroField;
-            }
-            set {
-                if ((this.GeneroField.Equals(value) != true)) {
-                    this.GeneroField = value;
-                    this.RaisePropertyChanged("Genero");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string GeneroText {
-            get {
-                return this.GeneroTextField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.GeneroTextField, value) != true)) {
-                    this.GeneroTextField = value;
-                    this.RaisePropertyChanged("GeneroText");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Identificacion {
-            get {
-                return this.IdentificacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IdentificacionField, value) != true)) {
-                    this.IdentificacionField = value;
-                    this.RaisePropertyChanged("Identificacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string IdentificacionRepresentante {
-            get {
-                return this.IdentificacionRepresentanteField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IdentificacionRepresentanteField, value) != true)) {
-                    this.IdentificacionRepresentanteField = value;
-                    this.RaisePropertyChanged("IdentificacionRepresentante");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NombreComercial {
-            get {
-                return this.NombreComercialField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreComercialField, value) != true)) {
-                    this.NombreComercialField = value;
-                    this.RaisePropertyChanged("NombreComercial");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NombrePersona {
-            get {
-                return this.NombrePersonaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombrePersonaField, value) != true)) {
-                    this.NombrePersonaField = value;
-                    this.RaisePropertyChanged("NombrePersona");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Observacion {
-            get {
-                return this.ObservacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
-                    this.ObservacionField = value;
-                    this.RaisePropertyChanged("Observacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Pais {
-            get {
-                return this.PaisField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PaisField, value) != true)) {
-                    this.PaisField = value;
-                    this.RaisePropertyChanged("Pais");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> PaisID {
-            get {
-                return this.PaisIDField;
-            }
-            set {
-                if ((this.PaisIDField.Equals(value) != true)) {
-                    this.PaisIDField = value;
-                    this.RaisePropertyChanged("PaisID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid PersonaID {
-            get {
-                return this.PersonaIDField;
-            }
-            set {
-                if ((this.PersonaIDField.Equals(value) != true)) {
-                    this.PersonaIDField = value;
-                    this.RaisePropertyChanged("PersonaID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string RepresentanteLegal {
-            get {
-                return this.RepresentanteLegalField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RepresentanteLegalField, value) != true)) {
-                    this.RepresentanteLegalField = value;
-                    this.RaisePropertyChanged("RepresentanteLegal");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Telefono {
-            get {
-                return this.TelefonoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TelefonoField, value) != true)) {
-                    this.TelefonoField = value;
-                    this.RaisePropertyChanged("Telefono");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short TipoIdentificacion {
-            get {
-                return this.TipoIdentificacionField;
-            }
-            set {
-                if ((this.TipoIdentificacionField.Equals(value) != true)) {
-                    this.TipoIdentificacionField = value;
-                    this.RaisePropertyChanged("TipoIdentificacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TipoIdentificacionText {
-            get {
-                return this.TipoIdentificacionTextField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TipoIdentificacionTextField, value) != true)) {
-                    this.TipoIdentificacionTextField = value;
-                    this.RaisePropertyChanged("TipoIdentificacionText");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid TipoPersonaID {
-            get {
-                return this.TipoPersonaIDField;
-            }
-            set {
-                if ((this.TipoPersonaIDField.Equals(value) != true)) {
-                    this.TipoPersonaIDField = value;
-                    this.RaisePropertyChanged("TipoPersonaID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TipoPersonaNombre {
-            get {
-                return this.TipoPersonaNombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TipoPersonaNombreField, value) != true)) {
-                    this.TipoPersonaNombreField = value;
-                    this.RaisePropertyChanged("TipoPersonaNombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UsuarioActualiza {
-            get {
-                return this.UsuarioActualizaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioActualizaField, value) != true)) {
-                    this.UsuarioActualizaField = value;
-                    this.RaisePropertyChanged("UsuarioActualiza");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UsuarioCreacion {
-            get {
-                return this.UsuarioCreacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioCreacionField, value) != true)) {
-                    this.UsuarioCreacionField = value;
-                    this.RaisePropertyChanged("UsuarioCreacion");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SEG_Usuarios_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SEG_Usuarios_VTA : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AppIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CargoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CelularField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CodigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoPersonaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short EstadoUsuarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FechaIngresoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IdentificacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreCompletoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PasswordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid PersonaIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short TipoIdentificacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TipoPersonaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TipoUsuarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid UsuarioIDField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AppID {
-            get {
-                return this.AppIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AppIDField, value) != true)) {
-                    this.AppIDField = value;
-                    this.RaisePropertyChanged("AppID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Cargo {
-            get {
-                return this.CargoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CargoField, value) != true)) {
-                    this.CargoField = value;
-                    this.RaisePropertyChanged("Cargo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Celular {
-            get {
-                return this.CelularField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CelularField, value) != true)) {
-                    this.CelularField = value;
-                    this.RaisePropertyChanged("Celular");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Codigo {
-            get {
-                return this.CodigoField;
-            }
-            set {
-                if ((this.CodigoField.Equals(value) != true)) {
-                    this.CodigoField = value;
-                    this.RaisePropertyChanged("Codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
-            get {
-                return this.EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short EstadoPersona {
-            get {
-                return this.EstadoPersonaField;
-            }
-            set {
-                if ((this.EstadoPersonaField.Equals(value) != true)) {
-                    this.EstadoPersonaField = value;
-                    this.RaisePropertyChanged("EstadoPersona");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short EstadoUsuario {
-            get {
-                return this.EstadoUsuarioField;
-            }
-            set {
-                if ((this.EstadoUsuarioField.Equals(value) != true)) {
-                    this.EstadoUsuarioField = value;
-                    this.RaisePropertyChanged("EstadoUsuario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> FechaIngreso {
-            get {
-                return this.FechaIngresoField;
-            }
-            set {
-                if ((this.FechaIngresoField.Equals(value) != true)) {
-                    this.FechaIngresoField = value;
-                    this.RaisePropertyChanged("FechaIngreso");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Identificacion {
-            get {
-                return this.IdentificacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IdentificacionField, value) != true)) {
-                    this.IdentificacionField = value;
-                    this.RaisePropertyChanged("Identificacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
-            get {
-                return this.NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NombreCompleto {
-            get {
-                return this.NombreCompletoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreCompletoField, value) != true)) {
-                    this.NombreCompletoField = value;
-                    this.RaisePropertyChanged("NombreCompleto");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Password {
-            get {
-                return this.PasswordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
-                    this.PasswordField = value;
-                    this.RaisePropertyChanged("Password");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid PersonaID {
-            get {
-                return this.PersonaIDField;
-            }
-            set {
-                if ((this.PersonaIDField.Equals(value) != true)) {
-                    this.PersonaIDField = value;
-                    this.RaisePropertyChanged("PersonaID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short TipoIdentificacion {
-            get {
-                return this.TipoIdentificacionField;
-            }
-            set {
-                if ((this.TipoIdentificacionField.Equals(value) != true)) {
-                    this.TipoIdentificacionField = value;
-                    this.RaisePropertyChanged("TipoIdentificacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TipoPersona {
-            get {
-                return this.TipoPersonaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TipoPersonaField, value) != true)) {
-                    this.TipoPersonaField = value;
-                    this.RaisePropertyChanged("TipoPersona");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TipoUsuario {
-            get {
-                return this.TipoUsuarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TipoUsuarioField, value) != true)) {
-                    this.TipoUsuarioField = value;
-                    this.RaisePropertyChanged("TipoUsuario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserName {
-            get {
-                return this.UserNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
-                    this.UserNameField = value;
-                    this.RaisePropertyChanged("UserName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid UsuarioID {
-            get {
-                return this.UsuarioIDField;
-            }
-            set {
-                if ((this.UsuarioIDField.Equals(value) != true)) {
-                    this.UsuarioIDField = value;
-                    this.RaisePropertyChanged("UsuarioID");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_ParametrosPassword", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
-    [System.SerializableAttribute()]
-    public partial class SGF_ParametrosPassword : SGF.Site.SGF_Service.EntityObject {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<short> EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FechaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> LongitudMinimaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> NumCaracteresEspecialesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> NumIntentosField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> NumMayusculasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> NumMinusculasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> NumNumerosField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Fecha {
-            get {
-                return this.FechaField;
-            }
-            set {
-                if ((this.FechaField.Equals(value) != true)) {
-                    this.FechaField = value;
-                    this.RaisePropertyChanged("Fecha");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> LongitudMinima {
-            get {
-                return this.LongitudMinimaField;
-            }
-            set {
-                if ((this.LongitudMinimaField.Equals(value) != true)) {
-                    this.LongitudMinimaField = value;
-                    this.RaisePropertyChanged("LongitudMinima");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> NumCaracteresEspeciales {
-            get {
-                return this.NumCaracteresEspecialesField;
-            }
-            set {
-                if ((this.NumCaracteresEspecialesField.Equals(value) != true)) {
-                    this.NumCaracteresEspecialesField = value;
-                    this.RaisePropertyChanged("NumCaracteresEspeciales");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> NumIntentos {
-            get {
-                return this.NumIntentosField;
-            }
-            set {
-                if ((this.NumIntentosField.Equals(value) != true)) {
-                    this.NumIntentosField = value;
-                    this.RaisePropertyChanged("NumIntentos");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> NumMayusculas {
-            get {
-                return this.NumMayusculasField;
-            }
-            set {
-                if ((this.NumMayusculasField.Equals(value) != true)) {
-                    this.NumMayusculasField = value;
-                    this.RaisePropertyChanged("NumMayusculas");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> NumMinusculas {
-            get {
-                return this.NumMinusculasField;
-            }
-            set {
-                if ((this.NumMinusculasField.Equals(value) != true)) {
-                    this.NumMinusculasField = value;
-                    this.RaisePropertyChanged("NumMinusculas");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> NumNumeros {
-            get {
-                return this.NumNumerosField;
-            }
-            set {
-                if ((this.NumNumerosField.Equals(value) != true)) {
-                    this.NumNumerosField = value;
-                    this.RaisePropertyChanged("NumNumeros");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Usuario {
-            get {
-                return this.UsuarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
-                    this.UsuarioField = value;
-                    this.RaisePropertyChanged("Usuario");
                 }
             }
         }
@@ -6224,6 +5350,2842 @@ namespace SGF.Site.SGF_Service {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SEG_Botones_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SEG_Botones_VTA : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> AgregarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BotonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid BotonIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> EditarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> EliminarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoBotonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> EstadoPermisoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FormularioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid FormularioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> ImprimirField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid PermisoBotonIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid PermisoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid UsuarioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> ValueField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Agregar {
+            get {
+                return this.AgregarField;
+            }
+            set {
+                if ((this.AgregarField.Equals(value) != true)) {
+                    this.AgregarField = value;
+                    this.RaisePropertyChanged("Agregar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Boton {
+            get {
+                return this.BotonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BotonField, value) != true)) {
+                    this.BotonField = value;
+                    this.RaisePropertyChanged("Boton");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid BotonID {
+            get {
+                return this.BotonIDField;
+            }
+            set {
+                if ((this.BotonIDField.Equals(value) != true)) {
+                    this.BotonIDField = value;
+                    this.RaisePropertyChanged("BotonID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Editar {
+            get {
+                return this.EditarField;
+            }
+            set {
+                if ((this.EditarField.Equals(value) != true)) {
+                    this.EditarField = value;
+                    this.RaisePropertyChanged("Editar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Eliminar {
+            get {
+                return this.EliminarField;
+            }
+            set {
+                if ((this.EliminarField.Equals(value) != true)) {
+                    this.EliminarField = value;
+                    this.RaisePropertyChanged("Eliminar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short EstadoBoton {
+            get {
+                return this.EstadoBotonField;
+            }
+            set {
+                if ((this.EstadoBotonField.Equals(value) != true)) {
+                    this.EstadoBotonField = value;
+                    this.RaisePropertyChanged("EstadoBoton");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> EstadoPermiso {
+            get {
+                return this.EstadoPermisoField;
+            }
+            set {
+                if ((this.EstadoPermisoField.Equals(value) != true)) {
+                    this.EstadoPermisoField = value;
+                    this.RaisePropertyChanged("EstadoPermiso");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Formulario {
+            get {
+                return this.FormularioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FormularioField, value) != true)) {
+                    this.FormularioField = value;
+                    this.RaisePropertyChanged("Formulario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid FormularioID {
+            get {
+                return this.FormularioIDField;
+            }
+            set {
+                if ((this.FormularioIDField.Equals(value) != true)) {
+                    this.FormularioIDField = value;
+                    this.RaisePropertyChanged("FormularioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Imprimir {
+            get {
+                return this.ImprimirField;
+            }
+            set {
+                if ((this.ImprimirField.Equals(value) != true)) {
+                    this.ImprimirField = value;
+                    this.RaisePropertyChanged("Imprimir");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid PermisoBotonID {
+            get {
+                return this.PermisoBotonIDField;
+            }
+            set {
+                if ((this.PermisoBotonIDField.Equals(value) != true)) {
+                    this.PermisoBotonIDField = value;
+                    this.RaisePropertyChanged("PermisoBotonID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid PermisoID {
+            get {
+                return this.PermisoIDField;
+            }
+            set {
+                if ((this.PermisoIDField.Equals(value) != true)) {
+                    this.PermisoIDField = value;
+                    this.RaisePropertyChanged("PermisoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid UsuarioID {
+            get {
+                return this.UsuarioIDField;
+            }
+            set {
+                if ((this.UsuarioIDField.Equals(value) != true)) {
+                    this.UsuarioIDField = value;
+                    this.RaisePropertyChanged("UsuarioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Clasificador", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_Clasificador : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ClasificadorIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> ParentIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.SGF_TipoClasificador SGF_TipoClasificadorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoClasificadorMYlFw61k SGF_TipoClasificadorReferenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid TipoClasificadorIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ValorField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ClasificadorID {
+            get {
+                return this.ClasificadorIDField;
+            }
+            set {
+                if ((this.ClasificadorIDField.Equals(value) != true)) {
+                    this.ClasificadorIDField = value;
+                    this.RaisePropertyChanged("ClasificadorID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> ParentID {
+            get {
+                return this.ParentIDField;
+            }
+            set {
+                if ((this.ParentIDField.Equals(value) != true)) {
+                    this.ParentIDField = value;
+                    this.RaisePropertyChanged("ParentID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.SGF_TipoClasificador SGF_TipoClasificador {
+            get {
+                return this.SGF_TipoClasificadorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_TipoClasificadorField, value) != true)) {
+                    this.SGF_TipoClasificadorField = value;
+                    this.RaisePropertyChanged("SGF_TipoClasificador");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoClasificadorMYlFw61k SGF_TipoClasificadorReference {
+            get {
+                return this.SGF_TipoClasificadorReferenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_TipoClasificadorReferenceField, value) != true)) {
+                    this.SGF_TipoClasificadorReferenceField = value;
+                    this.RaisePropertyChanged("SGF_TipoClasificadorReference");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid TipoClasificadorID {
+            get {
+                return this.TipoClasificadorIDField;
+            }
+            set {
+                if ((this.TipoClasificadorIDField.Equals(value) != true)) {
+                    this.TipoClasificadorIDField = value;
+                    this.RaisePropertyChanged("TipoClasificadorID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Valor {
+            get {
+                return this.ValorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
+                    this.ValorField = value;
+                    this.RaisePropertyChanged("Valor");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_TipoClasificador", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_TipoClasificador : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Clasificador> SGF_ClasificadorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid TipoClasificadorIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Clasificador> SGF_Clasificador {
+            get {
+                return this.SGF_ClasificadorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_ClasificadorField, value) != true)) {
+                    this.SGF_ClasificadorField = value;
+                    this.RaisePropertyChanged("SGF_Clasificador");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid TipoClasificadorID {
+            get {
+                return this.TipoClasificadorIDField;
+            }
+            set {
+                if ((this.TipoClasificadorIDField.Equals(value) != true)) {
+                    this.TipoClasificadorIDField = value;
+                    this.RaisePropertyChanged("TipoClasificadorID");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Clasificador_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_Clasificador_VTA : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ClasificadorIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> EstadoClasificadorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> EstadoTipoClasificadorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreClasificadorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreTipoClasificadorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid TipoClasificadorIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ValorField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ClasificadorID {
+            get {
+                return this.ClasificadorIDField;
+            }
+            set {
+                if ((this.ClasificadorIDField.Equals(value) != true)) {
+                    this.ClasificadorIDField = value;
+                    this.RaisePropertyChanged("ClasificadorID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> EstadoClasificador {
+            get {
+                return this.EstadoClasificadorField;
+            }
+            set {
+                if ((this.EstadoClasificadorField.Equals(value) != true)) {
+                    this.EstadoClasificadorField = value;
+                    this.RaisePropertyChanged("EstadoClasificador");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> EstadoTipoClasificador {
+            get {
+                return this.EstadoTipoClasificadorField;
+            }
+            set {
+                if ((this.EstadoTipoClasificadorField.Equals(value) != true)) {
+                    this.EstadoTipoClasificadorField = value;
+                    this.RaisePropertyChanged("EstadoTipoClasificador");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombreClasificador {
+            get {
+                return this.NombreClasificadorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreClasificadorField, value) != true)) {
+                    this.NombreClasificadorField = value;
+                    this.RaisePropertyChanged("NombreClasificador");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombreTipoClasificador {
+            get {
+                return this.NombreTipoClasificadorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreTipoClasificadorField, value) != true)) {
+                    this.NombreTipoClasificadorField = value;
+                    this.RaisePropertyChanged("NombreTipoClasificador");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid TipoClasificadorID {
+            get {
+                return this.TipoClasificadorIDField;
+            }
+            set {
+                if ((this.TipoClasificadorIDField.Equals(value) != true)) {
+                    this.TipoClasificadorIDField = value;
+                    this.RaisePropertyChanged("TipoClasificadorID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Valor {
+            get {
+                return this.ValorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
+                    this.ValorField = value;
+                    this.RaisePropertyChanged("Valor");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Formulario_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_Formulario_VTA : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoFormularioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoModuloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid FormularioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ModuloIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreFormularioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreModuloField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short EstadoFormulario {
+            get {
+                return this.EstadoFormularioField;
+            }
+            set {
+                if ((this.EstadoFormularioField.Equals(value) != true)) {
+                    this.EstadoFormularioField = value;
+                    this.RaisePropertyChanged("EstadoFormulario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short EstadoModulo {
+            get {
+                return this.EstadoModuloField;
+            }
+            set {
+                if ((this.EstadoModuloField.Equals(value) != true)) {
+                    this.EstadoModuloField = value;
+                    this.RaisePropertyChanged("EstadoModulo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid FormularioID {
+            get {
+                return this.FormularioIDField;
+            }
+            set {
+                if ((this.FormularioIDField.Equals(value) != true)) {
+                    this.FormularioIDField = value;
+                    this.RaisePropertyChanged("FormularioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ModuloID {
+            get {
+                return this.ModuloIDField;
+            }
+            set {
+                if ((this.ModuloIDField.Equals(value) != true)) {
+                    this.ModuloIDField = value;
+                    this.RaisePropertyChanged("ModuloID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombreFormulario {
+            get {
+                return this.NombreFormularioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreFormularioField, value) != true)) {
+                    this.NombreFormularioField = value;
+                    this.RaisePropertyChanged("NombreFormulario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombreModulo {
+            get {
+                return this.NombreModuloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreModuloField, value) != true)) {
+                    this.NombreModuloField = value;
+                    this.RaisePropertyChanged("NombreModulo");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SEG_Formularios_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SEG_Formularios_VTA : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> AgregarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> EditarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> EliminarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoModuloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> EstadoPermisoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoUsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoformularioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FormularioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid FormularioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FormularioPathField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> ImprimirField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModuloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ModuloIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid PermisoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid UsuarioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> ValueField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Agregar {
+            get {
+                return this.AgregarField;
+            }
+            set {
+                if ((this.AgregarField.Equals(value) != true)) {
+                    this.AgregarField = value;
+                    this.RaisePropertyChanged("Agregar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Editar {
+            get {
+                return this.EditarField;
+            }
+            set {
+                if ((this.EditarField.Equals(value) != true)) {
+                    this.EditarField = value;
+                    this.RaisePropertyChanged("Editar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Eliminar {
+            get {
+                return this.EliminarField;
+            }
+            set {
+                if ((this.EliminarField.Equals(value) != true)) {
+                    this.EliminarField = value;
+                    this.RaisePropertyChanged("Eliminar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short EstadoModulo {
+            get {
+                return this.EstadoModuloField;
+            }
+            set {
+                if ((this.EstadoModuloField.Equals(value) != true)) {
+                    this.EstadoModuloField = value;
+                    this.RaisePropertyChanged("EstadoModulo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> EstadoPermiso {
+            get {
+                return this.EstadoPermisoField;
+            }
+            set {
+                if ((this.EstadoPermisoField.Equals(value) != true)) {
+                    this.EstadoPermisoField = value;
+                    this.RaisePropertyChanged("EstadoPermiso");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short EstadoUsuario {
+            get {
+                return this.EstadoUsuarioField;
+            }
+            set {
+                if ((this.EstadoUsuarioField.Equals(value) != true)) {
+                    this.EstadoUsuarioField = value;
+                    this.RaisePropertyChanged("EstadoUsuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Estadoformulario {
+            get {
+                return this.EstadoformularioField;
+            }
+            set {
+                if ((this.EstadoformularioField.Equals(value) != true)) {
+                    this.EstadoformularioField = value;
+                    this.RaisePropertyChanged("Estadoformulario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Formulario {
+            get {
+                return this.FormularioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FormularioField, value) != true)) {
+                    this.FormularioField = value;
+                    this.RaisePropertyChanged("Formulario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid FormularioID {
+            get {
+                return this.FormularioIDField;
+            }
+            set {
+                if ((this.FormularioIDField.Equals(value) != true)) {
+                    this.FormularioIDField = value;
+                    this.RaisePropertyChanged("FormularioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FormularioPath {
+            get {
+                return this.FormularioPathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FormularioPathField, value) != true)) {
+                    this.FormularioPathField = value;
+                    this.RaisePropertyChanged("FormularioPath");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Imprimir {
+            get {
+                return this.ImprimirField;
+            }
+            set {
+                if ((this.ImprimirField.Equals(value) != true)) {
+                    this.ImprimirField = value;
+                    this.RaisePropertyChanged("Imprimir");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Modulo {
+            get {
+                return this.ModuloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModuloField, value) != true)) {
+                    this.ModuloField = value;
+                    this.RaisePropertyChanged("Modulo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ModuloID {
+            get {
+                return this.ModuloIDField;
+            }
+            set {
+                if ((this.ModuloIDField.Equals(value) != true)) {
+                    this.ModuloIDField = value;
+                    this.RaisePropertyChanged("ModuloID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid PermisoID {
+            get {
+                return this.PermisoIDField;
+            }
+            set {
+                if ((this.PermisoIDField.Equals(value) != true)) {
+                    this.PermisoIDField = value;
+                    this.RaisePropertyChanged("PermisoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid UsuarioID {
+            get {
+                return this.UsuarioIDField;
+            }
+            set {
+                if ((this.UsuarioIDField.Equals(value) != true)) {
+                    this.UsuarioIDField = value;
+                    this.RaisePropertyChanged("UsuarioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_LineaAerea", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_LineaAerea : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CedulaRUCField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoCAEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoSRIField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FechaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid LineaAereaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObservacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PrefijoGuiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CedulaRUC {
+            get {
+                return this.CedulaRUCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CedulaRUCField, value) != true)) {
+                    this.CedulaRUCField = value;
+                    this.RaisePropertyChanged("CedulaRUC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodigoCAE {
+            get {
+                return this.CodigoCAEField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoCAEField, value) != true)) {
+                    this.CodigoCAEField = value;
+                    this.RaisePropertyChanged("CodigoCAE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodigoSRI {
+            get {
+                return this.CodigoSRIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoSRIField, value) != true)) {
+                    this.CodigoSRIField = value;
+                    this.RaisePropertyChanged("CodigoSRI");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Fecha {
+            get {
+                return this.FechaField;
+            }
+            set {
+                if ((this.FechaField.Equals(value) != true)) {
+                    this.FechaField = value;
+                    this.RaisePropertyChanged("Fecha");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid LineaAereaID {
+            get {
+                return this.LineaAereaIDField;
+            }
+            set {
+                if ((this.LineaAereaIDField.Equals(value) != true)) {
+                    this.LineaAereaIDField = value;
+                    this.RaisePropertyChanged("LineaAereaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observacion {
+            get {
+                return this.ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
+                    this.ObservacionField = value;
+                    this.RaisePropertyChanged("Observacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PrefijoGuia {
+            get {
+                return this.PrefijoGuiaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PrefijoGuiaField, value) != true)) {
+                    this.PrefijoGuiaField = value;
+                    this.RaisePropertyChanged("PrefijoGuia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Persona_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_Persona_VTA : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CargoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CelularField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> EstadoCivilField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstadoCivilTextField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoPersonaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> EstadoTipoPersonaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FechaActualizaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaCreacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FechaExpiracionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FechaIngresoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FechaNacimientoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> GeneroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GeneroTextField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdentificacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdentificacionRepresentanteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreComercialField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombrePersonaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObservacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PaisField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> PaisIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid PersonaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RepresentanteLegalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TelefonoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short TipoIdentificacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoIdentificacionTextField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid TipoPersonaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoPersonaNombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioActualizaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioCreacionField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Cargo {
+            get {
+                return this.CargoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CargoField, value) != true)) {
+                    this.CargoField = value;
+                    this.RaisePropertyChanged("Cargo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Celular {
+            get {
+                return this.CelularField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CelularField, value) != true)) {
+                    this.CelularField = value;
+                    this.RaisePropertyChanged("Celular");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((this.CodigoField.Equals(value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> EstadoCivil {
+            get {
+                return this.EstadoCivilField;
+            }
+            set {
+                if ((this.EstadoCivilField.Equals(value) != true)) {
+                    this.EstadoCivilField = value;
+                    this.RaisePropertyChanged("EstadoCivil");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EstadoCivilText {
+            get {
+                return this.EstadoCivilTextField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoCivilTextField, value) != true)) {
+                    this.EstadoCivilTextField = value;
+                    this.RaisePropertyChanged("EstadoCivilText");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short EstadoPersona {
+            get {
+                return this.EstadoPersonaField;
+            }
+            set {
+                if ((this.EstadoPersonaField.Equals(value) != true)) {
+                    this.EstadoPersonaField = value;
+                    this.RaisePropertyChanged("EstadoPersona");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> EstadoTipoPersona {
+            get {
+                return this.EstadoTipoPersonaField;
+            }
+            set {
+                if ((this.EstadoTipoPersonaField.Equals(value) != true)) {
+                    this.EstadoTipoPersonaField = value;
+                    this.RaisePropertyChanged("EstadoTipoPersona");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FechaActualiza {
+            get {
+                return this.FechaActualizaField;
+            }
+            set {
+                if ((this.FechaActualizaField.Equals(value) != true)) {
+                    this.FechaActualizaField = value;
+                    this.RaisePropertyChanged("FechaActualiza");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaCreacion {
+            get {
+                return this.FechaCreacionField;
+            }
+            set {
+                if ((this.FechaCreacionField.Equals(value) != true)) {
+                    this.FechaCreacionField = value;
+                    this.RaisePropertyChanged("FechaCreacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FechaExpiracion {
+            get {
+                return this.FechaExpiracionField;
+            }
+            set {
+                if ((this.FechaExpiracionField.Equals(value) != true)) {
+                    this.FechaExpiracionField = value;
+                    this.RaisePropertyChanged("FechaExpiracion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FechaIngreso {
+            get {
+                return this.FechaIngresoField;
+            }
+            set {
+                if ((this.FechaIngresoField.Equals(value) != true)) {
+                    this.FechaIngresoField = value;
+                    this.RaisePropertyChanged("FechaIngreso");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FechaNacimiento {
+            get {
+                return this.FechaNacimientoField;
+            }
+            set {
+                if ((this.FechaNacimientoField.Equals(value) != true)) {
+                    this.FechaNacimientoField = value;
+                    this.RaisePropertyChanged("FechaNacimiento");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Genero {
+            get {
+                return this.GeneroField;
+            }
+            set {
+                if ((this.GeneroField.Equals(value) != true)) {
+                    this.GeneroField = value;
+                    this.RaisePropertyChanged("Genero");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string GeneroText {
+            get {
+                return this.GeneroTextField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GeneroTextField, value) != true)) {
+                    this.GeneroTextField = value;
+                    this.RaisePropertyChanged("GeneroText");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Identificacion {
+            get {
+                return this.IdentificacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdentificacionField, value) != true)) {
+                    this.IdentificacionField = value;
+                    this.RaisePropertyChanged("Identificacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdentificacionRepresentante {
+            get {
+                return this.IdentificacionRepresentanteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdentificacionRepresentanteField, value) != true)) {
+                    this.IdentificacionRepresentanteField = value;
+                    this.RaisePropertyChanged("IdentificacionRepresentante");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombreComercial {
+            get {
+                return this.NombreComercialField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreComercialField, value) != true)) {
+                    this.NombreComercialField = value;
+                    this.RaisePropertyChanged("NombreComercial");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombrePersona {
+            get {
+                return this.NombrePersonaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombrePersonaField, value) != true)) {
+                    this.NombrePersonaField = value;
+                    this.RaisePropertyChanged("NombrePersona");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observacion {
+            get {
+                return this.ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
+                    this.ObservacionField = value;
+                    this.RaisePropertyChanged("Observacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Pais {
+            get {
+                return this.PaisField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PaisField, value) != true)) {
+                    this.PaisField = value;
+                    this.RaisePropertyChanged("Pais");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> PaisID {
+            get {
+                return this.PaisIDField;
+            }
+            set {
+                if ((this.PaisIDField.Equals(value) != true)) {
+                    this.PaisIDField = value;
+                    this.RaisePropertyChanged("PaisID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid PersonaID {
+            get {
+                return this.PersonaIDField;
+            }
+            set {
+                if ((this.PersonaIDField.Equals(value) != true)) {
+                    this.PersonaIDField = value;
+                    this.RaisePropertyChanged("PersonaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RepresentanteLegal {
+            get {
+                return this.RepresentanteLegalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RepresentanteLegalField, value) != true)) {
+                    this.RepresentanteLegalField = value;
+                    this.RaisePropertyChanged("RepresentanteLegal");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Telefono {
+            get {
+                return this.TelefonoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TelefonoField, value) != true)) {
+                    this.TelefonoField = value;
+                    this.RaisePropertyChanged("Telefono");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short TipoIdentificacion {
+            get {
+                return this.TipoIdentificacionField;
+            }
+            set {
+                if ((this.TipoIdentificacionField.Equals(value) != true)) {
+                    this.TipoIdentificacionField = value;
+                    this.RaisePropertyChanged("TipoIdentificacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoIdentificacionText {
+            get {
+                return this.TipoIdentificacionTextField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoIdentificacionTextField, value) != true)) {
+                    this.TipoIdentificacionTextField = value;
+                    this.RaisePropertyChanged("TipoIdentificacionText");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid TipoPersonaID {
+            get {
+                return this.TipoPersonaIDField;
+            }
+            set {
+                if ((this.TipoPersonaIDField.Equals(value) != true)) {
+                    this.TipoPersonaIDField = value;
+                    this.RaisePropertyChanged("TipoPersonaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoPersonaNombre {
+            get {
+                return this.TipoPersonaNombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoPersonaNombreField, value) != true)) {
+                    this.TipoPersonaNombreField = value;
+                    this.RaisePropertyChanged("TipoPersonaNombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UsuarioActualiza {
+            get {
+                return this.UsuarioActualizaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioActualizaField, value) != true)) {
+                    this.UsuarioActualizaField = value;
+                    this.RaisePropertyChanged("UsuarioActualiza");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UsuarioCreacion {
+            get {
+                return this.UsuarioCreacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioCreacionField, value) != true)) {
+                    this.UsuarioCreacionField = value;
+                    this.RaisePropertyChanged("UsuarioCreacion");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_Producto_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_Producto_VTA : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CalidadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid CalidadIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LongitudField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid LongitudIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MercadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> MercadoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PaisField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> PaisIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ProductoIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TalloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid TalloIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> ValorRefCompraField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> ValorRefVentaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VariedadCalidadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> VariedadCicloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VariedadCodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VariedadColorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> VariedadDiasFloreroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid VariedadIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> VariedadIndProdMensualField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VariedadLongitudMaxField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VariedadLongitudMinField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VariedadNombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> VariedadNumeroPetalosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VariedadObtentorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> VariedadRotacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> VariedadTamanoBotonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VariedadTipoFlorField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Calidad {
+            get {
+                return this.CalidadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CalidadField, value) != true)) {
+                    this.CalidadField = value;
+                    this.RaisePropertyChanged("Calidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid CalidadID {
+            get {
+                return this.CalidadIDField;
+            }
+            set {
+                if ((this.CalidadIDField.Equals(value) != true)) {
+                    this.CalidadIDField = value;
+                    this.RaisePropertyChanged("CalidadID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Fecha {
+            get {
+                return this.FechaField;
+            }
+            set {
+                if ((this.FechaField.Equals(value) != true)) {
+                    this.FechaField = value;
+                    this.RaisePropertyChanged("Fecha");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Longitud {
+            get {
+                return this.LongitudField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LongitudField, value) != true)) {
+                    this.LongitudField = value;
+                    this.RaisePropertyChanged("Longitud");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid LongitudID {
+            get {
+                return this.LongitudIDField;
+            }
+            set {
+                if ((this.LongitudIDField.Equals(value) != true)) {
+                    this.LongitudIDField = value;
+                    this.RaisePropertyChanged("LongitudID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mercado {
+            get {
+                return this.MercadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MercadoField, value) != true)) {
+                    this.MercadoField = value;
+                    this.RaisePropertyChanged("Mercado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> MercadoID {
+            get {
+                return this.MercadoIDField;
+            }
+            set {
+                if ((this.MercadoIDField.Equals(value) != true)) {
+                    this.MercadoIDField = value;
+                    this.RaisePropertyChanged("MercadoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Pais {
+            get {
+                return this.PaisField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PaisField, value) != true)) {
+                    this.PaisField = value;
+                    this.RaisePropertyChanged("Pais");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> PaisID {
+            get {
+                return this.PaisIDField;
+            }
+            set {
+                if ((this.PaisIDField.Equals(value) != true)) {
+                    this.PaisIDField = value;
+                    this.RaisePropertyChanged("PaisID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ProductoID {
+            get {
+                return this.ProductoIDField;
+            }
+            set {
+                if ((this.ProductoIDField.Equals(value) != true)) {
+                    this.ProductoIDField = value;
+                    this.RaisePropertyChanged("ProductoID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tallo {
+            get {
+                return this.TalloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TalloField, value) != true)) {
+                    this.TalloField = value;
+                    this.RaisePropertyChanged("Tallo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid TalloID {
+            get {
+                return this.TalloIDField;
+            }
+            set {
+                if ((this.TalloIDField.Equals(value) != true)) {
+                    this.TalloIDField = value;
+                    this.RaisePropertyChanged("TalloID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> ValorRefCompra {
+            get {
+                return this.ValorRefCompraField;
+            }
+            set {
+                if ((this.ValorRefCompraField.Equals(value) != true)) {
+                    this.ValorRefCompraField = value;
+                    this.RaisePropertyChanged("ValorRefCompra");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> ValorRefVenta {
+            get {
+                return this.ValorRefVentaField;
+            }
+            set {
+                if ((this.ValorRefVentaField.Equals(value) != true)) {
+                    this.ValorRefVentaField = value;
+                    this.RaisePropertyChanged("ValorRefVenta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VariedadCalidad {
+            get {
+                return this.VariedadCalidadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VariedadCalidadField, value) != true)) {
+                    this.VariedadCalidadField = value;
+                    this.RaisePropertyChanged("VariedadCalidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> VariedadCiclo {
+            get {
+                return this.VariedadCicloField;
+            }
+            set {
+                if ((this.VariedadCicloField.Equals(value) != true)) {
+                    this.VariedadCicloField = value;
+                    this.RaisePropertyChanged("VariedadCiclo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VariedadCodigo {
+            get {
+                return this.VariedadCodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VariedadCodigoField, value) != true)) {
+                    this.VariedadCodigoField = value;
+                    this.RaisePropertyChanged("VariedadCodigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VariedadColor {
+            get {
+                return this.VariedadColorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VariedadColorField, value) != true)) {
+                    this.VariedadColorField = value;
+                    this.RaisePropertyChanged("VariedadColor");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> VariedadDiasFlorero {
+            get {
+                return this.VariedadDiasFloreroField;
+            }
+            set {
+                if ((this.VariedadDiasFloreroField.Equals(value) != true)) {
+                    this.VariedadDiasFloreroField = value;
+                    this.RaisePropertyChanged("VariedadDiasFlorero");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid VariedadID {
+            get {
+                return this.VariedadIDField;
+            }
+            set {
+                if ((this.VariedadIDField.Equals(value) != true)) {
+                    this.VariedadIDField = value;
+                    this.RaisePropertyChanged("VariedadID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> VariedadIndProdMensual {
+            get {
+                return this.VariedadIndProdMensualField;
+            }
+            set {
+                if ((this.VariedadIndProdMensualField.Equals(value) != true)) {
+                    this.VariedadIndProdMensualField = value;
+                    this.RaisePropertyChanged("VariedadIndProdMensual");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VariedadLongitudMax {
+            get {
+                return this.VariedadLongitudMaxField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VariedadLongitudMaxField, value) != true)) {
+                    this.VariedadLongitudMaxField = value;
+                    this.RaisePropertyChanged("VariedadLongitudMax");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VariedadLongitudMin {
+            get {
+                return this.VariedadLongitudMinField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VariedadLongitudMinField, value) != true)) {
+                    this.VariedadLongitudMinField = value;
+                    this.RaisePropertyChanged("VariedadLongitudMin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VariedadNombre {
+            get {
+                return this.VariedadNombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VariedadNombreField, value) != true)) {
+                    this.VariedadNombreField = value;
+                    this.RaisePropertyChanged("VariedadNombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> VariedadNumeroPetalos {
+            get {
+                return this.VariedadNumeroPetalosField;
+            }
+            set {
+                if ((this.VariedadNumeroPetalosField.Equals(value) != true)) {
+                    this.VariedadNumeroPetalosField = value;
+                    this.RaisePropertyChanged("VariedadNumeroPetalos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VariedadObtentor {
+            get {
+                return this.VariedadObtentorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VariedadObtentorField, value) != true)) {
+                    this.VariedadObtentorField = value;
+                    this.RaisePropertyChanged("VariedadObtentor");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> VariedadRotacion {
+            get {
+                return this.VariedadRotacionField;
+            }
+            set {
+                if ((this.VariedadRotacionField.Equals(value) != true)) {
+                    this.VariedadRotacionField = value;
+                    this.RaisePropertyChanged("VariedadRotacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> VariedadTamanoBoton {
+            get {
+                return this.VariedadTamanoBotonField;
+            }
+            set {
+                if ((this.VariedadTamanoBotonField.Equals(value) != true)) {
+                    this.VariedadTamanoBotonField = value;
+                    this.RaisePropertyChanged("VariedadTamanoBoton");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VariedadTipoFlor {
+            get {
+                return this.VariedadTipoFlorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VariedadTipoFlorField, value) != true)) {
+                    this.VariedadTipoFlorField = value;
+                    this.RaisePropertyChanged("VariedadTipoFlor");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SEG_Usuarios_VTA", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SEG_Usuarios_VTA : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AppIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CargoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CelularField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoPersonaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short EstadoUsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FechaIngresoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdentificacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreCompletoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid PersonaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short TipoIdentificacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoPersonaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoUsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid UsuarioIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AppID {
+            get {
+                return this.AppIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AppIDField, value) != true)) {
+                    this.AppIDField = value;
+                    this.RaisePropertyChanged("AppID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Cargo {
+            get {
+                return this.CargoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CargoField, value) != true)) {
+                    this.CargoField = value;
+                    this.RaisePropertyChanged("Cargo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Celular {
+            get {
+                return this.CelularField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CelularField, value) != true)) {
+                    this.CelularField = value;
+                    this.RaisePropertyChanged("Celular");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((this.CodigoField.Equals(value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short EstadoPersona {
+            get {
+                return this.EstadoPersonaField;
+            }
+            set {
+                if ((this.EstadoPersonaField.Equals(value) != true)) {
+                    this.EstadoPersonaField = value;
+                    this.RaisePropertyChanged("EstadoPersona");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short EstadoUsuario {
+            get {
+                return this.EstadoUsuarioField;
+            }
+            set {
+                if ((this.EstadoUsuarioField.Equals(value) != true)) {
+                    this.EstadoUsuarioField = value;
+                    this.RaisePropertyChanged("EstadoUsuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FechaIngreso {
+            get {
+                return this.FechaIngresoField;
+            }
+            set {
+                if ((this.FechaIngresoField.Equals(value) != true)) {
+                    this.FechaIngresoField = value;
+                    this.RaisePropertyChanged("FechaIngreso");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Identificacion {
+            get {
+                return this.IdentificacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdentificacionField, value) != true)) {
+                    this.IdentificacionField = value;
+                    this.RaisePropertyChanged("Identificacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombreCompleto {
+            get {
+                return this.NombreCompletoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreCompletoField, value) != true)) {
+                    this.NombreCompletoField = value;
+                    this.RaisePropertyChanged("NombreCompleto");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid PersonaID {
+            get {
+                return this.PersonaIDField;
+            }
+            set {
+                if ((this.PersonaIDField.Equals(value) != true)) {
+                    this.PersonaIDField = value;
+                    this.RaisePropertyChanged("PersonaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short TipoIdentificacion {
+            get {
+                return this.TipoIdentificacionField;
+            }
+            set {
+                if ((this.TipoIdentificacionField.Equals(value) != true)) {
+                    this.TipoIdentificacionField = value;
+                    this.RaisePropertyChanged("TipoIdentificacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoPersona {
+            get {
+                return this.TipoPersonaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoPersonaField, value) != true)) {
+                    this.TipoPersonaField = value;
+                    this.RaisePropertyChanged("TipoPersona");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoUsuario {
+            get {
+                return this.TipoUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoUsuarioField, value) != true)) {
+                    this.TipoUsuarioField = value;
+                    this.RaisePropertyChanged("TipoUsuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid UsuarioID {
+            get {
+                return this.UsuarioIDField;
+            }
+            set {
+                if ((this.UsuarioIDField.Equals(value) != true)) {
+                    this.UsuarioIDField = value;
+                    this.RaisePropertyChanged("UsuarioID");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_ParametrosPassword", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_ParametrosPassword : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FechaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> LongitudMinimaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> NumCaracteresEspecialesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> NumIntentosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> NumMayusculasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> NumMinusculasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> NumNumerosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Fecha {
+            get {
+                return this.FechaField;
+            }
+            set {
+                if ((this.FechaField.Equals(value) != true)) {
+                    this.FechaField = value;
+                    this.RaisePropertyChanged("Fecha");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> LongitudMinima {
+            get {
+                return this.LongitudMinimaField;
+            }
+            set {
+                if ((this.LongitudMinimaField.Equals(value) != true)) {
+                    this.LongitudMinimaField = value;
+                    this.RaisePropertyChanged("LongitudMinima");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> NumCaracteresEspeciales {
+            get {
+                return this.NumCaracteresEspecialesField;
+            }
+            set {
+                if ((this.NumCaracteresEspecialesField.Equals(value) != true)) {
+                    this.NumCaracteresEspecialesField = value;
+                    this.RaisePropertyChanged("NumCaracteresEspeciales");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> NumIntentos {
+            get {
+                return this.NumIntentosField;
+            }
+            set {
+                if ((this.NumIntentosField.Equals(value) != true)) {
+                    this.NumIntentosField = value;
+                    this.RaisePropertyChanged("NumIntentos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> NumMayusculas {
+            get {
+                return this.NumMayusculasField;
+            }
+            set {
+                if ((this.NumMayusculasField.Equals(value) != true)) {
+                    this.NumMayusculasField = value;
+                    this.RaisePropertyChanged("NumMayusculas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> NumMinusculas {
+            get {
+                return this.NumMinusculasField;
+            }
+            set {
+                if ((this.NumMinusculasField.Equals(value) != true)) {
+                    this.NumMinusculasField = value;
+                    this.RaisePropertyChanged("NumMinusculas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> NumNumeros {
+            get {
+                return this.NumNumerosField;
+            }
+            set {
+                if ((this.NumNumerosField.Equals(value) != true)) {
+                    this.NumNumerosField = value;
+                    this.RaisePropertyChanged("NumNumeros");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SGF_TipoPersona", Namespace="http://schemas.datacontract.org/2004/07/SGF.DataAccess", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class SGF_TipoPersona : SGF.Site.SGF_Service.EntityObject {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Persona> SGF_PersonaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid TipoPersonaIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Persona> SGF_Persona {
+            get {
+                return this.SGF_PersonaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SGF_PersonaField, value) != true)) {
+                    this.SGF_PersonaField = value;
+                    this.RaisePropertyChanged("SGF_Persona");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid TipoPersonaID {
+            get {
+                return this.TipoPersonaIDField;
+            }
+            set {
+                if ((this.TipoPersonaIDField.Equals(value) != true)) {
+                    this.TipoPersonaIDField = value;
+                    this.RaisePropertyChanged("TipoPersonaID");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityKey", Namespace="http://schemas.datacontract.org/2004/07/System.Data", IsReference=true)]
     [System.SerializableAttribute()]
     public partial class EntityKey : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -6309,31 +8271,57 @@ namespace SGF.Site.SGF_Service {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.LogicException))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SecurityException))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SecurityActions))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Auditoria))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Boton))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Formulario))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Boton>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Modulo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Formulario>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Permiso>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Permiso))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_PermisoBoton>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_PermisoBoton))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoPersona))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Persona>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Persona))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_ConfigurarPersonaEmpresa>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_ConfigurarPersonaEmpresa))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Sucursal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Almacen>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Almacen))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Bodega>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Bodega))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CampoCultivo>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CampoCultivo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoArea>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoArea))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoBloque>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoBloque))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoLado>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoLado))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoNave>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoNave))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoCama>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoCama))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_CultivoCuadro>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_CultivoCuadro))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Empresa))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Grupo))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Empresa>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Sucursal>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoPersona))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Persona>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Permiso>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Permiso))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Formulario))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Boton>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Boton))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Modulo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Formulario>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_PermisoBoton>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_PermisoBoton))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_TipoUsuario))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoPersona>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario_VTA>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Producto))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Auditoria))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SEG_Botones_VTA>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SEG_Botones_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Clasificador))]
@@ -6346,40 +8334,41 @@ namespace SGF.Site.SGF_Service {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SEG_Formularios_VTA>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SEG_Formularios_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Grupo>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_LineaAerea))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_LineaAerea>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Modulo>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Persona_VTA>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Persona_VTA))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto_VTA>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Producto_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SEG_Usuarios_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SEG_Usuarios_VTA>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_ParametrosPassword>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_ParametrosPassword))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoClasificador>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoPersona>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario_VTA>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Usuario_VTA))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Producto))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.SGF_Variedad_VTA))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityObject))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.StructuralObject))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_ModuloMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PersonaMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReference))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.RelatedEnd))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PermisoMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PersonaMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_AlmacenMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_SucursalMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CampoCultivoMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoAreaMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoBloqueMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoCamaMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoNaveMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoLadoMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_GrupoMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_EmpresaMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoPersonaMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoUsuarioMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_ModuloMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PermisoMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_UsuarioMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoClasificadorMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoUsuarioMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_VariedadMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoClasificadorMYlFw61k))]
     public partial class EntityKeyMember : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -6672,27 +8661,34 @@ namespace SGF.Site.SGF_Service {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_ModuloMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_PersonaMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
     [System.SerializableAttribute()]
-    public partial class EntityReferenceOfSGF_ModuloMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    public partial class EntityReferenceOfSGF_PersonaMYlFw61k : SGF.Site.SGF_Service.EntityReference {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityReference", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PermisoMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PersonaMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_AlmacenMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_SucursalMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CampoCultivoMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoAreaMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoBloqueMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoCamaMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoNaveMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoLadoMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_GrupoMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_EmpresaMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoPersonaMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoUsuarioMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_UsuarioMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoClasificadorMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_VariedadMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_ModuloMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PermisoMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_UsuarioMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoUsuarioMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_VariedadMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoClasificadorMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PersonaMYlFw61k))]
     public partial class EntityReference : SGF.Site.SGF_Service.RelatedEnd {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -6717,18 +8713,25 @@ namespace SGF.Site.SGF_Service {
     [System.Runtime.Serialization.DataContractAttribute(Name="RelatedEnd", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PermisoMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PersonaMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_AlmacenMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_SucursalMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CampoCultivoMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoAreaMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoBloqueMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoCamaMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoNaveMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_CultivoLadoMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_GrupoMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_EmpresaMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoPersonaMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoUsuarioMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_UsuarioMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoClasificadorMYlFw61k))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_VariedadMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_FormularioMYlFw61k))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_ModuloMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PermisoMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_UsuarioMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoUsuarioMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_VariedadMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_TipoClasificadorMYlFw61k))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(SGF.Site.SGF_Service.EntityReferenceOfSGF_PersonaMYlFw61k))]
     public partial class RelatedEnd : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -6756,23 +8759,9 @@ namespace SGF.Site.SGF_Service {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_FormularioMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_AlmacenMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
     [System.SerializableAttribute()]
-    public partial class EntityReferenceOfSGF_FormularioMYlFw61k : SGF.Site.SGF_Service.EntityReference {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_PermisoMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
-    [System.SerializableAttribute()]
-    public partial class EntityReferenceOfSGF_PermisoMYlFw61k : SGF.Site.SGF_Service.EntityReference {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_PersonaMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
-    [System.SerializableAttribute()]
-    public partial class EntityReferenceOfSGF_PersonaMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    public partial class EntityReferenceOfSGF_AlmacenMYlFw61k : SGF.Site.SGF_Service.EntityReference {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6780,6 +8769,48 @@ namespace SGF.Site.SGF_Service {
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_SucursalMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
     [System.SerializableAttribute()]
     public partial class EntityReferenceOfSGF_SucursalMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_CampoCultivoMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.SerializableAttribute()]
+    public partial class EntityReferenceOfSGF_CampoCultivoMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_CultivoAreaMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.SerializableAttribute()]
+    public partial class EntityReferenceOfSGF_CultivoAreaMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_CultivoBloqueMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.SerializableAttribute()]
+    public partial class EntityReferenceOfSGF_CultivoBloqueMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_CultivoCamaMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.SerializableAttribute()]
+    public partial class EntityReferenceOfSGF_CultivoCamaMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_CultivoNaveMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.SerializableAttribute()]
+    public partial class EntityReferenceOfSGF_CultivoNaveMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_CultivoLadoMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.SerializableAttribute()]
+    public partial class EntityReferenceOfSGF_CultivoLadoMYlFw61k : SGF.Site.SGF_Service.EntityReference {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6805,9 +8836,23 @@ namespace SGF.Site.SGF_Service {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_TipoUsuarioMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_FormularioMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
     [System.SerializableAttribute()]
-    public partial class EntityReferenceOfSGF_TipoUsuarioMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    public partial class EntityReferenceOfSGF_FormularioMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_ModuloMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.SerializableAttribute()]
+    public partial class EntityReferenceOfSGF_ModuloMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_PermisoMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.SerializableAttribute()]
+    public partial class EntityReferenceOfSGF_PermisoMYlFw61k : SGF.Site.SGF_Service.EntityReference {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6819,9 +8864,9 @@ namespace SGF.Site.SGF_Service {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_TipoClasificadorMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_TipoUsuarioMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
     [System.SerializableAttribute()]
-    public partial class EntityReferenceOfSGF_TipoClasificadorMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    public partial class EntityReferenceOfSGF_TipoUsuarioMYlFw61k : SGF.Site.SGF_Service.EntityReference {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6831,9 +8876,154 @@ namespace SGF.Site.SGF_Service {
     public partial class EntityReferenceOfSGF_VariedadMYlFw61k : SGF.Site.SGF_Service.EntityReference {
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityReferenceOfSGF_TipoClasificadorMYlFw61k", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses")]
+    [System.SerializableAttribute()]
+    public partial class EntityReferenceOfSGF_TipoClasificadorMYlFw61k : SGF.Site.SGF_Service.EntityReference {
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SGF_Service.Logic")]
     public interface Logic {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsernameResponse")]
+        SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona_ObtenerPorUsername(string nombre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsernameResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerPorUsernameAsync(string nombre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerTodoResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerTodo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoPersona>> TipoPersona_ObtenerTodoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_Grabar", ReplyAction="http://tempuri.org/Logic/TipoPersona_GrabarResponse")]
+        void TipoPersona_Grabar(SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_Grabar", ReplyAction="http://tempuri.org/Logic/TipoPersona_GrabarResponse")]
+        System.Threading.Tasks.Task TipoPersona_GrabarAsync(SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_TipoUsuario TipoUsuario_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsernameResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerPorUsername(string nombre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsernameResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario>> TipoUsuario_ObtenerPorUsernameAsync(string nombre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerTodoResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerTodo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario>> TipoUsuario_ObtenerTodoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_Grabar", ReplyAction="http://tempuri.org/Logic/TipoUsuario_GrabarResponse")]
+        void TipoUsuario_Grabar(SGF.Site.SGF_Service.SGF_TipoUsuario newTipoUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_Grabar", ReplyAction="http://tempuri.org/Logic/TipoUsuario_GrabarResponse")]
+        System.Threading.Tasks.Task TipoUsuario_GrabarAsync(SGF.Site.SGF_Service.SGF_TipoUsuario newTipoUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorIDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.InfraestructureException), Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDInfraestructureExceptionFault", Name="InfraestructureException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.LogicException), Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDLogicExceptionFault", Name="LogicException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.SecurityException), Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDSecurityExceptionFault", Name="SecurityException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
+        SGF.Site.SGF_Service.SGF_Usuario Usuario_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorUsernameResponse")]
+        SGF.Site.SGF_Service.SGF_Usuario Usuario_ObtenerPorUsername(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorUsernameResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorUsernameAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerTodoResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerTodo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario>> Usuario_ObtenerTodoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuario", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuarioResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorTipoUsuario(System.Guid TipoUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuario", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuarioResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario>> Usuario_ObtenerPorTipoUsuarioAsync(System.Guid TipoUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_Grabar", ReplyAction="http://tempuri.org/Logic/Usuario_GrabarResponse")]
+        void Usuario_Grabar(SGF.Site.SGF_Service.SGF_Usuario usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_Grabar", ReplyAction="http://tempuri.org/Logic/Usuario_GrabarResponse")]
+        System.Threading.Tasks.Task Usuario_GrabarAsync(SGF.Site.SGF_Service.SGF_Usuario usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ActualizarPassword", ReplyAction="http://tempuri.org/Logic/Usuario_ActualizarPasswordResponse")]
+        void Usuario_ActualizarPassword(string userName, string clvAnt, string clvAct, string ip, string mac, string nompc, string logueado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ActualizarPassword", ReplyAction="http://tempuri.org/Logic/Usuario_ActualizarPasswordResponse")]
+        System.Threading.Tasks.Task Usuario_ActualizarPasswordAsync(string userName, string clvAnt, string clvAct, string ip, string mac, string nompc, string logueado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTA", ReplyAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTAResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario_VTA> Usuario_BuscarUsuarioVTA(System.Guid TipoUsuario, string identificacion, string nombre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTA", ReplyAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTAResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario_VTA>> Usuario_BuscarUsuarioVTAAsync(System.Guid TipoUsuario, string identificacion, string nombre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTA", ReplyAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTAResponse")]
+        SGF.Site.SGF_Service.SGF_Usuario_VTA Usuario_BuscarUsuarioPorID_VTA(System.Guid usuarioID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTA", ReplyAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTAResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario_VTA> Usuario_BuscarUsuarioPorID_VTAAsync(System.Guid usuarioID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorIDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.InfraestructureException), Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDInfraestructureExceptionFault", Name="InfraestructureException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.LogicException), Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDLogicExceptionFault", Name="LogicException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.SecurityException), Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDSecurityExceptionFault", Name="SecurityException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
+        SGF.Site.SGF_Service.SGF_Variedad Variedad_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodName", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerPorCodName(string name, string code);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodName", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad>> Variedad_ObtenerPorCodNameAsync(string name, string code);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTA", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTAResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA> Variedad_ObtenerPorCodNameVTA(string name, string code);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTA", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTAResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA>> Variedad_ObtenerPorCodNameVTAAsync(string name, string code);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerTodoResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerTodo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad>> Variedad_ObtenerTodoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerTodoVTA", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerTodoVTAResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA> Variedad_ObtenerTodoVTA();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerTodoVTA", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerTodoVTAResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA>> Variedad_ObtenerTodoVTAAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_Grabar", ReplyAction="http://tempuri.org/Logic/Variedad_GrabarResponse")]
+        void Variedad_Grabar(SGF.Site.SGF_Service.SGF_Variedad variedad, string ip, string nompc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_Grabar", ReplyAction="http://tempuri.org/Logic/Variedad_GrabarResponse")]
+        System.Threading.Tasks.Task Variedad_GrabarAsync(SGF.Site.SGF_Service.SGF_Variedad variedad, string ip, string nompc);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Auditoria_Grabar", ReplyAction="http://tempuri.org/Logic/Auditoria_GrabarResponse")]
         void Auditoria_Grabar(SGF.Site.SGF_Service.SGF_Auditoria registro);
@@ -6882,6 +9072,90 @@ namespace SGF.Site.SGF_Service {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/PermisoBoton_Grabar", ReplyAction="http://tempuri.org/Logic/PermisoBoton_GrabarResponse")]
         System.Threading.Tasks.Task PermisoBoton_GrabarAsync(SGF.Site.SGF_Service.SGF_PermisoBoton newBoton);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CampoCultivo_Grabar", ReplyAction="http://tempuri.org/Logic/CampoCultivo_GrabarResponse")]
+        void CampoCultivo_Grabar(SGF.Site.SGF_Service.SGF_CampoCultivo newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CampoCultivo_Grabar", ReplyAction="http://tempuri.org/Logic/CampoCultivo_GrabarResponse")]
+        System.Threading.Tasks.Task CampoCultivo_GrabarAsync(SGF.Site.SGF_Service.SGF_CampoCultivo newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CampoCultivo_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CampoCultivo_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_CampoCultivo CampoCultivo_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CampoCultivo_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CampoCultivo_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CampoCultivo> CampoCultivo_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoArea_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoArea_GrabarResponse")]
+        void CultivoArea_Grabar(SGF.Site.SGF_Service.SGF_CultivoArea newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoArea_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoArea_GrabarResponse")]
+        System.Threading.Tasks.Task CultivoArea_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoArea newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoArea_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoArea_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_CultivoArea CultivoArea_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoArea_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoArea_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoArea> CultivoArea_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoBloque_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoBloque_GrabarResponse")]
+        void CultivoBloque_Grabar(SGF.Site.SGF_Service.SGF_CultivoBloque newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoBloque_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoBloque_GrabarResponse")]
+        System.Threading.Tasks.Task CultivoBloque_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoBloque newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoBloque_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoBloque_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_CultivoBloque CultivoBloque_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoBloque_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoBloque_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoBloque> CultivoBloque_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoLado_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoLado_GrabarResponse")]
+        void CultivoLado_Grabar(SGF.Site.SGF_Service.SGF_CultivoLado newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoLado_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoLado_GrabarResponse")]
+        System.Threading.Tasks.Task CultivoLado_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoLado newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoLado_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoLado_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_CultivoLado CultivoLado_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoLado_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoLado_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoLado> CultivoLado_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoNave_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoNave_GrabarResponse")]
+        void CultivoNave_Grabar(SGF.Site.SGF_Service.SGF_CultivoNave newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoNave_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoNave_GrabarResponse")]
+        System.Threading.Tasks.Task CultivoNave_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoNave newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoNave_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoNave_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_CultivoNave CultivoNave_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoNave_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoNave_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoNave> CultivoNave_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoCama_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoCama_GrabarResponse")]
+        void CultivoCama_Grabar(SGF.Site.SGF_Service.SGF_CultivoCama newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoCama_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoCama_GrabarResponse")]
+        System.Threading.Tasks.Task CultivoCama_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoCama newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoCama_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoCama_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_CultivoCama CultivoCama_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoCama_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoCama_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoCama> CultivoCama_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoCuadro_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoCuadro_GrabarResponse")]
+        void CultivoCuadro_Grabar(SGF.Site.SGF_Service.SGF_CultivoCuadro newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoCuadro_Grabar", ReplyAction="http://tempuri.org/Logic/CultivoCuadro_GrabarResponse")]
+        System.Threading.Tasks.Task CultivoCuadro_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoCuadro newCampoCultivo, string user, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoCuadro_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoCuadro_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_CultivoCuadro CultivoCuadro_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/CultivoCuadro_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/CultivoCuadro_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoCuadro> CultivoCuadro_ObtenerPorIDAsync(System.Guid id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Clasificador_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Clasificador_ObtenerPorIDResponse")]
         SGF.Site.SGF_Service.SGF_Clasificador Clasificador_ObtenerPorID(System.Guid id);
@@ -7057,6 +9331,18 @@ namespace SGF.Site.SGF_Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Grupo_Grabar", ReplyAction="http://tempuri.org/Logic/Grupo_GrabarResponse")]
         System.Threading.Tasks.Task Grupo_GrabarAsync(SGF.Site.SGF_Service.SGF_Grupo Grupo);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/LineaAerea_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/LineaAerea_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_LineaAerea LineaAerea_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/LineaAerea_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/LineaAerea_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_LineaAerea> LineaAerea_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/LineaAerea_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/LineaAerea_ObtenerTodoResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_LineaAerea> LineaAerea_ObtenerTodo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/LineaAerea_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/LineaAerea_ObtenerTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_LineaAerea>> LineaAerea_ObtenerTodoAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Activate", ReplyAction="http://tempuri.org/Logic/ActivateResponse")]
         void Activate();
         
@@ -7110,6 +9396,42 @@ namespace SGF.Site.SGF_Service {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Persona_BuscarPersonaVTA", ReplyAction="http://tempuri.org/Logic/Persona_BuscarPersonaVTAResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Persona_VTA>> Persona_BuscarPersonaVTAAsync(System.Guid TipoPersona, string identificacion, string nombre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Producto_ObtenerPorIDResponse")]
+        SGF.Site.SGF_Service.SGF_Producto Producto_ObtenerPorID(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Producto_ObtenerPorIDResponse")]
+        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Producto> Producto_ObtenerPorIDAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/Producto_ObtenerTodoResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto> Producto_ObtenerTodo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/Producto_ObtenerTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto>> Producto_ObtenerTodoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_ObtenerPorVariedad", ReplyAction="http://tempuri.org/Logic/Producto_ObtenerPorVariedadResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto> Producto_ObtenerPorVariedad(System.Guid variedadID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_ObtenerPorVariedad", ReplyAction="http://tempuri.org/Logic/Producto_ObtenerPorVariedadResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto>> Producto_ObtenerPorVariedadAsync(System.Guid variedadID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_ObtenerPorVariedadVTA", ReplyAction="http://tempuri.org/Logic/Producto_ObtenerPorVariedadVTAResponse")]
+        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto_VTA> Producto_ObtenerPorVariedadVTA(System.Guid variedadID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_ObtenerPorVariedadVTA", ReplyAction="http://tempuri.org/Logic/Producto_ObtenerPorVariedadVTAResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto_VTA>> Producto_ObtenerPorVariedadVTAAsync(System.Guid variedadID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_Grabar", ReplyAction="http://tempuri.org/Logic/Producto_GrabarResponse")]
+        void Producto_Grabar(SGF.Site.SGF_Service.SGF_Producto newProducto, string nomPC, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_Grabar", ReplyAction="http://tempuri.org/Logic/Producto_GrabarResponse")]
+        System.Threading.Tasks.Task Producto_GrabarAsync(SGF.Site.SGF_Service.SGF_Producto newProducto, string nomPC, string ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_ValidarProducto", ReplyAction="http://tempuri.org/Logic/Producto_ValidarProductoResponse")]
+        int Producto_ValidarProducto(SGF.Site.SGF_Service.SGF_Producto newProducto);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Producto_ValidarProducto", ReplyAction="http://tempuri.org/Logic/Producto_ValidarProductoResponse")]
+        System.Threading.Tasks.Task<int> Producto_ValidarProductoAsync(SGF.Site.SGF_Service.SGF_Producto newProducto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Seguridad_ObtenerUsuarioPorID", ReplyAction="http://tempuri.org/Logic/Seguridad_ObtenerUsuarioPorIDResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.InfraestructureException), Action="http://tempuri.org/Logic/Seguridad_ObtenerUsuarioPorIDInfraestructureExceptionFau" +
@@ -7218,144 +9540,6 @@ namespace SGF.Site.SGF_Service {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoClasificador_Grabar", ReplyAction="http://tempuri.org/Logic/TipoClasificador_GrabarResponse")]
         System.Threading.Tasks.Task TipoClasificador_GrabarAsync(SGF.Site.SGF_Service.SGF_TipoClasificador tipoclasificador);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorIDResponse")]
-        SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona_ObtenerPorID(System.Guid id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorIDResponse")]
-        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerPorIDAsync(System.Guid id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsernameResponse")]
-        SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona_ObtenerPorUsername(string nombre);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerPorUsernameResponse")]
-        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerPorUsernameAsync(string nombre);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerTodoResponse")]
-        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerTodo();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/TipoPersona_ObtenerTodoResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoPersona>> TipoPersona_ObtenerTodoAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_Grabar", ReplyAction="http://tempuri.org/Logic/TipoPersona_GrabarResponse")]
-        void TipoPersona_Grabar(SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoPersona_Grabar", ReplyAction="http://tempuri.org/Logic/TipoPersona_GrabarResponse")]
-        System.Threading.Tasks.Task TipoPersona_GrabarAsync(SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorIDResponse")]
-        SGF.Site.SGF_Service.SGF_TipoUsuario TipoUsuario_ObtenerPorID(System.Guid id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorIDResponse")]
-        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerPorIDAsync(System.Guid id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsernameResponse")]
-        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerPorUsername(string nombre);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerPorUsernameResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario>> TipoUsuario_ObtenerPorUsernameAsync(string nombre);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerTodoResponse")]
-        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerTodo();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/TipoUsuario_ObtenerTodoResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario>> TipoUsuario_ObtenerTodoAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_Grabar", ReplyAction="http://tempuri.org/Logic/TipoUsuario_GrabarResponse")]
-        void TipoUsuario_Grabar(SGF.Site.SGF_Service.SGF_TipoUsuario newTipoUsuario);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/TipoUsuario_Grabar", ReplyAction="http://tempuri.org/Logic/TipoUsuario_GrabarResponse")]
-        System.Threading.Tasks.Task TipoUsuario_GrabarAsync(SGF.Site.SGF_Service.SGF_TipoUsuario newTipoUsuario);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorIDResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.InfraestructureException), Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDInfraestructureExceptionFault", Name="InfraestructureException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.LogicException), Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDLogicExceptionFault", Name="LogicException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.SecurityException), Action="http://tempuri.org/Logic/Usuario_ObtenerPorIDSecurityExceptionFault", Name="SecurityException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
-        SGF.Site.SGF_Service.SGF_Usuario Usuario_ObtenerPorID(System.Guid id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorIDResponse")]
-        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorIDAsync(System.Guid id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorUsernameResponse")]
-        SGF.Site.SGF_Service.SGF_Usuario Usuario_ObtenerPorUsername(string username);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorUsername", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorUsernameResponse")]
-        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorUsernameAsync(string username);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerTodoResponse")]
-        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerTodo();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerTodoResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario>> Usuario_ObtenerTodoAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuario", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuarioResponse")]
-        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorTipoUsuario(System.Guid TipoUsuario);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuario", ReplyAction="http://tempuri.org/Logic/Usuario_ObtenerPorTipoUsuarioResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario>> Usuario_ObtenerPorTipoUsuarioAsync(System.Guid TipoUsuario);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_Grabar", ReplyAction="http://tempuri.org/Logic/Usuario_GrabarResponse")]
-        void Usuario_Grabar(SGF.Site.SGF_Service.SGF_Usuario usuario);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_Grabar", ReplyAction="http://tempuri.org/Logic/Usuario_GrabarResponse")]
-        System.Threading.Tasks.Task Usuario_GrabarAsync(SGF.Site.SGF_Service.SGF_Usuario usuario);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ActualizarPassword", ReplyAction="http://tempuri.org/Logic/Usuario_ActualizarPasswordResponse")]
-        void Usuario_ActualizarPassword(string userName, string clvAnt, string clvAct, string ip, string mac, string nompc, string logueado);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_ActualizarPassword", ReplyAction="http://tempuri.org/Logic/Usuario_ActualizarPasswordResponse")]
-        System.Threading.Tasks.Task Usuario_ActualizarPasswordAsync(string userName, string clvAnt, string clvAct, string ip, string mac, string nompc, string logueado);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTA", ReplyAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTAResponse")]
-        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario_VTA> Usuario_BuscarUsuarioVTA(System.Guid TipoUsuario, string identificacion, string nombre);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTA", ReplyAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioVTAResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario_VTA>> Usuario_BuscarUsuarioVTAAsync(System.Guid TipoUsuario, string identificacion, string nombre);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTA", ReplyAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTAResponse")]
-        SGF.Site.SGF_Service.SGF_Usuario_VTA Usuario_BuscarUsuarioPorID_VTA(System.Guid usuarioID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTA", ReplyAction="http://tempuri.org/Logic/Usuario_BuscarUsuarioPorID_VTAResponse")]
-        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario_VTA> Usuario_BuscarUsuarioPorID_VTAAsync(System.Guid usuarioID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorIDResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.InfraestructureException), Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDInfraestructureExceptionFault", Name="InfraestructureException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.LogicException), Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDLogicExceptionFault", Name="LogicException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SGF.Site.SGF_Service.SecurityException), Action="http://tempuri.org/Logic/Variedad_ObtenerPorIDSecurityExceptionFault", Name="SecurityException", Namespace="http://schemas.datacontract.org/2004/07/SGF.BussinessLogic.Common")]
-        SGF.Site.SGF_Service.SGF_Variedad Variedad_ObtenerPorID(System.Guid id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorID", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorIDResponse")]
-        System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerPorIDAsync(System.Guid id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodName", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameResponse")]
-        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerPorCodName(string name, string code);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodName", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad>> Variedad_ObtenerPorCodNameAsync(string name, string code);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTA", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTAResponse")]
-        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA> Variedad_ObtenerPorCodNameVTA(string name, string code);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTA", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerPorCodNameVTAResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA>> Variedad_ObtenerPorCodNameVTAAsync(string name, string code);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerTodoResponse")]
-        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerTodo();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerTodo", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerTodoResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad>> Variedad_ObtenerTodoAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerTodoVTA", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerTodoVTAResponse")]
-        System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA> Variedad_ObtenerTodoVTA();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_ObtenerTodoVTA", ReplyAction="http://tempuri.org/Logic/Variedad_ObtenerTodoVTAResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA>> Variedad_ObtenerTodoVTAAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_Grabar", ReplyAction="http://tempuri.org/Logic/Variedad_GrabarResponse")]
-        void Variedad_Grabar(SGF.Site.SGF_Service.SGF_Variedad variedad, string ip, string nompc);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Logic/Variedad_Grabar", ReplyAction="http://tempuri.org/Logic/Variedad_GrabarResponse")]
-        System.Threading.Tasks.Task Variedad_GrabarAsync(SGF.Site.SGF_Service.SGF_Variedad variedad, string ip, string nompc);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -7383,6 +9567,182 @@ namespace SGF.Site.SGF_Service {
         
         public LogicClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona_ObtenerPorID(System.Guid id) {
+            return base.Channel.TipoPersona_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.TipoPersona_ObtenerPorIDAsync(id);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona_ObtenerPorUsername(string nombre) {
+            return base.Channel.TipoPersona_ObtenerPorUsername(nombre);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerPorUsernameAsync(string nombre) {
+            return base.Channel.TipoPersona_ObtenerPorUsernameAsync(nombre);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerTodo() {
+            return base.Channel.TipoPersona_ObtenerTodo();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoPersona>> TipoPersona_ObtenerTodoAsync() {
+            return base.Channel.TipoPersona_ObtenerTodoAsync();
+        }
+        
+        public void TipoPersona_Grabar(SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona) {
+            base.Channel.TipoPersona_Grabar(TipoPersona);
+        }
+        
+        public System.Threading.Tasks.Task TipoPersona_GrabarAsync(SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona) {
+            return base.Channel.TipoPersona_GrabarAsync(TipoPersona);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_TipoUsuario TipoUsuario_ObtenerPorID(System.Guid id) {
+            return base.Channel.TipoUsuario_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.TipoUsuario_ObtenerPorIDAsync(id);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerPorUsername(string nombre) {
+            return base.Channel.TipoUsuario_ObtenerPorUsername(nombre);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario>> TipoUsuario_ObtenerPorUsernameAsync(string nombre) {
+            return base.Channel.TipoUsuario_ObtenerPorUsernameAsync(nombre);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerTodo() {
+            return base.Channel.TipoUsuario_ObtenerTodo();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario>> TipoUsuario_ObtenerTodoAsync() {
+            return base.Channel.TipoUsuario_ObtenerTodoAsync();
+        }
+        
+        public void TipoUsuario_Grabar(SGF.Site.SGF_Service.SGF_TipoUsuario newTipoUsuario) {
+            base.Channel.TipoUsuario_Grabar(newTipoUsuario);
+        }
+        
+        public System.Threading.Tasks.Task TipoUsuario_GrabarAsync(SGF.Site.SGF_Service.SGF_TipoUsuario newTipoUsuario) {
+            return base.Channel.TipoUsuario_GrabarAsync(newTipoUsuario);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_Usuario Usuario_ObtenerPorID(System.Guid id) {
+            return base.Channel.Usuario_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.Usuario_ObtenerPorIDAsync(id);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_Usuario Usuario_ObtenerPorUsername(string username) {
+            return base.Channel.Usuario_ObtenerPorUsername(username);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorUsernameAsync(string username) {
+            return base.Channel.Usuario_ObtenerPorUsernameAsync(username);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerTodo() {
+            return base.Channel.Usuario_ObtenerTodo();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario>> Usuario_ObtenerTodoAsync() {
+            return base.Channel.Usuario_ObtenerTodoAsync();
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorTipoUsuario(System.Guid TipoUsuario) {
+            return base.Channel.Usuario_ObtenerPorTipoUsuario(TipoUsuario);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario>> Usuario_ObtenerPorTipoUsuarioAsync(System.Guid TipoUsuario) {
+            return base.Channel.Usuario_ObtenerPorTipoUsuarioAsync(TipoUsuario);
+        }
+        
+        public void Usuario_Grabar(SGF.Site.SGF_Service.SGF_Usuario usuario) {
+            base.Channel.Usuario_Grabar(usuario);
+        }
+        
+        public System.Threading.Tasks.Task Usuario_GrabarAsync(SGF.Site.SGF_Service.SGF_Usuario usuario) {
+            return base.Channel.Usuario_GrabarAsync(usuario);
+        }
+        
+        public void Usuario_ActualizarPassword(string userName, string clvAnt, string clvAct, string ip, string mac, string nompc, string logueado) {
+            base.Channel.Usuario_ActualizarPassword(userName, clvAnt, clvAct, ip, mac, nompc, logueado);
+        }
+        
+        public System.Threading.Tasks.Task Usuario_ActualizarPasswordAsync(string userName, string clvAnt, string clvAct, string ip, string mac, string nompc, string logueado) {
+            return base.Channel.Usuario_ActualizarPasswordAsync(userName, clvAnt, clvAct, ip, mac, nompc, logueado);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario_VTA> Usuario_BuscarUsuarioVTA(System.Guid TipoUsuario, string identificacion, string nombre) {
+            return base.Channel.Usuario_BuscarUsuarioVTA(TipoUsuario, identificacion, nombre);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario_VTA>> Usuario_BuscarUsuarioVTAAsync(System.Guid TipoUsuario, string identificacion, string nombre) {
+            return base.Channel.Usuario_BuscarUsuarioVTAAsync(TipoUsuario, identificacion, nombre);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_Usuario_VTA Usuario_BuscarUsuarioPorID_VTA(System.Guid usuarioID) {
+            return base.Channel.Usuario_BuscarUsuarioPorID_VTA(usuarioID);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario_VTA> Usuario_BuscarUsuarioPorID_VTAAsync(System.Guid usuarioID) {
+            return base.Channel.Usuario_BuscarUsuarioPorID_VTAAsync(usuarioID);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_Variedad Variedad_ObtenerPorID(System.Guid id) {
+            return base.Channel.Variedad_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.Variedad_ObtenerPorIDAsync(id);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerPorCodName(string name, string code) {
+            return base.Channel.Variedad_ObtenerPorCodName(name, code);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad>> Variedad_ObtenerPorCodNameAsync(string name, string code) {
+            return base.Channel.Variedad_ObtenerPorCodNameAsync(name, code);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA> Variedad_ObtenerPorCodNameVTA(string name, string code) {
+            return base.Channel.Variedad_ObtenerPorCodNameVTA(name, code);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA>> Variedad_ObtenerPorCodNameVTAAsync(string name, string code) {
+            return base.Channel.Variedad_ObtenerPorCodNameVTAAsync(name, code);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerTodo() {
+            return base.Channel.Variedad_ObtenerTodo();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad>> Variedad_ObtenerTodoAsync() {
+            return base.Channel.Variedad_ObtenerTodoAsync();
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA> Variedad_ObtenerTodoVTA() {
+            return base.Channel.Variedad_ObtenerTodoVTA();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA>> Variedad_ObtenerTodoVTAAsync() {
+            return base.Channel.Variedad_ObtenerTodoVTAAsync();
+        }
+        
+        public void Variedad_Grabar(SGF.Site.SGF_Service.SGF_Variedad variedad, string ip, string nompc) {
+            base.Channel.Variedad_Grabar(variedad, ip, nompc);
+        }
+        
+        public System.Threading.Tasks.Task Variedad_GrabarAsync(SGF.Site.SGF_Service.SGF_Variedad variedad, string ip, string nompc) {
+            return base.Channel.Variedad_GrabarAsync(variedad, ip, nompc);
         }
         
         public void Auditoria_Grabar(SGF.Site.SGF_Service.SGF_Auditoria registro) {
@@ -7447,6 +9807,118 @@ namespace SGF.Site.SGF_Service {
         
         public System.Threading.Tasks.Task PermisoBoton_GrabarAsync(SGF.Site.SGF_Service.SGF_PermisoBoton newBoton) {
             return base.Channel.PermisoBoton_GrabarAsync(newBoton);
+        }
+        
+        public void CampoCultivo_Grabar(SGF.Site.SGF_Service.SGF_CampoCultivo newCampoCultivo, string user, string ip) {
+            base.Channel.CampoCultivo_Grabar(newCampoCultivo, user, ip);
+        }
+        
+        public System.Threading.Tasks.Task CampoCultivo_GrabarAsync(SGF.Site.SGF_Service.SGF_CampoCultivo newCampoCultivo, string user, string ip) {
+            return base.Channel.CampoCultivo_GrabarAsync(newCampoCultivo, user, ip);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_CampoCultivo CampoCultivo_ObtenerPorID(System.Guid id) {
+            return base.Channel.CampoCultivo_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CampoCultivo> CampoCultivo_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.CampoCultivo_ObtenerPorIDAsync(id);
+        }
+        
+        public void CultivoArea_Grabar(SGF.Site.SGF_Service.SGF_CultivoArea newCampoCultivo, string user, string ip) {
+            base.Channel.CultivoArea_Grabar(newCampoCultivo, user, ip);
+        }
+        
+        public System.Threading.Tasks.Task CultivoArea_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoArea newCampoCultivo, string user, string ip) {
+            return base.Channel.CultivoArea_GrabarAsync(newCampoCultivo, user, ip);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_CultivoArea CultivoArea_ObtenerPorID(System.Guid id) {
+            return base.Channel.CultivoArea_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoArea> CultivoArea_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.CultivoArea_ObtenerPorIDAsync(id);
+        }
+        
+        public void CultivoBloque_Grabar(SGF.Site.SGF_Service.SGF_CultivoBloque newCampoCultivo, string user, string ip) {
+            base.Channel.CultivoBloque_Grabar(newCampoCultivo, user, ip);
+        }
+        
+        public System.Threading.Tasks.Task CultivoBloque_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoBloque newCampoCultivo, string user, string ip) {
+            return base.Channel.CultivoBloque_GrabarAsync(newCampoCultivo, user, ip);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_CultivoBloque CultivoBloque_ObtenerPorID(System.Guid id) {
+            return base.Channel.CultivoBloque_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoBloque> CultivoBloque_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.CultivoBloque_ObtenerPorIDAsync(id);
+        }
+        
+        public void CultivoLado_Grabar(SGF.Site.SGF_Service.SGF_CultivoLado newCampoCultivo, string user, string ip) {
+            base.Channel.CultivoLado_Grabar(newCampoCultivo, user, ip);
+        }
+        
+        public System.Threading.Tasks.Task CultivoLado_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoLado newCampoCultivo, string user, string ip) {
+            return base.Channel.CultivoLado_GrabarAsync(newCampoCultivo, user, ip);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_CultivoLado CultivoLado_ObtenerPorID(System.Guid id) {
+            return base.Channel.CultivoLado_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoLado> CultivoLado_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.CultivoLado_ObtenerPorIDAsync(id);
+        }
+        
+        public void CultivoNave_Grabar(SGF.Site.SGF_Service.SGF_CultivoNave newCampoCultivo, string user, string ip) {
+            base.Channel.CultivoNave_Grabar(newCampoCultivo, user, ip);
+        }
+        
+        public System.Threading.Tasks.Task CultivoNave_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoNave newCampoCultivo, string user, string ip) {
+            return base.Channel.CultivoNave_GrabarAsync(newCampoCultivo, user, ip);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_CultivoNave CultivoNave_ObtenerPorID(System.Guid id) {
+            return base.Channel.CultivoNave_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoNave> CultivoNave_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.CultivoNave_ObtenerPorIDAsync(id);
+        }
+        
+        public void CultivoCama_Grabar(SGF.Site.SGF_Service.SGF_CultivoCama newCampoCultivo, string user, string ip) {
+            base.Channel.CultivoCama_Grabar(newCampoCultivo, user, ip);
+        }
+        
+        public System.Threading.Tasks.Task CultivoCama_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoCama newCampoCultivo, string user, string ip) {
+            return base.Channel.CultivoCama_GrabarAsync(newCampoCultivo, user, ip);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_CultivoCama CultivoCama_ObtenerPorID(System.Guid id) {
+            return base.Channel.CultivoCama_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoCama> CultivoCama_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.CultivoCama_ObtenerPorIDAsync(id);
+        }
+        
+        public void CultivoCuadro_Grabar(SGF.Site.SGF_Service.SGF_CultivoCuadro newCampoCultivo, string user, string ip) {
+            base.Channel.CultivoCuadro_Grabar(newCampoCultivo, user, ip);
+        }
+        
+        public System.Threading.Tasks.Task CultivoCuadro_GrabarAsync(SGF.Site.SGF_Service.SGF_CultivoCuadro newCampoCultivo, string user, string ip) {
+            return base.Channel.CultivoCuadro_GrabarAsync(newCampoCultivo, user, ip);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_CultivoCuadro CultivoCuadro_ObtenerPorID(System.Guid id) {
+            return base.Channel.CultivoCuadro_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_CultivoCuadro> CultivoCuadro_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.CultivoCuadro_ObtenerPorIDAsync(id);
         }
         
         public SGF.Site.SGF_Service.SGF_Clasificador Clasificador_ObtenerPorID(System.Guid id) {
@@ -7681,6 +10153,22 @@ namespace SGF.Site.SGF_Service {
             return base.Channel.Grupo_GrabarAsync(Grupo);
         }
         
+        public SGF.Site.SGF_Service.SGF_LineaAerea LineaAerea_ObtenerPorID(System.Guid id) {
+            return base.Channel.LineaAerea_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_LineaAerea> LineaAerea_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.LineaAerea_ObtenerPorIDAsync(id);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_LineaAerea> LineaAerea_ObtenerTodo() {
+            return base.Channel.LineaAerea_ObtenerTodo();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_LineaAerea>> LineaAerea_ObtenerTodoAsync() {
+            return base.Channel.LineaAerea_ObtenerTodoAsync();
+        }
+        
         public void Activate() {
             base.Channel.Activate();
         }
@@ -7751,6 +10239,54 @@ namespace SGF.Site.SGF_Service {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Persona_VTA>> Persona_BuscarPersonaVTAAsync(System.Guid TipoPersona, string identificacion, string nombre) {
             return base.Channel.Persona_BuscarPersonaVTAAsync(TipoPersona, identificacion, nombre);
+        }
+        
+        public SGF.Site.SGF_Service.SGF_Producto Producto_ObtenerPorID(System.Guid id) {
+            return base.Channel.Producto_ObtenerPorID(id);
+        }
+        
+        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Producto> Producto_ObtenerPorIDAsync(System.Guid id) {
+            return base.Channel.Producto_ObtenerPorIDAsync(id);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto> Producto_ObtenerTodo() {
+            return base.Channel.Producto_ObtenerTodo();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto>> Producto_ObtenerTodoAsync() {
+            return base.Channel.Producto_ObtenerTodoAsync();
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto> Producto_ObtenerPorVariedad(System.Guid variedadID) {
+            return base.Channel.Producto_ObtenerPorVariedad(variedadID);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto>> Producto_ObtenerPorVariedadAsync(System.Guid variedadID) {
+            return base.Channel.Producto_ObtenerPorVariedadAsync(variedadID);
+        }
+        
+        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto_VTA> Producto_ObtenerPorVariedadVTA(System.Guid variedadID) {
+            return base.Channel.Producto_ObtenerPorVariedadVTA(variedadID);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Producto_VTA>> Producto_ObtenerPorVariedadVTAAsync(System.Guid variedadID) {
+            return base.Channel.Producto_ObtenerPorVariedadVTAAsync(variedadID);
+        }
+        
+        public void Producto_Grabar(SGF.Site.SGF_Service.SGF_Producto newProducto, string nomPC, string ip) {
+            base.Channel.Producto_Grabar(newProducto, nomPC, ip);
+        }
+        
+        public System.Threading.Tasks.Task Producto_GrabarAsync(SGF.Site.SGF_Service.SGF_Producto newProducto, string nomPC, string ip) {
+            return base.Channel.Producto_GrabarAsync(newProducto, nomPC, ip);
+        }
+        
+        public int Producto_ValidarProducto(SGF.Site.SGF_Service.SGF_Producto newProducto) {
+            return base.Channel.Producto_ValidarProducto(newProducto);
+        }
+        
+        public System.Threading.Tasks.Task<int> Producto_ValidarProductoAsync(SGF.Site.SGF_Service.SGF_Producto newProducto) {
+            return base.Channel.Producto_ValidarProductoAsync(newProducto);
         }
         
         public SGF.Site.SGF_Service.SEG_Usuarios_VTA Seguridad_ObtenerUsuarioPorID(string NombreUsuario, string Clave) {
@@ -7871,182 +10407,6 @@ namespace SGF.Site.SGF_Service {
         
         public System.Threading.Tasks.Task TipoClasificador_GrabarAsync(SGF.Site.SGF_Service.SGF_TipoClasificador tipoclasificador) {
             return base.Channel.TipoClasificador_GrabarAsync(tipoclasificador);
-        }
-        
-        public SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona_ObtenerPorID(System.Guid id) {
-            return base.Channel.TipoPersona_ObtenerPorID(id);
-        }
-        
-        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerPorIDAsync(System.Guid id) {
-            return base.Channel.TipoPersona_ObtenerPorIDAsync(id);
-        }
-        
-        public SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona_ObtenerPorUsername(string nombre) {
-            return base.Channel.TipoPersona_ObtenerPorUsername(nombre);
-        }
-        
-        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerPorUsernameAsync(string nombre) {
-            return base.Channel.TipoPersona_ObtenerPorUsernameAsync(nombre);
-        }
-        
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoPersona> TipoPersona_ObtenerTodo() {
-            return base.Channel.TipoPersona_ObtenerTodo();
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoPersona>> TipoPersona_ObtenerTodoAsync() {
-            return base.Channel.TipoPersona_ObtenerTodoAsync();
-        }
-        
-        public void TipoPersona_Grabar(SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona) {
-            base.Channel.TipoPersona_Grabar(TipoPersona);
-        }
-        
-        public System.Threading.Tasks.Task TipoPersona_GrabarAsync(SGF.Site.SGF_Service.SGF_TipoPersona TipoPersona) {
-            return base.Channel.TipoPersona_GrabarAsync(TipoPersona);
-        }
-        
-        public SGF.Site.SGF_Service.SGF_TipoUsuario TipoUsuario_ObtenerPorID(System.Guid id) {
-            return base.Channel.TipoUsuario_ObtenerPorID(id);
-        }
-        
-        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerPorIDAsync(System.Guid id) {
-            return base.Channel.TipoUsuario_ObtenerPorIDAsync(id);
-        }
-        
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerPorUsername(string nombre) {
-            return base.Channel.TipoUsuario_ObtenerPorUsername(nombre);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario>> TipoUsuario_ObtenerPorUsernameAsync(string nombre) {
-            return base.Channel.TipoUsuario_ObtenerPorUsernameAsync(nombre);
-        }
-        
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario> TipoUsuario_ObtenerTodo() {
-            return base.Channel.TipoUsuario_ObtenerTodo();
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_TipoUsuario>> TipoUsuario_ObtenerTodoAsync() {
-            return base.Channel.TipoUsuario_ObtenerTodoAsync();
-        }
-        
-        public void TipoUsuario_Grabar(SGF.Site.SGF_Service.SGF_TipoUsuario newTipoUsuario) {
-            base.Channel.TipoUsuario_Grabar(newTipoUsuario);
-        }
-        
-        public System.Threading.Tasks.Task TipoUsuario_GrabarAsync(SGF.Site.SGF_Service.SGF_TipoUsuario newTipoUsuario) {
-            return base.Channel.TipoUsuario_GrabarAsync(newTipoUsuario);
-        }
-        
-        public SGF.Site.SGF_Service.SGF_Usuario Usuario_ObtenerPorID(System.Guid id) {
-            return base.Channel.Usuario_ObtenerPorID(id);
-        }
-        
-        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorIDAsync(System.Guid id) {
-            return base.Channel.Usuario_ObtenerPorIDAsync(id);
-        }
-        
-        public SGF.Site.SGF_Service.SGF_Usuario Usuario_ObtenerPorUsername(string username) {
-            return base.Channel.Usuario_ObtenerPorUsername(username);
-        }
-        
-        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorUsernameAsync(string username) {
-            return base.Channel.Usuario_ObtenerPorUsernameAsync(username);
-        }
-        
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerTodo() {
-            return base.Channel.Usuario_ObtenerTodo();
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario>> Usuario_ObtenerTodoAsync() {
-            return base.Channel.Usuario_ObtenerTodoAsync();
-        }
-        
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario> Usuario_ObtenerPorTipoUsuario(System.Guid TipoUsuario) {
-            return base.Channel.Usuario_ObtenerPorTipoUsuario(TipoUsuario);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario>> Usuario_ObtenerPorTipoUsuarioAsync(System.Guid TipoUsuario) {
-            return base.Channel.Usuario_ObtenerPorTipoUsuarioAsync(TipoUsuario);
-        }
-        
-        public void Usuario_Grabar(SGF.Site.SGF_Service.SGF_Usuario usuario) {
-            base.Channel.Usuario_Grabar(usuario);
-        }
-        
-        public System.Threading.Tasks.Task Usuario_GrabarAsync(SGF.Site.SGF_Service.SGF_Usuario usuario) {
-            return base.Channel.Usuario_GrabarAsync(usuario);
-        }
-        
-        public void Usuario_ActualizarPassword(string userName, string clvAnt, string clvAct, string ip, string mac, string nompc, string logueado) {
-            base.Channel.Usuario_ActualizarPassword(userName, clvAnt, clvAct, ip, mac, nompc, logueado);
-        }
-        
-        public System.Threading.Tasks.Task Usuario_ActualizarPasswordAsync(string userName, string clvAnt, string clvAct, string ip, string mac, string nompc, string logueado) {
-            return base.Channel.Usuario_ActualizarPasswordAsync(userName, clvAnt, clvAct, ip, mac, nompc, logueado);
-        }
-        
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario_VTA> Usuario_BuscarUsuarioVTA(System.Guid TipoUsuario, string identificacion, string nombre) {
-            return base.Channel.Usuario_BuscarUsuarioVTA(TipoUsuario, identificacion, nombre);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Usuario_VTA>> Usuario_BuscarUsuarioVTAAsync(System.Guid TipoUsuario, string identificacion, string nombre) {
-            return base.Channel.Usuario_BuscarUsuarioVTAAsync(TipoUsuario, identificacion, nombre);
-        }
-        
-        public SGF.Site.SGF_Service.SGF_Usuario_VTA Usuario_BuscarUsuarioPorID_VTA(System.Guid usuarioID) {
-            return base.Channel.Usuario_BuscarUsuarioPorID_VTA(usuarioID);
-        }
-        
-        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Usuario_VTA> Usuario_BuscarUsuarioPorID_VTAAsync(System.Guid usuarioID) {
-            return base.Channel.Usuario_BuscarUsuarioPorID_VTAAsync(usuarioID);
-        }
-        
-        public SGF.Site.SGF_Service.SGF_Variedad Variedad_ObtenerPorID(System.Guid id) {
-            return base.Channel.Variedad_ObtenerPorID(id);
-        }
-        
-        public System.Threading.Tasks.Task<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerPorIDAsync(System.Guid id) {
-            return base.Channel.Variedad_ObtenerPorIDAsync(id);
-        }
-        
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerPorCodName(string name, string code) {
-            return base.Channel.Variedad_ObtenerPorCodName(name, code);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad>> Variedad_ObtenerPorCodNameAsync(string name, string code) {
-            return base.Channel.Variedad_ObtenerPorCodNameAsync(name, code);
-        }
-        
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA> Variedad_ObtenerPorCodNameVTA(string name, string code) {
-            return base.Channel.Variedad_ObtenerPorCodNameVTA(name, code);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA>> Variedad_ObtenerPorCodNameVTAAsync(string name, string code) {
-            return base.Channel.Variedad_ObtenerPorCodNameVTAAsync(name, code);
-        }
-        
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad> Variedad_ObtenerTodo() {
-            return base.Channel.Variedad_ObtenerTodo();
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad>> Variedad_ObtenerTodoAsync() {
-            return base.Channel.Variedad_ObtenerTodoAsync();
-        }
-        
-        public System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA> Variedad_ObtenerTodoVTA() {
-            return base.Channel.Variedad_ObtenerTodoVTA();
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SGF.Site.SGF_Service.SGF_Variedad_VTA>> Variedad_ObtenerTodoVTAAsync() {
-            return base.Channel.Variedad_ObtenerTodoVTAAsync();
-        }
-        
-        public void Variedad_Grabar(SGF.Site.SGF_Service.SGF_Variedad variedad, string ip, string nompc) {
-            base.Channel.Variedad_Grabar(variedad, ip, nompc);
-        }
-        
-        public System.Threading.Tasks.Task Variedad_GrabarAsync(SGF.Site.SGF_Service.SGF_Variedad variedad, string ip, string nompc) {
-            return base.Channel.Variedad_GrabarAsync(variedad, ip, nompc);
         }
     }
 }

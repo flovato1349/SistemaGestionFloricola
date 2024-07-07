@@ -336,6 +336,7 @@ namespace SGF.Site.Cultivo
             chk_CrearProducto.Checked = false;
             txt_Observaciones.Text = "";
             txt_Estado.Text = "";
+            gv_Producto.DataSource = null;
         }
 
         protected void btn_Buscar_Click(object sender, ImageClickEventArgs e)
@@ -405,6 +406,11 @@ namespace SGF.Site.Cultivo
                 //chk_CrearProducto.Checked = false;
                 txt_Observaciones.Text = _variedad.Observaciones;
                 txt_Estado.Text = ObtenerNombreEstado((int)_variedad.Estado);
+
+                var _productsVTA = client.Producto_ObtenerPorVariedadVTA(new Guid(hdn_VariedadID.Value));
+                gv_Producto.DataSource = _productsVTA;
+                gv_Producto.DataBind();
+
             }
         }
 
@@ -556,6 +562,184 @@ namespace SGF.Site.Cultivo
         }
 
         protected void btn_GenerarProducto_Click(object sender, EventArgs e)
+        {
+            LogicClient client = new LogicClient();
+            List<SGF_Producto> _productos = new List<SGF_Producto>();
+            #region validar 
+            string _res = ValidarListBox(rlb_Tallos);
+            if (_res != string.Empty)
+            {
+                VerMensaje("INFORMACIÓN", "info", "info", _res);
+                return;
+            }
+            _res = ValidarListBox(rlb_Longitud);
+            if (_res != string.Empty)
+            {
+                VerMensaje("INFORMACIÓN", "info", "info", _res);
+                return;
+            }
+            _res = ValidarListBox(rlb_TipoCalidad);
+            if (_res != string.Empty)
+            {
+                VerMensaje("INFORMACIÓN", "info", "info", _res);
+                return;
+            }
+
+            _productos = RecogerDatosListBox();
+
+            if (_productos.Count > 0)
+            {
+                foreach (SGF_Producto _itemProducto in _productos)
+                {
+                    client.Producto_Grabar(_itemProducto, Utils.getHostName(Utils.getIP()), Utils.getIP());
+                    var _productsVTA = client.Producto_ObtenerPorVariedadVTA(new Guid(hdn_VariedadID.Value));
+                    gv_Producto.DataSource = _productsVTA;
+                    gv_Producto.DataBind();
+                }
+                VerMensaje("INFORMACIÓN", "info", "info", "Productos creados: " + _productos.Count.ToString());
+
+            }
+            #endregion
+        }
+        private string ValidarListBox(RadListBox _list)
+        {
+            string respuesta = "No tiene seleccionado ningún item en el listado de " + _list.ToolTip;
+            foreach (RadListBoxItem item in _list.Items)
+            {
+                if (item.Checked == true)
+                {
+                    respuesta = "";
+                    break;
+                }
+            }
+            return respuesta;
+        }
+
+        private List<SGF_Producto> RecogerDatosListBox()
+        {
+            string _Mercado = ValidarListBox(rlb_Mercado);
+            string _Paises = ValidarListBox(rlb_Pais);
+            List<SGF_Producto> _productos = new List<SGF_Producto>();
+            LogicClient client = new LogicClient();
+            foreach (RadListBoxItem itemCalidad in rlb_TipoCalidad.Items)
+            {
+                if (itemCalidad.Checked == true)
+                {
+                    foreach (RadListBoxItem itemLongitud in rlb_Longitud.Items)
+                    {
+                        if (itemLongitud.Checked == true)
+                        {
+                            foreach (RadListBoxItem itemTallos in rlb_Tallos.Items)
+                            {
+                                if (itemTallos.Checked == true)
+                                {
+                                    SGF_Producto _newProducto = new SGF_Producto();
+                                    if (_Mercado == string.Empty) //Tiene seleccionado items en el Mercado
+                                    {
+                                        foreach (RadListBoxItem itemMercado in rlb_Mercado.Items)
+                                        {
+                                            if (itemMercado.Checked == true)
+                                            {
+                                                if (_Paises == string.Empty) //Tiene seleccionado items en Paises
+                                                {
+                                                    foreach (RadListBoxItem itemPais in rlb_Pais.Items)
+                                                    {
+                                                        if (itemPais.Checked == true)
+                                                        {
+                                                            var _clCalidad = client.Clasificador_ObtenerPorID(new Guid(itemCalidad.Value));
+                                                            var _clLongitud = client.Clasificador_ObtenerPorID(new Guid(itemLongitud.Value));
+                                                            var _clTallo = client.Clasificador_ObtenerPorID(new Guid(itemTallos.Value));
+                                                            var _clMercado = client.Clasificador_ObtenerPorID(new Guid(itemMercado.Value));
+                                                            var _clPais = client.Clasificador_ObtenerPorID(new Guid(itemPais.Value));
+                                                            _newProducto = new SGF_Producto();
+                                                            _newProducto.ProductoID = Guid.NewGuid();
+                                                            _newProducto.VariedadID = new Guid(hdn_VariedadID.Value);
+                                                            _newProducto.Codigo = _clCalidad.Valor.Trim() + "."+txt_Codigo.Text.Trim()+"." + _clLongitud.Valor.Trim() + "." + _clTallo.Valor.Trim() + "." + _clMercado.Valor.Trim() + "." + _clPais.Valor.Trim();
+                                                            _newProducto.Nombre = txt_NombreVariedad.Text + ": " + _newProducto.Codigo;
+                                                            _newProducto.CalidadID = new Guid(itemCalidad.Value);
+                                                            _newProducto.LongitudID = new Guid(itemLongitud.Value);
+                                                            _newProducto.TalloID = new Guid(itemTallos.Value);
+                                                            _newProducto.MercadoID = new Guid(itemMercado.Value);
+                                                            _newProducto.PaisID = new Guid(itemPais.Value); ;
+                                                            _newProducto.Descripcion = "";
+                                                            _newProducto.ValorRefCompra = 0;
+                                                            _newProducto.ValorRefVenta = 0;
+                                                            _newProducto.Usuario = Me.Usuario.NombreUsuario;
+                                                            _newProducto.Fecha = DateTime.Now;
+                                                            _newProducto.Estado = 1;
+                                                            _productos.Add(_newProducto);
+                                                        }
+                                                    }
+                                                }
+                                                else //No Tiene seleccionado items en Paises
+                                                {
+                                                    var _clCalidad = client.Clasificador_ObtenerPorID(new Guid(itemCalidad.Value));
+                                                    var _clLongitud = client.Clasificador_ObtenerPorID(new Guid(itemLongitud.Value));
+                                                    var _clTallo = client.Clasificador_ObtenerPorID(new Guid(itemTallos.Value));
+                                                    var _clMercado = client.Clasificador_ObtenerPorID(new Guid(itemMercado.Value));
+                                                    _newProducto = new SGF_Producto();
+                                                    _newProducto.ProductoID = Guid.NewGuid();
+                                                    _newProducto.VariedadID = new Guid(hdn_VariedadID.Value);
+                                                    _newProducto.Codigo = _clCalidad.Valor.Trim() + "." + txt_Codigo.Text.Trim() + "." + _clLongitud.Valor.Trim() + "." + _clTallo.Valor.Trim() + "." + _clMercado.Valor.Trim();
+                                                    _newProducto.Nombre = txt_NombreVariedad.Text + ": " + _newProducto.Codigo;
+                                                    _newProducto.CalidadID = new Guid(itemCalidad.Value);
+                                                    _newProducto.LongitudID = new Guid(itemLongitud.Value);
+                                                    _newProducto.TalloID = new Guid(itemTallos.Value);
+                                                    _newProducto.MercadoID = new Guid(itemMercado.Value);
+                                                    _newProducto.PaisID = Guid.Empty;
+                                                    _newProducto.Descripcion = "";
+                                                    _newProducto.ValorRefCompra = 0;
+                                                    _newProducto.ValorRefVenta = 0;
+                                                    _newProducto.Usuario = Me.Usuario.NombreUsuario;
+                                                    _newProducto.Fecha = DateTime.Now;
+                                                    _newProducto.Estado = 1;
+                                                    _productos.Add(_newProducto);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    else //No tiene seleccionado items en el Mercado
+                                    {
+                                        var _clCalidad = client.Clasificador_ObtenerPorID(new Guid(itemCalidad.Value));
+                                        var _clLongitud = client.Clasificador_ObtenerPorID(new Guid(itemLongitud.Value));
+                                        var _clTallo = client.Clasificador_ObtenerPorID(new Guid(itemTallos.Value));
+                                        _newProducto = new SGF_Producto();
+                                        _newProducto.ProductoID = Guid.NewGuid();
+                                        _newProducto.VariedadID = new Guid(hdn_VariedadID.Value);
+                                        _newProducto.Codigo = _clCalidad.Valor.Trim() + "." + txt_Codigo.Text.Trim() + "." + "." + _clLongitud.Valor.Trim() + "." + _clTallo.Valor.Trim();
+                                        _newProducto.Nombre = txt_NombreVariedad.Text + ": " + _newProducto.Codigo;
+                                        _newProducto.CalidadID = new Guid(itemCalidad.Value);
+                                        _newProducto.LongitudID = new Guid(itemLongitud.Value);
+                                        _newProducto.TalloID = new Guid(itemTallos.Value);
+                                        _newProducto.MercadoID = Guid.Empty;
+                                        _newProducto.PaisID = Guid.Empty;
+                                        _newProducto.Descripcion = "";
+                                        _newProducto.ValorRefCompra = 0;
+                                        _newProducto.ValorRefVenta = 0;
+                                        _newProducto.Usuario = Me.Usuario.NombreUsuario;
+                                        _newProducto.Fecha = DateTime.Now;
+                                        _newProducto.Estado = 1;
+                                        _productos.Add(_newProducto);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            return _productos;
+        }
+
+        protected void gv_Producto_NeedDataSource(object sender, GridNeedDataSourceEventArgs e)
+        {
+            LogicClient client = new LogicClient();
+            var _productsVTA = client.Producto_ObtenerPorVariedadVTA(new Guid(hdn_VariedadID.Value));
+            gv_Producto.DataSource = _productsVTA;
+
+        }
+
+        protected void gv_Producto_ItemCommand(object sender, GridCommandEventArgs e)
         {
 
         }

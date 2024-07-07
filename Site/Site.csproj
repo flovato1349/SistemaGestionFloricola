@@ -202,6 +202,36 @@
     <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_Variedad_VTA.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_LineaAerea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_Producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_Producto_VTA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_CampoCultivo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_CultivoArea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_CultivoBloque.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_CultivoCama.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_CultivoCuadro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_CultivoLado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SGF_Service\SGF.Site.SGF_Service.SGF_CultivoNave.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\SGF_Service\SGF_Service.disco" />
     <None Include="Connected Services\SGF_Service\configuration91.svcinfo" />
     <None Include="Connected Services\SGF_Service\configuration.svcinfo" />
